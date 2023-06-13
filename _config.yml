@@ -20,12 +20,10 @@
 
 title: 6.790 Machine Learning
 email: 6.790-website@mit.edu
-description:
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: "Graduate Machine Learning course from MIT EECS. Fall 2023 term."
+  
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://gradml.mit.edu" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Build settings

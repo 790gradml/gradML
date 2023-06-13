@@ -1,0 +1,44 @@
+{"0": {
+    "doc": "About",
+    "title": "About",
+    "content": "- Course Overview - Staff - Instructors - TAs - Recommended Reading - [B] Pattern Recognition and Machine Learning, Bishop; Springer, 2007. - [EH] Computer Age Statistical Inference, Efron and Hastie; Cambridge University Press, 2016. - [JWHT] An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani; Springer, 2013. Easy read, very pragmatic. - [SB]/[SSS] Understanding Machine Learning: From Theory to Algorithms, Shalev-Shwartz and Ben-David, 2014. - [HTF] The Elements of Statistical Learning, Hastie, Tibshirani, Friedman, 2009. - [S] Introduction to Reinforcement Learning, Sutton, 2018. ",
+    "url": "/about/",
+    
+    "relUrl": "/about/"
+  },"1": {
+    "doc": "Graphical",
+    "title": "Graphical",
+    "content": " ",
+    "url": "/unsupervised/graphical/graphical.html",
+    
+    "relUrl": "/unsupervised/graphical/graphical.html"
+  },"2": {
+    "doc": "Introduction",
+    "title": "Introduction",
+    "content": "Machine Learning is ... Typically three categories ",
+    "url": "/intro/",
+    
+    "relUrl": "/intro/"
+  },"3": {
+    "doc": "Linear Regression",
+    "title": "Linear Regression",
+    "content": " ",
+    "url": "/supervised/linearRegression.html",
+    
+    "relUrl": "/supervised/linearRegression.html"
+  },"4": {
+    "doc": "Supervised",
+    "title": "Supervised",
+    "content": " ",
+    "url": "/supervised/supervised.html",
+    
+    "relUrl": "/supervised/supervised.html"
+  },"5": {
+    "doc": "Unsupervised",
+    "title": "Unsupervised",
+    "content": " ",
+    "url": "/unsupervised/unsupervised.html",
+    
+    "relUrl": "/unsupervised/unsupervised.html"
+  }
+}

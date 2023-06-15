@@ -1,5 +1,5 @@
 ---
 layout: about
 title: Linear Regression
-parent: Supervised
+parent: Supervised Learning
 ---

@@ -18,21 +18,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 6.790 Machine Learning
+title: 6.790 <br> Machine Learning
 email: 6.790-website@mit.edu
 description: "Graduate Machine Learning course, MIT EECS, fall 2023 term."
-  
+
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://gradml.mit.edu" # the base hostname & protocol for your site, e.g. http://example.com
-
 
 # Build settings
 # remote_theme: "just-the-docs"
 theme: "just-the-docs"
 #remote_theme: just-the-docs/just-the-docs
 plugins:
-  - jekyll-feed
-  - jekyll-default-layout
+    - jekyll-feed
+    - jekyll-default-layout
 math: katex
 # math: mathjax
 # Exclude from processing.

@@ -32,8 +32,10 @@ theme: "just-the-docs"
 plugins:
     - jekyll-feed
     - jekyll-default-layout
+    - jekyll-pandoc
 math: katex
 # math: mathjax
+markdown: Pandoc
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

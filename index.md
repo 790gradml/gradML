@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+nav_order: 1
 ---
 
 # The site is under construction for launch in the fall 2023 semester

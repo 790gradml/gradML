@@ -1,44 +1,142 @@
 {"0": {
-    "doc": "About",
-    "title": "About",
-    "content": ". | Course Overview . | Staff . | Instructors | TAs | . | Recommended Reading . | [B] Pattern Recognition and Machine Learning, Bishop; Springer, 2007. | [EH] Computer Age Statistical Inference, Efron and Hastie; Cambridge University Press, 2016. | [JWHT] An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani; Springer, 2013. Easy read, very pragmatic. | [SB]/[SSS] Understanding Machine Learning: From Theory to Algorithms, Shalev-Shwartz and Ben-David, 2014. | [HTF] The Elements of Statistical Learning, Hastie, Tibshirani, Friedman, 2009. | [S] Introduction to Reinforcement Learning, Sutton, 2018. | . | . ",
-    "url": "/about/",
+    "doc": "Bandits",
+    "title": "Bandits",
+    "content": " ",
+    "url": "/reinforcement/bandit.html",
     
-    "relUrl": "/about/"
+    "relUrl": "/reinforcement/bandit.html"
   },"1": {
     "doc": "Graphical",
     "title": "Graphical",
     "content": " ",
-    "url": "/unsupervised/graphical/graphical.html",
+    "url": "/unsupervised/graphical.html",
     
-    "relUrl": "/unsupervised/graphical/graphical.html"
+    "relUrl": "/unsupervised/graphical.html"
   },"2": {
+    "doc": "About",
+    "title": "The site is under construction for launch in the fall 2023 semester",
+    "content": " ",
+    "url": "/#the-site-is-under-construction-for-launch-in-the-fall-2023-semester",
+    
+    "relUrl": "/#the-site-is-under-construction-for-launch-in-the-fall-2023-semester"
+  },"3": {
+    "doc": "About",
+    "title": "Course overview",
+    "content": ". | Graduate level; offered in the Fall only | 12 units (3-0-9) | Prerequisites: . | Linear algebra (at the level of 18.06) | and Probability (at the level of 6.3700, 6.3800, or 18.600) | . | Brief description: Principles, techniques, and algorithms in machine learning from the point of view of statistical inference; representation, generalization, and model selection; and methods such as linear/additive models, active learning, boosting, support vector machines, non-parametric Bayesian methods, hidden Markov models, Bayesian networks, and convolutional and recurrent neural networks. Recommended prerequisite: 6.3900 or other previous experience in machine learning. Enrollment may be limited. | . ",
+    "url": "/#course-overview",
+    
+    "relUrl": "/#course-overview"
+  },"4": {
+    "doc": "About",
+    "title": "Staff",
+    "content": ". | Instructors | TAs | . ",
+    "url": "/#staff",
+    
+    "relUrl": "/#staff"
+  },"5": {
+    "doc": "About",
+    "title": "Logistics",
+    "content": ". | Lectures: Tuesday and Thursday, 2:30pm in 32-123 | Recitations: Friday, | Office hours: . | Instructor office hours: TBD | TA office hours: TBD | . | . ",
+    "url": "/#logistics",
+    
+    "relUrl": "/#logistics"
+  },"6": {
+    "doc": "About",
+    "title": "Grading",
+    "content": ". | Homework | Exams | . ",
+    "url": "/#grading",
+    
+    "relUrl": "/#grading"
+  },"7": {
+    "doc": "About",
+    "title": "Recommended Reading",
+    "content": ". | [B] Pattern Recognition and Machine Learning, Bishop; Springer, 2007. | [EH] Computer Age Statistical Inference, Efron and Hastie; Cambridge University Press, 2016. | [JWHT] An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani; Springer, 2013. | [SB]/[SSS] Understanding Machine Learning: From Theory to Algorithms, Shalev-Shwartz and Ben-David, 2014. | [HTF] The Elements of Statistical Learning, Hastie, Tibshirani, Friedman, 2009. | [SB] Reinforcement Learning: An Introduction, Sutton and Barton, 2018. | . ",
+    "url": "/#recommended-reading",
+    
+    "relUrl": "/#recommended-reading"
+  },"8": {
+    "doc": "About",
+    "title": "About",
+    "content": " ",
+    "url": "/",
+    
+    "relUrl": "/"
+  },"9": {
     "doc": "Introduction",
     "title": "Introduction",
-    "content": "Machine Learning is … . Typically three categories . ",
-    "url": "/intro/",
+    "content": "Machine Learning is … . Typically, we can break machine learning problems down into three categories, supervised learning, unsupervised learning, and reinforcement learning. ",
+    "url": "/intro.html",
     
-    "relUrl": "/intro/"
-  },"3": {
+    "relUrl": "/intro.html"
+  },"10": {
     "doc": "Linear Regression",
     "title": "Linear Regression",
     "content": " ",
     "url": "/supervised/linearRegression.html",
     
     "relUrl": "/supervised/linearRegression.html"
-  },"4": {
-    "doc": "Supervised",
-    "title": "Supervised",
+  },"11": {
+    "doc": "Markov Decision Process",
+    "title": "Markov Decision Process",
     "content": " ",
-    "url": "/supervised/supervised.html",
+    "url": "/reinforcement/mdp.html",
     
-    "relUrl": "/supervised/supervised.html"
-  },"5": {
-    "doc": "Unsupervised",
-    "title": "Unsupervised",
+    "relUrl": "/reinforcement/mdp.html"
+  },"12": {
+    "doc": "Reinforcement Learning",
+    "title": "Reinforcement Learning",
     "content": " ",
-    "url": "/unsupervised/unsupervised.html",
+    "url": "/reinforcement.html",
     
-    "relUrl": "/unsupervised/unsupervised.html"
+    "relUrl": "/reinforcement.html"
+  },"13": {
+    "doc": "Review",
+    "title": "Review lecture",
+    "content": " ",
+    "url": "/review.html#review-lecture",
+    
+    "relUrl": "/review.html#review-lecture"
+  },"14": {
+    "doc": "Review",
+    "title": "Notations",
+    "content": ". | Data matrix is of the size \\((n,d)\\) where \\(n\\) is the number of data points, and \\(d\\) is the dimension of the features | Vectors are denoted with a small-case letter; matrices capital letters | The default norm of a vector is the \\(l_2\\) norm | . ",
+    "url": "/review.html#notations",
+    
+    "relUrl": "/review.html#notations"
+  },"15": {
+    "doc": "Review",
+    "title": "Linear algebra, calculus, and optimization",
+    "content": ". | Gradient vector | Positive semi-definite (PSD) and positive definiteness (PD) | Convexity, strong convexity | Optimal solutions, uniqueness | . ",
+    "url": "/review.html#linear-algebra-calculus-and-optimization",
+    
+    "relUrl": "/review.html#linear-algebra-calculus-and-optimization"
+  },"16": {
+    "doc": "Review",
+    "title": "Probability theory and Statistics",
+    "content": "Concepts related to a single distribution . | Multi-variate normal distribution | Max likelihood and Max log likelihood | . Concepts involving multiple distributions . | Marginal independence . | Joint probability is the product | Entropy of the joint distribution is the sum of individual entropies | . | Bayes’ rule | Conditional independence . | Compare with marginal independence | . | Importance sampling | Jensen inequality | KL divergence | . ",
+    "url": "/review.html#probability-theory-and-statistics",
+    
+    "relUrl": "/review.html#probability-theory-and-statistics"
+  },"17": {
+    "doc": "Review",
+    "title": "Review",
+    "content": " ",
+    "url": "/review.html",
+    
+    "relUrl": "/review.html"
+  },"18": {
+    "doc": "Supervised Learning",
+    "title": "Supervised Learning",
+    "content": " ",
+    "url": "/supervised.html",
+    
+    "relUrl": "/supervised.html"
+  },"19": {
+    "doc": "Unsupervised Learning",
+    "title": "Unsupervised Learning",
+    "content": " ",
+    "url": "/unsupervised.html",
+    
+    "relUrl": "/unsupervised.html"
   }
 }

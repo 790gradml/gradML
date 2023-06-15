@@ -33,6 +33,11 @@ plugins:
     - jekyll-feed
     - jekyll-default-layout
     - jekyll-pandoc
+    - jekyll-last-modified-at
+
+# Optional. The default date format, used if none is specified in the tag.
+last-modified-at:
+    date-format: "%d-%b-%Y"
 math: katex
 # math: mathjax
 markdown: Pandoc

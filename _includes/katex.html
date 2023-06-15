@@ -1,0 +1,26 @@
+<!-- Copied from https://katex.org/docs/browser.html#starter-template -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js">
+</script>
+
+<!-- Automatically display code inside script tags with type=math/tex using KaTeX -->
+<script defer src="/assets/js/mathtex-script-type.js">
+</script>
+
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {
+  globalGroup: true,
+  trust: true,
+  strict: false,
+  throwOnError: false,
+});"></script>
+
+<!-- The KaTeX default is 1.21em, see https://katex.org/docs/font.html#font-size-and-lengths -->
+<style>
+  .katex {
+    font-size: 1.21em;
+  }
+</style>

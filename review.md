@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Review
-permalink: /review/
 nav_order: 3
 
 ---
@@ -10,14 +9,14 @@ nav_order: 3
 
 ## Notations
 
-- Data matrix is of the size $$(n,d)$$ where $n$ is the number of data points, and $$d$$ is the dimension of the features
+- Data matrix is of the size $$(n,d)$$ where $$n$$ is the number of data points, and $$d$$ is the dimension of the features
 - Vectors are denoted with a small-case letter; matrices capital letters
-- The default norm of a vector is the $l_2$ norm
+- The default norm of a vector is the $$l_2$$ norm
 
 ## Linear algebra, calculus, and optimization
 
-- Gradient
-- PSD/PD
+- Gradient vector
+- Positive semi-definite (PSD) and positive definiteness (PD)
 - Convexity, strong convexity
 - Optimal solutions, uniqueness
 

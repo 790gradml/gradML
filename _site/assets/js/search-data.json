@@ -211,7 +211,7 @@
   },"30": {
     "doc": "Credit",
     "title": "Credit",
-    "content": "Special thanks to: . | Leslie Kaelbling | 6.867 Fall 2019 teaching staff | . This site uses: . | Jekyll | Just the Docs | Just the Class | Last Modified At | Hypothesis | Git | . ",
+    "content": "Special thanks to: . | Leslie Kaelbling | 6.867 Fall 2019 teaching staff | . This site uses: . | Pandoc | Hypothesis | Jekyll | Just the Docs | Just the Class | Last Modified At | . ",
     "url": "/credit/",
     
     "relUrl": "/credit/"

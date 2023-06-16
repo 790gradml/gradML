@@ -92,16 +92,17 @@
       @extend .fs-2;
     }
 
-    &.lecture {
-      background-color: $grey-dk-000;
+    &.lecture{
+      background-color: rgba(198, 22, 141, 1)
     }
 
-    &.recitation {
-      background-color: $purple-000;
+    &.recitation{
+      background-color: rgba(102, 45, 145, 1)
     }
 
-    &.office-hours {
-      background-color: $blue-000;
+    &.office-hours{
+      background-color: rgba(0, 161, 199, 1)
     }
   }
 }
+

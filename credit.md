@@ -14,6 +14,7 @@ This site uses:
 
 - [Jekyll](https://jekyllrb.com)
 - [Just the Docs](https://github.com/just-the-docs/just-the-docs)
-- [Last modified at](https://github.com/gjtorikian/jekyll-last-modified-at)
+- [Just the Class](https://github.com/kevinlin1/just-the-class)
+- [Last Modified At](https://github.com/gjtorikian/jekyll-last-modified-at)
 - [Hypothesis](https://hypothesis.is)
 - [Git](https://git-scm.com/)

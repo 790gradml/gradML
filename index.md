@@ -17,7 +17,7 @@ nav_order: 0
 
 # Staff
 
-- Instructors
+- Instructors 6.7900-instructors@mit.edu
   - [Pulkit Agrawal](https://people.csail.mit.edu/pulkitag/)
   - [Tommi Jaakkola](https://people.csail.mit.edu/tommi/)
   - [Shen Shen](https://shenshen.mit.edu)
@@ -30,7 +30,7 @@ nav_order: 0
   - Elizaveta Tremsina
   - Frederick 'Freddie' Zhao
 
-# Logistics
+# [Weekly Schedule](/schedule)
 
 - Lectures: Tuesday and Thursday, 2:30pm-4pm, in 32-123
 - Recitations (four options to choose one from):

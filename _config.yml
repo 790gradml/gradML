@@ -19,21 +19,42 @@
 # in the templates via {{ site.myvariable }}.
 
 title: 6.790 <br> Machine Learning
+tagline: 6.790 Machine Learning, Fall 2023
 email: 6.790-website@mit.edu
 description: "Graduate Machine Learning course, MIT EECS, fall 2023 term."
 
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gradml.mit.edu" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 # remote_theme: "just-the-docs"
 theme: "just-the-docs"
+heading_anchors: true
+permalink: pretty
+aux_links:
+    Canvas:
+        - "https://canvas.mit.edu/"
+    Piazza:
+        - "https://piazza.com"
+aux_links_new_tab: true
+
 #remote_theme: just-the-docs/just-the-docs
 plugins:
     - jekyll-feed
     - jekyll-default-layout
     - jekyll-pandoc
     - jekyll-last-modified-at
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on Git"
+gh_edit_repository: "https://shenshen.mit.edu/git/shensquared/gradml"
+gh_edit_branch: "main" # the branch that your docs is served from
+# gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree"
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
@@ -49,14 +70,53 @@ markdown: Pandoc
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+    - .sass-cache/
+    - .jekyll-cache/
+    - gemfiles/
+    - Gemfile
+    - Gemfile.lock
+    - node_modules/
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
+# Collections for website data
+collections:
+    staffers:
+    modules:
+    schedules:
+    announcements:
+    # Define a collection named "resource", its documents reside in the "_resource" directory
+    resource:
+        #permalink: "/:collection/:path/"
+        permalink: "/:path/"
+        output: true
+# Default layouts for each collection type
+defaults:
+    - scope:
+          path: ""
+          type: staffers
+      values:
+          layout: staffer
+          subpath: "/assets/images/"
+    - scope:
+          path: ""
+          type: modules
+      values:
+          layout: module
+    - scope:
+          path: ""
+          type: schedules
+      values:
+          layout: schedule
+    - scope:
+          path: ""
+          type: announcements
+      values:
+          layout: announcement
+    - scope:
+          path: ""
+          type: resource
+      values:
+          layout: minimal

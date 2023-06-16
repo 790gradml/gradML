@@ -91,17 +91,17 @@
     .location {
       @extend .fs-2;
     }
-
+@import "./../color_schemes/eecs";
     &.lecture{
-      background-color: rgba(198, 22, 141, 1)
+      background-color: $eecs-red
     }
 
     &.recitation{
-      background-color: rgba(102, 45, 145, 1)
+      background-color: $eecs-purple
     }
 
     &.office-hours{
-      background-color: rgba(0, 161, 199, 1)
+      background-color: $eecs-blue
     }
   }
 }

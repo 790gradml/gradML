@@ -1,10 +1,8 @@
 ---
 layout: page
 title: Introduction
-# permalink: /intro/
 nav_order: 3
 ---
-
 
 # Background
 
@@ -85,7 +83,7 @@ to learn a boundary as shown in Figure
 [1](#fig:classify){reference-type="ref" reference="fig:classify"} which
 separate *no default* from *default*.
 
-![image](classification.pdf){#fig:classify width="40%"}
+![image](/intro/classification.pdf)
 
 Formally, the data are labeled observations of the following form:
 $(x_1,y_1),\ldots,(x_N,y_N)$. The goal is to learn a model that maps
@@ -107,9 +105,7 @@ Various approaches for learning $f$ can be categorized as
 How to find $f$? Among all possible choices of $f$, choose the one that
 *fits* the data the best. That is, solve optimization: *empirical risk
 minimization (ERM)*:
-
 $$\text{Minimize } \sum_{i=1}^N \mathrm{loss}\left(y_i,f(x_i)\right) \text{ over all possible } f.$$
-
 Stochastic Gradient Descent (SGD) is a method to solve this optimization
 problem. This is where Optimization meets Machine Learning.
 
@@ -183,7 +179,7 @@ rule: As sketched in the figure below, $y_i=0$ when the corresponding
 $\mathbf{x}_i$ lies in the shaded square and $y_i=1$ otherwise. The area
 of the shaded square is $1/2$.
 
-![image](square.pdf){width="22%"}
+![image](/intro/square.pdf){width="22%"}
 
 Pretend we do not know the true label rule and would like to to find a
 model to approximate it based on the observations. The function fit,
@@ -277,7 +273,7 @@ learn the model of uncertainty, given observations. The goal is to make
 vs information *timescale* are critically important. The following
 diagram summarizes the framework of decision making,
 
-![image](dm.pdf){width="50%"}
+![](/intro/dm.pdf)
 
 The two key *timescales* are state or environment dynamics, and
 information dynamics. Depending on the two timescales, there are methods
@@ -328,23 +324,23 @@ refined goal is to learn the mean and variance. How to learn
 A common method is maximum likelihood (ML), that is, choose the
 parameters that maximize $\mathbb{P}(\text{data}|\text{parameters})$. In
 this problem, to choose mean, variance from samples, the likelihood is
-
 $$\begin{aligned}
     \mathbb{P}\left(x_1,\ldots,x_N|\mu,\sigma^2\right)=&\prod_{i=1}^N\mathbb{P}\left(x_i|\mu,\sigma^2\right) \\
     =&\prod_{i=1}^N \frac{1}{(2\pi\sigma^2)^{1/2}}\exp\left(-\frac{(x_i-\mu)^2}{2\sigma^2}\right).
-\end{aligned}$$
-
-Maximizing likelihood is same as maximizing logarithm of
+\end{aligned}$$ Maximizing likelihood is same as maximizing logarithm of
 likelihood. This leads to $$\max_{\mu,\sigma^2} g(\mu,\sigma^2),$$ where
 $$g(\mu,\sigma^2)=-\frac{1}{2\sigma^2}\sum_{i=1}^N(x_i-\mu)^2-N\ln\sigma -N\ln\sqrt{2\pi}.$$
 This is an optimization problem and its solution is what we desire. For
 such reasons, optimization is an integral part of Machine Learning.
 
+::: center
+:::
+
 The ML estimation for variance (and standard deviation) is biased. This
 leads to the Bessel correction for variance:
 $$\tilde{\sigma}^2_{\rm ML}=\frac{1}{N-1}\sum_{i=1}^N (x_i-\mu_{\rm ML})^2.$$
 
-[^1]: See https://g.co/kgs/Lj3v3k to read more about Arthur Samuel.
+[^1]: See <https://g.co/kgs/Lj3v3k> to read more about Arthur Samuel.
 
 [^2]: What is learning? Some food for thought: <https://goo.gl/5R1m4S>.
 

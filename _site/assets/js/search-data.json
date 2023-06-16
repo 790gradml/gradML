@@ -1,382 +1,557 @@
 {"0": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Overview",
+    "content": "In this lecture, we will mainly discuss two different approaches to build classifiers, the generative approach and the discriminative approach. As concrete examples, we will look at the Naive Bayes classifier for the generative approach and compare it the logistic regression, as an example of discriminative approach. We will show under center conditions, the Naive Bayes is a linear classifier, just as Logistic Regression, but it assumes stronger assumptions and therefore is a more biased classifier. ",
+    "url": "/supervised/DiscriminativeGenerative/#overview",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#overview"
+  },"1": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Four Approaches to Build\nClassifiers",
+    "content": " ",
+    "url": "/supervised/DiscriminativeGenerative/#four-approaches-to-build-classifiers",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#four-approaches-to-build-classifiers"
+  },"2": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Review: Bayes Classifier",
+    "content": "We started our discussion of classification from the Bayes Classifier in Lecture 2. Recall the Bayes classifier h*(x) is defined by the rule: $$h^{*}(x) := \\begin{cases} 1, &amp;\\text{if}\\ \\eta(x)=\\mathbb{P}(Y=1 | X=x)&gt;\\frac{1}{2}\\\\ 0, &amp;\\text{otherwise}. \\end{cases}$$ The classifier predicts label 1 if the conditional probability of being in class 1 is bigger than half. We also showed this classifier is actually the optimal possible classifier, as the underlying distribution ℙ is assumed known. ",
+    "url": "/supervised/DiscriminativeGenerative/#review-bayes-classifier",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#review-bayes-classifier"
+  },"3": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "When Bayes Classifier is\nnot feasible",
+    "content": "However, we know this idealized situation is seldom the case in reality, as we usually do not have access to ℙ. Therefore, we introduced two different approaches, distance based classification (e.g. Nearest Neighbors) and Empirical Risk Minimization (e.g. SVM). Here, we give a formal summary of four possible methods to learn a classifier. | Distance based method . | Empirical Risk Minimization . | Discriminative Approach: Fit a model ℙ̂(Y|X) to approximate the conditional distribution ℙ(Y|X), add classify using: h(x) = argmaxyℙ̂(Y=y|X=x) . | Generative Approach: Fit a model ℙ̂(X,Y) to approximate the joint distribution ℙ(X,Y), add classify using: h(x) = argmaxyP(X=x,Y=y) = P(X=x|Y=y)P(Y=y) . | . ",
+    "url": "/supervised/DiscriminativeGenerative/#when-bayes-classifier-is-not-feasible",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#when-bayes-classifier-is-not-feasible"
+  },"4": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Discriminative\nvs. Generative",
+    "content": "The discriminative and the generative methods are two approaches to approximate the unknown underlying true distribution, and they are related by the Bayes rule P(X,Y) = P(X|Y)P(Y) = P(Y|X)P(X). Concretely, the generative approach learn what the individual classes looks like and models the data distribution P(X). It is a potentially harder problem and computationally more challenging. But the advantage of this approach is that it can be used to sample new data. On the other hand, the discriminative approach learn the boundary between classes and models P(Y|X), the conditional distribution and ignores P(X). It solves a potentially easier problem and computationally simpler. However, it cannot be used to sample new data. ",
+    "url": "/supervised/DiscriminativeGenerative/#discriminative-vs.-generative",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#discriminative-vs.-generative"
+  },"5": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Discrimitive\nClassifiers: Logistic Regression",
+    "content": "Logistic Regression can be viewed as an approach of fitting a discriminative model. It assumes a parametric form of the conditional distribution P(Y|X) as $$P(Y=1|X=x;w) = \\frac{e^{w^Tx}}{1+e^{w^Tx}} = \\sigma (w^Tx)$$ where $\\sigma(z) = \\frac{1}{1+e^{-z}}$ and is often called the Sigmoid function. Therefore, $$P(Y=0|X=x;w) = 1- \\frac{e^{w^Tx}}{1+e^{w^Tx}} = 1- \\sigma (w^Tx)$$ In the training process, we are given a training data set S = {(x1,y1), ..., (xN,yN)} to estimate the weights w. Naturally, we will apply the maximum likelihood method where we can write the likelihood of the training data, assuming i.i.d., as $$\\begin{aligned} P(S|w) &amp; = \\prod_{i=1}^N P(y_i|x_i;w) \\\\ &amp; = \\prod_{i=1}^N ( \\sigma (w^Tx_i))^{y_i} (1-\\sigma (w^Tx_i) ) ^{1-y_i} \\end{aligned}$$ Equivalent to maximize P(S|w), we can minimize the negative log-likelihood of S, which is $$\\begin{aligned} L(w) &amp;= - \\sum_{i=1}^N \\log [(\\sigma(w^Tx_i))^{y_i}(1-\\sigma(w^Tx_i))^{1-y_i}] \\\\ &amp; = - \\sum_{i=1}^N [y_i \\log \\sigma(w^Tx_i) + (1-y_i) \\log (1-\\sigma (w^Tx_i))] \\end{aligned}$$ This is often called the cross-entropy error. ",
+    "url": "/supervised/DiscriminativeGenerative/#discrimitive-classifiers-logistic-regression",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#discrimitive-classifiers-logistic-regression"
+  },"6": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Generative Classifiers:\nNaive Bayes",
+    "content": "Now we take a closer look at the generative approach. As said before, in the generative approach, we fit a model of the joint distribution P(X,Y) and derived our classifier using the Bayes rule: $$P(Y|X) = \\frac{P(X|Y)P(Y)}{P(X)}$$ where P(X) = ∑YP(X|Y)P(Y). For classification, we have $$\\begin{aligned} h(x) &amp; = argmax_y P(Y=y|X=x)\\\\ &amp; = argmax_y \\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)} \\\\ &amp; = argmax_y P(X=x|Y=y)P(Y=y) \\end{aligned}$$ The denominator P(X=x) is only a normalization constant and thus can be ignored for deriving argmaxyP(Y=y|X=x). Now let’s suppose both X and Y are discrete random variables, where X ∈ 𝒳d and Y ∈ 𝒴. Then we have P(Y=yi|X=xi) ∝ P(X=xk|Y=yi)P(Y=yi) Remember X is a d dimensional random variable, so to fully express this conditional distribution, we will approximately need |𝒳|d|𝒴| + |𝒴| parameters. As a simple example, suppose 𝒳 = 𝒴 = {0, 1}, then X ∈ {0, 1}d. To specify P(X=xk|Y=0), we need 2d parameters. Unless d is sufficiently small, this full distribution is usually not computational tractable. ",
+    "url": "/supervised/DiscriminativeGenerative/#generative-classifiers-naive-bayes",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#generative-classifiers-naive-bayes"
+  },"7": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "The Naive Bayes Assumption",
+    "content": "To make the computation tractable and make the problem simpler, the Naive Bayes model make a strong assumption that the d features are conditional independent of each other given the class label Y. Therefore, $$\\begin{aligned} P(X|Y) &amp;= P(X_1,X_2,...,X_d|Y) \\\\ &amp;=P(X_1|X_2,...X_d|Y)P(X_2|X_3,...,X_d|Y)...P(X_d|Y) \\\\ &amp;=P(X_1|Y)P(X_2|Y)...P(X_d|Y) \\end{aligned}$$ where the second ‘=’ used the conditional independence. Therefore, our classifier becomes $$argmax_y P(Y=y|X_1,...,X_d) \\propto P(Y=y)\\prod_{j=1}^d P(X_j|Y=y)$$ . Now, using maximum likelihood on training data S, we can estimate the parameters for the Naive Bayes classifier, assuming a specific distribution for P(Xj|Y), 1 ≤ j ≤ d. We can show for a multinomial distribution of P(Xj|Y), the parameters of Naive Bayes are $$\\begin{aligned} P(Y=y) &amp;= \\frac{\\# \\text{Example with }Y = y}{N} \\\\ P(X_i=x|Y=y) &amp;= \\frac{\\# \\text{Example with} X_i = x \\text{ and } Y=y}{\\# \\text{Example with }Y = y} \\end{aligned}$$ . ",
+    "url": "/supervised/DiscriminativeGenerative/#the-naive-bayes-assumption",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#the-naive-bayes-assumption"
+  },"8": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Naive Bayes can be a\nlinear classifier",
+    "content": "We can show that under some common assumptions of P(Xj|Y), the Naive Bayes classifier is actually a linear classifier. Here we provide a proof for Xj ∈ 0, 1 and P(Xj|Y) is a Bernoulli distribution. (See Exercise 2 Problem 2 for other more general situations.) . Theorem 1 (). Let X ∈ {0, 1}d, and P(Xj|Y),1 ≤ j ≤ d is a Bernoulli distribution. The Naive Bayes classifier is defined by h(x) = sgn(wTx+w0) for a suitable choice of w,w0. Proof. As Xj ∈ {0, 1}, the Bernoulli distribution is therefore $$\\begin{aligned} P(X_j|Y=1) &amp; = a_j^{X_j} (1-a_j)^{(1-X_j)} \\\\ P(X_j|Y=0) &amp; = b_j^{X_j} (1-b_j)^{(1-X_j)} \\end{aligned}$$ where aj and bj are parameters for the jth dimension of X. With the conditional independence, we have $$\\begin{aligned} P(Y=1|X) &amp; =\\frac{P(X|Y=1)P(Y=1)}{P(X|Y=1)P(Y=1)+P(X|Y=0)P(Y=0)} \\\\ &amp; =\\frac{1}{1+\\frac{P(X|Y=0)P(Y=0)}{P(X|Y=1)P(Y=1)}} \\\\ &amp; = \\frac{1}{1+\\exp (- \\log \\frac{P(X|Y=1)P(Y=1)}{P(X|Y=0)P(Y=0)})} \\\\ &amp; =\\sigma \\left( \\sum_j^d \\log \\frac{P(X_j|Y=1)}{P(X_j|Y=0)} + \\log \\frac{P(Y=1)}{P(Y=0)} \\right) \\end{aligned}$$ and therefore, $$\\begin{aligned} P(Y=1|X) &amp; = \\sigma \\left( \\sum_j^d \\log \\frac{a_j^{X_j}(1-a_j)^{(1-X_j)}}{b_j^{X_j}(1-b_j)^{(1-X_j)}} + \\log \\frac{p}{1-p} \\right) \\\\ &amp; = \\sigma \\left( \\sum_j^d \\left(X_j \\log \\frac{a_j(1-b_j)}{b_j(1-a_j)}\\right) + \\log \\left(\\frac{p}{1-p} \\prod_j^d \\frac{1-a_j}{1-b_j} \\right) \\right) \\\\ &amp; = \\sigma \\left( \\sum_j^d w_j X_j + w_0\\right) \\end{aligned}$$ where $w_j = \\log \\frac{a_j(1-b_j)}{b_j(1-a_j)}$ and $w_0=\\log \\left(\\frac{p}{1-p} \\prod_j^d \\frac{1-a_j}{1-b_j} \\right)$. Therefore, h(x) = sgn(wTx+w0) . and this shows the Naive Bayes is a linear classifier. ◻ . ",
+    "url": "/supervised/DiscriminativeGenerative/#naive-bayes-can-be-a-linear-classifier",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#naive-bayes-can-be-a-linear-classifier"
+  },"9": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Naive Bayes vs. Logistic\nRegression",
+    "content": "We saw in the last section that Naive Bayes can be a linear classifier under some assumptions, but some of the assumptions are quite strong, such as the conditional independence. Thus, the hypothesis class of Naive Bayes is not all the possible linear classifiers, but only a subset of them. We know the Logistic Regression is another common linear classifier, how does Naive Bayes compare to Logistic Regression? In this section, we will look at them more closely through a theoretic view. ",
+    "url": "/supervised/DiscriminativeGenerative/#naive-bayes-vs.-logistic-regression",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#naive-bayes-vs.-logistic-regression"
+  },"10": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Asymptotic Regime",
+    "content": "We first define certain notations for our discussion, let ϵ(hA,N) ≡ L(hA,S), where |S| = N. Here, ϵ(hA,N) stands for the error of hypothesis h trained using algorithm A from N observations. We will first discuss in the asymptotic setting, which means the number of training data points is infinity. If the two classes is linear separable, which means both models are correct, then we have ϵ(hNB,∞) = ϵ(hLR,∞) which means, asymptotically, NB and LR produce the identical classifier. If the linear assumption does not hold, which is usually the case, we claim LR is expected to outperform NB, i.e. ϵ(hLR,∞) ≤ ϵ(hNB,∞) Intuitively, this can be shown by observing that, since Logistic Regression assumes no other assumption other than linear classification, ϵ(hLR,∞) converges to infh ∈ ℋL(h), where ℋ is the class of all linear classifiers, it must therefore be asymptotically no worse than the linear classifier picked by Naive Bayes, which assumes conditional independence between features. ",
+    "url": "/supervised/DiscriminativeGenerative/#asymptotic-regime",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#asymptotic-regime"
+  },"11": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Non-asymptotic Regime",
+    "content": "In a more real setting, where we do not have infinite number of training data, we must talk about how fast (how many training sample needed) an estimator converges to its asymptotic limit. This ‘rate of convergence’ for Logistic Regression is as below . Theorem 2 (). Let hLR, N be a Logistic Regression model in d dimensions. Then, with high probability, $$\\epsilon(h_{LR,N} \\leq \\epsilon(h_{LR},\\infty)) + O \\left( \\sqrt{\\frac{d}{N} \\log \\frac{N}{d}} \\right)$$ Thus, for ϵ(hLR,N) ≤ ϵ(hLR,∞) + ϵ0 to hold up for a fixed constant ϵ0, it suffices to pick N = Ω(d) . The proof of theorem 2 follows the application of the uniform convergence bounds to logistic regression, and using the fact that the d dimensional linear classifier ℋ has a VC dimension of d + 1. These concepts will be covered in Lecture 5. Now, we want to draw a similar picture for the Naive Bayes classifier and compare it the Logistic Regression. It turns out this is a more challenging task and we will break our analysis into two parts . | How fast do parameters of NB converge to their optimal values . | How fast do the risk if NB converge to the asymptotic risk . | . For the first part, formally, we have the following theroem . Theorem 3 (). *Let any ϵ1, delta &gt; 0 and any l ≤ 0 be fixed. Assume that for some fixed ρ0 &gt; 0, we hvae ρ0 ≤ P(y=1) ≤ 1 − ρ0. Let d = O((1/ϵ12)log(d/δ)), then with probability at least 1 − δ: $$ and $$ for all j = 1, ..., d and b ∈ 𝒴* . This theorem states that with a number of samples that is only logarithmic, rather than linear, in d, the parameters of Naive Bayes are uniformly close to their asymptotic values in hNB, ∞. Proof of this theorem is a straightforward application of the Hoeffding bound, here we provide a simple setting where X ∈ {0, 1} and P(X=1) = p. Suppose we have N i.i.d. samples (x1,...,xN), then the maximum likelihood estimation for p is simply $$\\hat{p} = \\frac{1}{N}\\sum_i x_i$$ The Hoeffding bound for this case states, for all p ∈ [0,1], ϵ &gt; 0 P(|p−p̂|&gt;ϵ) ≤ 2e−2Nϵ2 Intuitively, this means that the probability of the empirical estimation being epsilon-far from the ground truth decays exponentially fast with the number of samples N. For a detailed proof of theorem 3, please look at paper [Ng]. Now we know the parameters of Naive Bayes converge logarithmically to its optimal values, but this doesn’t directly imply the error of Naive Bayes also converges with this rate. To intuitively show why the error also converges, we can first show that the convergence of the parameters implies that hNB, N is very likely to make the same predictions as hNB, ∞. Recall that hNB(x) makes its predictions according to $$\\ell_{NB}(x)=\\log \\frac{\\hat{P}(Y=1)\\prod_j \\hat{P}(x_j|Y=1)}{\\hat{P}(Y=0)\\prod_j \\hat{P}(x_j|Y=0)} &gt; 0$$ For every example for which both ℓNB(x) and ℓNB, ∞(x) have the same sign, hNB, N and hNB, ∞ will make the same prediction. If hNB, ∞ ≫ 0 or hNB, ∞ ≪ 0, as ℓNB(x) is only a small perturbation of ℓNB, ∞(x), they will be on the same side of 0 with high probability. With some steps of derivation, we will eventually reach the formal risk convergence of Naive Bayes . Theorem 4 (). Define G(τ) = P(x,y) ∼ ℙ[(ℓNB, ∞(x)∈[0,τd]∧y=1)∨(ℓNB, ∞(x)∈[−τd,0]∧y=0)]. Assume that for some fixed ρ0 &gt; 0, we have ρ0 ≤ P(y=1) ≤ 1 − ρ0), and that ρ0 ≤ P(xj=1|y=b) ≤ 1 − ρ0) for all j,b, then with high probability, $$\\epsilon(h_{NB,N}) \\leq \\epsilon(h_{NB, \\infty}) + G\\left(O\\left(\\sqrt{\\frac{1}{N}\\log d}\\right)\\right)$$ . Here, G defines the fraction of points that are very close to the decision boundary. Intuitively, if we can understand and control the event G(τ), then we can obtain a more precise control on the bound of the error. Theorem 5 (). Let the conditions of Theorem 4 hold, and suppose G(τ) ≤ ϵ/2 + F(τ), for some function F(τ) that statisfies F(τ) → 0 as τ → 0, and some fixed ϵ0 &gt; 0. Then for ϵ(hNB, N) ≤ ϵ(hNB, ∞) + ϵ0 to hold with high probability, it suffices to pick N = Ω(logd) . Thus, we can conclude that though the asymptotic error of Naive Bayes is greater than Logistic Regression, the convergence rate of NB is only Ω(logd), which is faster than Ω(d) of Logistic Regression. ",
+    "url": "/supervised/DiscriminativeGenerative/#non-asymptotic-regime",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/#non-asymptotic-regime"
+  },"12": {
+    "doc": "Discriminative vs Generative Classification",
+    "title": "Discriminative vs Generative Classification",
+    "content": " ",
+    "url": "/supervised/DiscriminativeGenerative/",
+    
+    "relUrl": "/supervised/DiscriminativeGenerative/"
+  },"13": {
     "doc": "Bandits",
     "title": "Bandits",
     "content": " ",
     "url": "/reinforcement/bandit/",
     
     "relUrl": "/reinforcement/bandit/"
-  },"1": {
+  },"14": {
     "doc": "Syllabus / Calendar",
     "title": "Calendar",
     "content": " ",
     "url": "/calendar/#calendar",
     
     "relUrl": "/calendar/#calendar"
-  },"2": {
+  },"15": {
     "doc": "Syllabus / Calendar",
     "title": "\nWeek 1 - Introduction\n",
     "content": "Sep 1 Intro Sep 2 Recitation ",
     "url": "/calendar/#week-1-introduction",
     
     "relUrl": "/calendar/#week-1-introduction"
-  },"3": {
+  },"16": {
     "doc": "Syllabus / Calendar",
     "title": "\nWeek 2 - Review and Foundations\n",
     "content": "Sep 1 Background and Review Sep 2 Recitation ",
     "url": "/calendar/#week-2-review-and-foundations",
     
     "relUrl": "/calendar/#week-2-review-and-foundations"
-  },"4": {
+  },"17": {
     "doc": "Syllabus / Calendar",
     "title": "Syllabus / Calendar",
     "content": " ",
     "url": "/calendar/",
     
     "relUrl": "/calendar/"
-  },"5": {
+  },"18": {
+    "doc": "Classification Foundation",
+    "title": "Overview",
+    "content": "The aim of this lecture is to establish basic terminology and definitions useful for studying classification. We will discuss two basic classifiers: (i) Bayes; and (ii) Nearest Neighbors. The former is an abstract classifier used to understands the theoretical limits of classification, while the latter is a basic technique that one can use without having to use any specific “training algorithm”. We will see performance measures as well as some theoretical results regarding the classifiers introduced, along with some of the intuition behind when and why they work. Thereafter, we will motivate the idea of Empirical Risk Minimization (ERM), which is a leading paradigm for training classifiers in machine learning. We will discuss strengths and weaknesses of this framework, including the key ideas of “over-fitting” and “inductive bias”, as well as some standard trade-offs that one should be aware of when performing classification. ",
+    "url": "/supervised/classification_foundation/#overview",
+    
+    "relUrl": "/supervised/classification_foundation/#overview"
+  },"19": {
+    "doc": "Classification Foundation",
+    "title": "Notations, Setup",
+    "content": "We start with notations, setup that are we assume throughout the course for classification or more generally for supervised learning. | Data domain: An arbitrary set 𝒳 from which our training and test data are drawn. As often is the case, 𝒳 = ℝd. For instance, if we assume that the members of 𝒳 are represented via feature vectors; we may write Φ(x) to emphasize the encoding of a data point $x \\in \\cal X$ as a feature vector in ℝd. | Label domain: A discrete set 𝒴; e.g., {0, 1} or { − 1, 1}. It is important to not interpret these 0 and 1 as “numbers,” but rather as “classes” or categorical variables. For the setting of regression, as we shall see, the label domain 𝒴 could be continuous, e.g. 𝒴 = [0,1] or ℝ. | Training data: A finite collection S = {(x1,y1),…,(xN,yN)} of (data, label) pairs drawn from 𝒳 × 𝒴. | Data distribution: A joint distribution ℙ on 𝒳 × 𝒴. An important assumption made throughout standard supervised machine learning is that while ℙ is unknown, it is fixed.   We write (X,Y) to denote a random variable with X taking values in 𝒳 and Y taking values in 𝒴. | . Classifier. With these definitions, we are now ready to define a classifier; formally, it is simply a prediction rule h : 𝒳 → 𝒴, that is, a map from the data domain to the label domain. We will write hS to emphasize dependence of the classifier h on training data. We will abuse the notation by denoting h as a hypothesis, prediction rule, or classifier, but we do hope that the precise meaning will be clear from the context. Suppose we have a candidate classifier h. We need some way to measure its performance or simply to provide us with a mathematical guideline on “what does it mean to train?” Indeed, the goal of supervised learning is to use training data to help train a classifier that works well on unseen test data. To quantify what “works well”, we describe a key idea below. Measuring success. We consider a quantity that measures the error of classifier. This quantity is called risk, which is also known as the generalization error: L(h) ≡ Lℙ(h) := ℙ(h(X)≠Y). In words, the risk [eq:1] of a classifier h is the probability of randomly choosing a pair (X,Y) ∼ ℙ for which h(X) ≠ Y. The central goal of supervised learning is to learn a classifier h using training data so that it has low risk—ideally, a classifier that is guaranteed to minimize [eq:1]. ",
+    "url": "/supervised/classification_foundation/#notations-setup",
+    
+    "relUrl": "/supervised/classification_foundation/#notations-setup"
+  },"20": {
+    "doc": "Classification Foundation",
+    "title": "Bayes Classifier",
+    "content": "Given the goal of task is to minimize the risk [eq:1] (i.e., the chance of being wrong on unseen data), at least in principle there is a simple strategy that can help attain this risk. Indeed, suppose we know the distribution ℙ as per which data is generated, then intuitively it makes sense to pick the most likely class given the observation (notice, this intuition not limited to binary classification). This intuitive idea is exactly the idea behind the so-called Bayes classifier. Before describing the Bayes classifier formally, let us introduce some additional notation; we limit our description to binary classification for ease of exposition. Class conditional distribution: Let 𝒴 = {0, 1}. We define η(x) := ℙ(Y=1|X=x) = 𝔼[Y|X=x], which describes the posterior probability of the data being in class 1 given that you have observed x. The Bayes classifier h*(x) is defined by the rule: $$\\label{eq:3} h^{*}(x) := \\begin{cases} 1, &amp;\\text{if}\\ \\eta(x)=\\mathbb{P}(Y=1 | X=x)&gt;\\frac{1}{2}\\\\ 0, &amp;\\text{otherwise}. \\end{cases}$$ The classifier [eq:3] predicts label 1 if the conditional probability of being in class 1 is bigger than half. Remarkably, it can be shown that this simple classifier actually performs as good as any other classifier in terms of minimizing the risk, as established formally via the following theorem (stated formally for 𝒳 = ℝd for simplicity). Theorem 1 (BC optimality). For any classifier h : ℝd → {0, 1}, L(h*) ≤ L(h). Proof. Given X = x, the conditional error probability of any classifier h may be written as: $$\\begin{aligned} {\\quad \\mathbb{P}\\left(h(X) \\neq Y | X=x\\right)} &amp;{=1-\\mathbb{P}\\left(Y=h(X) | X=x\\right)} \\\\ &amp; {=1-\\left(\\mathbb{P}\\left(Y=1, h(X)=1 | X=x\\right)+\\mathbb{P}\\left(Y=0, h(X)=0 | X=x\\right)\\right)} \\\\ &amp; =1-\\left( [\\![h(x)=1]\\!] \\mathbb{P}\\left(Y=1 | X=x\\right)+[\\![h(x)=0]\\!] \\mathbb{P}\\left(Y=0 | X=x\\right)\\right)\\\\ &amp; =1- \\left([\\![h(x)=1]\\!] \\eta(x)+ [\\![h(x)=0]\\!] (1-\\eta(x))\\right) \\end{aligned}$$ where [ [⋅] ] is the Iverson bracket, i.e. [ [z] ] = 1 if z= ‘true’ and 0 if z= ‘false’. Thus, for every x ∈ ℝd, we have: $$\\begin{aligned} &amp; \\mathbb{P}\\left(h(X) \\neq Y | X=x\\right) - \\mathbb{P}\\left(h^{*}(X) \\neq Y | X=x\\right) \\\\ &amp; \\qquad = \\eta(x)\\left([\\![h^{*}(x)=1]\\!]-[\\![h(x)=1]\\!]\\right) + \\left(1-\\eta(x)\\right) \\left([\\![h^{*}(x)=0]\\!]-[\\![h(x)=0]\\!]\\right). \\end{aligned}$$ Since [ [h*(x)=0] ] = 1 − [ [h*(x)=1] ], the above equals to (2η(x)−1)([ [h*(x)=1] ]−[ [h(x)=1] ]) which is non-negative based on the definition of h* (η(x) &gt; 1/2 ⇔ [ [h*(x)=1] ] = 1). Thus we have ∫ ℙ(h(X)≠Y|X=x)dℙ(x) ≥ ∫ ℙ(h*(X)≠Y|X=x)dℙ(x). or equivalently, ℙ(h(X)≠Y) ≥ ℙ(h*(X)≠Y). ◻ . Related to the manipulations of Theorem 1 is a helpful exercise below: . 1 . Per Theorem 1, we have found the best possible classifier. But it is idealized. Question: What makes the Bayes classifier idealized? Answer: The Bayes classifier assumes that we have access to ℙ(X,Y), but we almost never have access to this joint distribution. So the importance of Bayes classifier is more conceptual: if we had complete power and knew the distribution of the data we would know how to construct the best possible classifier. Because we almost never have access to the true underlying joint distribution, let us now take a look at a fundamental approach to classification that seems distribution-free, namely, the method of nearest neighbors (NN). ",
+    "url": "/supervised/classification_foundation/#sub:bayes_classifier",
+    
+    "relUrl": "/supervised/classification_foundation/#sub:bayes_classifier"
+  },"21": {
+    "doc": "Classification Foundation",
+    "title": "Nearest Neighbors",
+    "content": "This approach is akin to taking a view opposite to the Bayes classifier: whereas Bayes assumes full knowledge and takes advantage of the data distribution, Nearest neighbors (NN) ignores the underlying probability distribution. At a high level, the NN method is based on the belief that features that are used to describe the data are relevant to the labelings in a way that makes “close by” points likely to have the same label. NN is one of the simplest possible classifiers, where the training process is essentially to memorize the training data. Then during testing, for a given point x, it finds the k points in training data nearest to x and predicts a label by taking (weighted) majority label over these k points. Precisely, given training data S = {(xi,yi)|1≤i≤N}, define NNk(x) := {j|1≤j≤k,xj is within k closest to x}. Notice that NN1(x) = argmin1 ≤ i ≤ Ndist (x,xi). Then, the k-NN classifier $$\\begin{aligned} h_{k\\text{-NN}}(x) &amp; = \\frac{1}{k} \\sum_{\\ell \\in \\mathrm{NN}_{k}(x)} y_\\ell. \\end{aligned}$$ . ",
+    "url": "/supervised/classification_foundation/#nearest-neighbors",
+    
+    "relUrl": "/supervised/classification_foundation/#nearest-neighbors"
+  },"22": {
+    "doc": "Classification Foundation",
+    "title": "NN and Bayes",
+    "content": "k-NN can learn complex nonlinear classifiers (Image Credit: Elements of Statistical Learning Theory) Despite its simplicity, NN is capable of learning complex nonlinear classifiers. Precisely, the risk of NN $$\\begin{aligned} L_{k\\text{-NN}} &amp; = \\mathbb{P}(h_{k\\text{-NN}}(X) \\neq Y). \\end{aligned}$$ NN classifier has excellent asymptotic performance even for k = 1 as stated below (see [@cover1967nearest] for more details). Theorem 2. Let 𝒳 ⊂ ℝd, d ≥ 1. Let η be continuous. Then, $$\\begin{aligned} \\lim_{n\\to\\infty} L_{1\\text{-NN}} &amp; = 2 \\mathbb{E}\\big[\\eta(X) (1-\\eta(X))\\big] ~\\leq~2 \\mathbb{E}\\big[\\min\\{\\eta(X), 1-\\eta(X)\\}] ~=~ 2 L^*. \\end{aligned}$$ . That is, with large number of data points, even 1-NN algorithm has risk that is within factor 2 of the optimal risk. Proof. Given X = x, let X′(n) the closest data point to x amongst given n observations. Then due to 𝒳 ⊂ ℝd (i.e. complete, separable metric space), it can be argued that X′(n) → x as n → ∞ with probability 1. Further, η is continuous. Therefore, η(X′(n)) → η(x) as n → ∞ with probability 1. Let Y′(n) be the label observed associated X′(n). Then, $$\\begin{aligned} \\mathbb{P}(h_{1\\text{-NN}}(x) \\neq Y | X = x) &amp; = \\mathbb{P}(Y'(n) \\neq Y | X = x) \\\\ &amp; = \\mathbb{P}(Y'(n) = 1, Y = 0| X = x) + \\mathbb{P}(Y'(n) = 0, Y = 1| X = x) \\\\ &amp; \\stackrel{(a)}{=} \\mathbb{P}(Y'(n) = 1 | X = x) \\mathbb{P}( Y = 0 | X = x) + \\mathbb{P}(Y'(n) = 0 | X = x) \\mathbb{P}( Y = 1| X = x) \\\\ &amp; = \\eta(X'(n)) (1-\\eta(x)) + (1-\\eta(X'(n)) \\eta(x) \\\\ &amp; \\to 2 \\eta(x) (1-\\eta(x)) \\\\ &amp; \\stackrel{(b)}{=} 2 \\min\\{\\eta(x), 1-\\eta(x)\\} \\max\\{\\eta(x), 1-\\eta(x)\\} \\\\ &amp; \\stackrel{(c)}{\\leq} 2 \\min\\{\\eta(x), 1-\\eta(x)\\}. \\end{aligned}$$ In above, (a) follows from the fact that Y′(n) and Y are generated independently per our generative model; (b) from that the fact for α, β ∈ ℝ we have αβ = min {α, β}max {α, β}; and (c) from the fact that η(x) ∈ [0,1] as it is probability. Then, the claim of theorem follows by recalling that the Bayes risk L* = 𝔼[min{η(X),1−η(X)}]. ◻ . Theorem 2 provides asymptotic guarantee for 1-NN algorithm. But in practice, we have only finite amount of data. A refined analysis (cf. see [@chen-shah Chapter 3]) suggests that if 𝒳 ⊂ ℝd, η is α ≥ 1-Holder continuous (see [@chen-shah] for precise definition, for example), then for any ε ∈ (0,1), for k-NN with k = Θ(ε−2) and $n = \\Theta(\\varepsilon^{-\\frac{d}{\\alpha} + 3} \\log \\varepsilon^{-1})$, the algorithm find approximation of η that is within ε error on average. This leads to good approximation of Bayes risk. The nearest neighbor approach is powerful in that it works for any (reasonable) setting. For that reason, it is called non-parametric method. However, it comes at the cost of not utilizing the potentially simpler, a priori known structure in the data. For that reason, it suffers from requiring large amount of data (there is no ‘free lunch’). However, if we have prior knowledge about the model class, it may make sense to incorporate it. And this is where the framework of Empirical Risk Minimization through incorporating “inductive bias” comes handy and we describe that next. ",
+    "url": "/supervised/classification_foundation/#nn-and-bayes",
+    
+    "relUrl": "/supervised/classification_foundation/#nn-and-bayes"
+  },"23": {
+    "doc": "Classification Foundation",
+    "title": "Empirical Risk Minimization",
+    "content": "ERM makes the following trade-off: we accept that we do not know the full distribution (unlike the Bayes Classifier), but we do get to see the training data and we are not ignoring the training distribution (unlike NN classifiers). By not throwing away the training distribution, we can at least measure the error incurred by a classifier on the training data, aka the training error or empirical risk: $$L_{S}(h) :=\\frac{1}{N} \\big|\\left\\{i \\in[N] | h\\left(x_{i}\\right) \\neq y_{i}\\right\\} \\big|.$$ As the name suggests, the paradigm of Empirical Risk Minimization (ERM) seeks a predictor that minimizes LS(h). In other words, it uses LS(h) as a proxy for the true risk. Notice how this implies that while we do not throw away any “knowledge” gained from the training data, we are implicitly assuming the distribution of the training data is “representative” of the true underlying distribution. ",
+    "url": "/supervised/classification_foundation/#empirical-risk-minimization",
+    
+    "relUrl": "/supervised/classification_foundation/#empirical-risk-minimization"
+  },"24": {
+    "doc": "Classification Foundation",
+    "title": "Over-fitting",
+    "content": "Of course, greedily minimizing the empirical loss can lead to overfitting. If we get “unlucky” where the training data is not true example of the actual distribution, then over-fitting would lead to high error on unseen data, which is obviously problematic. Food for thought: What is over-fitting? Essentially memorizing the training data. But is it necessarily bad? In itself not necessarily a bad idea; some argue that deep neural nets are essentially memorizing, yet they generalize well. More on this later today and also in Lecture 7. ",
+    "url": "/supervised/classification_foundation/#sub:over_fitting",
+    
+    "relUrl": "/supervised/classification_foundation/#sub:over_fitting"
+  },"25": {
+    "doc": "Classification Foundation",
+    "title": "Inductive bias",
+    "content": "Since it is so easy to overfit when minimizing empirical risk, we search for settings where overfitting can be alleviated. One idea is to introduce the so-called “inductive bias,” which restricts the family of classifiers that we search over; this choice is made in advance before having seen any training data. Common examples of inductive-bias include linear models, neural networks, random forests, etc. The reason this is called a bias is because we are limiting ourselves to a “pre-determined” hypothesis class that we chose (i.e. our “bias” is present). And by doing so, it may not have any classifier that perfectly fits the data – that is, overfitting is avoided. Formally, let ERMℋ uses ERM to learn h : 𝒳 → 𝒴 over $h \\in {\\cal H}$ by using the training data S: $$\\operatorname{ERM}_{\\mathcal{H}}(S) \\in \\underset{h \\in \\mathcal{H}}{\\operatorname{argmin}} L_{S}(h).$$ In other words, we are now minimizing a constrained empirical risk. Ideally, the choice of ℋ should be governed by knowledge of data. But even “simple” choices of ℋ can overfit if we are not careful. Of course, overly strong inductive bias can lead to underfitting. How to balance between the overfit and underfit is precisely the job of learning designers. ",
+    "url": "/supervised/classification_foundation/#sub:inductive_bias",
+    
+    "relUrl": "/supervised/classification_foundation/#sub:inductive_bias"
+  },"26": {
+    "doc": "Classification Foundation",
+    "title": "Loss function, ERM setup",
+    "content": "Now let us write the ERM as a mathematical problem. Recall, risk is defined as L(h) = ℙ(h(X)≠Y). Here we introduce a generic framework that encapsulates variety of “risks”. To that end, consider a loss function ℓ : ℋ × 𝒳 × 𝒴 → ℝ+. Then, the risk can then be written as the expected loss upon using h ∈ ℋ with respect to the data distribution ℙ. Thus, L(h) := 𝔼[ℓ(h,X,Y)]. Similarly, the empirical risk is using N data points is $$\\label{eq:5} L_{S}(h) :=\\frac{1}{N} \\sum_{i=1}^{N} \\ell\\left(h, x_{i}, y_{i}\\right).$$ The classification risk we have considered thus far corresponds to 0/1-loss: $$\\ell_{0 / 1}(h,x, y) :=\\left\\{\\begin{array}{ll}{1,} &amp; {h(x) \\neq y} \\\\ {0,} &amp; {h(x)=y},\\end{array}\\right.$$ which incurs a loss of 1 if the current data is mis-classified. When we shall discuss regression, we will introduce different (squared) loss. Under the 0/1-loss, the task of ERM reduces to the computational question: $$\\min _{h \\in \\mathcal{H}} \\frac{1}{N} \\sum_{i=1}^{N} \\ell_{0 / 1}\\left(h, x_{i}, y_{i}\\right)=\\frac{1}{N} \\sum_{i=1}^{N}\\left\\llbracket h\\left(x_{i}\\right) \\neq y_{i}\\right\\rrbracket.\\label{eq:6}$$ This empirical risk minimization is typically computationally hard. One way to get around the computational hardness is to utilize surrogate for 0/1-loss that leads to computational simplicity. For example, support vector machine that shall be covered in future lecture, the computationally feasible surrogate of 0/1-loss turns out to be the so called “hinge loss”. ",
+    "url": "/supervised/classification_foundation/#loss-function-erm-setup",
+    
+    "relUrl": "/supervised/classification_foundation/#loss-function-erm-setup"
+  },"27": {
+    "doc": "Classification Foundation",
+    "title": "ERM: Theory",
+    "content": "The ERM theory asks this question: when does ERM work? In other words, if we minimize the empirical risk LS(h), what bearing does that have on the population risk L(h)? The goal of learning theory is to study this (and such) question(s). Informally, if for all h ∈ ℋ, the empirical risk LS(h) is a good approximation to L(h), then ERM will also return a good hypothesis within ${\\cal H}$, and we may be able to establish a bound of the form $$\\label{eq4} L_{\\mathbb{P}}\\left(\\operatorname{ERM}_{\\mathcal{H}}(S) \\right) \\leq \\min _{h \\in \\mathcal{H}} L_{\\mathbb{P}}(h) + \\varepsilon(N, {\\cal H}).$$ where recall that ERMℋ(S) is the classifier learned using ERM; both risks are taken over the data distribution as well as randomly generated S per the data distribution. If such is that case, then empirical risk of ERMℋ(S) will provide a good proxy of the best population risk achievable by ${\\cal H}$. Naturally, larger ${\\cal H}$ we have better the best population risk minimization is achieved over ${\\cal H}$; so what stops us from choosing very large ${\\cal H}$? . ",
+    "url": "/supervised/classification_foundation/#erm-theory",
+    
+    "relUrl": "/supervised/classification_foundation/#erm-theory"
+  },"28": {
+    "doc": "Classification Foundation",
+    "title": "ERM: Bias-complexity tradeoff",
+    "content": "At the highest level, typically the error $\\varepsilon(N, {\\cal H})$ in [eq4] increases with ${\\cal H}$ for a fixed N. And minh ∈ ℋLℙ(h) decreases as ${\\cal H}$ increases. That is, if we increase “complexity” of ${\\cal H}$, then the ‘bias’, represented as minh ∈ ℋLℙ(h) decreases. But ‘variance’, represented as $\\varepsilon(N, {\\cal H})$ in [eq4] increases. The ultimate goal is to achieve the right trade-off between these two for a given number of data points, N. Classical training vs test curve. (Figure taken from: [@belkin2019reconciling].) This bias-variance tradeoff or tension is captured by Figure 1. This is the classical view point. In the recent times, practitioners have found “rich” models e.g. over parametrized neural networks and empirically observed that once passed a certain complexity (of the model class ℋ), beyond the so-called interpolation threshold point, the data can be fit perfectly as well as the generalization continues to improve. This is shown by the double-descent curve in Figure 2. It is believed that this behavior is similar to that of non-parametric method like the nearest neighbor that generalizes well for all setting with enough observations even through the corresponding model class is extremely rich. Modern training vs test curve. (Figure taken from: [@belkin2019reconciling].) Extra reading: all sections are from [@sss]: . | Definitions: §2.1, . | ERM and inductive bias: §2.2, §2.3, . | Loss function: §12.3, §3.2.2, . | Nearest neighbor §19.0, §19.1. | . | These exercises are beyond those covered in recitation; they supplement the lecture material and notes, and it will be valuable for the reader to think about them carefully.↩︎ . | . ",
+    "url": "/supervised/classification_foundation/#erm-bias-complexity-tradeoff",
+    
+    "relUrl": "/supervised/classification_foundation/#erm-bias-complexity-tradeoff"
+  },"29": {
+    "doc": "Classification Foundation",
+    "title": "Classification Foundation",
+    "content": " ",
+    "url": "/supervised/classification_foundation/",
+    
+    "relUrl": "/supervised/classification_foundation/"
+  },"30": {
     "doc": "Credit",
     "title": "Credit",
     "content": "Special thanks to: . | Leslie Kaelbling | 6.867 Fall 2019 teaching staff | . This site uses: . | Jekyll | Just the Docs | Just the Class | Last Modified At | Hypothesis | Git | . ",
     "url": "/credit/",
     
     "relUrl": "/credit/"
-  },"6": {
+  },"31": {
     "doc": "Deep Reinforcement Learning",
     "title": "Deep Reinforcement Learning",
     "content": " ",
     "url": "/reinforcement/deepRL/",
     
     "relUrl": "/reinforcement/deepRL/"
-  },"7": {
+  },"32": {
     "doc": "Graphical Models",
     "title": "Graphical Models",
     "content": " ",
     "url": "/unsupervised/graphical/",
     
     "relUrl": "/unsupervised/graphical/"
-  },"8": {
+  },"33": {
     "doc": "About",
     "title": "The\nsite is under construction for launch in the fall 2023 semester",
     "content": " ",
     "url": "/#the-site-is-under-construction-for-launch-in-the-fall-2023-semester",
     
     "relUrl": "/#the-site-is-under-construction-for-launch-in-the-fall-2023-semester"
-  },"9": {
+  },"34": {
     "doc": "About",
     "title": "Course overview",
     "content": ". | Graduate level; offered regularly in the fall | 12 units (3-0-9) | Prerequisites: . | Linear algebra (at the level of 18.06) | and Probability (at the level of 6.3700, 6.3800, or 18.600) | . | Brief description: Principles, techniques, and algorithms in machine learning from the point of view of statistical inference; representation, generalization, and model selection; and methods such as linear/additive models, active learning, boosting, support vector machines, non-parametric Bayesian methods, hidden Markov models, Bayesian networks, and convolutional and recurrent neural networks. Recommended prerequisite: 6.3900 or other previous experience in machine learning. Enrollment may be limited. | . ",
     "url": "/#course-overview",
     
     "relUrl": "/#course-overview"
-  },"10": {
+  },"35": {
     "doc": "About",
     "title": "Staff",
     "content": ". | Instructors 6.7900-instructors@mit.edu . | Pulkit Agrawal | Tommi Jaakkola | Shen Shen | . | TAs . | Eric Zhang | Rupert Li | Abhijatmedhi ‘Earth’ Chotrattanapituk | Amit Schechter | Nishant Abhangi | Elizaveta Tremsina | Frederick ‘Freddie’ Zhao | . | . ",
     "url": "/#staff",
     
     "relUrl": "/#staff"
-  },"11": {
+  },"36": {
     "doc": "About",
     "title": "Weekly Schedule",
     "content": ". | Lectures: Tuesday and Thursday, 2:30pm-4pm, in 32-123 | Recitations (four options to choose one from): . | Friday, 10am, in 4-237 | Friday, 11am, in 4-237 | Friday, 1pm, in 3-270 | Friday, 2pm, in 3-270 | . | Office hours: . | Instructor office hours: TBD | TA office hours: TBD | . | . ",
     "url": "/#weekly-schedule",
     
     "relUrl": "/#weekly-schedule"
-  },"12": {
+  },"37": {
     "doc": "About",
     "title": "Grading",
     "content": ". | Homework | Exams | . ",
     "url": "/#grading",
     
     "relUrl": "/#grading"
-  },"13": {
+  },"38": {
     "doc": "About",
     "title": "Recommended Reading",
     "content": "All freely accessible with an MIT IP: . | [B] Pattern Recognition and Machine Learning, Bishop; Springer, 2007. | [HTF] The Elements of Statistical Learning, Hastie, Tibshirani, Friedman, 2009. | [SB]/[SSS] Understanding Machine Learning: From Theory to Algorithms, Shalev-Shwartz and Ben-David, 2014. | [SB] Reinforcement Learning: An Introduction, Sutton and Barton, 2018. | [JWHT] An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani; Springer, 2013. | [EH] Computer Age Statistical Inference, Efron and Hastie; Cambridge University Press, 2016. | . ",
     "url": "/#recommended-reading",
     
     "relUrl": "/#recommended-reading"
-  },"14": {
+  },"39": {
     "doc": "About",
     "title": "About",
     "content": " ",
     "url": "/",
     
     "relUrl": "/"
-  },"15": {
+  },"40": {
     "doc": "Introduction",
     "title": "Background",
     "content": "The term “Machine Learning” was coined by MIT alumnus Arthur Samuel1 in 1959. It evolved from many fields including Statistical Learning, Pattern Recognition and so on. The goal of machine learning is to make computers “learn” from “data”2. From an end user’s perspective, it is about understanding your data, make predictions and decisions. Intellectually, it is a collection of models, methods and algorithms that have evolved over more than a half-century now. Historically both disciplines evolved from different perspectives, but with similar end goals. For example, Machine Learning focused on “prediction” and “decisions”. It relied on “patterns” or “model” learnt in the process to achieve it. Computation has played key role in its evolution. In contrast, Statistics, founded by statisticians such as Pearson and Fisher, focused on “model learning”. To understand and explain “why” behind a phenomenon. Probability has played key role in development of the field. As a concrete example, recall the ideal gas law PV = nRT for Physics. Historically, machine learning only cared about ability to predict P by knowing V and T, did not matter how; on the other hand, Statistics did care about the precise form of the relationship between P, V and T, in particular it being linear. Having said that, in current day and age, both disciplines are getting closer and closer, day-by-day, and this class is such an amalgamation. Artificial Intelligence’s stated goal is to mimic human behavior in an intelligent manner, and to do what humans can do but really well, which includes artificial “creativity” and driving cars, playing games, responding to consumer questions, etc. Traditionally, the main tools to achieve these goals are “rules” and “decision trees”. In that sense, Artificial intelligence seeks to create muscle and mind of humans, and mind requires learning from data, i.e. Machine Learning. However, Machine Learning helps learn from data beyond mimicking humans. Having said that, again the boundaries between AI and ML are getting blurry day-by-day. ",
     "url": "/intro/#background",
     
     "relUrl": "/intro/#background"
-  },"16": {
+  },"41": {
     "doc": "Introduction",
     "title": "Course Structure",
     "content": "The course contains four parts: . | Part I. Supervised Learning (L2-11, 43%). Learning from data to predict. | Part II. Unsupervised Learning (L12-18, 30%). Understanding the structure within the data. | Part III. Probabilistic Modeling (L19-20, 9%). Probabilistic view to model complex scenarios. | Part IV. Decision Making (L21-24, 18%). Using data to make decisions. | . ",
     "url": "/intro/#course-structure",
     
     "relUrl": "/intro/#course-structure"
-  },"17": {
+  },"42": {
     "doc": "Introduction",
     "title": "Supervised Learning",
-    "content": "The goal of supervised learning is to predict target using input / features, and a model is learned to do so. This can be sufficiently summarized as $$\\text{\\textit{target}} = f ( \\text{\\textit{features}} )$$ For classification tasks, the target is categorical or takes discrete values (e.g. hot or cold). For regression tasks, the target takes any real value (e.g. temperature). The model type reflects our belief about the reality and different model leads to different algorithm. The philosophy of supervised learning is: future of the past equals future of the future. Examples of classification include: identify handwritten digits, email spam filtering, detecting malicious network connection based on network log information or predicting whether a client will default on her/his credit based on the client’s features. For example, suppose we have access to a client’s features or attributes in terms of the (credit card) balance and income. Consider Figure 1. It plots available data with X axis representing (credit card) balance and Y axis representing income. The color of the point is blue if no default and brown if default. Pictorially, the classifier is trying to learn a boundary as shown in Figure 1 which separate no default from default. image Formally, the data are labeled observations of the following form: (x1,y1), …, (xN,yN). The goal is to learn a model that maps attribute (or feature) x to label (or target) y so that given attribute x, we can predict corresponding unknown (discrete) label y. That is, to learn a function f such that y = f(x) (and sometimes also what’s the confidence). Various approaches for learning f can be categorized as . | Linear: Logistic regression, Support Vector Machine (SVM), Linear Discriminant Analysis (LDA), Perceptron . | Non-linear (parametric): Quadratic Discriminant Analysis (QDA), Polynomial, Neural Networks . | Non-parametric: Kernels, Nearest Neighbors . | . How to find f? Among all possible choices of f, choose the one that fits the data the best. That is, solve optimization: empirical risk minimization (ERM): . $$\\text{Minimize } \\sum_{i=1}^N \\mathrm{loss}\\left(y_i,f(x_i)\\right) \\text{ over all possible } f.$$ . Stochastic Gradient Descent (SGD) is a method to solve this optimization problem. This is where Optimization meets Machine Learning. 6.036 (or equivalent undergraduate class) discusses the “How” or “mechanics” of such approaches. In this class, we expect that you know the “How” for much of supervised learning and decision making. That is, more than 60% of this class. So, what will we do in 6.867 (since  &gt; 60% is already done!)? . To start with, we will learn “Why” behind the “How”. We will utilize Probability as our formal language. We will discuss estimators and theoretical guarantees, and generalization: does a good model fit on historical data lead to ability to predict future? Finally, we will have 40% of the course discusses unsupervised learning / probabilistic modeling to understand the structure within the data. To understand “Why”, effectively we need to “logically deduce” what we do starting with appropriate goals and axioms. The axioms that are relevant are that of Probability. In particular, to reason about what we do in Machine Learning, we will utilize the language of probability. And probability is entirely based on the three key axioms. Formally, there is a probability space Ω, events ℱ in it, and a probability function ℙ : ℱ → [0,1]. | Axiom 1. ℙ(A) ≥ 0, for all A ∈ ℱ. | Axiom 2. ℙ(Ω) = 1. | Axiom 3. $\\mathbb{P}(\\cup_{i=1}^\\infty E_i)=\\sum_{i=1}^\\infty \\mathbb{P}(E_i)$, if Ei ∩ Ej = ⌀, for all i ≠ j. | . The above exercise is a simple example of logical deduction starting from the axioms of probability. In a sense, this is what we will do to explain “why”. Before proceeding further, it is important to wonder – “Is it possible to have a different set of probability axioms?” This is a question hotly debated in the first half of last century. At the end of the day, All roads lead to Rome: All sorts of reasonable hypothesis about beliefs / decision making lead to axioms of probability3. In the language of probability, both attributes X and labels Y are random variables. Especially, Y is discrete-valued random variable. The conditional distribution ℙ(Y|X) is of interest. Suppose labels take value 1 (e.g. default) or  − 1 (e.g. no default), given attribute X = x. An ideal classier, also known as Bayes classifier, which in the context of binary classification, predicts $$ $$ The performance metric of interest is mis-classification probability, i.e. ℙ(Ŷ(X)≠Y). Probabilistic view will help us understand how to choose the loss function and how well our model generalizes. In terms of generalization and overfitting, you should trust your data, but only so much. Consider the following example: We have observations (xi,yi), i = 1, …, n. Here attributes xi are points distributed uniformly in the unit square. The label is generated according to the following rule: As sketched in the figure below, yi = 0 when the corresponding xi lies in the shaded square and yi = 1 otherwise. The area of the shaded square is 1/2. image Pretend we do not know the true label rule and would like to to find a model to approximate it based on the observations. The function fit, $$f({x})=\\begin{cases} y_i, &amp; \\text{if }{x}={x}_i, \\\\ 0, &amp; \\text{otherwise}, \\end{cases}$$ which assigns every observed points to the correct label yi and assign all unseen points to 0, is a perfect fit for the observation. However, since the possibility we encounter the same points in the set {(xi,yi), i = 1, …, n} in the future is zero, we will most certainly assign all future points to 0 and this function is simply as bad as “random” function! This is overfitting. In order to prevent overfitting, empirically, we use cross-validation – split data into three parts: train, (validate) and test, or/and K-fold cross-validation. To explain why this the right thing to do, we shall discuss the notion of generalization that utilizes the view that data is generated per an unknown underlying probability distribution. Methodically, we shall use regularization and again probabilistic formalism will help explain why (or why not) it works well. Probabilistic view, again will come to our rescue to explain the implicit regularization that is implemented by modern methods (e.g. ‘dropout’) of neural networks. Some examples of regression include predict wage given age, year, and education level. Formally, the data are labeled observations of the following form: (x1,y1), …, (xN,yN). The goal is to learn a model that maps attribute (or feature) x to label (or target) y so that given attribute x, we can predict corresponding unknown (continuous) label y. That is, to learn a function f such that y = f(x) (and sometimes also what is the confidence interval). In the language of probability, both attributes X and labels Y are random variables. Now, Y is continuous-valued random variable. The conditional distribution ℙ(Y|X) is of interest. Given attribute X = x, we estimate Ŷ(x) to minimize estimation error. One the most common estimation error is 𝔼[(Y−Ŷ(x))2|X=x], which is minimized by Ŷ(x) = 𝔼[Y|X=x]. Finally, we should determine predictive distribution. 𝔼[Y|X=x] is unknown. The model fit for regression means to find the best fit for f(x) ≈ 𝔼[Y|X=x] using observed data. ",
+    "content": "The goal of supervised learning is to predict target using input / features, and a model is learned to do so. This can be sufficiently summarized as $$\\text{\\textit{target}} = f ( \\text{\\textit{features}} )$$ For classification tasks, the target is categorical or takes discrete values (e.g. hot or cold). For regression tasks, the target takes any real value (e.g. temperature). The model type reflects our belief about the reality and different model leads to different algorithm. The philosophy of supervised learning is: future of the past equals future of the future. Examples of classification include: identify handwritten digits, email spam filtering, detecting malicious network connection based on network log information or predicting whether a client will default on her/his credit based on the client’s features. For example, suppose we have access to a client’s features or attributes in terms of the (credit card) balance and income. Consider Figure 1. It plots available data with X axis representing (credit card) balance and Y axis representing income. The color of the point is blue if no default and brown if default. Pictorially, the classifier is trying to learn a boundary as shown in Figure 1 which separate no default from default. image Formally, the data are labeled observations of the following form: (x1,y1), …, (xN,yN). The goal is to learn a model that maps attribute (or feature) x to label (or target) y so that given attribute x, we can predict corresponding unknown (discrete) label y. That is, to learn a function f such that y = f(x) (and sometimes also what’s the confidence). Various approaches for learning f can be categorized as . | Linear: Logistic regression, Support Vector Machine (SVM), Linear Discriminant Analysis (LDA), Perceptron . | Non-linear (parametric): Quadratic Discriminant Analysis (QDA), Polynomial, Neural Networks . | Non-parametric: Kernels, Nearest Neighbors . | . How to find f? Among all possible choices of f, choose the one that fits the data the best. That is, solve optimization: empirical risk minimization (ERM): $$\\text{Minimize } \\sum_{i=1}^N \\mathrm{loss}\\left(y_i,f(x_i)\\right) \\text{ over all possible } f.$$ Stochastic Gradient Descent (SGD) is a method to solve this optimization problem. This is where Optimization meets Machine Learning. 6.036 (or equivalent undergraduate class) discusses the “How” or “mechanics” of such approaches. In this class, we expect that you know the “How” for much of supervised learning and decision making. That is, more than 60% of this class. So, what will we do in 6.867 (since  &gt; 60% is already done!)? . To start with, we will learn “Why” behind the “How”. We will utilize Probability as our formal language. We will discuss estimators and theoretical guarantees, and generalization: does a good model fit on historical data lead to ability to predict future? Finally, we will have 40% of the course discusses unsupervised learning / probabilistic modeling to understand the structure within the data. To understand “Why”, effectively we need to “logically deduce” what we do starting with appropriate goals and axioms. The axioms that are relevant are that of Probability. In particular, to reason about what we do in Machine Learning, we will utilize the language of probability. And probability is entirely based on the three key axioms. Formally, there is a probability space Ω, events ℱ in it, and a probability function ℙ : ℱ → [0,1]. | Axiom 1. ℙ(A) ≥ 0, for all A ∈ ℱ. | Axiom 2. ℙ(Ω) = 1. | Axiom 3. $\\mathbb{P}(\\cup_{i=1}^\\infty E_i)=\\sum_{i=1}^\\infty \\mathbb{P}(E_i)$, if Ei ∩ Ej = ⌀, for all i ≠ j. | . The above exercise is a simple example of logical deduction starting from the axioms of probability. In a sense, this is what we will do to explain “why”. Before proceeding further, it is important to wonder – “Is it possible to have a different set of probability axioms?” This is a question hotly debated in the first half of last century. At the end of the day, All roads lead to Rome: All sorts of reasonable hypothesis about beliefs / decision making lead to axioms of probability3. In the language of probability, both attributes X and labels Y are random variables. Especially, Y is discrete-valued random variable. The conditional distribution ℙ(Y|X) is of interest. Suppose labels take value 1 (e.g. default) or  − 1 (e.g. no default), given attribute X = x. An ideal classier, also known as Bayes classifier, which in the context of binary classification, predicts $$ $$ The performance metric of interest is mis-classification probability, i.e. ℙ(Ŷ(X)≠Y). Probabilistic view will help us understand how to choose the loss function and how well our model generalizes. In terms of generalization and overfitting, you should trust your data, but only so much. Consider the following example: We have observations (xi,yi), i = 1, …, n. Here attributes xi are points distributed uniformly in the unit square. The label is generated according to the following rule: As sketched in the figure below, yi = 0 when the corresponding xi lies in the shaded square and yi = 1 otherwise. The area of the shaded square is 1/2. image Pretend we do not know the true label rule and would like to to find a model to approximate it based on the observations. The function fit, $$f({x})=\\begin{cases} y_i, &amp; \\text{if }{x}={x}_i, \\\\ 0, &amp; \\text{otherwise}, \\end{cases}$$ which assigns every observed points to the correct label yi and assign all unseen points to 0, is a perfect fit for the observation. However, since the possibility we encounter the same points in the set {(xi,yi), i = 1, …, n} in the future is zero, we will most certainly assign all future points to 0 and this function is simply as bad as “random” function! This is overfitting. In order to prevent overfitting, empirically, we use cross-validation – split data into three parts: train, (validate) and test, or/and K-fold cross-validation. To explain why this the right thing to do, we shall discuss the notion of generalization that utilizes the view that data is generated per an unknown underlying probability distribution. Methodically, we shall use regularization and again probabilistic formalism will help explain why (or why not) it works well. Probabilistic view, again will come to our rescue to explain the implicit regularization that is implemented by modern methods (e.g. ‘dropout’) of neural networks. Some examples of regression include predict wage given age, year, and education level. Formally, the data are labeled observations of the following form: (x1,y1), …, (xN,yN). The goal is to learn a model that maps attribute (or feature) x to label (or target) y so that given attribute x, we can predict corresponding unknown (continuous) label y. That is, to learn a function f such that y = f(x) (and sometimes also what is the confidence interval). In the language of probability, both attributes X and labels Y are random variables. Now, Y is continuous-valued random variable. The conditional distribution ℙ(Y|X) is of interest. Given attribute X = x, we estimate Ŷ(x) to minimize estimation error. One the most common estimation error is 𝔼[(Y−Ŷ(x))2|X=x], which is minimized by Ŷ(x) = 𝔼[Y|X=x]. Finally, we should determine predictive distribution. 𝔼[Y|X=x] is unknown. The model fit for regression means to find the best fit for f(x) ≈ 𝔼[Y|X=x] using observed data. ",
     "url": "/intro/#supervised-learning",
     
     "relUrl": "/intro/#supervised-learning"
-  },"18": {
+  },"43": {
     "doc": "Introduction",
     "title": "Unsupervised Learning",
     "content": "In unsupervised learning, there is no target. Only input / features are given. The goal is to learn the data distribution. In this course, we are going to cover topics such as dimensionality reduction, matrix estimation, clustering and mixture distribution, and feature extraction (topic model and deep generative model) from unstructured data such as text, audio or image, or for complexity reduction. Examples of unsupervised learning: Finding the principal component of DNA data (dimensionality reduction) [@Novembre2008], movie recommendation (matrix estimation), analyzing topics in documents (feature extraction: topic model), generating fake faces of celebrities (feature extraction: deep generative model). ",
     "url": "/intro/#unsupervised-learning",
     
     "relUrl": "/intro/#unsupervised-learning"
-  },"19": {
+  },"44": {
     "doc": "Introduction",
     "title": "Probabilistic Modeling",
     "content": "Two important topics in probabilistic modeling is incorporating prior knowledge from Bayesian perspective and sampling from distribution when probabilistic model is complex. Most of the key tasks in machine learning are inference tasks. For example, in prediction we need to infer ℙ(Y|X). In model learning, we need to infer ℙ(parameters|data). The Bayes’ rule states that $$\\underset{\\text{posterior}}{\\mathbb{P}(\\text{parameters}|\\text{data})}\\propto \\underset{\\text{likelihood}}{\\mathbb{P}(\\text{data}|\\text{parameters})}\\times \\underset{\\text{prior}}{\\mathbb{P}(\\text{parameters})}$$ The key question is how to select prior? This is the prior knowledge of the world. One of the classical priors is Gaussian distribution, which for example, leads to ridge regularization in regression. A probability distribution can be complex. It may have succinct representation but no closed form formula, and hence difficult to evaluate. For example, we may know $$\\mathbb{P}(X=x)\\propto \\exp(f(x))=\\frac{1}{Z}\\exp(f(x)),$$ where Z = ∫exp (f(x))dx. This integration can be very hard to evaluate for a general f(x). The key algorithm to evaluate on such complex distributions is Markov Chain Monte Carlo (MCMC)4 It has specific forms such as Gibbs sampling and Metropolis-Hastings. MCMC works for generic form of distribution. ",
     "url": "/intro/#probabilistic-modeling",
     
     "relUrl": "/intro/#probabilistic-modeling"
-  },"20": {
+  },"45": {
     "doc": "Introduction",
     "title": "Decision Making",
-    "content": "In data driven decision making (in presence of uncertainty), we need to learn the model of uncertainty, given observations. The goal is to make “optimal” decision with respect to a long-term objective. The decision vs information timescale are critically important. The following diagram summarizes the framework of decision making, . image The two key timescales are state or environment dynamics, and information dynamics. Depending on the two timescales, there are methods / approaches including optimizing given model of uncertainty, Markov decision process, and reinforcement learning. | | State Dynamics | Information Dynamics | . | Optimizing Given Model of Uncertainty | No change (or extremely slow) | Lots of historical information | . | Markov Decision Process | High | Lots of historical information | . | Reinforcement Learning | High | Minimal information, learn as you go | . The fundamental challenge in reinforcement learning is explore vs exploit. An example of poor decision is it is difficult to find blue sweater for young girls. To maximize profit (exploit), clothes makers choose not to make or make very few blue sweaters such that blue sweaters are hard to find and expensive. An important application of reinforcement learning is automated game player. We’ll do a case study on AlphaGoZero. ",
+    "content": "In data driven decision making (in presence of uncertainty), we need to learn the model of uncertainty, given observations. The goal is to make “optimal” decision with respect to a long-term objective. The decision vs information timescale are critically important. The following diagram summarizes the framework of decision making, . The two key timescales are state or environment dynamics, and information dynamics. Depending on the two timescales, there are methods / approaches including optimizing given model of uncertainty, Markov decision process, and reinforcement learning. | | State Dynamics | Information Dynamics | . | Optimizing Given Model of Uncertainty | No change (or extremely slow) | Lots of historical information | . | Markov Decision Process | High | Lots of historical information | . | Reinforcement Learning | High | Minimal information, learn as you go | . The fundamental challenge in reinforcement learning is explore vs exploit. An example of poor decision is it is difficult to find blue sweater for young girls. To maximize profit (exploit), clothes makers choose not to make or make very few blue sweaters such that blue sweaters are hard to find and expensive. An important application of reinforcement learning is automated game player. We’ll do a case study on AlphaGoZero. ",
     "url": "/intro/#decision-making",
     
     "relUrl": "/intro/#decision-making"
-  },"21": {
+  },"46": {
     "doc": "Introduction",
     "title": "And then, What Is\nNot Cover, But Of Interest",
     "content": "We may not be able to cover the following interesting topics in machine learning: . | Active Learning, actively obtain data as each data point is expensive. | Transfer Learning, transfer data collected for one task to other learning task. | Semi-supervised Learning, supervised setting with (additional) unsupervised data. | Causal inference, Hypothesis testing, ... | . But hopefully, things you’ll learn this in course will provide systematic foundations to approach these topics. ",
     "url": "/intro/#and-then-what-is-not-cover-but-of-interest",
     
     "relUrl": "/intro/#and-then-what-is-not-cover-but-of-interest"
-  },"22": {
+  },"47": {
     "doc": "Introduction",
     "title": "Model Selection: An Example",
-    "content": "We have data x1, …, xN sampled from a distribution. The goal is to learn the distribution. The assumption is that the data is generated from a Gaussian distribution 𝒩(μ,σ2). Then the refined goal is to learn the mean and variance. How to learn (parameters, mean and variance)? . A common method is maximum likelihood (ML), that is, choose the parameters that maximize ℙ(data|parameters). In this problem, to choose mean, variance from samples, the likelihood is . $$\\begin{aligned} \\mathbb{P}\\left(x_1,\\ldots,x_N|\\mu,\\sigma^2\\right)=&amp;\\prod_{i=1}^N\\mathbb{P}\\left(x_i|\\mu,\\sigma^2\\right) \\\\ =&amp;\\prod_{i=1}^N \\frac{1}{(2\\pi\\sigma^2)^{1/2}}\\exp\\left(-\\frac{(x_i-\\mu)^2}{2\\sigma^2}\\right). \\end{aligned}$$ . Maximizing likelihood is same as maximizing logarithm of likelihood. This leads to maxμ, σ2g(μ,σ2), where $$g(\\mu,\\sigma^2)=-\\frac{1}{2\\sigma^2}\\sum_{i=1}^N(x_i-\\mu)^2-N\\ln\\sigma -N\\ln\\sqrt{2\\pi}.$$ This is an optimization problem and its solution is what we desire. For such reasons, optimization is an integral part of Machine Learning. The ML estimation for variance (and standard deviation) is biased. This leads to the Bessel correction for variance: $$\\tilde{\\sigma}^2_{\\rm ML}=\\frac{1}{N-1}\\sum_{i=1}^N (x_i-\\mu_{\\rm ML})^2.$$ . | See https://g.co/kgs/Lj3v3k to read more about Arthur Samuel.↩︎ . | What is learning? Some food for thought: https://goo.gl/5R1m4S.↩︎ . | A good set of readings include [@Cox1946], [@Savage2012] and [@de2017]↩︎ . | MCMC is one of the top 10 algorithms of all time [@top10]. Other algorithms include quicksort and fast Fourier transform.↩︎ . | . ",
+    "content": "We have data x1, …, xN sampled from a distribution. The goal is to learn the distribution. The assumption is that the data is generated from a Gaussian distribution 𝒩(μ,σ2). Then the refined goal is to learn the mean and variance. How to learn (parameters, mean and variance)? . A common method is maximum likelihood (ML), that is, choose the parameters that maximize ℙ(data|parameters). In this problem, to choose mean, variance from samples, the likelihood is $$\\begin{aligned} \\mathbb{P}\\left(x_1,\\ldots,x_N|\\mu,\\sigma^2\\right)=&amp;\\prod_{i=1}^N\\mathbb{P}\\left(x_i|\\mu,\\sigma^2\\right) \\\\ =&amp;\\prod_{i=1}^N \\frac{1}{(2\\pi\\sigma^2)^{1/2}}\\exp\\left(-\\frac{(x_i-\\mu)^2}{2\\sigma^2}\\right). \\end{aligned}$$ Maximizing likelihood is same as maximizing logarithm of likelihood. This leads to maxμ, σ2g(μ,σ2), where $$g(\\mu,\\sigma^2)=-\\frac{1}{2\\sigma^2}\\sum_{i=1}^N(x_i-\\mu)^2-N\\ln\\sigma -N\\ln\\sqrt{2\\pi}.$$ This is an optimization problem and its solution is what we desire. For such reasons, optimization is an integral part of Machine Learning. The ML estimation for variance (and standard deviation) is biased. This leads to the Bessel correction for variance: $$\\tilde{\\sigma}^2_{\\rm ML}=\\frac{1}{N-1}\\sum_{i=1}^N (x_i-\\mu_{\\rm ML})^2.$$ . | See https://g.co/kgs/Lj3v3k to read more about Arthur Samuel.↩︎ . | What is learning? Some food for thought: https://goo.gl/5R1m4S.↩︎ . | A good set of readings include [@Cox1946], [@Savage2012] and [@de2017]↩︎ . | MCMC is one of the top 10 algorithms of all time [@top10]. Other algorithms include quicksort and fast Fourier transform.↩︎ . | . ",
     "url": "/intro/#model-selection-an-example",
     
     "relUrl": "/intro/#model-selection-an-example"
-  },"23": {
+  },"48": {
     "doc": "Introduction",
     "title": "Introduction",
     "content": " ",
     "url": "/intro/",
     
     "relUrl": "/intro/"
-  },"24": {
+  },"49": {
     "doc": "Learnability and VC Dimension",
     "title": "Overview",
     "content": "In this lecture, we will discuss learnability and show when the Empirical Risk Minimization methods that we’ve introduced will succeed. We will start our discussion from simple settings under strong assumptions, realizability and infinite hypothesis class. We will define a formal PAC-Learnability and generalize our conclusion to settings where realizability does not hold and hypothesis class is infinite. The concept of VC-dimension will be introduced to quantify the power of infinite hypothesis classes. Finally, we will reach the fundamental theorem of statistical learning. ",
     "url": "/supervised/learnability_and_vc/#overview",
     
     "relUrl": "/supervised/learnability_and_vc/#overview"
-  },"25": {
+  },"50": {
     "doc": "Learnability and VC Dimension",
     "title": "Motivation",
     "content": "In our previous discussion, we introduced the empirical risk minimization (ERM) method as a approximation to the true risk minimization and we also introduced different ways to restrict our hypothesis class so that our ERM found classifiers can have better performance on unseen data. We saw a theoretic analysis on Logistic Regression and Naive Bayes last lecture and in this lecture, we want to generalize the discussion to the entire ERM methods and try to answer some fundamental questions related to the concept of learning. First of all, we haven’t had a clear definition of what does it mean to be able to learn. We also want to ask, what hypothesis class should we choose and what limitations do different hypothesis class have. Further more, given a hypothesis class, we would like to discuss and determine what kinds of learning rules should we use, and how many data points do we need to learn a good model. With these question in head, we will start our discussion from simple settings and then try to generalize our conclusions. ",
     "url": "/supervised/learnability_and_vc/#motivation",
     
     "relUrl": "/supervised/learnability_and_vc/#motivation"
-  },"26": {
+  },"51": {
     "doc": "Learnability and VC Dimension",
     "title": "Learnability",
     "content": " ",
     "url": "/supervised/learnability_and_vc/#learnability",
     
     "relUrl": "/supervised/learnability_and_vc/#learnability"
-  },"27": {
+  },"52": {
     "doc": "Learnability and VC Dimension",
     "title": "Realizability",
     "content": "We start our discussion with a simplifying assumption, realizability. Formally, realizability means that there exists an optimal hypothesis h* ∈ ℋ such that the true risk Lℙ(h*) = 0. This is a strong assumption and it implies that with probability 1, over random samples S ∼ ℙ, LS(h*) = 0 . However, this strong assumption only implies the existence of such a hypothesis that can give 0 error, it is not guaranteed that the ERM found hypothesis hS is the optimal hypothesis h*. The realizability assumption makes sure the richness of our hypothesis class, so that we don’t need to worry about underfitting, but we can still be overfitting by only minimizing the empirical error. Thus, we want to further discuss that under this assumption, what is the risk of the ERM hypothesis hS on the unseen data and can this risk be bounded such that we are guaranteed to find a good hypothesis? . ",
     "url": "/supervised/learnability_and_vc/#realizability",
     
     "relUrl": "/supervised/learnability_and_vc/#realizability"
-  },"28": {
+  },"53": {
     "doc": "Learnability and VC Dimension",
     "title": "ϵ - δ Parameters",
     "content": "To quantitively measure how good our hypothesis is, we introduce the ϵ and δ parameters for our discussion. The ϵ parameter is called accuracy paramter and is used to quantify the quality of the prediction. Concretely, we interpret the event Lℙ(hs) &gt; ϵ as a failure of the learner, while if Lℙ(hS) ≤ ϵ, we view the output of the ERM as an approximately correct hypothesis. However, this single parameter is not enough because hS depends on the training set S, and the training set is picked by a random process so that there is randomness in the result of the ERM. It is not realistic to expect that with full certainty S will suffice to direct the learner toward a good hypothesis, as there is always some probability that the sampled training data happens to be very non-representative of the underlying distribution ℙ. We therefore denote the probability of getting a non-representative sample by δ, and call (1−δ) the confidence parameter of our prediction. ",
     "url": "/supervised/learnability_and_vc/#epsilon---delta-parameters",
     
     "relUrl": "/supervised/learnability_and_vc/#epsilon---delta-parameters"
-  },"29": {
+  },"54": {
     "doc": "Learnability and VC Dimension",
     "title": "Finite Hypothesis Class",
-    "content": "To bound the error of the ERM hypothesis hS, we further introduce some restrictions on the hypothesis class ℋ so that we can prevent overfitting. The simplest type of restriction on a class is imposing an upper bound on its size, that is, the hypothesis class ℋ has a finite cardinality. With this additional assumption, we can show that the ERM hypothesis will not overfit, i.e., have a bounded error on unseen data. Let ℋ be finite. Let δ ∈ (0,1), ϵ &gt; 0 and $N \\geq \\frac{\\log(|\\mathcal{H}|/\\delta)}{\\epsilon}$. Then, for any distribution ℙ for which realizability holds, we probability at least 1 − δ over the choice of dataset S of size N, every ERM hypothesis hS satisfies Lℙ ≤ ϵ . Proof. Let ℋB be the set of ‘failed’ hypotheses, that is ℋB = {h ∈ ℋ : Lℙ(h) &gt; ϵ} In addition, let M be the set of misleading samples, that is M = {S : ∃h ∈ ℋB, LS(h) = 0} Namely, for every S ∈ M, there is a ‘failed’ hypothesis, h ∈ ℬ, that looks like a ‘good’ hypothesis on S. Now, recall that we would like to bound the probability of the event Lℙ(hS) &gt; ϵ. Since the realizability implies that LS(hS) = 0, it follows that the event Lℙ(hS) &gt; ϵ can only happen if for some h ∈ ℋB, we have LS(h) = 0. In other words, the failure will only happen if our training data is in the set of misleading samples Set M. Formally, we have {S : Lℙ(hS) &gt; ϵ} ⊆ M As we can write M as M = ∪h ∈ ℋB{S : LS(h) = 0} Hence, P({S:Lℙ(hS)&gt;ϵ}) ≤ P(∪h ∈ ℋB{S:LS(h)=0}) Applying the union bound to the right-hand side yields P({S:Lℙ(hS)) ≤ ∑h ∈ ℋBP({S:LS(h)=0} ) Next, we can bound each summand of the right-hand side. Fix some ‘failed’ hypothesis h ∈ ℋB, the event LS(h) = 0 is equivalent to the event that in the training set, ∀i, h(xi) = yi. Since the training data are i.i.d. sampled, we have $${P} \\left(\\{S : L_{S}(h)=0\\}\\ \\right) = \\prod_{i=1}^N {P} \\left( \\{x_i: h(x_i) = y_i\\} \\right)$$ For each individual sampling of an element of the training set, we have P({xi:h(xi)=yi}) = 1 − Lℙ(h) ≤ 1 − ϵ where the last inequality follows from the fact that h ∈ ℋB. Using the inequality 1 − ϵ ≤ e−ϵ, we have for every h ∈ ℋB, P(S:LS(h)=0) ≤ (1−ϵ)N ≤ e−ϵN Therefore, we have P(S:Lℙ(hS)&gt;ϵ) ≤ |ℋB|e−ϵN ≤ |ℋ|e−ϵN Let δ = P(S:Lℙ(hS)&gt;ϵ), we will reach the desired conclusion that with probability at least 1 − δ, and having $N \\geq \\frac{\\log (|\\mathcal{H}|/\\delta)}{\\epsilon}$, Lℙ(hS) ≤ ϵ ◻ . A weaker result can be proved without realizability, see Exercise 2 for details. ",
+    "content": "To bound the error of the ERM hypothesis hS, we further introduce some restrictions on the hypothesis class ℋ so that we can prevent overfitting. The simplest type of restriction on a class is imposing an upper bound on its size, that is, the hypothesis class ℋ has a finite cardinality. With this additional assumption, we can show that the ERM hypothesis will not overfit, i.e., have a bounded error on unseen data. Theorem 1 (). Let ℋ be finite. Let δ ∈ (0,1), ϵ &gt; 0 and $N \\geq \\frac{\\log(|\\mathcal{H}|/\\delta)}{\\epsilon}$. Then, for any distribution ℙ for which realizability holds, we probability at least 1 − δ over the choice of dataset S of size N, every ERM hypothesis hS satisfies Lℙ ≤ ϵ . Proof. Let ℋB be the set of ‘failed’ hypotheses, that is ℋB = {h ∈ ℋ : Lℙ(h) &gt; ϵ} In addition, let M be the set of misleading samples, that is M = {S : ∃h ∈ ℋB, LS(h) = 0} Namely, for every S ∈ M, there is a ‘failed’ hypothesis, h ∈ ℬ, that looks like a ‘good’ hypothesis on S. Now, recall that we would like to bound the probability of the event Lℙ(hS) &gt; ϵ. Since the realizability implies that LS(hS) = 0, it follows that the event Lℙ(hS) &gt; ϵ can only happen if for some h ∈ ℋB, we have LS(h) = 0. In other words, the failure will only happen if our training data is in the set of misleading samples Set M. Formally, we have {S : Lℙ(hS) &gt; ϵ} ⊆ M As we can write M as M = ∪h ∈ ℋB{S : LS(h) = 0} Hence, P({S:Lℙ(hS)&gt;ϵ}) ≤ P(∪h ∈ ℋB{S:LS(h)=0}) Applying the union bound to the right-hand side yields P({S:Lℙ(hS)) ≤ ∑h ∈ ℋBP({S:LS(h)=0} ) Next, we can bound each summand of the right-hand side. Fix some ‘failed’ hypothesis h ∈ ℋB, the event LS(h) = 0 is equivalent to the event that in the training set, ∀i, h(xi) = yi. Since the training data are i.i.d. sampled, we have $${P} \\left(\\{S : L_{S}(h)=0\\}\\ \\right) = \\prod_{i=1}^N {P} \\left( \\{x_i: h(x_i) = y_i\\} \\right)$$ For each individual sampling of an element of the training set, we have P({xi:h(xi)=yi}) = 1 − Lℙ(h) ≤ 1 − ϵ where the last inequality follows from the fact that h ∈ ℋB. Using the inequality 1 − ϵ ≤ e−ϵ, we have for every h ∈ ℋB, P(S:LS(h)=0) ≤ (1−ϵ)N ≤ e−ϵN Therefore, we have P(S:Lℙ(hS)&gt;ϵ) ≤ |ℋB|e−ϵN ≤ |ℋ|e−ϵN Let δ = P(S:Lℙ(hS)&gt;ϵ), we will reach the desired conclusion that with probability at least 1 − δ, and having $N \\geq \\frac{\\log (|\\mathcal{H}|/\\delta)}{\\epsilon}$, Lℙ(hS) ≤ ϵ ◻ . A weaker result can be proved without realizability, see Exercise 2 for details. ",
     "url": "/supervised/learnability_and_vc/#finite-hypothesis-class",
     
     "relUrl": "/supervised/learnability_and_vc/#finite-hypothesis-class"
-  },"30": {
+  },"55": {
     "doc": "Learnability and VC Dimension",
     "title": "PAC Learnability",
-    "content": "We see that the finite hypothesis class makes it possible to bound the unseen error of ERM hypothesis. In order the generalize this result, we first give a formal name of such hypothesis classes. As we are using the ϵ and δ parameters which implies the conclusion is both approximate and not determined, we use the name Probably approximately correct learnablity, also known as PAC-Learnability. A formal definition is as follows, . Assuming realizability, a hypothesis class ℋ is PAC-learnable if there exists a function Nℋ(ϵ,δ) and a learning algorithm with the following property: For every ϵ, δ ∈ (0,1) and every distribution ℙ, training using N ≥ Nℋ(ϵ,δ) i.i.d. samples generated from ℙ, the learning algorithm returns a hypothesis h such that Lℙ ≤ ϵ with confidence (1−δ) over choice of samples. Informally, PAC-learnability of class ℋ means that enough number of random examples drawn from the data distribution will allow approximate risk minimization, i.e., ensure Lℙ(h) ≤ ϵ with probability  ≥ 1 − δ, where the number of samples needed depends on the desired tolerances (ϵ,δ). Note here ϵ and δ are inevitable. δ arises due to the randomness of training data S drawn from ℙ and ϵ arises due to the actual hypothesis picked by the learner on the finite data S. With this formal concept of PAC-learnable defined, we can discuss the situations when our two assumptions on realizability and finite hypothesis class do not hold. Concretely, is the hypothesis class still learnable if realizability does not hold? And on the other hand, what about infinite hypothesis classes? Are they PAC-learnable? . ",
+    "content": "We see that the finite hypothesis class makes it possible to bound the unseen error of ERM hypothesis. In order the generalize this result, we first give a formal name of such hypothesis classes. As we are using the ϵ and δ parameters which implies the conclusion is both approximate and not determined, we use the name Probably approximately correct learnablity, also known as PAC-Learnability. A formal definition is as follows, . Definition 2 (PAC-Learnablity). Assuming realizability, a hypothesis class ℋ is PAC-learnable if there exists a function Nℋ(ϵ,δ) and a learning algorithm with the following property: For every ϵ, δ ∈ (0,1) and every distribution ℙ, training using N ≥ Nℋ(ϵ,δ) i.i.d. samples generated from ℙ, the learning algorithm returns a hypothesis h such that Lℙ ≤ ϵ with confidence (1−δ) over choice of samples. Informally, PAC-learnability of class ℋ means that enough number of random examples drawn from the data distribution will allow approximate risk minimization, i.e., ensure Lℙ(h) ≤ ϵ with probability  ≥ 1 − δ, where the number of samples needed depends on the desired tolerances (ϵ,δ). Note here ϵ and δ are inevitable. δ arises due to the randomness of training data S drawn from ℙ and ϵ arises due to the actual hypothesis picked by the learner on the finite data S. With this formal concept of PAC-learnable defined, we can discuss the situations when our two assumptions on realizability and finite hypothesis class do not hold. Concretely, is the hypothesis class still learnable if realizability does not hold? And on the other hand, what about infinite hypothesis classes? Are they PAC-learnable? . ",
     "url": "/supervised/learnability_and_vc/#pac-learnability",
     
     "relUrl": "/supervised/learnability_and_vc/#pac-learnability"
-  },"31": {
+  },"56": {
     "doc": "Learnability and VC Dimension",
     "title": "Agnostic PAC-Learnability",
-    "content": "We first release the realizability assumption. By No-Free-Lunch (NFL) theorem, we know that no learner is guaranteed to match the Bayes classifier in general, as there’s always an adversarial distribution that can be constructed on which our learner fails while another may succeed. Thus, if the realizability does not hold, we don’t have the hope of satisfying Lℙ ≤ ϵ. We now can only weaken our aim, and see if we can at least come ϵ− close to the best possible classifier within our hypothesis class with high probability, i.e. Lℙ(hS) ≤ infh′ ∈ ℋℙ(h′) + ϵ In this setting, the hypothesis class ℋ may be bad, but we can still try to be approximately as good as the best possible hypothesis within this class. This weaker property is known as agnostic PAC-Learnability. A hypothesis class ℋ is agnostic PAC learnable if there exist a function Nℋ : (0,1)2 → N and a learning algorithm with the following property: For every ϵ, δ ∈ (0,1) and for every distribution ℙ over 𝒳 × 𝒴, when running the learning algorithm on N &gt; Nℋ(ϵ,δ) i.i.d. samples generated by ℙ, the algorithm returns a hypothesis h such that, with probability of at least 1 − δ over the choice of the N training samples, Lℙ(h) ≤ infh′ ∈ ℋℙ(h′) + ϵ . Clearly, if the realizability assumption holds, agnostic PAC-Learnability provides the same guarantee as PAC-Learnability. In that sense, agnostic PAC-Learnability generalizes the definition of PAC-Learnability. When the realizability assumption does not hold, no learner can guarantee an arbitrarily small error. Nevertheless, under the definition of agnostic PAC learning, a learner can still declare success if its error is not much larger than the best error achievable by a predictor from the class ℋ. This is in contrast to PAC learning, in which the learner is required to achieve a small error in absolute terms and not relative to the best error achievable by the hypothesis class. Recall from lecture 2 where we decompose the error into the approximation error term and the estimation error term, where Lℙ(hS) = ϵapx + ϵest ϵapx := minh ∈ ℋL(h) ϵest := Lℙ(hS) − ϵapx As the approximation error depends on the fit of our prior knowledge via the inductive bias to the unknown underlying distribution, so it won’t be minimized further more after we’ve chosen the hypothesis class ℋ. The agnostic PAC-Learnability loses the bound on this term but bound the estimation error uniformly over all distributions for a given hypothesis class. ",
+    "content": "We first release the realizability assumption. By No-Free-Lunch (NFL) theorem, we know that no learner is guaranteed to match the Bayes classifier in general, as there’s always an adversarial distribution that can be constructed on which our learner fails while another may succeed. Thus, if the realizability does not hold, we don’t have the hope of satisfying Lℙ ≤ ϵ. We now can only weaken our aim, and see if we can at least come ϵ− close to the best possible classifier within our hypothesis class with high probability, i.e. Lℙ(hS) ≤ infh′ ∈ ℋℙ(h′) + ϵ In this setting, the hypothesis class ℋ may be bad, but we can still try to be approximately as good as the best possible hypothesis within this class. This weaker property is known as agnostic PAC-Learnability. Definition 3 (Agnostic PAC-Learnability). A hypothesis class ℋ is agnostic PAC learnable if there exist a function Nℋ : (0,1)2 → N and a learning algorithm with the following property: For every ϵ, δ ∈ (0,1) and for every distribution ℙ over 𝒳 × 𝒴, when running the learning algorithm on N &gt; Nℋ(ϵ,δ) i.i.d. samples generated by ℙ, the algorithm returns a hypothesis h such that, with probability of at least 1 − δ over the choice of the N training samples, Lℙ(h) ≤ infh′ ∈ ℋℙ(h′) + ϵ . Clearly, if the realizability assumption holds, agnostic PAC-Learnability provides the same guarantee as PAC-Learnability. In that sense, agnostic PAC-Learnability generalizes the definition of PAC-Learnability. When the realizability assumption does not hold, no learner can guarantee an arbitrarily small error. Nevertheless, under the definition of agnostic PAC learning, a learner can still declare success if its error is not much larger than the best error achievable by a predictor from the class ℋ. This is in contrast to PAC learning, in which the learner is required to achieve a small error in absolute terms and not relative to the best error achievable by the hypothesis class. Recall from lecture 2 where we decompose the error into the approximation error term and the estimation error term, where Lℙ(hS) = ϵapx + ϵest ϵapx := minh ∈ ℋL(h) ϵest := Lℙ(hS) − ϵapx As the approximation error depends on the fit of our prior knowledge via the inductive bias to the unknown underlying distribution, so it won’t be minimized further more after we’ve chosen the hypothesis class ℋ. The agnostic PAC-Learnability loses the bound on this term but bound the estimation error uniformly over all distributions for a given hypothesis class. ",
     "url": "/supervised/learnability_and_vc/#agnostic-pac-learnability",
     
     "relUrl": "/supervised/learnability_and_vc/#agnostic-pac-learnability"
-  },"32": {
+  },"57": {
     "doc": "Learnability and VC Dimension",
-    "title": "Uniform\nConvergence implies Agnostic PAC Learnability",
-    "content": "How can we make sure the ERM solution is close the true risk? One strong assumption one can make is that LS(h) for all h ∈ ℋ is close to the true risk Lℙ(h), then the ERM solution hS will also have small true risk Lℙ(hS). Hence, we introduce the notion of an ϵ−representative data sample . A dataset S is called ϵ-representative if ∀hinℋ,  |LS(h)−Lℙ(h)| ≤ ϵ . The next simple conclusion we can make is that whenever the sample is ϵ/2-representative, the ERM learning rule is guaranteed to return a good hypothesis. Assume S is ϵ/2 - representative. Then, any ERM solution hS ∈ argminh ∈ ℋLS(h) satisfies Lℙ ≤ minh ∈ ℍLℙ + ϵ . Proof. For every h ∈ ℋ, $$\\begin{aligned} L_{\\mathbb{P}} &amp; \\leq L_S(h_S) + \\epsilon/2 \\\\ &amp; \\leq L_S(h) + \\epsilon/2 \\\\ &amp; \\leq L_{\\mathbb{P}}(h) + \\epsilon/2 + \\epsilon/2 \\\\ &amp; = L_{\\mathbb{P}}(h) + \\epsilon \\end{aligned}$$ ◻ . The simple theorem implies that to ensure that the ERM rule is agnostic PAC-Learnable, it suffices to show that with probability of at least 1?δ over the random choice of a training set, it will be an ϵ-representative training set. The following uniform convergence condition formalizes this requirement. A hypothesis class ℋ has the uniform convergence property w.r.t a domain Z and a loss function ℓ, if there exists a function NℋUC : (0,1)2 → ℕ such that for every ϵ, δ ∈ (0,1) and for every probability distribution ℙ over Z, if S is a sample of N ≥ NℋUC(ϵ,δ) i.i.d. examples drawn from ℙ, then, with probability of at least 1 − δ, S is ϵ-representative. Similar to the definition of sample complexity for PAC learning, the function NℋUC measures the minimal sample complexity of obtaining the uniform convergence property, namely, how many examples we need to ensure that with probability of at least 1 − δ the sample would be ϵ-representative. The term uniform here refers to having a fixed sample size that works for all members of ℋ and over all possible probability distributions over the domain. The following corollary follows directly from the previous theorem and the definition of uniform convergence. If a class ℋ has the uniform convergence property with a function NℋUC then the class is agnostically PAC learnable with the sample complexity Nℋ(ϵ,δ) ≤ NℋUC(ϵ/2,δ). ",
+    "title": "Uniform\nConvergence implies agnostic PAC Learnability",
+    "content": "How can we make sure the ERM solution is close the true risk? One strong assumption one can make is that LS(h) for all h ∈ ℋ is close to the true risk Lℙ(h), then the ERM solution hS will also have small true risk Lℙ(hS). Hence, we introduce the notion of an ϵ−representative data sample . Definition 4 (ϵ-representative). A dataset S is called ϵ-representative if ∀hinℋ,  |LS(h)−Lℙ(h)| ≤ ϵ . The next simple conclusion we can make is that whenever the sample is ϵ/2-representative, the ERM learning rule is guaranteed to return a good hypothesis. Theorem 5. Assume S is ϵ/2 - representative. Then, any ERM solution hS ∈ argminh ∈ ℋLS(h) satisfies Lℙ ≤ minh ∈ ℍLℙ + ϵ . Proof. For every h ∈ ℋ, $$\\begin{aligned} L_{\\mathbb{P}} &amp; \\leq L_S(h_S) + \\epsilon/2 \\\\ &amp; \\leq L_S(h) + \\epsilon/2 \\\\ &amp; \\leq L_{\\mathbb{P}}(h) + \\epsilon/2 + \\epsilon/2 \\\\ &amp; = L_{\\mathbb{P}}(h) + \\epsilon \\end{aligned}$$ ◻ . The simple theorem implies that to ensure that the ERM rule is agnostic PAC-Learnable, it suffices to show that with probability of at least 1?δ over the random choice of a training set, it will be an ϵ-representative training set. The following uniform convergence condition formalizes this requirement. Definition 6 (Uniform Convergence). A hypothesis class ℋ has the uniform convergence property w.r.t a domain Z and a loss function ℓ, if there exists a function NℋUC : (0,1)2 → ℕ such that for every ϵ, δ ∈ (0,1) and for every probability distribution ℙ over Z, if S is a sample of N ≥ NℋUC(ϵ,δ) i.i.d. examples drawn from ℙ, then, with probability of at least 1 − δ, S is ϵ-representative. Similar to the definition of sample complexity for PAC learning, the function NℋUC measures the minimal sample complexity of obtaining the uniform convergence property, namely, how many examples we need to ensure that with probability of at least 1 − δ the sample would be ϵ-representative. The term uniform here refers to having a fixed sample size that works for all members of ℋ and over all possible probability distributions over the domain. The following corollary follows directly from the previous theorem and the definition of uniform convergence. Corollary 7. If a class ℋ has the uniform convergence property with a function NℋUC then the class is agnostically PAC learnable with the sample complexity Nℋ(ϵ,δ) ≤ NℋUC(ϵ/2,δ). ",
     "url": "/supervised/learnability_and_vc/#uniform-convergence-implies-agnostic-pac-learnability",
     
     "relUrl": "/supervised/learnability_and_vc/#uniform-convergence-implies-agnostic-pac-learnability"
-  },"33": {
+  },"58": {
     "doc": "Learnability and VC Dimension",
     "title": "VC-Dimesion",
-    "content": "Now, let’s move to the situation of infinite hypothesis class. Clearly, we don’t have a measurement for the size of the hypothesis class any more, but it is still possible to quantitively measure complexity of the model. For learnability In classification problems, what really matters is not the literal size of the hypothesis class, but the maximum number of data points that can be classified exactly. Take the simple situation in Figure 1 for example, the hypothesis class of 1-dimensional linear classifier has a infinite size, but this doesn’t mean this class is a very complex class. As shown in Figure 1 (a), two points with whatever labels can be classified correctly by a linear classifier, but in Figure 1 (b), we can see that this no longer holds for 3 points, as the last example in (b) cannot be classified correctly by any hypothesis in the linear classifier class. This inspires us that in order to measure the richness of our hypothesis class, we can try to construct a subset C of the data domain for which our classifier fails or succeeds. To understand the power of our hypothesis class, we just focus on its behavior on C and try to check how many different possible classification decisions on C can our hypothesis class capture. Then, if the hypothesis class can explain all decisions possible on C, then one can construct a ‘misleading data distribution’ so that we maintain realizability on C but can be totally wrong on the part outside of C and thus suffer large risk. This implies that to achieve learnability, we need to restrict the size of C. Linear classifiers in 1D can shatter 2 points as in (a), but cannot classifier the last case correctly in (b). Thus the VC-Dimension of 1-D linear classifiers is 2. To be more formal, here we introduce the definition of restriction of ℋ to C and the following definition of shattering and VC-Dimension . Let ℋ be a class of functions from 𝒳 to {0, 1} and let C = {c1, ..., cm} ⊂ 𝒳. The restriction of ℋ to C is the set of functions from C to {0, 1} that can be derived from ℋ. That is, ℋC = {(h(c1),...,h(cm)) : h ∈ ℋ} where we present each function from C to {0, 1} as a vector in {0, 1}|C|. If the restriction of H to C is the set of all functions from C to {0, 1}, then we say ℋ shatters the set C, formally . A hypothesis class ℋ shatters finite set C ⊂ 𝒳 if the restriction of ℋ to C is the set of all functions from C to {0, 1}. That is, |ℋC| = 2|C|. ::: definition The VC-dimension of a hypothesis class ℋ, denoted VCdim(ℋ), is the maximal size of a set C ⊂ 𝒳 that can be shattered by ℋ. If ℋ can shatter sets of arbitrarily large size, we say that ℋ has infinite VC-dimension. Here we give another example on 2-D linear classifiers, as shown in Figure 2. In (a), we can see that the linear classifier class can shatter 3 points in 2 dimensional space, however in (b), it cannot shatter 4 points as there exists a case where no linear classifier can correctly classifier the 4 points with the particular labelling as in the right figure in (b). This shows that the VC-Dimension of 2-D linear classifiers is 3. Linear classifiers in 2D can classifier 3 points with arbitrary labelling as shown in (a), but cannot classifier 4 points correctly as in (b). Thus the VC-Dimension of 2-D linear classifiers is 3. From this kind of observation, we can see that to show that VC − dim(ℋ) = d, we need to prove two things: . | There exists a set C of size d that is shattered by ℋ, this proves VC − dim(ℋ) ≥ d . | No set of size d + 1 is shattered by ℋ, this proves VC − dim(ℋ) &lt; d + 1. Thus VC − dim(ℋ) = d. | . Though we showed the VC-Dimension of d-dimensional linear classifier is d + 1, most of the time, we can only have lower/upper bound of VC dimension, but not an exact computable number. Thus, it is important to understand the meaning of the lower and upper bound of VC-Dimension. ",
+    "content": "Now, let’s move to the situation of infinite hypothesis class. Clearly, we don’t have a measurement for the size of the hypothesis class any more, but it is still possible to quantitively measure complexity of the model. For learnability In classification problems, what really matters is not the literal size of the hypothesis class, but the maximum number of data points that can be classified exactly. Take the simple situation in Figure 1 for example, the hypothesis class of 1-dimensional linear classifier has a infinite size, but this doesn’t mean this class is a very complex class. As shown in Figure 1 (a), two points with whatever labels can be classified correctly by a linear classifier, but in Figure 1 (b), we can see that this no longer holds for 3 points, as the last example in (b) cannot be classified correctly by any hypothesis in the linear classifier class. This inspires us that in order to measure the richness of our hypothesis class, we can try to construct a subset C of the data domain for which our classifier fails or succeeds. To understand the power of our hypothesis class, we just focus on its behavior on C and try to check how many different possible classification decisions on C can our hypothesis class capture. Then, if the hypothesis class can explain all decisions possible on C, then one can construct a ‘misleading data distribution’ so that we maintain realizability on C but can be totally wrong on the part outside of C and thus suffer large risk. This implies that to achieve learnability, we need to restrict the size of C. Linear classifiers in 1D can shatter 2 points as in (a), but cannot classifier the last case correctly in (b). Thus the VC-Dimension of 1-D linear classifiers is 2. To be more formal, here we introduce the definition of restriction of ℋ to C and the following definition of shattering and VC-Dimension . Definition 8. Let ℋ be a class of functions from 𝒳 to {0, 1} and let C = {c1, ..., cm} ⊂ 𝒳. The restriction of ℋ to C is the set of functions from C to {0, 1} that can be derived from ℋ. That is, ℋC = {(h(c1),...,h(cm)) : h ∈ ℋ} where we present each function from C to {0, 1} as a vector in {0, 1}|C|. If the restriction of H to C is the set of all functions from C to {0, 1}, then we say ℋ shatters the set C, formally . Definition 9 (Shattering). A hypothesis class ℋ shatters finite set C ⊂ 𝒳 if the restriction of ℋ to C is the set of all functions from C to {0, 1}. That is, |ℋC| = 2|C|. Definition 10 (VC-dimension). The VC-dimension of a hypothesis class ℋ, denoted VCdim(ℋ), is the maximal size of a set C ⊂ 𝒳 that can be shattered by ℋ. If ℋ can shatter sets of arbitrarily large size, we say that ℋ has infinite VC-dimension. Here we give another example on 2-D linear classifiers, as shown in Figure 2. In (a), we can see that the linear classifier class can shatter 3 points in 2 dimensional space, however in (b), it cannot shatter 4 points as there exists a case where no linear classifier can correctly classifier the 4 points with the particular labelling as in the right figure in (b). This shows that the VC-Dimension of 2-D linear classifiers is 3. Linear classifiers in 2D can classifier 3 points with arbitrary labelling as shown in (a), but cannot classifier 4 points correctly as in (b). Thus the VC-Dimension of 2-D linear classifiers is 3. From this kind of observation, we can see that to show that VC − dim(ℋ) = d, we need to prove two things: . | There exists a set C of size d that is shattered by ℋ, this proves VC − dim(ℋ) ≥ d . | No set of size d + 1 is shattered by ℋ, this proves VC − dim(ℋ) &lt; d + 1. Thus VC − dim(ℋ) = d. | . Though we showed the VC-Dimension of d-dimensional linear classifier is d + 1, most of the time, we can only have lower/upper bound of VC dimension, but not an exact computable number. Thus, it is important to understand the meaning of the lower and upper bound of VC-Dimension. ",
     "url": "/supervised/learnability_and_vc/#vc_dimension",
     
     "relUrl": "/supervised/learnability_and_vc/#vc_dimension"
-  },"34": {
+  },"59": {
     "doc": "Learnability and VC Dimension",
     "title": "Fundamental Theorem of\nLearnability",
-    "content": "Let ℋ be a hypothesis class of functions from a domain 𝒳 to {0, 1} and let the loss function be the 0 − 1 loss. Then the following are equivalent: . | ℋ has the uniform convergence property. | Any ERM rule is a successful agnostic PAC learner for ℋ. | ℋ is agnostic PAC learnable. | ℋ is PAC learnable. | ℋ Any ERM rule is a successful PAC learner for ℋ. | ℋ has a finite VC-dimension. | . In our previous discussion, we saw 1 → 2. 2 → 3, 3 → 4 and 2 → 5 are all trivial. For 4 → 6 and 5 → 6, there is detailed proof in [SSS] through the no-free-lunch theorem. Here, we take a closer look at 6 → 1, that a finite VC-dimension implies the uniform convergence property, and therefore is PAC-learnable. The detailed proof can be found in chapter 6 of [SSS], here we provide a high level sketch of the proof. The two main parts of the proof are . | If VC − dim(ℋ) = d, when restricting to a finite subset C of the data domain, its effective size |ℋC| is only O|C|d, instead of exponential in |C| . | Finite hypothesis class can be proved to have the uniform convergence property by a direct application of Hoeffiding inequality plus the union bound theorem. Similarly, the uniform convergence holds whenever the \"effective size\" is small. | . To define the term \"effective size\", we introduce the definition of Growth Function, . Let ℋ be a hypothesis class. Then the growth function of ℋ, denoted τℋ : ℕ → ℕ, is defined as τℋ(N) = maxC ⊂ 𝒳 : |C| = N|ℋC| . In words, τℋ(N) is the number of different functions from a set C of size N to {0, 1} that can be obtained by restricting ℋ to C. We then can prove the Sauer’s lemma that can bound this growth function . Let ℋ be a hypothesis class with VC − Dim(ℋ) ≤ d &lt; ∞. Then for all N, $\\tau_\\mathcal{H}(N) \\leq \\sum_{i=0}^d \\begin{pmatrix} N\\\\i \\end{pmatrix}$. In particular, if N &gt; d + 1 then τℋ(N) ≤ (eN)d . Thus, finite VC-dimension implies polynomial growth, while infinite VC-dim means exponential growth. Intuitively, for any C as a subset of 𝒳, let B be a subset of C such that ℋ shatters B. Then, |ℋC| ≤ #{B ⊂ C : ℋ shatters B}. That is, if 𝒞 is the collection of subsets of C that are shattered by ℋ, then |ℋC| is upper-bounded by the cardinality of 𝒞. Then we can show the ERM error is bounded using the growth function . Let ℋ be a class and τℋ its growth function. Then for every distribution ℙ(X,Y) and every δ ∈ (0,1), with probability at least 1 − δ over the choices of S ∼ ℙ, we have $$|L_S(h) - L_\\mathbb{P}(h) | \\leq \\frac{4+\\sqrt{\\log \\tau_{\\mathcal{H}}(2N)}}{\\delta \\sqrt{2N}}$$ . And it follows from here that if VC-Dim(ℋ) is finite, then the uniform convergence property holds, and indeed, $$N_{\\mathcal{H}}^{UC}(\\epsilon, \\delta) \\leq O(\\frac{d}{(\\delta \\epsilon)^2})$$ suffices for the uniform convergence property to hold. A more quantitative version of this theorem is as follows, and the proof can be found in chapter 28 of [SSS]. Let ℋ be a hypothesis class of functions from a domain 𝒳 to {0, 1} and let the loss function be the 0 − 1 loss. Assume that VC − Dim(ℋ) = d &lt; ∞. Then, there are absolute constants C1, C2 such that: . | ℋ has the uniform convergence property with sample complexity $$C_1\\frac{d+\\log(1/\\delta)}{\\epsilon^2} \\leq N_\\mathcal{H}^{UC}(\\epsilon,\\delta) \\leq C_2 \\frac{d+\\log(1/\\delta)}{\\epsilon^2}$$ . | ℋ is agnostic PAC learnable with sample complexity $$C_1\\frac{d+\\log(1/\\delta)}{\\epsilon^2} \\leq N_\\mathcal{H}(\\epsilon,\\delta) \\leq C_2 \\frac{d+\\log(1/\\delta)}{\\epsilon^2}$$ . | ℋ is PAC learnable with sample complexity $$C_1\\frac{d+\\log(1/\\delta)}{\\epsilon} \\leq N_\\mathcal{H}(\\epsilon,\\delta) \\leq C_2 \\frac{d\\log (1/\\epsilon)+\\log(1/\\delta)}{\\epsilon}$$ . | . ",
+    "content": "Theorem 11 (The Fundamental Theorem of Statistical Learning). Let ℋ be a hypothesis class of functions from a domain 𝒳 to {0, 1} and let the loss function be the 0 − 1 loss. Then the following are equivalent: . | ℋ has the uniform convergence property. | Any ERM rule is a successful agnostic PAC learner for ℋ. | ℋ is agnostic PAC learnable. | ℋ is PAC learnable. | ℋ Any ERM rule is a successful PAC learner for ℋ. | ℋ has a finite VC-dimension. | . In our previous discussion, we saw 1 → 2. 2 → 3, 3 → 4 and 2 → 5 are all trivial. For 4 → 6 and 5 → 6, there is detailed proof in [SSS] through the no-free-lunch theorem. Here, we take a closer look at 6 → 1, that a finite VC-dimension implies the uniform convergence property, and therefore is PAC-learnable. The detailed proof can be found in chapter 6 of [SSS], here we provide a high level sketch of the proof. The two main parts of the proof are . | If VC − dim(ℋ) = d, when restricting to a finite subset C of the data domain, its effective size |ℋC| is only O|C|d, instead of exponential in |C| . | Finite hypothesis class can be proved to have the uniform convergence property by a direct application of Hoeffiding inequality plus the union bound theorem. Similarly, the uniform convergence holds whenever the \"effective size\" is small. | . To define the term \"effective size\", we introduce the definition of Growth Function, . Definition 12 (Growth Function). Let ℋ be a hypothesis class. Then the growth function of ℋ, denoted τℋ : ℕ → ℕ, is defined as τℋ(N) = maxC ⊂ 𝒳 : |C| = N|ℋC| . In words, τℋ(N) is the number of different functions from a set C of size N to {0, 1} that can be obtained by restricting ℋ to C. We then can prove the Sauer’s lemma that can bound this growth function . Lemma 13. Let ℋ be a hypothesis class with VC − Dim(ℋ) ≤ d &lt; ∞. Then for all N, $\\tau_\\mathcal{H}(N) \\leq \\sum_{i=0}^d \\begin{pmatrix} N\\\\i \\end{pmatrix}$. In particular, if N &gt; d + 1 then τℋ(N) ≤ (eN)d . Thus, finite VC-dimension implies polynomial growth, while infinite VC-dim means exponential growth. Intuitively, for any C as a subset of 𝒳, let B be a subset of C such that ℋ shatters B. Then, |ℋC| ≤ #{B ⊂ C : ℋ shatters B}. That is, if 𝒞 is the collection of subsets of C that are shattered by ℋ, then |ℋC| is upper-bounded by the cardinality of 𝒞. Then we can show the ERM error is bounded using the growth function . Theorem 14. Let ℋ be a class and τℋ its growth function. Then for every distribution ℙ(X,Y) and every δ ∈ (0,1), with probability at least 1 − δ over the choices of S ∼ ℙ, we have $$|L_S(h) - L_\\mathbb{P}(h) | \\leq \\frac{4+\\sqrt{\\log \\tau_{\\mathcal{H}}(2N)}}{\\delta \\sqrt{2N}}$$ . And it follows from here that if VC-Dim(ℋ) is finite, then the uniform convergence property holds, and indeed, $$N_{\\mathcal{H}}^{UC}(\\epsilon, \\delta) \\leq O(\\frac{d}{(\\delta \\epsilon)^2})$$ suffices for the uniform convergence property to hold. A more quantitative version of this theorem is as follows, and the proof can be found in chapter 28 of [SSS]. Theorem 15. Let ℋ be a hypothesis class of functions from a domain 𝒳 to {0, 1} and let the loss function be the 0 − 1 loss. Assume that VC − Dim(ℋ) = d &lt; ∞. Then, there are absolute constants C1, C2 such that: . | ℋ has the uniform convergence property with sample complexity $$C_1\\frac{d+\\log(1/\\delta)}{\\epsilon^2} \\leq N_\\mathcal{H}^{UC}(\\epsilon,\\delta) \\leq C_2 \\frac{d+\\log(1/\\delta)}{\\epsilon^2}$$ . | ℋ is agnostic PAC learnable with sample complexity $$C_1\\frac{d+\\log(1/\\delta)}{\\epsilon^2} \\leq N_\\mathcal{H}(\\epsilon,\\delta) \\leq C_2 \\frac{d+\\log(1/\\delta)}{\\epsilon^2}$$ . | ℋ is PAC learnable with sample complexity $$C_1\\frac{d+\\log(1/\\delta)}{\\epsilon} \\leq N_\\mathcal{H}(\\epsilon,\\delta) \\leq C_2 \\frac{d\\log (1/\\epsilon)+\\log(1/\\delta)}{\\epsilon}$$ . | . ",
     "url": "/supervised/learnability_and_vc/#fundamental-theorem-of-learnability",
     
     "relUrl": "/supervised/learnability_and_vc/#fundamental-theorem-of-learnability"
-  },"35": {
+  },"60": {
     "doc": "Learnability and VC Dimension",
     "title": "Learnability and VC Dimension",
-    "content": "Learnability and VC Dimension . ",
+    "content": " ",
     "url": "/supervised/learnability_and_vc/",
     
     "relUrl": "/supervised/learnability_and_vc/"
-  },"36": {
+  },"61": {
     "doc": "Linear Regression",
     "title": "Linear Regression",
     "content": " ",
     "url": "/supervised/linearRegression/",
     
     "relUrl": "/supervised/linearRegression/"
-  },"37": {
+  },"62": {
     "doc": "Markov Decision Process",
     "title": "Markov Decision Process",
     "content": " ",
     "url": "/reinforcement/mdp/",
     
     "relUrl": "/reinforcement/mdp/"
-  },"38": {
+  },"63": {
     "doc": "Policy Gradient",
     "title": "Policy Gradient",
     "content": " ",
     "url": "/reinforcement/policy_gradient/",
     
     "relUrl": "/reinforcement/policy_gradient/"
-  },"39": {
+  },"64": {
     "doc": "Reinforcement Learning",
     "title": "Reinforcement Learning",
     "content": " ",
     "url": "/reinforcement/",
     
     "relUrl": "/reinforcement/"
-  },"40": {
+  },"65": {
     "doc": "Background/Review",
     "title": "Backrgound and Review",
     "content": " ",
     "url": "/review/#backrgound-and-review",
     
     "relUrl": "/review/#backrgound-and-review"
-  },"41": {
+  },"66": {
     "doc": "Background/Review",
     "title": "Notations",
     "content": ". | Data matrix is of the size (n,d) where n is the number of data points, and d is the dimension of the features | Vectors are denoted with a small-case letter; matrices capital letters | The default norm of a vector is the l2 norm | . ",
     "url": "/review/#notations",
     
     "relUrl": "/review/#notations"
-  },"42": {
+  },"67": {
     "doc": "Background/Review",
     "title": "Linear algebra,\ncalculus, and optimization",
     "content": ". | Gradient vector | Positive semi-definite (PSD) and positive definiteness (PD) | Convexity, strong convexity | . | Optimal solutions, uniqueness | . ",
     "url": "/review/#linear-algebra-calculus-and-optimization",
     
     "relUrl": "/review/#linear-algebra-calculus-and-optimization"
-  },"43": {
+  },"68": {
     "doc": "Background/Review",
     "title": "Probability theory and\nStatistics",
     "content": "Concepts related to a single distribution . | Multi-variate normal distribution | Max likelihood and Max log likelihood | . Concepts involving multiple distributions . | Marginal independence . | Joint probability is the product | Entropy of the joint distribution is the sum of individual entropies | . | Bayes’ rule | Conditional independence . | Compare with marginal independence | . | Importance sampling | Jensen inequality | KL divergence | . ",
     "url": "/review/#probability-theory-and-statistics",
     
     "relUrl": "/review/#probability-theory-and-statistics"
-  },"44": {
+  },"69": {
     "doc": "Background/Review",
     "title": "Background/Review",
     "content": " ",
     "url": "/review/",
     
     "relUrl": "/review/"
-  },"45": {
+  },"70": {
     "doc": "Weekly Schedule",
     "title": "Weekly Schedule",
     "content": ". | 9:00 AM | 9:30 AM | 10:00 AM | 10:30 AM | 11:00 AM | 11:30 AM | 12:00 PM | 12:30 PM | 1:00 PM | 1:30 PM | 2:00 PM | 2:30 PM | 3:00 PM | 3:30 PM | 4:00 PM | 4:30 PM | 5:00 PM | 5:30 PM | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"46": {
+  },"71": {
     "doc": "Weekly Schedule",
     "title": "\n",
     "content": "| ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"47": {
+  },"72": {
     "doc": "Weekly Schedule",
     "title": "\nMonday\n",
     "content": ". | Office Hours 12:30 PM–2:00 PM 271 Soda | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"48": {
+  },"73": {
     "doc": "Weekly Schedule",
     "title": "\nTuesday\n",
     "content": ". | Lecture 2:30 PM–4:00 PM 32-123 | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"49": {
+  },"74": {
     "doc": "Weekly Schedule",
     "title": "\nWednesday\n",
     "content": "| ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"50": {
+  },"75": {
     "doc": "Weekly Schedule",
     "title": "\nThursday\n",
     "content": ". | Lecture 2:30 PM–4:00 PM 32-123 | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"51": {
+  },"76": {
     "doc": "Weekly Schedule",
     "title": "\nFriday\n",
     "content": ". | Recitation 10:00 AM–11:00 AM 4-237 | Recitation 11:00 AM–12:00 PM 4-237 | Recitation 1:00 PM–2:00 PM 3-270 | Recitation 2:00 PM–3:00 PM 3-270 | . | . ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"52": {
+  },"77": {
     "doc": "Supervised Learning",
     "title": "Supervised Learning",
     "content": " ",
     "url": "/supervised/",
     
     "relUrl": "/supervised/"
-  },"53": {
+  },"78": {
     "doc": "Unsupervised Learning",
     "title": "Unsupervised Learning",
     "content": " ",
     "url": "/unsupervised/",
     
     "relUrl": "/unsupervised/"
-  },"54": {
+  },"79": {
     "doc": "Value functions and Bellman",
     "title": "Value functions and Bellman",
     "content": " ",

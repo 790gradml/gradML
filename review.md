@@ -13,21 +13,45 @@ nav_order: 3
 - Vectors are denoted with a small-case letter; matrices capital letters
 - The default norm of a vector is the $$l_2$$ norm
 
-## Linear algebra, calculus, and optimization
+## Linear Algebra, Calculus, and Optimization
 
 - Gradient vector
 - Positive semi-definite (PSD) and positive definiteness (PD)
 - Convexity, strong convexity
-
-<!-- <iframe src = https://shenshen.mit.edu/demos/QuadraticFun.html style="width:100%; height: 100%"></iframe> -->
 - Optimal solutions, uniqueness
 
-## Probability theory and Statistics
+## Probability and Statistics
 
 ### Concepts related to a single distribution
 
 - Multi-variate normal distribution
 - Max likelihood and Max log likelihood
+
+Example: MLE for Gaussian
+
+We have data $x_1,\ldots,x_N$ sampled from a distribution. The goal is
+to learn the distribution. The assumption is that the data is generated
+from a Gaussian distribution $\mathcal{N}(\mu,\sigma^2)$. Then the
+refined goal is to learn the mean and variance.
+
+How to learn
+(parameters, mean and variance)?
+
+A common method is maximum likelihood (ML), that is, choose the
+parameters that maximize $\mathbb{P}(\text{data}|\text{parameters})$. In
+this problem, to choose mean, variance from samples, the likelihood is
+$$\begin{aligned}
+    \mathbb{P}\left(x_1,\ldots,x_N|\mu,\sigma^2\right)=&\prod_{i=1}^N\mathbb{P}\left(x_i|\mu,\sigma^2\right) \\
+    =&\prod_{i=1}^N \frac{1}{(2\pi\sigma^2)^{1/2}}\exp\left(-\frac{(x_i-\mu)^2}{2\sigma^2}\right).
+\end{aligned}$$ Maximizing likelihood is same as maximizing logarithm of
+likelihood. This leads to $$\max_{\mu,\sigma^2} g(\mu,\sigma^2),$$ where
+$$g(\mu,\sigma^2)=-\frac{1}{2\sigma^2}\sum_{i=1}^N(x_i-\mu)^2-N\ln\sigma -N\ln\sqrt{2\pi}.$$
+This is an optimization problem and its solution is what we desire. For
+such reasons, optimization is an integral part of Machine Learning.
+
+The ML estimation for variance (and standard deviation) is biased. This
+leads to the Bessel correction for variance:
+$$\tilde{\sigma}^2_{\rm ML}=\frac{1}{N-1}\sum_{i=1}^N (x_i-\mu_{\rm ML})^2.$$
 
 ### Concepts involving multiple distributions
 

@@ -44,17 +44,13 @@ day-by-day.
 
 The course contains four parts:
 
-- Part I. Supervised Learning (L2-11, 43%). Learning from data to
-    predict.
+- Part I. Supervised Learning. Learning from data to predict.
 
-- Part II. Unsupervised Learning (L12-18, 30%). Understanding the
-    structure within the data.
+- Part II. Unsupervised Learning. Understanding the structure within the data.
 
-- Part III. Probabilistic Modeling (L19-20, 9%). Probabilistic view to
-    model complex scenarios.
+- Part III. Probabilistic Modeling. Probabilistic view to model complex scenarios.
 
-- Part IV. Decision Making (L21-24, 18%). Using data to make
-    decisions.
+- Part IV. Decision Making. Using data to make decisions.
 
 ## Supervised Learning
 
@@ -83,7 +79,7 @@ to learn a boundary as shown in Figure
 [1](#fig:classify){reference-type="ref" reference="fig:classify"} which
 separate *no default* from *default*.
 
-![image](/intro/classification.pdf)
+![Classification of *default* and *no default* ](/intro/classification.png)
 
 Formally, the data are labeled observations of the following form:
 $(x_1,y_1),\ldots,(x_N,y_N)$. The goal is to learn a model that maps
@@ -104,15 +100,15 @@ Various approaches for learning $f$ can be categorized as
 
 How to find $f$? Among all possible choices of $f$, choose the one that
 *fits* the data the best. That is, solve optimization: *empirical risk
-minimization (ERM)*:
+minimization **(ERM)**:
 $$\text{Minimize } \sum_{i=1}^N \mathrm{loss}\left(y_i,f(x_i)\right) \text{ over all possible } f.$$
 Stochastic Gradient Descent (SGD) is a method to solve this optimization
-problem. This is where Optimization meets Machine Learning.
+problem. This is where **Optimization** meets Machine Learning.
 
-6.036 (or equivalent undergraduate class) discusses the "How" or
+6.390 (or equivalent undergraduate class) discusses the "How" or
 "mechanics" of such approaches. In this class, we expect that you know
 the "How" for much of supervised learning and decision making. That is,
-more than $60\%$ of this class. So, what will we do in 6.867 (since
+more than $60\%$ of this class. So, what will we do in 6.790 (since
 $> 60\%$ is already done!)?
 
 To start with, we will learn "Why" behind the "How". We will utilize
@@ -124,7 +120,7 @@ modeling to understand the structure within the data.
 
 To understand "Why", effectively we need to "logically deduce" what we
 do starting with appropriate goals and axioms. The axioms that are
-relevant are that of Probability. In particular, to reason about what we
+relevant are that of **Probability**. In particular, to reason about what we
 do in Machine Learning, we will utilize the language of probability. And
 probability is entirely based on the three key axioms. Formally, there
 is a probability space $\Omega$, events $\mathcal{F}$ in it, and a
@@ -134,12 +130,7 @@ probability function $\mathbb{P}:\mathcal{F}\to [0,1]$.
 
 - Axiom 2. $\mathbb{P}(\Omega)=1$.
 
-- Axiom 3.
-    $\mathbb{P}(\cup_{i=1}^\infty E_i)=\sum_{i=1}^\infty \mathbb{P}(E_i)$,
-    if $E_i\cap E_j=\varnothing$, for all $i\neq j$.
-
-::: center
-:::
+- Axiom 3. $\mathbb{P}\left(\cup_{i=1}^{\infty} E_i\right)=\sum_{i=1}^{\infty}\mathbb{P}\left( E_i\right)$
 
 The above exercise is a simple example of logical deduction starting
 from the axioms of probability. In a sense, this is what we will do to
@@ -157,17 +148,14 @@ The conditional distribution $\mathbb{P}(Y|X)$ is of interest. Suppose
 labels take value $1$ (e.g. default) or $-1$ (e.g. no default), given
 attribute $X=x$. An ideal classier, also known as *Bayes classifier*,
 which in the context of binary classification, predicts
-$$\begin{aligned}
-\hat{Y}(x) & = \begin{cases}
-            1 & \mbox{~if~} \mathbb{P}(Y=1|X=x)\geq 1/2\\
-            0 & \mbox{~otherwise.}
-              \end{cases}
+$$
+\begin{equation}
+\hat{Y}(x)= \begin{cases}1 & \text { if } \mathbb{P}(Y=1 \mid X=x) \geq 1 / 2 \\ 0 & \text { otherwise }\end{cases}
+\end{equation}
+$$
 
-\end{aligned}$$ The performance metric of interest is mis-classification
+The performance metric of interest is mis-classification
 probability, i.e. $\mathbb{P}(\hat{Y}(X) \neq Y)$.
-
-::: center
-:::
 
 Probabilistic view will help us understand how to choose the loss
 function and how well our model *generalizes*. In terms of
@@ -179,7 +167,7 @@ rule: As sketched in the figure below, $y_i=0$ when the corresponding
 $\mathbf{x}_i$ lies in the shaded square and $y_i=1$ otherwise. The area
 of the shaded square is $1/2$.
 
-![image](/intro/square.pdf){width="22%"}
+![image](/intro/square.png){width="22%"}
 
 Pretend we do not know the true label rule and would like to to find a
 model to approximate it based on the observations. The function fit,
@@ -191,20 +179,20 @@ label $y_i$ and assign all unseen points to $0$, is a perfect fit for
 the observation. However, since the possibility we encounter the same
 points in the set $\{({x}_i,y_i), i=1,\ldots,n\}$ in the future is zero,
 we will most certainly assign all future points to $0$ and this function
-is simply as bad as "random" function! This is overfitting.
+is simply as bad as "random" function! This is **overfitting**.
 
-In order to prevent overfitting, empirically, we use *cross-validation*
+In order to prevent overfitting, empirically, we use **cross-validation**
 -- split data into three parts: *train*, (*validate*) and *test*, or/and
 *$K$-fold* cross-validation. To explain why this the right thing to do,
-we shall discuss the notion of *generalization* that utilizes the view
+we shall discuss the notion of **generalization** that utilizes the view
 that data is generated per an unknown underlying probability
-distribution. Methodically, we shall use *regularization* and again
+distribution. Methodically, we shall use **regularization** and again
 probabilistic formalism will help explain why (or why not) it works
 well. Probabilistic view, again will come to our rescue to explain the
 *implicit* regularization that is implemented by modern methods (e.g.
 'dropout') of neural networks.
 
-Some examples of regression include predict wage given age, year, and
+Some examples of **regression** include predict wage given age, year, and
 education level. Formally, the data are labeled observations of the
 following form: $(x_1,y_1),\ldots,(x_N,y_N)$. The goal is to learn a
 model that maps *attribute* (or *feature*) $x$ to *label* (or *target*)
@@ -213,7 +201,7 @@ $y$ so that given *attribute* $x$, we can predict corresponding *unknown
 $y = f(x)$ (and sometimes also what is the *confidence interval*).
 
 In the language of probability, both attributes $X$ and labels $Y$ are
-random variables. Now, $Y$ is continuous-valued random variable. The
+still random variables. Now, $Y$ is continuous-valued random variable. The
 conditional distribution $\mathbb{P}(Y|X)$ is of interest. Given
 attribute $X=x$, we estimate $\hat{Y}(x)$ to minimize estimation error.
 One the most common estimation error is
@@ -222,9 +210,6 @@ $\hat{Y}(x)=\mathbb{E}\left[Y|X=x\right]$. Finally, we should determine
 *predictive* distribution. $\mathbb{E}\left[Y|X=x\right]$ is unknown.
 The model fit for regression means to find the best fit for
 $f(x)\approx \mathbb{E}\left[Y|X=x\right]$ using observed data.
-
-::: center
-:::
 
 ## Unsupervised Learning
 
@@ -235,7 +220,7 @@ reduction, matrix estimation, clustering and mixture distribution, and
 feature extraction (topic model and deep generative model) from
 unstructured data such as text, audio or image, or for complexity
 reduction. Examples of unsupervised learning: Finding the principal
-component of DNA data (dimensionality reduction) [@Novembre2008], movie
+component of DNA data (dimensionality reduction) [^5], movie
 recommendation (matrix estimation), analyzing topics in documents
 (feature extraction: topic model), generating fake faces of celebrities
 (feature extraction: deep generative model).
@@ -247,8 +232,9 @@ knowledge from Bayesian perspective and sampling from distribution when
 probabilistic model is complex.
 
 Most of the key tasks in machine learning are inference tasks. For
-example, in prediction we need to infer $\mathbb{P}(Y|X)$. In model
-learning, we need to infer $\mathbb{P}(\text{parameters}|\text{data})$.
+example, in prediction we need to infer $\mathbb{P}(Y|X)$,
+in model learning, we need to infer $\mathbb{P}(\text{parameters}|\text{data})$.
+
 The Bayes' rule states that
 $$\underset{\text{posterior}}{\mathbb{P}(\text{parameters}|\text{data})}\propto \underset{\text{likelihood}}{\mathbb{P}(\text{data}|\text{parameters})}\times \underset{\text{prior}}{\mathbb{P}(\text{parameters})}$$
 The key question is how to select *prior*? This is the *prior* knowledge
@@ -259,7 +245,9 @@ A probability distribution can be complex. It may have succinct
 representation but no closed form formula, and hence difficult to
 evaluate. For example, we may know
 $$\mathbb{P}(X=x)\propto \exp(f(x))=\frac{1}{Z}\exp(f(x)),$$ where
-$$Z=\int  \exp(f(x))dx.$$ This integration can be very hard to evaluate
+$$Z=\int  \exp(f(x))dx.$$
+
+This integration can be very hard to evaluate
 for a general $f(x)$. The key algorithm to evaluate on such complex
 distributions is Markov Chain Monte Carlo (MCMC)[^4] It has specific
 forms such as Gibbs sampling and Metropolis-Hastings. MCMC works for
@@ -273,7 +261,7 @@ learn the model of uncertainty, given observations. The goal is to make
 vs information *timescale* are critically important. The following
 diagram summarizes the framework of decision making,
 
-![](/intro/dm.pdf)
+![typical setup for decision making problems](/intro/dm.png)
 
 The two key *timescales* are state or environment dynamics, and
 information dynamics. Depending on the two timescales, there are methods
@@ -286,13 +274,8 @@ decision process, and reinforcement learning.
   Markov Decision Process                 High                            Lots of historical information
   Reinforcement Learning                  High                            Minimal information, learn as you go
 
-The fundamental challenge in reinforcement learning is *explore vs
-exploit*. An example of poor decision is it is difficult to find blue
-sweater for young girls. To maximize profit (*exploit*), clothes makers
-choose not to make or make very few blue sweaters such that blue
-sweaters are hard to find and expensive. An important application of
-reinforcement learning is automated game player. We'll do a case study
-on AlphaGoZero.
+The fundamental challenge in reinforcement learning is *explore vs exploit*. An important application of
+reinforcement learning is automated game player. We'll do a case study on AlphaGoZero.
 
 ## And then, What Is Not Cover, But Of Interest
 
@@ -313,33 +296,6 @@ learning:
 But hopefully, things you'll learn this in course will provide
 systematic foundations to approach these topics.
 
-# Model Selection: An Example
-
-We have data $x_1,\ldots,x_N$ sampled from a distribution. The goal is
-to learn the distribution. The assumption is that the data is generated
-from a Gaussian distribution $\mathcal{N}(\mu,\sigma^2)$. Then the
-refined goal is to learn the mean and variance. How to learn
-(parameters, mean and variance)?
-
-A common method is maximum likelihood (ML), that is, choose the
-parameters that maximize $\mathbb{P}(\text{data}|\text{parameters})$. In
-this problem, to choose mean, variance from samples, the likelihood is
-$$\begin{aligned}
-    \mathbb{P}\left(x_1,\ldots,x_N|\mu,\sigma^2\right)=&\prod_{i=1}^N\mathbb{P}\left(x_i|\mu,\sigma^2\right) \\
-    =&\prod_{i=1}^N \frac{1}{(2\pi\sigma^2)^{1/2}}\exp\left(-\frac{(x_i-\mu)^2}{2\sigma^2}\right).
-\end{aligned}$$ Maximizing likelihood is same as maximizing logarithm of
-likelihood. This leads to $$\max_{\mu,\sigma^2} g(\mu,\sigma^2),$$ where
-$$g(\mu,\sigma^2)=-\frac{1}{2\sigma^2}\sum_{i=1}^N(x_i-\mu)^2-N\ln\sigma -N\ln\sqrt{2\pi}.$$
-This is an optimization problem and its solution is what we desire. For
-such reasons, optimization is an integral part of Machine Learning.
-
-::: center
-:::
-
-The ML estimation for variance (and standard deviation) is biased. This
-leads to the Bessel correction for variance:
-$$\tilde{\sigma}^2_{\rm ML}=\frac{1}{N-1}\sum_{i=1}^N (x_i-\mu_{\rm ML})^2.$$
-
 [^1]: See <https://g.co/kgs/Lj3v3k> to read more about Arthur Samuel.
 
 [^2]: What is learning? Some food for thought: <https://goo.gl/5R1m4S>.
@@ -347,5 +303,8 @@ $$\tilde{\sigma}^2_{\rm ML}=\frac{1}{N-1}\sum_{i=1}^N (x_i-\mu_{\rm ML})^2.$$
 [^3]: A good set of readings include [@Cox1946], [@Savage2012] and
     [@de2017]
 
-[^4]: MCMC is one of the top 10 algorithms of all time [@top10]. Other
-    algorithms include quicksort and fast Fourier transform.
+[^4]: John Novembre, Toby Johnson, Katarzyna Bryc, Zolt´an Kutalik, Adam R Boyko, Adam Auton, Amit
+Indap, Karen S King, Sven Bergmann, Matthew R Nelson, Matthew Stephens, and Carlos D Bustamante.
+Genes mirror geography within Europe. Nature, 456:98, Aug 2008. doi:10.1038/nature07331.
+
+[^5]: MCMC is one of the top 10 algorithms of all time [@top10]. Other algorithms include quicksort and fast Fourier transform.

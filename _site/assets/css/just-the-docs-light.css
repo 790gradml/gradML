@@ -664,6 +664,18 @@ pre {
   margin: 0;
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+figure img,
+figure video,
+figure svg {
+  margin: auto;
+}
+
 li {
   margin: 0.25em 0;
 }
@@ -671,6 +683,7 @@ li {
 img {
   max-width: 100%;
   height: auto;
+  justify-content: center;
 }
 
 hr {

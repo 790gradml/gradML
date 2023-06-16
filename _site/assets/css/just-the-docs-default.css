@@ -664,6 +664,18 @@ pre {
   margin: 0;
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+figure img,
+figure video,
+figure svg {
+  margin: auto;
+}
+
 li {
   margin: 0.25em 0;
 }
@@ -671,6 +683,7 @@ li {
 img {
   max-width: 100%;
   height: auto;
+  justify-content: center;
 }
 
 hr {
@@ -707,7 +720,7 @@ blockquote {
 }
 @media (min-width: 66.5rem) {
   .side-bar {
-    width: calc((100% - 1064px) / 2 + 264px);
+    width: calc((100% - 1264px) / 2 + 264px);
     min-width: 264px;
   }
 }
@@ -715,7 +728,7 @@ blockquote {
 @media (min-width: 50rem) {
   .main {
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin-left: 248px;
   }
 }
@@ -723,7 +736,7 @@ blockquote {
   .main {
     margin-left: max(
       264px,
-      calc((100% - 1064px) / 2 + 264px)
+      calc((100% - 1264px) / 2 + 264px)
     );
   }
 }
@@ -7553,7 +7566,7 @@ summary {
 }
 
 .main-content-wrap {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
 }
 

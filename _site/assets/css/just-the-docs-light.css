@@ -7513,13 +7513,13 @@ div.opaque {
   width: 100%;
 }
 .schedule .schedule-event.lecture {
-  background-color: #959396;
+  background-color: rgb(198, 22, 141);
 }
 .schedule .schedule-event.recitation {
-  background-color: #7253ed;
+  background-color: rgb(102, 45, 145);
 }
 .schedule .schedule-event.office-hours {
-  background-color: #2c84fa;
+  background-color: rgb(0, 161, 199);
 }
 
 .staffer {
@@ -7527,7 +7527,6 @@ div.opaque {
   margin: 1rem 0;
 }
 .staffer .staffer-image {
-  border-radius: 50%;
   height: 100px;
   margin-right: 1rem;
   width: auto;

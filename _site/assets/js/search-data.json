@@ -322,54 +322,61 @@
     "relUrl": "/schedule/"
   },"46": {
     "doc": "Weekly Schedule",
+    "title": "\n",
+    "content": "| ",
+    "url": "/schedule/",
+    
+    "relUrl": "/schedule/"
+  },"47": {
+    "doc": "Weekly Schedule",
     "title": "\nMonday\n",
     "content": ". | Office Hours 12:30 PM–2:00 PM 271 Soda | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"47": {
+  },"48": {
     "doc": "Weekly Schedule",
     "title": "\nTuesday\n",
     "content": ". | Lecture 2:30 PM–4:00 PM 32-123 | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"48": {
+  },"49": {
     "doc": "Weekly Schedule",
     "title": "\nWednesday\n",
     "content": "| ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"49": {
+  },"50": {
     "doc": "Weekly Schedule",
     "title": "\nThursday\n",
     "content": ". | Lecture 2:30 PM–4:00 PM 32-123 | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"50": {
+  },"51": {
     "doc": "Weekly Schedule",
     "title": "\nFriday\n",
     "content": ". | Recitation 10:00 AM–11:00 AM 4-237 | Recitation 11:00 AM–12:00 PM 4-237 | Recitation 1:00 PM–2:00 PM 3-270 | Recitation 2:00 PM–3:00 PM 3-270 | . | . ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"51": {
+  },"52": {
     "doc": "Supervised Learning",
     "title": "Supervised Learning",
     "content": " ",
     "url": "/supervised/",
     
     "relUrl": "/supervised/"
-  },"52": {
+  },"53": {
     "doc": "Unsupervised Learning",
     "title": "Unsupervised Learning",
     "content": " ",
     "url": "/unsupervised/",
     
     "relUrl": "/unsupervised/"
-  },"53": {
+  },"54": {
     "doc": "Value functions and Bellman",
     "title": "Value functions and Bellman",
     "content": " ",

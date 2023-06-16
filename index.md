@@ -1,14 +1,14 @@
 ---
 layout: page
 title: About
-nav_order: 1
+nav_order: 0
 ---
 
 # The site is under construction for launch in the fall 2023 semester
 
 # Course overview
 
-- Graduate level; offered in the Fall only
+- Graduate level; offered regularly in the fall
 - 12 units (3-0-9)
 - Prerequisites:
   - Linear algebra (at the level of 18.06)
@@ -18,12 +18,26 @@ nav_order: 1
 # Staff
 
 - Instructors
+  - [Pulkit Agrawal](https://people.csail.mit.edu/pulkitag/)
+  - [Tommi Jaakkola](https://people.csail.mit.edu/tommi/)
+  - [Shen Shen](https://shenshen.mit.edu)
 - TAs
+  - Eric Zhang
+  - Rupert Li
+  - Abhijatmedhi 'Earth' Chotrattanapituk
+  - Amit Schechter
+  - Nishant Abhangi
+  - Elizaveta Tremsina
+  - Frederick 'Freddie' Zhao
 
 # Logistics
 
-- Lectures: Tuesday and Thursday, 2:30pm in 32-123
-- Recitations: Friday,
+- Lectures: Tuesday and Thursday, 2:30pm-4pm, in 32-123
+- Recitations (four options to choose one from):
+  - Friday, 10am, in 4-237
+  - Friday, 11am, in 4-237
+  - Friday, 1pm, in 3-270
+  - Friday, 2pm, in 3-270
 - Office hours:
   - Instructor office hours: TBD
   - TA office hours: TBD
@@ -35,9 +49,11 @@ nav_order: 1
 
 # Recommended Reading
 
-- [B] Pattern Recognition and Machine Learning, Bishop; Springer, 2007.
-- [EH] Computer Age Statistical Inference, Efron and Hastie; Cambridge University Press, 2016.
-- [JWHT] An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani; Springer, 2013.
-- [SB]/[SSS] Understanding Machine Learning: From Theory to Algorithms, Shalev-Shwartz and Ben-David, 2014.
-- [HTF] The Elements of Statistical Learning, Hastie, Tibshirani, Friedman, 2009.
+All freely accessible with an MIT IP:
+
+- [B] [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf), Bishop; Springer, 2007.
+- [HTF] [The Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/), Hastie, Tibshirani, Friedman, 2009.
+- [SB]/[SSS] [Understanding Machine Learning: From Theory to Algorithms](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning), Shalev-Shwartz and Ben-David, 2014.
 - [SB] [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/RLbook2020trimmed.pdf), Sutton and Barton, 2018.
+- [JWHT] An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani; Springer, 2013.
+- [EH] Computer Age Statistical Inference, Efron and Hastie; Cambridge University Press, 2016.

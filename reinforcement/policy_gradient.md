@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Bandits
+title: Policy Gradient
 parent: Reinforcement Learning
-nav_order: 3
+nav_order: 4
 ---

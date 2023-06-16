@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Review
+title: Background/Review
 nav_order: 3
 
 ---
 
-# Review lecture
+# Backrgound and Review
 
 ## Notations
 
@@ -18,6 +18,8 @@ nav_order: 3
 - Gradient vector
 - Positive semi-definite (PSD) and positive definiteness (PD)
 - Convexity, strong convexity
+
+<!-- <iframe src = https://shenshen.mit.edu/demos/QuadraticFun.html style="width:100%; height: 100%"></iframe> -->
 - Optimal solutions, uniqueness
 
 ## Probability theory and Statistics

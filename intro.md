@@ -353,6 +353,3 @@ $$\tilde{\sigma}^2_{\rm ML}=\frac{1}{N-1}\sum_{i=1}^N (x_i-\mu_{\rm ML})^2.$$
 
 [^4]: MCMC is one of the top 10 algorithms of all time [@top10]. Other
     algorithms include quicksort and fast Fourier transform.
-
-{: .highlight }
-A paragraph

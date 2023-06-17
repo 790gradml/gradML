@@ -2,7 +2,6 @@
 layout: page
 title: Background/Review
 nav_order: 3
-
 ---
 
 # Backrgound and Review
@@ -10,13 +9,15 @@ nav_order: 3
 ## Notations
 
 - Data matrix is of the size $$(n,d)$$ where $$n$$ is the number of data points, and $$d$$ is the dimension of the features
+
 - Vectors are denoted with a small-case letter; matrices capital letters
 - The default norm of a vector is the $$l_2$$ norm
 
 ## Linear Algebra, Calculus, and Optimization
 
 - Gradient vector
-- Positive semi-definite (PSD) and positive definiteness (PD)
+- The chain rule (in calculus)
+- Positive semidefiniteness (PSD) and positive definiteness (PD)
 - Convexity, strong convexity
 - Optimal solutions, uniqueness
 
@@ -59,6 +60,7 @@ $$\tilde{\sigma}^2_{\rm ML}=\frac{1}{N-1}\sum_{i=1}^N (x_i-\mu_{\rm ML})^2.$$
 
 ### Concepts involving multiple distributions
 
+- The chain rule (in probability)
 - Marginal independence
   - Joint probability is the product
   - Entropy of the joint distribution is the sum of individual entropies

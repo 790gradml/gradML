@@ -24,7 +24,11 @@ nav_order: 3
 
 ### Concepts related to a single distribution
 
-- Multi-variate normal distribution
+- Basics and formulas
+- Fundamental distributions
+  - 1d normal
+  - Multi-variate normal
+- Jensen's inequality
 - Max likelihood and Max log likelihood
 
 Example: MLE for Gaussian
@@ -60,7 +64,6 @@ $$\tilde{\sigma}^2_{\rm ML}=\frac{1}{N-1}\sum_{i=1}^N (x_i-\mu_{\rm ML})^2.$$
   - Entropy of the joint distribution is the sum of individual entropies
 - Bayes' rule
 - Conditional independence
-  - Compare with marginal independence
+  - Comparison with marginal independence
 - Importance sampling
-- Jensen inequality
 - KL divergence

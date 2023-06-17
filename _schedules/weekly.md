@@ -24,9 +24,9 @@ schedule:
 - name: Monday
   events:
     - name: Office Hours
-      start: 12:30 PM
+      start: 1:00 PM
       end: 2:00 PM
-      location: 271 Soda
+      location: 26-322?
 - name: Tuesday
   events:
     - name: Lecture

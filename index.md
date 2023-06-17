@@ -4,9 +4,9 @@ title: About
 nav_order: 0
 ---
 
-# The site is under construction for launch in the fall 2023 semester
+# The site is under construction
 
-# Course overview
+# Course Overview
 
 - Graduate level; offered regularly in the fall
 - 12 units (3-0-9)

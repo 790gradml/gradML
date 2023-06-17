@@ -18,10 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 6.790 <br> Machine Learning
+title: 6.790 | Machine Learning | Fall 2023
 tagline: 6.790 Machine Learning, Fall 2023
 email: 6.790-website@mit.edu
-description: "Graduate Machine Learning course, MIT EECS, fall 2023 term."
+description: "Graduate Machine Learning Course, MIT EECS, Fall 2023."
+logo: "/assets/images/790-txt.png"
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gradml.mit.edu" # the base hostname & protocol for your site, e.g. http://example.com
@@ -121,3 +122,8 @@ defaults:
           type: resource
       values:
           layout: minimal
+pandoc:
+    extensions:
+        # - normalize
+        # - csl: _styles/apa.csl
+        - bibliography: _bib/*.bibs

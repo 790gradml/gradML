@@ -29,7 +29,7 @@ url: "https://gradml.mit.edu" # the base hostname & protocol for your site, e.g.
 
 # Build settings
 # remote_theme: "just-the-docs"
-theme: "just-the-docs"
+# theme: "just-the-docs"
 heading_anchors: true
 permalink: pretty
 aux_links:
@@ -43,12 +43,14 @@ aux_links_new_tab: true
 plugins:
     - jekyll-feed
     - jekyll-default-layout
-    - jekyll-pandoc
+    # - jekyll-pandoc
     - jekyll-last-modified-at
+    - jekyll-seo-tag
 
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to top"
+nav_next_prev: true
 
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on Git"
@@ -60,9 +62,20 @@ gh_edit_view_mode: "tree"
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
     date-format: "%d-%b-%Y"
-math: katex
+# kramdown:
+# math_engine: katex
+# input: GFMKatex # GFMKatex class from sp301415 is in _plugins/server-side-math.rb
+# math_engine_opts:
+#     katex_js: "assets/js/katex.min.js"
+#     debug: true
+#     verbose: true
+#     js_run: Node
+#     katex_opts:
+#         throwOnError: false
+#         macros: {} # lots of macros here
 # math: mathjax
-markdown: Pandoc
+# math: katex
+# markdown: Pandoc
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -88,12 +101,12 @@ collections:
     staffers:
     modules:
     schedules:
-    announcements:
+    # announcements:
     # Define a collection named "resource", its documents reside in the "_resource" directory
-    resource:
-        #permalink: "/:collection/:path/"
-        permalink: "/:path/"
-        output: true
+    # resource:
+    #permalink: "/:collection/:path/"
+    # permalink: "/:path/"
+    # output: true
 # Default layouts for each collection type
 defaults:
     - scope:
@@ -118,12 +131,46 @@ defaults:
       values:
           layout: announcement
     - scope:
-          path: ""
-          type: resource
+          path: "supervised/"
       values:
-          layout: minimal
-pandoc:
-    extensions:
-        # - normalize
-        # - csl: _styles/apa.csl
-        - bibliography: _bib/*.bibs
+          parent: Supervised Learning
+          layout: page
+          katex: true
+    - scope:
+          path: "reinforcement/"
+      values:
+          parent: Reinforcement Learning
+          layout: page
+    - scope:
+          path: "unsupervised/"
+      values:
+          parent: Unsupervised Learning
+          layout: page
+# pandoc:
+#     extensions:
+#         # - normalize
+#         # - csl: _styles/apa.csl
+#         - bibliography: _bib/*.bibs
+
+# callouts
+callouts_level: quiet # or loud
+callouts:
+    important:
+        title: Important
+        color: yellow
+    new:
+        title: New
+        color: green
+    note:
+        title: Note
+        color: blue
+    warning:
+        title: ""
+        color: eecs-red
+    example:
+        title: "Example"
+        color: eecs-purple
+# mermaid:
+#     # Version of mermaid library
+#     # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+#     version: "9.1.7"

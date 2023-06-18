@@ -16,11 +16,19 @@
   trust: true,
   strict: false,
   throwOnError: false,
-});"></script>
+  delimiters: [
+      { left: '$$',  right: '$$',  display: true  },
+      { left: '$',   right: '$',   display: false },
+      { left: '\\[', right: '\\]', display: true  },
+      { left: '\\(', right: '\\)', display: false }
+  ],
+});">
+</script>
+
 
 <!-- The KaTeX default is 1.21em, see https://katex.org/docs/font.html#font-size-and-lengths -->
 <style>
   .katex {
-    font-size: 1.21em;
+    font-size: 1em;
   }
 </style>

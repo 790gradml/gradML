@@ -1,8 +1,19 @@
-{% assign math = page.math | default: layout.math | default: site.math %}
+<link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/images/favicon.png">
 
-{% case math %}
-{% when "mathjax" %}
-{% include mathjax.html %}
-{% when "katex" %}
-{% include katex.html %}
-{% endcase %}
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/js/katex.min.css" />
+
+<!-- JavaScript -->
+<script defer src="/assets/js/katex.min.js"></script>
+<script defer src="/assets/js/auto-render.min.js" onload="renderMathInElement(document.body,{
+      delimiters: [
+        { left: '$$',  right: '$$',  display: true  },
+        { left: '$',   right: '$',   display: false },
+        { left: '\\[', right: '\\]', display: true  },
+        { left: '\\(', right: '\\)', display: false }
+    ]
+  }
+  );">
+  </script>
+
+<script src="/assets/js/hypothesis.js" async></script>

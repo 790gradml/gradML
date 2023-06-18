@@ -20,10 +20,10 @@ scripts.forEach(function(script) {
     try {
         katex.render(script.text, katexElement, {
           displayMode: display,
-          globalGroup: true,
-          trust: true,
-          strict: false,
-          throwOnError: false,
+        //   globalGroup: true,
+        //   trust: true,
+        //   strict: false,
+        //   throwOnError: false,
           macros
         });
     } catch (err) {

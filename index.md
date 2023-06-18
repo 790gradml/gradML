@@ -1,10 +1,17 @@
 ---
-layout: page
-title: About
+title: 6.790 - Machine Learning
 nav_order: 0
 ---
 
-# The site is under construction
+# 6.790 \| Machine Learning \| Fall 2023
+{: .no_toc}
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 
 # Course Overview
 

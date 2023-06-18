@@ -1,9 +1,13 @@
 ---
-layout: about
-parent: Supervised Learning
 title: Discriminative vs Generative Classification
 nav_order: 1
 ---
+{: .no_toc}
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 # Overview
 
@@ -22,11 +26,15 @@ is a more biased classifier.
 
 We started our discussion of classification from the Bayes Classifier in
 Lecture 2. Recall the Bayes classifier $h^{*}(x)$ is defined by the
-rule: $$h^{*}(x) :=
+rule: 
+
+$$h^{*}(x) :=
   \begin{cases}
     1, &\text{if}\ \eta(x)=\mathbb{P}(Y=1 | X=x)>\frac{1}{2}\\
     0, &\text{otherwise}.
-  \end{cases}$$ The classifier predicts label $1$ if the conditional
+  \end{cases}$$
+  
+The classifier predicts label $1$ if the conditional
 probability of being in class $1$ is bigger than half. We also showed
 this classifier is actually the optimal possible classifier, as the
 underlying distribution $\mathbb{P}$ is assumed known.
@@ -43,13 +51,13 @@ give a formal summary of four possible methods to learn a classifier.
 
 - Empirical Risk Minimization
 
-- Discriminative Approach: Fit a model $\mathbb{\hat{P}}(Y|X)$ to
-    approximate the conditional distribution $\mathbb{P}(Y|X)$, add
-    classify using: $$h(x)=argmax_{y}\mathbb{\hat{P}}(Y=y|X=x)$$
+- Discriminative Approach: Fit a model $\mathbb{\hat{P}}(Y\|X)$ to
+  approximate the conditional distribution $\mathbb{P}(Y|X)$, add
+  classify using: $h(x)=\\argmax_{y}\mathbb{\hat{P}}(Y=y|X=x)$
 
 - Generative Approach: Fit a model $\mathbb{\hat{P}}(X, Y)$ to
-    approximate the joint distribution $\mathbb{P}(X, Y)$, add classify
-    using: $$h(x)=argmax_{y}P(X=x,Y=y) = P(X=x|Y=y)P(Y=y)$$
+  approximate the joint distribution $\mathbb{P}(X, Y)$, add classify
+  using: $$h(x)=\\argmax_{y}P(X=x,Y=y) = P(X=x | Y=y)P(Y=y)$$
 
 # Discriminative vs. Generative
 
@@ -66,8 +74,7 @@ between classes and models $P(Y|X)$, the conditional distribution and
 ignores $P(X)$. It solves a potentially easier problem and
 computationally simpler. However, it cannot be used to sample new data.
 
-::: center
-:::
+
 
 # Discrimitive Classifiers: Logistic Regression
 
@@ -76,38 +83,49 @@ discriminative model. It assumes a parametric form of the conditional
 distribution $P(Y|X)$ as
 $$P(Y=1|X=x;w) = \frac{e^{w^Tx}}{1+e^{w^Tx}} = \sigma (w^Tx)$$ where
 $\sigma(z) = \frac{1}{1+e^{-z}}$ and is often called the Sigmoid
-function. Therefore,
+function.
+
+Therefore,
 $$P(Y=0|X=x;w) = 1- \frac{e^{w^Tx}}{1+e^{w^Tx}} = 1- \sigma (w^Tx)$$ In
 the training process, we are given a training data set
 $S=\{(x_1,y_1), ... , (x_N,y_N)\}$ to estimate the weights $w$.
 Naturally, we will apply the maximum likelihood method where we can
 write the likelihood of the training data, assuming i.i.d., as
+
 $$\begin{aligned}
 P(S|w) & = \prod_{i=1}^N P(y_i|x_i;w) \\
     & = \prod_{i=1}^N ( \sigma (w^Tx_i))^{y_i} (1-\sigma (w^Tx_i) ) ^{1-y_i}
-\end{aligned}$$ Equivalent to maximize $P(S|w)$, we can minimize the
-negative log-likelihood of $S$, which is $$\begin{aligned}
+\end{aligned}$$
+
+Equivalent to maximize $P(S|w)$, we can minimize the
+negative log-likelihood of $S$, which is
+
+$$\begin{aligned}
 L(w) &=  - \sum_{i=1}^N \log [(\sigma(w^Tx_i))^{y_i}(1-\sigma(w^Tx_i))^{1-y_i}] \\
 & =  - \sum_{i=1}^N [y_i \log \sigma(w^Tx_i) + (1-y_i) \log (1-\sigma (w^Tx_i))]
-\end{aligned}$$ This is often called the cross-entropy error.
+\end{aligned}$$
 
-::: center
-:::
+This is often called the cross-entropy error.
 
 # Generative Classifiers: Naive Bayes
 
 Now we take a closer look at the generative approach. As said before, in
 the generative approach, we fit a model of the joint distribution
 $P(X,Y)$ and derived our classifier using the Bayes rule:
-$$P(Y|X) = \frac{P(X|Y)P(Y)}{P(X)}$$ where $P(X)=\sum_Y P(X|Y)P(Y)$. For
-classification, we have $$\begin{aligned}
-h(x)  & = argmax_y P(Y=y|X=x)\\
-    & = argmax_y \frac{P(X=x|Y=y)P(Y=y)}{P(X=x)} \\
-    & = argmax_y P(X=x|Y=y)P(Y=y)
-\end{aligned}$$ The denominator $P(X=x)$ is only a normalization
-constant and thus can be ignored for deriving $argmax_y P(Y=y|X=x)$.
+$$P(Y|X) = \frac{P(X|Y)P(Y)}{P(X)}$$ where $P(X)=\sum_Y P(X|Y)P(Y)$. 
 
-Now let's suppose both $X$ and $Y$ are discrete random variables, where
+For classification, we have 
+
+$$\begin{aligned}
+h(x)  & = \argmax_y P(Y=y|X=x)\\
+    & = \argmax_y \frac{P(X=x|Y=y)P(Y=y)}{P(X=x)} \\
+    & = \argmax_y P(X=x|Y=y)P(Y=y)
+\end{aligned}$$ 
+
+The denominator $P(X=x)$ is only a normalization
+constant and thus can be ignored for deriving $\argmax_y P(Y=y|X=x)$.
+
+Now let’s suppose both $X$ and $Y$ are discrete random variables, where
 $X \in \mathcal{X}^d$ and $Y \in \mathcal{Y}$. Then we have
 $$P(Y=y_i|X=x_i) \propto P(X=x_k|Y=y_i)P(Y=y_i)$$ Remember $X$ is a $d$
 dimensional random variable, so to fully express this conditional
@@ -127,12 +145,11 @@ Therefore, $$\begin{aligned}
 P(X|Y) &= P(X_1,X_2,...,X_d|Y) \\
     &=P(X_1|X_2,...X_d|Y)P(X_2|X_3,...,X_d|Y)...P(X_d|Y) \\
     &=P(X_1|Y)P(X_2|Y)...P(X_d|Y)
-\end{aligned}$$ where the second '$=$' used the conditional
+\end{aligned}$$ where the second ’$=$’ used the conditional
 independence. Therefore, our classifier becomes
-$$argmax_y P(Y=y|X_1,...,X_d) \propto P(Y=y)\prod_{j=1}^d P(X_j|Y=y)$$
+$$\argmax_y P(Y=y|X_1,...,X_d) \propto P(Y=y)\prod_{j=1}^d P(X_j|Y=y)$$
 
-::: center
-:::
+
 
 Now, using maximum likelihood on training data $S$, we can estimate the
 parameters for the Naive Bayes classifier, assuming a specific
@@ -143,8 +160,7 @@ P(Y=y) &= \frac{\# \text{Example with }Y = y}{N} \\
 P(X_i=x|Y=y) &= \frac{\# \text{Example with} X_i = x \text{ and } Y=y}{\# \text{Example with }Y = y}
 \end{aligned}$$
 
-::: center
-:::
+
 
 ## Naive Bayes can be a linear classifier
 
@@ -153,13 +169,16 @@ Bayes classifier is actually a linear classifier. Here we provide a
 proof for $X_j \in {0,1}$ and $P(X_j|Y)$ is a Bernoulli distribution.
 (See Exercise 2 Problem 2 for other more general situations.)
 
-::: {#thm:nb_linear .theorem}
+<div id="thm:nb_linear" class="theorem">
+
 **Theorem 1** (). *Let $X \in \{0,1\}^d$, and $P(X_j|Y)$,$1\leq j\leq d$
 is a Bernoulli distribution. The Naive Bayes classifier is defined by
 $$h(x) = sgn (w^Tx+w_0)$$ for a suitable choice of $w$,$w_0$.*
-:::
 
-::: proof
+</div>
+
+<div class="proof">
+
 *Proof.* As $X_j \in \{0,1 \}$, the Bernoulli distribution is therefore
 $$\begin{aligned}
 P(X_j|Y=1) & = a_j^{X_j} (1-a_j)^{(1-X_j)} \\
@@ -181,7 +200,8 @@ $w_0=\log \left(\frac{p}{1-p} \prod_j^d \frac{1-a_j}{1-b_j} \right)$.
 Therefore, $$h(x) = sgn (w^Tx+w_0)$$
 
 and this shows the Naive Bayes is a linear classifier. ◻
-:::
+
+</div>
 
 # Naive Bayes vs. Logistic Regression
 
@@ -221,23 +241,26 @@ by Naive Bayes, which assumes conditional independence between features.
 
 In a more real setting, where we do not have infinite number of training
 data, we must talk about how fast (how many training sample needed) an
-estimator converges to its asymptotic limit. This 'rate of convergence'
+estimator converges to its asymptotic limit. This ’rate of convergence’
 for Logistic Regression is as below
 
-::: {#thm:LR_converge .theorem}
-**Theorem 2** (). *Let $h_{LR,N}$ be a Logistic Regression model in $d$
+<div id="thm:LR_converge" class="theorem">
+
+**Theorem 2**. *Let $h_{LR,N}$ be a Logistic Regression model in $d$
 dimensions. Then, with high probability,
 $$\epsilon(h_{LR,N} \leq \epsilon(h_{LR},\infty)) + O \left( \sqrt{\frac{d}{N} \log \frac{N}{d}} \right)$$
 Thus, for
 $\epsilon(h_{LR}, N) \leq \epsilon(h_{LR},\infty) + \epsilon_0$ to hold
 up for a fixed constant $\epsilon_0$, it suffices to pick $N=\Omega(d)$*
-:::
 
-The proof of theorem [2](#thm:LR_converge){reference-type="ref"
-reference="thm:LR_converge"} follows the application of the uniform
-convergence bounds to logistic regression, and using the fact that the
-$d$ dimensional linear classifier $\mathcal{H}$ has a VC dimension of
-$d+1$. These concepts will be covered in Lecture 5.
+</div>
+
+The proof of theorem
+<a href="#thm:LR_converge" data-reference-type="ref"
+data-reference="thm:LR_converge">2</a> follows the application of the
+uniform convergence bounds to logistic regression, and using the fact
+that the $d$ dimensional linear classifier $\mathcal{H}$ has a VC
+dimension of $d+1$. These concepts will be covered in Lecture 5.
 
 Now, we want to draw a similar picture for the Naive Bayes classifier
 and compare it the Logistic Regression. It turns out this is a more
@@ -249,7 +272,8 @@ challenging task and we will break our analysis into two parts
 
 For the first part, formally, we have the following theroem
 
-::: {#thm:NB_convergence .theorem}
+<div id="thm:NB_convergence" class="theorem">
+
 **Theorem 3** (). *Let any $\epsilon_1$, $delta >0$ and any $l \leq 0$
 be fixed. Assume that for some fixed $\rho_0 > 0$, we hvae
 $\rho_0 \leq P(y=1) \leq 1- \rho_0$. Let
@@ -261,7 +285,8 @@ $1-\delta$: $$\begin{aligned}
   |\hat{P}(Y=b) - P(Y=b)| \leq \epsilon_1
   
 \end{aligned}$$ for all $j=1,...,d$ and $b \in \mathcal{Y}$*
-:::
+
+</div>
 
 This theorem states that with a number of samples that is only
 *logarithmic*, rather than linear, in $d$, the parameters of Naive Bayes
@@ -277,12 +302,12 @@ $$P(|p-\hat{p}|>\epsilon) \leq 2 e^{-2N\epsilon^2}$$ Intuitively, this
 means that the probability of the empirical estimation being epsilon-far
 from the ground truth decays exponentially fast with the number of
 samples $N$. For a detailed proof of theorem
-[3](#thm:NB_convergence){reference-type="ref"
-reference="thm:NB_convergence"}, please look at paper
-[\[Ng\]](#Ng){reference-type="ref" reference="Ng"}.
+<a href="#thm:NB_convergence" data-reference-type="ref"
+data-reference="thm:NB_convergence">3</a>, please look at paper
+<a href="#Ng" data-reference-type="ref" data-reference="Ng">[Ng]</a>.
 
 Now we know the parameters of Naive Bayes converge logarithmically to
-its optimal values, but this doesn't directly imply the error of Naive
+its optimal values, but this doesn’t directly imply the error of Naive
 Bayes also converges with this rate. To intuitively show why the error
 also converges, we can first show that the convergence of the parameters
 implies that $h_{NB,N}$ is very likely to make the same predictions as
@@ -299,7 +324,8 @@ probability.
 With some steps of derivation, we will eventually reach the formal risk
 convergence of Naive Bayes
 
-::: {#thm:NB_risk_convergence .theorem}
+<div id="thm:NB_risk_convergence" class="theorem">
+
 **Theorem 4** (). *Define
 $G(\tau) = P_{(x,y)\sim \mathbb{P}}\left[ (\ell_{NB,\infty}(x) \in [0,\tau d] \wedge y=1 ) \vee  (\ell_{NB,\infty}(x) \in [-\tau d,0] \wedge y=0 ) \right]$.
 Assume that for some fixed $\rho_0 > 0$, we have
@@ -307,23 +333,26 @@ $\rho_0 \leq P(y=1) \leq 1-\rho_0)$, and that
 $\rho_0 \leq P(x_j=1|y=b) \leq 1-\rho_0)$ for all $j$,$b$, then with
 high probability,
 $$\epsilon(h_{NB,N}) \leq \epsilon(h_{NB, \infty}) + G\left(O\left(\sqrt{\frac{1}{N}\log d}\right)\right)$$*
-:::
+
+</div>
 
 Here, $G$ defines the fraction of points that are very close to the
 decision boundary. Intuitively, if we can understand and control the
 event $G(\tau)$, then we can obtain a more precise control on the bound
 of the error.
 
-::: {#thm:NB_risk_convergence_final .theorem}
+<div id="thm:NB_risk_convergence_final" class="theorem">
+
 **Theorem 5** (). *Let the conditions of Theorem
-[4](#thm:NB_risk_convergence){reference-type="ref"
-reference="thm:NB_risk_convergence"} hold, and suppose
+<a href="#thm:NB_risk_convergence" data-reference-type="ref"
+data-reference="thm:NB_risk_convergence">4</a> hold, and suppose
 $G(\tau) \leq \epsilon/2 +F(\tau)$, for some function $F(\tau)$ that
 statisfies $F(\tau) \to 0$ as $\tau \to 0$, and some fixed
 $\epsilon_0 > 0$. Then for
 $\epsilon(h_{NB,N}) \leq \epsilon (h_{NB,\infty}) + \epsilon_0$ to hold
 with high probability, it suffices to pick $N=\Omega(\log d)$*
-:::
+
+</div>
 
 Thus, we can conclude that though the asymptotic error of Naive Bayes is
 greater than Logistic Regression, the convergence rate of NB is only

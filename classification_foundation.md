@@ -1,15 +1,10 @@
 ---
-title: Classification Fundamentals
-nav_order: 0
+bibliography:
+- lecture2.bib
 ---
 
-# Classification Fundamentals
-{: .no_toc}
-## Table of contents
-{: .no_toc .text-delta }
 
-1. TOC
-{:toc}
+
 # Overview
 
 The aim of this lecture is to establish basic terminology and
@@ -152,9 +147,13 @@ $\mathbb{P}(h(X) \neq Y) \geq \mathbb{P}(h^{*}(X) \neq Y)$. ◻
 
 Related to the manipulations of
 Theorem <a href="#thm:bayes" data-reference-type="ref"
-data-reference="thm:bayes">1</a> is a helpful exercise below:[^1]
+data-reference="thm:bayes">1</a> is a helpful exercise below:
 
-Per Theorem <a href="#thm:bayes" data-reference-type="ref"
+[^1]
+
+
+
+. Per Theorem <a href="#thm:bayes" data-reference-type="ref"
 data-reference="thm:bayes">1</a>, we have found the best possible
 classifier. But it is *idealized*.
 
@@ -192,7 +191,7 @@ $$\mathrm{NN}_{k}(x) :=\left\{j | 1 \leq j \leq k, x_{j}\text { is within } k \t
 Notice that
 $\mathrm{NN}_{1}(x)=\operatorname{argmin}_{1 \leq i \leq N} \operatorname{dist}\left(x, x_{i}\right)$.
 Then, the $k$-NN classifier $$\begin{aligned}
-h_{k\text{-NN}}(x) & = \frac{1}{k} \sum_{\ell \in \mathrm{NN}_{k}(x)} y_\ell.
+h_{k\text{-NN}}(x) & = \frac{1}{k} \sum_{\ell \in \mathrm{NN}_{k}(x)} y_\ell. 
 \end{aligned}$$
 
 ## NN and Bayes
@@ -206,7 +205,7 @@ Statistical Learning Theory)</span></figcaption>
 
 Despite its simplicity, NN is capable of learning complex nonlinear
 classifiers. Precisely, the risk of NN $$\begin{aligned}
-L_{k\text{-NN}} & = \mathbb{P}(h_{k\text{-NN}}(X) \neq Y).
+L_{k\text{-NN}} & = \mathbb{P}(h_{k\text{-NN}}(X) \neq Y). 
 \end{aligned}$$ NN classifier has excellent asymptotic performance even
 for $k=1$ as stated below (see for more details).
 
@@ -214,7 +213,7 @@ for $k=1$ as stated below (see for more details).
 
 **Theorem 2**. *Let $\mathcal{X} \subset \mathbb{R}^d, ~d\geq 1$. Let
 $\eta$ be continuous. Then, $$\begin{aligned}
-\lim_{n\to\infty} L_{1\text{-NN}} & = 2 \mathbb{E}\big[\eta(X) (1-\eta(X))\big] ~\leq~2 \mathbb{E}\big[\min\{\eta(X), 1-\eta(X)\}] ~=~ 2 L^*.
+\lim_{n\to\infty} L_{1\text{-NN}} & = 2 \mathbb{E}\big[\eta(X) (1-\eta(X))\big] ~\leq~2 \mathbb{E}\big[\min\{\eta(X), 1-\eta(X)\}] ~=~ 2 L^*. 
 \end{aligned}$$*
 
 </div>
@@ -369,16 +368,12 @@ study this (and such) question(s). Informally, if for all
 $h \in \mathcal{H}$, the empirical risk $L_{S}(h)$ is a good
 approximation to $L(h),$ then ERM will also return a good hypothesis
 within ${\cal H}$, and we may be able to establish a bound of the form
-
 $$\label{eq4}
 L_{\mathbb{P}}\left(\operatorname{ERM}_{\mathcal{H}}(S) \right) \leq \min _{h \in \mathcal{H}} L_{\mathbb{P}}(h) + \varepsilon(N, {\cal H}).$$
-
 where recall that $\operatorname{ERM}_{\mathcal{H}}(S)$ is the
 classifier learned using ERM; both risks are taken over the data
 distribution as well as randomly generated $S$ per the data
-distribution.
-
-If such is that case, then empirical risk of
+distribution. If such is that case, then empirical risk of
 $\operatorname{ERM}_{\mathcal{H}}(S)$ will provide a good proxy of the
 best population risk achievable by ${\cal H}$. Naturally, larger
 ${\cal H}$ we have better the best population risk minimization is

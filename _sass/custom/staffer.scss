@@ -5,8 +5,12 @@
   .staffer-image {
     // border-radius: 100%;
     height: 100px;
-    margin-right: $sp-4;
-    width: auto;
+    // margin-right: $sp-4;
+    // width: auto;
+
+    border: 1px solid silver;
+      padding: 2px;
+      margin: 0em 0.8em 0.8em 0.8em;
   }
 
   p,

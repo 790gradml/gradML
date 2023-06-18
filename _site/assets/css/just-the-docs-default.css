@@ -7310,6 +7310,331 @@ div.opaque {
   background-color: #fff;
 }
 
+p.important, blockquote.important {
+  background: rgba(255, 235, 130, 0.2);
+  border-left: 4px solid #e7af06;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.important::before, blockquote.important::before {
+  color: #e7af06;
+  content: "Important";
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+p.important > .important-title, blockquote.important > .important-title {
+  color: #e7af06;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+p.important-title, blockquote.important-title {
+  background: rgba(255, 235, 130, 0.2);
+  border-left: 4px solid #e7af06;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.important-title > p:first-child, blockquote.important-title > p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #e7af06;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+blockquote.important {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.important > p:first-child {
+  margin-top: 0;
+}
+blockquote.important > p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.important-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.important-title > p:nth-child(2) {
+  margin-top: 0;
+}
+blockquote.important-title > p:last-child {
+  margin-bottom: 0;
+}
+
+p.new, blockquote.new {
+  background: rgba(65, 214, 147, 0.2);
+  border-left: 4px solid #026e57;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.new::before, blockquote.new::before {
+  color: #026e57;
+  content: "New";
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+p.new > .new-title, blockquote.new > .new-title {
+  color: #026e57;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+p.new-title, blockquote.new-title {
+  background: rgba(65, 214, 147, 0.2);
+  border-left: 4px solid #026e57;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.new-title > p:first-child, blockquote.new-title > p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #026e57;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+blockquote.new {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.new > p:first-child {
+  margin-top: 0;
+}
+blockquote.new > p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.new-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.new-title > p:nth-child(2) {
+  margin-top: 0;
+}
+blockquote.new-title > p:last-child {
+  margin-bottom: 0;
+}
+
+p.note, blockquote.note {
+  background: rgba(44, 132, 250, 0.2);
+  border-left: 4px solid #183385;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.note::before, blockquote.note::before {
+  color: #183385;
+  content: "Note";
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+p.note > .note-title, blockquote.note > .note-title {
+  color: #183385;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+p.note-title, blockquote.note-title {
+  background: rgba(44, 132, 250, 0.2);
+  border-left: 4px solid #183385;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.note-title > p:first-child, blockquote.note-title > p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #183385;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+blockquote.note {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.note > p:first-child {
+  margin-top: 0;
+}
+blockquote.note > p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.note-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.note-title > p:nth-child(2) {
+  margin-top: 0;
+}
+blockquote.note-title > p:last-child {
+  margin-bottom: 0;
+}
+
+p.warning, blockquote.warning {
+  background: rgba(198, 22, 141, 0.2);
+  border-left: 4px solid rgb(198, 22, 141);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.warning::before, blockquote.warning::before {
+  color: rgb(198, 22, 141);
+  content: "";
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+p.warning > .warning-title, blockquote.warning > .warning-title {
+  color: rgb(198, 22, 141);
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+p.warning-title, blockquote.warning-title {
+  background: rgba(198, 22, 141, 0.2);
+  border-left: 4px solid rgb(198, 22, 141);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.warning-title > p:first-child, blockquote.warning-title > p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgb(198, 22, 141);
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+blockquote.warning {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.warning > p:first-child {
+  margin-top: 0;
+}
+blockquote.warning > p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.warning-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.warning-title > p:nth-child(2) {
+  margin-top: 0;
+}
+blockquote.warning-title > p:last-child {
+  margin-bottom: 0;
+}
+
+p.example, blockquote.example {
+  background: rgba(102, 45, 145, 0.2);
+  border-left: 4px solid rgb(102, 45, 145);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.example::before, blockquote.example::before {
+  color: rgb(102, 45, 145);
+  content: "Example";
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+p.example > .example-title, blockquote.example > .example-title {
+  color: rgb(102, 45, 145);
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+p.example-title, blockquote.example-title {
+  background: rgba(102, 45, 145, 0.2);
+  border-left: 4px solid rgb(102, 45, 145);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.example-title > p:first-child, blockquote.example-title > p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgb(102, 45, 145);
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+blockquote.example {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.example > p:first-child {
+  margin-top: 0;
+}
+blockquote.example > p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.example-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.example-title > p:nth-child(2) {
+  margin-top: 0;
+}
+blockquote.example-title > p:last-child {
+  margin-bottom: 0;
+}
+
 .main-content .module,
 .module, .announcement {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 14px rgba(0, 0, 0, 0.05);
@@ -7541,8 +7866,9 @@ div.opaque {
 }
 .staffer .staffer-image {
   height: 100px;
-  margin-right: 1rem;
-  width: auto;
+  border: 1px solid silver;
+  padding: 2px;
+  margin: 0em 0.8em 0.8em 0.8em;
 }
 .staffer p,
 .staffer .staffer-name {

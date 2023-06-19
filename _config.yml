@@ -146,6 +146,11 @@ defaults:
       values:
           parent: Unsupervised Learning
           layout: page
+    - scope:
+          path: "info/"
+      values:
+          parent: Info
+          layout: page
 # pandoc:
 #     extensions:
 #         # - normalize

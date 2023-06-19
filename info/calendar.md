@@ -2,7 +2,6 @@
 title: Syllabus / Calendar
 description: Listing of course modules and topics.
 nav_order: 0
-enable_copy_code_button: true
 ---
 
 # Calendar

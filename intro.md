@@ -119,10 +119,10 @@ $$\text{Minimize } \sum_{i=1}^N \mathrm{loss}\left(y_i,f(x_i)\right) \text{ over
 Stochastic Gradient Descent (SGD) is a method to solve this optimization
 problem. This is where Optimization meets Machine Learning.
 
-6.036 (or equivalent undergraduate class) discusses the “How” or
+6.390 (or equivalent undergraduate class) discusses the “How” or
 “mechanics” of such approaches. In this class, we expect that you know
 the “How” for much of supervised learning and decision making. That is,
-more than $60\%$ of this class. So, what will we do in 6.867 (since
+more than $60\%$ of this class. So, what will we do in 6.790 (since
 $> 60\%$ is already done!)?
 
 To start with, we will learn “Why” behind the “How”. We will utilize
@@ -244,8 +244,10 @@ deep generative model).
 
 ### Probabilistic Modeling
 
-Two important topics in probabilistic modeling is incorporating prior
-knowledge from Bayesian perspective and sampling from distribution when
+Two important topics in probabilistic modeling are:
+-  incorporating prior
+knowledge from Bayesian perspective, and 
+- sampling from distribution when
 probabilistic model is complex.
 
 Most of the key tasks in machine learning are inference tasks. For
@@ -261,7 +263,7 @@ of the world. One of the classical priors is Gaussian distribution,
 which for example, leads to ridge regularization in regression.
 
 A probability distribution can be complex. It may have succinct
-representation but no closed form formula, and hence difficult to
+representation but no closed-form formula, and hence difficult to
 evaluate. For example, we may know
 $$\mathbb{P}(X=x)\propto \exp(f(x))=\frac{1}{Z}\exp(f(x)),$$ where
 $$Z=\int  \exp(f(x))dx.$$
@@ -295,14 +297,12 @@ decision process, and reinforcement learning.
 | Markov Decision Process               | High                          | Lots of historical information       |
 | Reinforcement Learning                | High                          | Minimal information, learn as you go |
 
-The fundamental challenge in reinforcement learning is *explore vs
-exploit*. An example of poor decision is it is difficult to find blue
-sweater for young girls. To maximize profit (*exploit*), clothes makers
-choose not to make or make very few blue sweaters such that blue
-sweaters are hard to find and expensive. An important application of
-reinforcement learning is automated game player. We’ll do a case study
-on AlphaGoZero.
+One fundamental challenge in reinforcement learning is *explore vs
+exploit*: we need to make decisions based on incomplete information about the world; in turn the decision we make affects future data we get to see. so should we stick to a decision that seems best for the moment, or sacrifice near-term gain to get more information for future long-term decision making. 
 
+Another central question in RL is the **credit assignment problem**. (TO be expanded.)
+
+Reinforcement learning has found success in various applications such as robotics, automated game player, ads placement. And notably, in the recent success of large-language-models (LLMs) such as [ChatGPT](https://chat.openai.com). 
 ## And then, What Is Not Cover, But Of Interest
 
 We may not be able to cover the following interesting topics in machine

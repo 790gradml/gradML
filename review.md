@@ -33,7 +33,7 @@ nav_order: 3
 
 Quadratic functions' Convexity Property
 
-<iframe src="https://shenshen.mit.edu/demos/QuadraticFun.html" width=1000 height=800></iframe>
+<iframe src="/demos/QuadraticFun.html" width=1000 height=800></iframe>
 
 ##  Optimal Solutions and Uniqueness
 

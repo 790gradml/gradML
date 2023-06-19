@@ -463,116 +463,165 @@
   },"66": {
     "doc": "Background/Review",
     "title": "Table of contents",
-    "content": ". | Notations | Linear Algebra, Calculus, and Optimization | Probability and Statistics . | Concepts related to a single distribution | Concepts involving multiple distributions | . | . ",
+    "content": ". | Notations | Linear Algebra, Calculus, and Optimization . | The Gradient Vector | The Chain Rule (in calculus) | Positive Semidefiniteness (PSD) and Positive Definiteness (PD) | Convexity and Strong Convexity | Optimal Solutions and Uniqueness | . | Probability and Statistics . | Concepts related to a single distribution . | Basics and formulae | Fundamental Distributions | Jensen’s Inequality | Max likelihood and Max log likelihood | . | Concepts involving multiple distributions . | Conditional probability | The Chain Rule (in probability) | Marginal Independence | Bayes’ Rule | Conditional Independence | Importance sampling | KL divergence | . | . | . ",
     "url": "/review/#table-of-contents",
     
     "relUrl": "/review/#table-of-contents"
   },"67": {
     "doc": "Background/Review",
     "title": "Notations",
-    "content": ". | Data matrix is of the size $(n,d)$ where $n$ is the number of data points, and $d$ is the dimension of the features . | Vectors are denoted with a small-case letter; matrices capital letters | The default norm of a vector is the $l_2$ norm | . ",
+    "content": ". | Data matrix is of the size $(n,d)$ where $n$ is the number of data points, and $d$ is the dimension of the features | Vectors are denoted with a small-case letter; matrices capital letters | The default norm of a vector is the $l_2$ norm | . ",
     "url": "/review/#notations",
     
     "relUrl": "/review/#notations"
   },"68": {
     "doc": "Background/Review",
     "title": "Linear Algebra, Calculus, and Optimization",
-    "content": ". | Gradient vector | The chain rule (in calculus) | Positive semidefiniteness (PSD) and positive definiteness (PD) | Convexity, strong convexity | Optimal solutions, uniqueness | . ",
+    "content": " ",
     "url": "/review/#linear-algebra-calculus-and-optimization",
     
     "relUrl": "/review/#linear-algebra-calculus-and-optimization"
   },"69": {
     "doc": "Background/Review",
+    "title": "The Gradient Vector",
+    "content": " ",
+    "url": "/review/#the-gradient-vector",
+    
+    "relUrl": "/review/#the-gradient-vector"
+  },"70": {
+    "doc": "Background/Review",
+    "title": "The Chain Rule (in calculus)",
+    "content": " ",
+    "url": "/review/#the-chain-rule-in-calculus",
+    
+    "relUrl": "/review/#the-chain-rule-in-calculus"
+  },"71": {
+    "doc": "Background/Review",
+    "title": "Positive Semidefiniteness (PSD) and Positive Definiteness (PD)",
+    "content": " ",
+    "url": "/review/#positive-semidefiniteness-psd-and-positive-definiteness-pd",
+    
+    "relUrl": "/review/#positive-semidefiniteness-psd-and-positive-definiteness-pd"
+  },"72": {
+    "doc": "Background/Review",
+    "title": "Convexity and Strong Convexity",
+    "content": "Quadratic functions’ Convexity Property . ",
+    "url": "/review/#convexity-and-strong-convexity",
+    
+    "relUrl": "/review/#convexity-and-strong-convexity"
+  },"73": {
+    "doc": "Background/Review",
+    "title": "Optimal Solutions and Uniqueness",
+    "content": " ",
+    "url": "/review/#optimal-solutions-and-uniqueness",
+    
+    "relUrl": "/review/#optimal-solutions-and-uniqueness"
+  },"74": {
+    "doc": "Background/Review",
     "title": "Probability and Statistics",
-    "content": "Concepts related to a single distribution . | Basics and formulas | Fundamental distributions . | 1d normal | Multi-variate normal | . | Jensen’s inequality | Max likelihood and Max log likelihood | . MLE for Gaussian . We have data $x_1,\\ldots,x_N$ sampled from a distribution. The goal is to learn the distribution. The assumption is that the data is generated from a Gaussian distribution $\\mathcal{N}(\\mu,\\sigma^2)$. Then the refined goal is to learn the mean and variance. How to learn (parameters, mean and variance)? . A common method is maximum likelihood (ML), that is, choose the parameters that maximize $\\mathbb{P}(\\text{data}|\\text{parameters})$. In this problem, to choose mean, variance from samples, the likelihood is . \\[\\begin{aligned} \\mathbb{P}\\left(x_1,\\ldots,x_N|\\mu,\\sigma^2\\right)=&amp;\\prod_{i=1}^N\\mathbb{P}\\left(x_i|\\mu,\\sigma^2\\right) \\\\ =&amp;\\prod_{i=1}^N \\frac{1}{(2\\pi\\sigma^2)^{1/2}}\\exp\\left(-\\frac{(x_i-\\mu)^2}{2\\sigma^2}\\right). \\end{aligned}\\] Maximizing likelihood is same as maximizing logarithm of likelihood. This leads to . \\[\\max_{\\mu,\\sigma^2} g(\\mu,\\sigma^2),\\] where \\(g(\\mu,\\sigma^2)=-\\frac{1}{2\\sigma^2}\\sum_{i=1}^N(x_i-\\mu)^2-N\\ln\\sigma -N\\ln\\sqrt{2\\pi}.\\) This is an optimization problem and its solution is what we desire. For such reasons, optimization is an integral part of Machine Learning. The ML estimation for variance (and standard deviation) is biased. This leads to the Bessel correction for variance: \\(\\tilde{\\sigma}^2_{\\rm ML}=\\frac{1}{N-1}\\sum_{i=1}^N (x_i-\\mu_{\\rm ML})^2.\\) . Concepts involving multiple distributions . | The chain rule (in probability) | Marginal independence . | Joint probability is the product | Entropy of the joint distribution is the sum of individual entropies | . | Bayes’ rule | Conditional independence . | Comparison with marginal independence | . | Importance sampling | KL divergence | . ",
+    "content": " ",
     "url": "/review/#probability-and-statistics",
     
     "relUrl": "/review/#probability-and-statistics"
-  },"70": {
+  },"75": {
+    "doc": "Background/Review",
+    "title": "Concepts related to a single distribution",
+    "content": "Basics and formulae . The notions of random variable, expectation, variance, entropy . Fundamental Distributions . Discrete Distributions PMFs (Probability Mass Functions) . | Discrete uniform with parameters $a$ and $b$, where $a$ and $b$ are integers with $a&lt;b$. Here, \\(p_X(k)=1 /(b-a+1), \\quad k=a, a+1, \\ldots, b,\\) and $p_X(k)=0$, otherwise. (In the remaining examples, the qualification “ $p_X(k)=0$, otherwise,” will be omitted brevity.) . | Bernoulli with parameter $p$, where $0 \\leq p \\leq 1$. Here, $p_X(0)=p, p_X(1)=$ $1-p$. | Binomial with parameters $n$ and $p$, where $n \\in \\mathbb{N}$ and $p \\in[0,1]$. Here, . | . \\[p_X(k)=\\left(\\begin{array}{l} n \\\\ k \\end{array}\\right) p^k(1-p)^{n-k}, \\quad k=0,1, \\ldots, n\\] Continuous Distributions PDFs (Probability Density Functions) . | 1D Gaussian | Multivariate Gaussian | . Jensen’s Inequality . Max likelihood and Max log likelihood . MLE for Gaussian . We have data $x_1,\\ldots,x_N$ sampled from a distribution. The goal is to learn the distribution. The assumption is that the data is generated from a Gaussian distribution $\\mathcal{N}(\\mu,\\sigma^2)$. Then the refined goal is to learn the mean and variance. How to learn (parameters, mean and variance)? . A common method is maximum likelihood (ML), that is, choose the parameters that maximize $\\mathbb{P}(\\text{data}|\\text{parameters})$. In this problem, to choose mean, variance from samples, the likelihood is . \\[\\begin{aligned} \\mathbb{P}\\left(x_1,\\ldots,x_N|\\mu,\\sigma^2\\right)=&amp;\\prod_{i=1}^N\\mathbb{P}\\left(x_i|\\mu,\\sigma^2\\right) \\\\ =&amp;\\prod_{i=1}^N \\frac{1}{(2\\pi\\sigma^2)^{1/2}}\\exp\\left(-\\frac{(x_i-\\mu)^2}{2\\sigma^2}\\right). \\end{aligned}\\] Maximizing likelihood is same as maximizing logarithm of likelihood. This leads to . \\[\\max_{\\mu,\\sigma^2} g(\\mu,\\sigma^2),\\] where \\(g(\\mu,\\sigma^2)=-\\frac{1}{2\\sigma^2}\\sum_{i=1}^N(x_i-\\mu)^2-N\\ln\\sigma -N\\ln\\sqrt{2\\pi}.\\) This is an optimization problem and its solution is what we desire. For such reasons, optimization is an integral part of Machine Learning. The ML estimation for variance (and standard deviation) is biased. This leads to the Bessel’s correction for variance: . \\[\\tilde{\\sigma}^2_{\\rm ML}=\\frac{1}{N-1}\\sum_{i=1}^N (x_i-\\mu_{\\rm ML})^2.\\] ",
+    "url": "/review/#concepts-related-to-a-single-distribution",
+    
+    "relUrl": "/review/#concepts-related-to-a-single-distribution"
+  },"76": {
+    "doc": "Background/Review",
+    "title": "Concepts involving multiple distributions",
+    "content": "Conditional probability . Consider a probability space $(\\Omega, \\mathcal{F}, \\mathbb{P})$, and an event $B \\in \\mathcal{F}$ with $\\mathbb{P}(B)&gt;0$. For every event $A \\in \\mathcal{F}$, the conditional probability that $A$ occurs given that $B$ occurs is denoted by $\\mathbb{P}(A \\mid B)$ and is defined by . \\[\\mathbb{P}(A \\mid B)=\\frac{\\mathbb{P}(A \\cap B)}{\\mathbb{P}(B)}.\\] The Chain Rule (in probability) . Marginal Independence . Let $(\\Omega, \\mathcal{F} \\cdot \\mathbb{P})$ be a probability space. Two events, $A$ and $B$, are said to be independent if $\\mathbb{P}(A \\cap B)=\\mathbb{P}(A) \\mathbb{P}(B)$. If $\\mathbb{P}(B)&gt;0$, an equivalent condition is $\\mathbb{P}(A)=\\mathbb{P}(A \\mid B)$. Note: As an immediate consequence of that joint probability is the product of individual probabilities, the entropy of the joint distribution is the sum of individual entropies . Bayes’ Rule . Let $A$ be an event with $\\mathbb{P}(A)&gt;0$. If the events $B_i, i \\in \\mathbb{N}$, form a partition of $\\Omega$, and $\\mathbb{P}\\left(B_i\\right)&gt;0$ for every $i$, then . \\[\\mathbb{P}\\left(B_i \\mid A\\right)=\\frac{\\mathbb{P}\\left(B_i\\right) \\mathbb{P}\\left(A \\mid B_i\\right)}{\\mathbb{P}(A)}=\\frac{\\mathbb{P}\\left(B_i\\right) \\mathbb{P}\\left(A \\mid B_i\\right)}{\\sum_{j=1}^{\\infty} \\mathbb{P}\\left(B_j\\right) \\mathbb{P}\\left(A \\mid B_j\\right)}\\] Conditional Independence . | Comparison with marginal independence | . Importance sampling . KL divergence . ",
+    "url": "/review/#concepts-involving-multiple-distributions",
+    
+    "relUrl": "/review/#concepts-involving-multiple-distributions"
+  },"77": {
     "doc": "Background/Review",
     "title": "Background/Review",
     "content": " ",
     "url": "/review/",
     
     "relUrl": "/review/"
-  },"71": {
+  },"78": {
     "doc": "Weekly Schedule",
     "title": "Weekly Schedule",
     "content": ". | 9:00 AM | 9:30 AM | 10:00 AM | 10:30 AM | 11:00 AM | 11:30 AM | 12:00 PM | 12:30 PM | 1:00 PM | 1:30 PM | 2:00 PM | 2:30 PM | 3:00 PM | 3:30 PM | 4:00 PM | 4:30 PM | 5:00 PM | 5:30 PM | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"72": {
+  },"79": {
     "doc": "Weekly Schedule",
     "title": "",
     "content": "| ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"73": {
+  },"80": {
     "doc": "Weekly Schedule",
     "title": "Monday",
     "content": ". | Office Hours 1:00 PM–2:00 PM 26-322? | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"74": {
+  },"81": {
     "doc": "Weekly Schedule",
     "title": "Tuesday",
     "content": ". | Lecture 2:30 PM–4:00 PM 32-123 | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"75": {
+  },"82": {
     "doc": "Weekly Schedule",
     "title": "Wednesday",
     "content": "| ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"76": {
+  },"83": {
     "doc": "Weekly Schedule",
     "title": "Thursday",
     "content": ". | Lecture 2:30 PM–4:00 PM 32-123 | . | ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"77": {
+  },"84": {
     "doc": "Weekly Schedule",
     "title": "Friday",
     "content": ". | Recitation 10:00 AM–11:00 AM 4-237 | Recitation 11:00 AM–12:00 PM 4-237 | Recitation 1:00 PM–2:00 PM 3-270 | Recitation 2:00 PM–3:00 PM 3-270 | . | . ",
     "url": "/schedule/",
     
     "relUrl": "/schedule/"
-  },"78": {
+  },"85": {
     "doc": "Staff",
     "title": "Staff",
     "content": " ",
     "url": "/staff/",
     
     "relUrl": "/staff/"
-  },"79": {
+  },"86": {
     "doc": "Staff",
     "title": "Instructors",
     "content": "Pulkit Agrawal . Shen Shen . shenshen@mit.edu . Tommi Jaakkola . ",
     "url": "/staff/#instructors",
     
     "relUrl": "/staff/#instructors"
-  },"80": {
+  },"87": {
     "doc": "Supervised Learning",
     "title": "Supervised Learning",
     "content": " ",
     "url": "/supervised/",
     
     "relUrl": "/supervised/"
-  },"81": {
+  },"88": {
     "doc": "Unsupervised Learning",
     "title": "Unsupervised Learning",
     "content": " ",
     "url": "/unsupervised/",
     
     "relUrl": "/unsupervised/"
-  },"82": {
+  },"89": {
     "doc": "Value functions and Bellman",
     "title": "Value functions and Bellman",
     "content": " ",

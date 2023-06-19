@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Weekly Schedule
 description: The weekly event schedule.
 nav_order: 2
@@ -10,3 +9,5 @@ nav_order: 2
 {% for schedule in site.schedules %}
 {{ schedule }}
 {% endfor %}
+
+

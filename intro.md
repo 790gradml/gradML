@@ -301,7 +301,7 @@ exploit*: we need to make decisions based on incomplete information about the wo
 Another central question in RL is the **credit assignment problem**. (TO be expanded.)
 
 Reinforcement learning has found success in various applications such as robotics, automated game player, ads placement. And notably, in the recent success of large-language-models (LLMs) such as [ChatGPT](https://chat.openai.com). 
-## And then, What Is Not Cover, But Of Interest
+## And then, What Is Not Covered, But Of Interest
 
 We may not be able to cover the following interesting topics in machine
 learning:
@@ -325,5 +325,4 @@ systematic foundations to approach these topics.
 
 [^3]: A good set of readings include , and
 
-[^4]: MCMC is one of the top 10 algorithms of all time . Other
-    algorithms include quicksort and fast Fourier transform.
+[^4]: MCMC is one of the top 10 algorithms of all time . Other algorithms include quicksort and fast Fourier transform.

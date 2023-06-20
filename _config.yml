@@ -163,9 +163,12 @@ callouts:
     important:
         title: Important
         color: yellow
-    new:
-        title: New
-        color: green
+    thm:
+        title: Theorem
+        color: eecs-red
+    proof:
+        title: Proof
+        color: eecs-blue
     note:
         title: Note
         color: blue
@@ -175,6 +178,9 @@ callouts:
     example:
         title: "Example"
         color: eecs-purple
+    exercise:
+        title: "Exercise"
+        color: blue
 # mermaid:
 #     # Version of mermaid library
 #     # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/

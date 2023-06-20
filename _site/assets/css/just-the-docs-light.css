@@ -7375,24 +7375,24 @@ blockquote.important-title > p:last-child {
   margin-bottom: 0;
 }
 
-p.new, blockquote.new {
-  background: rgba(65, 214, 147, 0.2);
-  border-left: 4px solid #026e57;
+p.thm, blockquote.thm {
+  background: rgba(198, 22, 141, 0.2);
+  border-left: 4px solid rgb(198, 22, 141);
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   padding: 0.8rem;
 }
-p.new::before, blockquote.new::before {
-  color: #026e57;
-  content: "New";
+p.thm::before, blockquote.thm::before {
+  color: rgb(198, 22, 141);
+  content: "Theorem";
   display: block;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.75em;
   padding-bottom: 0.125rem;
 }
-p.new > .new-title, blockquote.new > .new-title {
-  color: #026e57;
+p.thm > .thm-title, blockquote.thm > .thm-title {
+  color: rgb(198, 22, 141);
   display: block;
   font-weight: bold;
   text-transform: uppercase;
@@ -7400,17 +7400,17 @@ p.new > .new-title, blockquote.new > .new-title {
   padding-bottom: 0.125rem;
 }
 
-p.new-title, blockquote.new-title {
-  background: rgba(65, 214, 147, 0.2);
-  border-left: 4px solid #026e57;
+p.thm-title, blockquote.thm-title {
+  background: rgba(198, 22, 141, 0.2);
+  border-left: 4px solid rgb(198, 22, 141);
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   padding: 0.8rem;
 }
-p.new-title > p:first-child, blockquote.new-title > p:first-child {
+p.thm-title > p:first-child, blockquote.thm-title > p:first-child {
   margin-top: 0;
   margin-bottom: 0;
-  color: #026e57;
+  color: rgb(198, 22, 141);
   display: block;
   font-weight: bold;
   text-transform: uppercase;
@@ -7418,25 +7418,90 @@ p.new-title > p:first-child, blockquote.new-title > p:first-child {
   padding-bottom: 0.125rem;
 }
 
-blockquote.new {
+blockquote.thm {
   margin-left: 0;
   margin-right: 0;
 }
-blockquote.new > p:first-child {
+blockquote.thm > p:first-child {
   margin-top: 0;
 }
-blockquote.new > p:last-child {
+blockquote.thm > p:last-child {
   margin-bottom: 0;
 }
 
-blockquote.new-title {
+blockquote.thm-title {
   margin-left: 0;
   margin-right: 0;
 }
-blockquote.new-title > p:nth-child(2) {
+blockquote.thm-title > p:nth-child(2) {
   margin-top: 0;
 }
-blockquote.new-title > p:last-child {
+blockquote.thm-title > p:last-child {
+  margin-bottom: 0;
+}
+
+p.proof, blockquote.proof {
+  background: rgba(0, 161, 199, 0.2);
+  border-left: 4px solid rgb(0, 161, 199);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.proof::before, blockquote.proof::before {
+  color: rgb(0, 161, 199);
+  content: "Proof";
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+p.proof > .proof-title, blockquote.proof > .proof-title {
+  color: rgb(0, 161, 199);
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+p.proof-title, blockquote.proof-title {
+  background: rgba(0, 161, 199, 0.2);
+  border-left: 4px solid rgb(0, 161, 199);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.proof-title > p:first-child, blockquote.proof-title > p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgb(0, 161, 199);
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+blockquote.proof {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.proof > p:first-child {
+  margin-top: 0;
+}
+blockquote.proof > p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.proof-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.proof-title > p:nth-child(2) {
+  margin-top: 0;
+}
+blockquote.proof-title > p:last-child {
   margin-bottom: 0;
 }
 
@@ -7632,6 +7697,71 @@ blockquote.example-title > p:nth-child(2) {
   margin-top: 0;
 }
 blockquote.example-title > p:last-child {
+  margin-bottom: 0;
+}
+
+p.exercise, blockquote.exercise {
+  background: rgba(44, 132, 250, 0.2);
+  border-left: 4px solid #183385;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.exercise::before, blockquote.exercise::before {
+  color: #183385;
+  content: "Exercise";
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+p.exercise > .exercise-title, blockquote.exercise > .exercise-title {
+  color: #183385;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+p.exercise-title, blockquote.exercise-title {
+  background: rgba(44, 132, 250, 0.2);
+  border-left: 4px solid #183385;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.8rem;
+}
+p.exercise-title > p:first-child, blockquote.exercise-title > p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #183385;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.125rem;
+}
+
+blockquote.exercise {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.exercise > p:first-child {
+  margin-top: 0;
+}
+blockquote.exercise > p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.exercise-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote.exercise-title > p:nth-child(2) {
+  margin-top: 0;
+}
+blockquote.exercise-title > p:last-child {
   margin-bottom: 0;
 }
 

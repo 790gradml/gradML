@@ -7375,14 +7375,14 @@ blockquote.important-title > p:last-child {
   margin-bottom: 0;
 }
 
-p.thm, blockquote.thm {
+p.theorem, blockquote.theorem {
   background: rgba(198, 22, 141, 0.2);
   border-left: 4px solid rgb(198, 22, 141);
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   padding: 0.8rem;
 }
-p.thm::before, blockquote.thm::before {
+p.theorem::before, blockquote.theorem::before {
   color: rgb(198, 22, 141);
   content: "Theorem";
   display: block;
@@ -7391,7 +7391,7 @@ p.thm::before, blockquote.thm::before {
   font-size: 0.75em;
   padding-bottom: 0.125rem;
 }
-p.thm > .thm-title, blockquote.thm > .thm-title {
+p.theorem > .theorem-title, blockquote.theorem > .theorem-title {
   color: rgb(198, 22, 141);
   display: block;
   font-weight: bold;
@@ -7400,14 +7400,14 @@ p.thm > .thm-title, blockquote.thm > .thm-title {
   padding-bottom: 0.125rem;
 }
 
-p.thm-title, blockquote.thm-title {
+p.theorem-title, blockquote.theorem-title {
   background: rgba(198, 22, 141, 0.2);
   border-left: 4px solid rgb(198, 22, 141);
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   padding: 0.8rem;
 }
-p.thm-title > p:first-child, blockquote.thm-title > p:first-child {
+p.theorem-title > p:first-child, blockquote.theorem-title > p:first-child {
   margin-top: 0;
   margin-bottom: 0;
   color: rgb(198, 22, 141);
@@ -7418,25 +7418,25 @@ p.thm-title > p:first-child, blockquote.thm-title > p:first-child {
   padding-bottom: 0.125rem;
 }
 
-blockquote.thm {
+blockquote.theorem {
   margin-left: 0;
   margin-right: 0;
 }
-blockquote.thm > p:first-child {
+blockquote.theorem > p:first-child {
   margin-top: 0;
 }
-blockquote.thm > p:last-child {
+blockquote.theorem > p:last-child {
   margin-bottom: 0;
 }
 
-blockquote.thm-title {
+blockquote.theorem-title {
   margin-left: 0;
   margin-right: 0;
 }
-blockquote.thm-title > p:nth-child(2) {
+blockquote.theorem-title > p:nth-child(2) {
   margin-top: 0;
 }
-blockquote.thm-title > p:last-child {
+blockquote.theorem-title > p:last-child {
   margin-bottom: 0;
 }
 

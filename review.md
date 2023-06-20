@@ -46,7 +46,8 @@ Quadratic functions' Convexity Property
   - The notions of random variable, expectation, variance, entropy.
   - Union bounds
   - Concentration inequalities: Markov's Inequality, Chernoff bound, Hoeffding's inequality
-###  Fundamental Distributions
+
+### Fundamental Distributions
 
 **Discrete Distributions PMFs (Probability Mass Functions)**
 

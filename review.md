@@ -43,8 +43,9 @@ Quadratic functions' Convexity Property
 ## Concepts related to a single distribution
 
 ### Basics and formulae
-
-The notions of random variable, expectation, variance, entropy
+  - The notions of random variable, expectation, variance, entropy.
+  - Union bounds
+  - Concentration inequalities: Markov's Inequality, Chernoff bound, Hoeffding's inequality
 ###  Fundamental Distributions
 
 **Discrete Distributions PMFs (Probability Mass Functions)**
@@ -55,9 +56,9 @@ p_X(k)=1 /(b-a+1), \quad k=a, a+1, \ldots, b,
 $$
 and $p_X(k)=0$, otherwise. (In the remaining examples, the qualification " $p_X(k)=0$, otherwise," will be omitted brevity.)
 
-- Bernoulli with parameter $p$, where $0 \leq p \leq 1$. Here, $p_X(0)=p, p_X(1)=$ $1-p$.
+- *Bernoulli* with parameter $p$, where $0 \leq p \leq 1$. Here, $p_X(0)=p, p_X(1)=$ $1-p$.
 
-- Binomial with parameters $n$ and $p$, where $n \in \mathbb{N}$ and $p \in[0,1]$. Here,
+- *Binomial* with parameters $n$ and $p$, where $n \in \mathbb{N}$ and $p \in[0,1]$. Here,
 
 $$
 p_X(k)=\left(\begin{array}{l}

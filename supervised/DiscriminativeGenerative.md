@@ -249,7 +249,7 @@ up for a fixed constant $\epsilon_0$, it suffices to pick $N=\Omega(d)$
 The proof of this theorem follows the application of the
 uniform convergence bounds to logistic regression, and using the fact
 that the $d$ dimensional linear classifier $\mathcal{H}$ has a VC
-dimension of $d+1$. These concepts will be covered in [Learnability and VC dimension](/supervised/learnability_and_vc.md).
+dimension of $d+1$. These concepts will be covered in [Learnability and VC dimension](/supervised/learnability_and_vc).
 
 Now, we want to draw a similar picture for the Naive Bayes classifier
 and compare it the Logistic Regression. It turns out this is a more

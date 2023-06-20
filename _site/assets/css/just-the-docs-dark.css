@@ -7574,23 +7574,23 @@ div.opaque {
   background-color: #27262b;
 }
 
-p.important, blockquote.important {
+p.definition, blockquote.definition {
   background: rgba(255, 235, 130, 0.2);
   border-left: 4px solid #e7af06;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   padding: 0.8rem;
 }
-p.important::before, blockquote.important::before {
+p.definition::before, blockquote.definition::before {
   color: #e7af06;
-  content: "Important";
+  content: "Definition";
   display: block;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.75em;
   padding-bottom: 0.125rem;
 }
-p.important > .important-title, blockquote.important > .important-title {
+p.definition > .definition-title, blockquote.definition > .definition-title {
   color: #e7af06;
   display: block;
   font-weight: bold;
@@ -7599,14 +7599,14 @@ p.important > .important-title, blockquote.important > .important-title {
   padding-bottom: 0.125rem;
 }
 
-p.important-title, blockquote.important-title {
+p.definition-title, blockquote.definition-title {
   background: rgba(255, 235, 130, 0.2);
   border-left: 4px solid #e7af06;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   padding: 0.8rem;
 }
-p.important-title > p:first-child, blockquote.important-title > p:first-child {
+p.definition-title > p:first-child, blockquote.definition-title > p:first-child {
   margin-top: 0;
   margin-bottom: 0;
   color: #e7af06;
@@ -7617,25 +7617,25 @@ p.important-title > p:first-child, blockquote.important-title > p:first-child {
   padding-bottom: 0.125rem;
 }
 
-blockquote.important {
+blockquote.definition {
   margin-left: 0;
   margin-right: 0;
 }
-blockquote.important > p:first-child {
+blockquote.definition > p:first-child {
   margin-top: 0;
 }
-blockquote.important > p:last-child {
+blockquote.definition > p:last-child {
   margin-bottom: 0;
 }
 
-blockquote.important-title {
+blockquote.definition-title {
   margin-left: 0;
   margin-right: 0;
 }
-blockquote.important-title > p:nth-child(2) {
+blockquote.definition-title > p:nth-child(2) {
   margin-top: 0;
 }
-blockquote.important-title > p:last-child {
+blockquote.definition-title > p:last-child {
   margin-bottom: 0;
 }
 

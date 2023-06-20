@@ -160,8 +160,8 @@ defaults:
 # callouts
 callouts_level: quiet # or loud
 callouts:
-    important:
-        title: Important
+    definition:
+        title: Definition
         color: yellow
     theorem:
         title: Theorem

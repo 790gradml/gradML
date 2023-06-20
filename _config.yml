@@ -163,7 +163,7 @@ callouts:
     important:
         title: Important
         color: yellow
-    thm:
+    theorem:
         title: Theorem
         color: eecs-red
     proof:

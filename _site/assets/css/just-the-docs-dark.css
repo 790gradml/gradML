@@ -894,7 +894,7 @@ h6,
   margin-top: 0;
   margin-bottom: 1em;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.25;
   color: #f5f6fa;
 }
 
@@ -1110,7 +1110,7 @@ blockquote {
 @media (min-width: 31.25rem) {
   .site-title {
     font-size: 24px !important;
-    line-height: 1;
+    line-height: 1.25;
   }
 }
 @media (min-width: 50rem) {
@@ -1620,7 +1620,7 @@ body {
 h1,
 .text-alpha {
   font-size: 32px !important;
-  line-height: 1;
+  line-height: 1.25;
   font-weight: 300;
 }
 @media (min-width: 31.25rem) {
@@ -1640,7 +1640,7 @@ h2,
   .text-beta,
   #toctitle {
     font-size: 24px !important;
-    line-height: 1;
+    line-height: 1.25;
   }
 }
 
@@ -3768,13 +3768,13 @@ pre.highlight {
 @media (min-width: 31.25rem) {
   .fs-6 {
     font-size: 24px !important;
-    line-height: 1;
+    line-height: 1.25;
   }
 }
 
 .fs-7 {
   font-size: 24px !important;
-  line-height: 1;
+  line-height: 1.25;
 }
 @media (min-width: 31.25rem) {
   .fs-7 {
@@ -3784,7 +3784,7 @@ pre.highlight {
 
 .fs-8 {
   font-size: 32px !important;
-  line-height: 1;
+  line-height: 1.25;
 }
 @media (min-width: 31.25rem) {
   .fs-8 {
@@ -3794,7 +3794,7 @@ pre.highlight {
 
 .fs-9 {
   font-size: 36px !important;
-  line-height: 1;
+  line-height: 1.25;
 }
 @media (min-width: 31.25rem) {
   .fs-9 {
@@ -3804,7 +3804,7 @@ pre.highlight {
 
 .fs-10 {
   font-size: 42px !important;
-  line-height: 1;
+  line-height: 1.25;
 }
 @media (min-width: 31.25rem) {
   .fs-10 {
@@ -3837,7 +3837,7 @@ pre.highlight {
 }
 
 .lh-tight {
-  line-height: 1;
+  line-height: 1.25;
 }
 
 .ls-5 {

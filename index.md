@@ -11,8 +11,8 @@ has_toc: false
 
 <img src="/assets/images/790-txt.png" width="12%">
 
-<h1>Machine Learning <br> (Fall 2023)</h1>
-
+<h1 style="margin-bottom:-1em">Machine Learning</h1>
+<h1>(Fall 2023)</h1>
 </center>
 
 

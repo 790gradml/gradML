@@ -312,17 +312,17 @@ Agnostically PAC learnable with the sample complexity
 $N_\mathcal{H}(\epsilon, \delta) \leq N_{\mathcal{H}}^{UC}(\epsilon/2, \delta)$.
 </div>
 
-# VC-Dimension
+# VC Dimension
 
 Now, let’s move to the situation of infinite hypothesis class. Clearly,
 we don’t have a measurement for the size of the hypothesis class any
-more, but it is still possible to quantitively measure complexity of the
-model. For learnability In classification problems, what really matters
+more, but it is still possible to quantitatively measure complexity of the
+model. For learnability in classification problems, what really matters
 is not the literal size of the hypothesis class, but the maximum number
 of data points that can be classified exactly. Take the simple situation
 in Figure <a href="#Fig:vc1" data-reference-type="ref"
 data-reference="Fig:vc1">1</a> for example, the hypothesis class of
-1-dimensional linear classifier has a infinite size, but this doesn’t
+1-dimensional linear classifier has an infinite size, but this doesn’t
 mean this class is a very complex class. As shown in Figure
 <a href="#Fig:vc1" data-reference-type="ref"
 data-reference="Fig:vc1">1</a> (a), two points with whatever labels can
@@ -351,44 +351,38 @@ of 1-D linear classifiers is 2.</figcaption>
 
 To be more formal, here we introduce the definition of restriction of
 $\mathcal{H}$ to $C$ and the following definition of *shattering* and
-*VC-Dimension*
+*VC-Dimension*.
 
-<div class="definition">
-
-**Definition 8**. *Let $\mathcal{H}$ be a class of functions from
+<p class="definition">
+Let $\mathcal{H}$ be a class of functions from
 $\mathcal{X}$ to $\{0,1\}$ and let
 $C=\{c_1,...,c_m\} \subset \mathcal{X}$. The restriction of
 $\mathcal{H}$ to $C$ is the set of functions from $C$ to $\{0,1\}$ that
 can be derived from $\mathcal{H}$. That is,
 $$\mathcal{H}_C=\{(h(c_1),...,h(c_m)): h \in \mathcal{H} \}$$ where we
 present each function from $C$ to $\{0,1\}$ as a vector in
-$\{0,1\}^{|C|}$.*
-
-</div>
+$\{0,1\}^{|C|}$.
+</p>
 
 If the restriction of $H$ to $C$ is the set of all functions from $C$ to
 $\{0,1\}$, then we say $\mathcal{H}$ shatters the set $C$, formally
 
-<div class="definition">
-
-**Definition 9** (Shattering). *A hypothesis class $\mathcal{H}$
+<p class="definition">
+(Shattering). A hypothesis class $\mathcal{H}$
 shatters finite set $C \subset \mathcal{X}$ if the restriction of
 $\mathcal{H}$ to $C$ is the set of all functions from $C$ to $\{0, 1\}$.
-That is, $|\mathcal{H}_C| = 2^ {|C|}$.*
+That is, $|\mathcal{H}_C| = 2^ {|C|}$.
+</p>
 
-</div>
+With the idea of shattering in, we are now ready to present the definition of VC dimension.
 
-<div class="definition">
-
-**Definition 10** (VC-dimension). *The VC-dimension of a hypothesis
-class $\mathcal{H}$, denoted $VCdim(\mathcal{H})$, is the maximal size
+<p class="definition">
+(VC-dimension). The VC-dimension of a hypothesis
+class $\mathcal{H}$, denoted $VC-dim(\mathcal{H})$, is the maximal size
 of a set $C \subset \mathcal{X}$ that can be shattered by $\mathcal{H}$.
 If $\mathcal{H}$ can shatter sets of arbitrarily large size, we say that
-$\mathcal{H}$ has infinite VC-dimension.*
-
-</div>
-
-
+$\mathcal{H}$ has infinite VC-dimension.
+</p>
 
 Here we give another example on 2-D linear classifiers, as shown in
 Figure <a href="#Fig:vc2" data-reference-type="ref"
@@ -424,29 +418,28 @@ understand the meaning of the lower and upper bound of VC-Dimension.
 
 
 # Fundamental Theorem of Learnability
+As the name suggests, a pretty important theorem:
 
-<div id="fundamental" class="theorem">
-
-**Theorem 11** (The Fundamental Theorem of Statistical Learning). *Let
+<p id="fundamental" class="theorem">
+(The Fundamental Theorem of Statistical Learning). Let
 $\mathcal{H}$ be a hypothesis class of functions from a domain
 $\mathcal{X}$ to $\{0, 1\}$ and let the loss function be the $0 - 1$
-loss. Then the following are equivalent:*
-
-1. *$\mathcal{H}$ has the uniform convergence property.*
-
-2. *Any ERM rule is a successful agnostic PAC learner for
-    $\mathcal{H}$.*
-
-3. *$\mathcal{H}$ is agnostic PAC learnable.*
-
-4. *$\mathcal{H}$ is PAC learnable.*
-
-5. *$\mathcal{H}$ Any ERM rule is a successful PAC learner for
-    $\mathcal{H}$.*
-
-6. *$\mathcal{H}$ has a finite VC-dimension.*
-
-</div>
+loss. Then the following are equivalent:
+<br>
+1. $\mathcal{H}$ has the uniform convergence property.
+<br>
+2. Any ERM rule is a successful agnostic PAC learner for
+    $\mathcal{H}$.
+<br>
+3. $\mathcal{H}$ is agnostic PAC learnable.
+<br>
+4. $\mathcal{H}$ is PAC learnable.
+<br>
+5. $\mathcal{H}$ Any ERM rule is a successful PAC learner for
+    $\mathcal{H}$.
+<br>
+6. $\mathcal{H}$ has a finite VC-dimension.
+</p>
 
 In our previous discussion, we saw $1 \to 2$. $2 \to 3$, $3 \to 4$ and
 $2 \to 5$ are all trivial. For $4 \to 6$ and $5 \to 6$, there is
@@ -454,7 +447,9 @@ detailed proof in \[SSS\] through the no-free-lunch theorem. Here, we
 take a closer look at $6 \to 1$, that a finite VC-dimension implies the
 uniform convergence property, and therefore is PAC-learnable. The
 detailed proof can be found in chapter 6 of \[SSS\], here we provide a
-high level sketch of the proof. The two main parts of the proof are
+high level sketch of the proof. 
+
+The two main parts of the proof are:
 
 1. If $VC-dim(\mathcal{H})=d$, when restricting to a finite subset $C$
     of the data domain, its effective size $|\mathcal{H}_C|$ is only
@@ -466,16 +461,14 @@ high level sketch of the proof. The two main parts of the proof are
     convergence holds whenever the "effective size" is small.
 
 To define the term "effective size", we introduce the definition of
-Growth Function,
+Growth Function:
 
-<div class="definition">
-
-**Definition 12** (Growth Function). *Let $\mathcal{H}$ be a hypothesis
+<p class="definition">
+(Growth Function). Let $\mathcal{H}$ be a hypothesis
 class. Then the growth function of $\mathcal{H}$, denoted
 $\tau_\mathcal{H}: \mathbb{N} \to \mathbb{N}$, is defined as
-$$\tau_\mathcal{H}(N) = \max_{C \subset \mathcal{X}: |C|=N}|\mathcal{H}_C|$$*
-
-</div>
+$$\tau_\mathcal{H}(N) = \max_{C \subset \mathcal{X}: |C|=N}|\mathcal{H}_C|$$
+</p>
 
 In words, $\tau_{\mathcal{H}}(N)$ is the number of different functions
 from a set $C$ of size $N$ to $\{0, 1\}$ that can be obtained by
@@ -494,22 +487,21 @@ In particular, if $N > d+1$ then $\tau_\mathcal{H}(N) \leq (eN)^d$*
 Thus, finite VC-dimension implies polynomial growth, while infinite
 VC-dim means exponential growth. Intuitively, for any $C$ as a subset of
 $\mathcal{X}$, let $B$ be a subset of $C$ such that $\mathcal{H}$
-shatters $B$. Then,
-$|\mathcal{H}_C| \leq \# \{ B \subset C: \mathcal{H} \text{ shatters } B \}$.
+shatters $B$. 
+
+Then,$$|\mathcal{H}_C| \leq \# \{ B \subset C: \mathcal{H} \text{ shatters } B \}$$.
 That is, if $\mathcal{C}$ is the collection of subsets of $C$ that are
 shattered by $\mathcal{H}$, then $|\mathcal{H}_C|$ is upper-bounded by
 the cardinality of $\mathcal{C}$. Then we can show the ERM error is
-bounded using the growth function
+bounded using the growth function.
 
-<div class="theorem">
-
-**Theorem 14**. *Let $\mathcal{H}$ be a class and $\tau_{\mathcal{H}}$
+<p class="theorem">
+Let $\mathcal{H}$ be a class and $\tau_{\mathcal{H}}$
 its growth function. Then for every distribution $\mathbb{P}(X,Y)$ and
 every $\delta \in (0, 1)$, with probability at least $1-\delta$ over the
 choices of $S \sim \mathbb{P}$, we have
-$$|L_S(h) - L_\mathbb{P}(h) | \leq \frac{4+\sqrt{\log \tau_{\mathcal{H}}(2N)}}{\delta \sqrt{2N}}$$*
-
-</div>
+$$|L_S(h) - L_\mathbb{P}(h) | \leq \frac{4+\sqrt{\log \tau_{\mathcal{H}}(2N)}}{\delta \sqrt{2N}}$$
+</p>
 
 And it follows from here that if VC-Dim($\mathcal{H}$) is finite, then
 the uniform convergence property holds, and indeed,
@@ -517,23 +509,22 @@ $$N_{\mathcal{H}}^{UC}(\epsilon, \delta) \leq O(\frac{d}{(\delta \epsilon)^2})$$
 suffices for the uniform convergence property to hold.
 
 A more quantitative version of this theorem is as follows, and the proof
-can be found in chapter 28 of \[SSS\].
+can be found in Chapter 28 of \[SSS\].
 
-<div class="theorem">
+<p class="theorem">
 
 **Theorem 15**. *Let $\mathcal{H}$ be a hypothesis class of functions
 from a domain $\mathcal{X}$ to $\{0, 1\}$ and let the loss function be
 the $0 -1$ loss. Assume that $VC-Dim(\mathcal{H}) =d < \infty$. Then,
 there are absolute constants $C_1$, $C_2$ such that:*
 
-1. *$\mathcal{H}$ has the uniform convergence property with sample
+1. $\mathcal{H}$ has the uniform convergence property with sample
     complexity
-    $$C_1\frac{d+\log(1/\delta)}{\epsilon^2} \leq N_\mathcal{H}^{UC}(\epsilon,\delta) \leq C_2 \frac{d+\log(1/\delta)}{\epsilon^2}$$*
+    $$C_1\frac{d+\log(1/\delta)}{\epsilon^2} \leq N_\mathcal{H}^{UC}(\epsilon,\delta) \leq C_2 \frac{d+\log(1/\delta)}{\epsilon^2}$$
 
-2. *$\mathcal{H}$ is agnostic PAC learnable with sample complexity
-    $$C_1\frac{d+\log(1/\delta)}{\epsilon^2} \leq N_\mathcal{H}(\epsilon,\delta) \leq C_2 \frac{d+\log(1/\delta)}{\epsilon^2}$$*
+2. $\mathcal{H}$ is agnostic PAC learnable with sample complexity
+    $$C_1\frac{d+\log(1/\delta)}{\epsilon^2} \leq N_\mathcal{H}(\epsilon,\delta) \leq C_2 \frac{d+\log(1/\delta)}{\epsilon^2}$$
 
 3. *$\mathcal{H}$ is PAC learnable with sample complexity
-    $$C_1\frac{d+\log(1/\delta)}{\epsilon} \leq N_\mathcal{H}(\epsilon,\delta) \leq C_2 \frac{d\log (1/\epsilon)+\log(1/\delta)}{\epsilon}$$*
-
-</div>
+    $$C_1\frac{d+\log(1/\delta)}{\epsilon} \leq N_\mathcal{H}(\epsilon,\delta) \leq C_2 \frac{d\log (1/\epsilon)+\log(1/\delta)}{\epsilon}$$
+</p>

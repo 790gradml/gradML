@@ -101,7 +101,8 @@ collections:
     staffers:
     modules:
     schedules:
-    # announcements:
+    announcements:
+    
     # Define a collection named "resource", its documents reside in the "_resource" directory
     # resource:
     #permalink: "/:collection/:path/"

@@ -9,6 +9,8 @@ Special thanks to:
 
 - [Leslie Kaelbling](https://people.csail.mit.edu/lpk/)
 - 6.867 Fall 2019 teaching staff
+
+    Devavrat Shah, David Sontag, Suvrit Sra, Aaditya Singh, Aniruddh Raghu, Wangzhi Dai, Matthew McDermott, Rares Buhai,Varkey Alumootil, Hongge Chen, Yun-Ta Tsai, Shen Shen, Huitao Shen, Zhongxia Yan
 - [Russ Tedrake](http://groups.csail.mit.edu/locomotion/russt.html)
 
 

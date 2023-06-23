@@ -152,6 +152,12 @@ defaults:
       values:
           parent: Info
           layout: page
+    - scope:
+          path: "homeworks/"
+      values:
+          parent: Homeworks
+          layout: page
+          
 # pandoc:
 #     extensions:
 #         # - normalize

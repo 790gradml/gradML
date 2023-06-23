@@ -53,8 +53,8 @@ back_to_top_text: "Back to top"
 nav_next_prev: true
 
 gh_edit_link: true # show or hide edit this page link
-gh_edit_link_text: "Edit this page on Git"
-gh_edit_repository: "https://shenshen.mit.edu/git/shensquared/gradml"
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/shensquared/gradML"
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree"

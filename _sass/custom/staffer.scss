@@ -1,3 +1,9 @@
+.staff-row{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 20px;
+}
+
 .staffer {
   display: flex;
   margin: $sp-4 0;

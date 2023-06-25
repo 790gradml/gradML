@@ -1,5 +1,5 @@
 ---
-title: Syllabus / Calendar
+title: Syllabus
 description: Listing of course modules and topics.
 nav_order: 0
 ---
@@ -21,3 +21,4 @@ All freely accessible with an MIT IP:
 - [SB] [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/RLbook2020trimmed.pdf), Sutton and Barton, 2018.
 - [JWHT] An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani; Springer, 2013.
 - [EH] Computer Age Statistical Inference, Efron and Hastie; Cambridge University Press, 2016.
+

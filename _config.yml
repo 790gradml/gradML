@@ -189,6 +189,9 @@ callouts:
     exercise:
         title: "Exercise"
         color: blue
+    solutions:
+        title: "Solutions"
+        color: mit-gray
 # mermaid:
 #     # Version of mermaid library
 #     # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/

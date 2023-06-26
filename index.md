@@ -25,5 +25,4 @@ has_toc: false
 - Prerequisites:
   - Linear algebra (at the level of 18.06)
   - and Probability (at the level of 6.3700, 6.3800, or 18.600)
-- Brief description: Principles, techniques, and algorithms in machine learning from the point of view of statistical inference; representation, generalization, and model selection; and methods such as linear/additive models, active learning, boosting, support vector machines, non-parametric Bayesian methods, hidden Markov models, Bayesian networks, and convolutional and recurrent neural networks. Recommended prerequisite: 6.3900 or other previous experience in machine learning. Enrollment may be limited.
-
+- Brief description: Principles, techniques, and algorithms in machine learning from the point of view of statistical inference; representation, generalization, and model selection; and methods such as linear models, Bayesian networks, and deep learning models. The focus in fall23 is on generative models and reinforcement learning. Recommended prerequisite: 6.3900, 6.C01, or other previous experience in machine learning.

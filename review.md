@@ -74,6 +74,7 @@ $$
 
 ### Jensen's Inequality
 
+<iframe src="/demos/Jensen.html" width=1000 height=800 async></iframe>
 
 ###  Max likelihood and Max log likelihood
 

@@ -1,51 +1,123 @@
 import numpy as np
 import plotly.graph_objects as go
+import colors as c
 
-n = 200
-# Generate random data
+n = 100
+min_x = -3
+max_x = 3
+min_y = -60
+max_y = 40
+
+# Generate data
 f = lambda alpha, x: alpha * x * x + x + 3 * x
-
-# Create NumPy arrays
-alphas = np.linspace(-3, 3, 9)
-x = np.random.randn(n) + 1
+alphas = np.linspace(min_x * 2, max_x * 2, 7)
+x = np.random.randn(n) - 0.43
 xbar = np.average(x)
 
 y = {}
 ybar = {}
 f_of_x_bar = {}
 for alpha in alphas:
-    f_of_x_bar[alpha] = f(alpha, xbar)
     this_y = f(alpha, x)
+    f_of_x_bar[str(alpha)] = f(alpha, xbar)
     y[str(alpha)] = this_y
     ybar[str(alpha)] = np.average(this_y)
+
+
 # Create figure and scatter plot
-fig = go.Figure(
-    data=[
+
+
+def vertical_line(x, y):
+    return go.Scatter(
+        x=[x, x],  # x-coordinates of the vertical line
+        y=[min_y, y],  # y-coordinates of the vertical line
+        mode="lines",
+        name="Vertical Line",
+        marker=dict(color=c.BLUE),
+    )
+
+
+# Create the horizontal line trace
+def horizontal_line(x, y):
+    return go.Scatter(
+        x=[min_x, x],  # x-coordinates of the horizontal line
+        y=[y, y],  # y-coordinates of the horizontal line
+        mode="lines",
+        name="Horizontal Line",
+        marker=dict(color=c.PURPLE),
+    )
+
+
+def scatter_on_f(i=alphas[0]):
+    return [
         go.Scatter(
             x=x,
-            y=y[str(alphas[0])],
+            y=y[str(i)],
             mode="markers",
-            marker=dict(size=10, colorscale="Viridis", showscale=False),
+            marker=dict(size=4, showscale=False),
             hovertemplate="x: %{x}<br>y: %{y}",
         ),
-        go.Scatter(
-            x=x,
-            y=np.zeros(n),
-            mode="markers",
-            xaxis="x",
-            yaxis="y2",
-        ),
+        horizontal_line(xbar, f_of_x_bar[str(i)]),
+        vertical_line(xbar, f_of_x_bar[str(i)]),
+    ]
+
+
+subplot_x_axis = [
+    go.Scatter(
+        x=x,
+        y=np.zeros(n),
+        mode="markers",
+        xaxis="x",
+        yaxis="y2",
+        marker=dict(size=4, showscale=False),
+    ),
+    go.Scatter(
+        x=np.array(xbar),
+        y=np.zeros(1),
+        mode="markers",
+        xaxis="x",
+        yaxis="y2",
+        marker=dict(size=12, symbol="star", color=c.BLUE),
+        hovertemplate="the mean of x samples: %{xbar}",
+    ),
+]
+
+
+def subplot_y_axis(i=alphas[0]):
+    return [
         go.Scatter(
             x=np.zeros(n),
-            y=y[str(alphas[0])],
+            y=y[str(i)],
             xaxis="x2",
             yaxis="y",
+            mode="markers",
+            marker=dict(size=4, showscale=False),
         ),
-    ],
+        go.Scatter(
+            x=np.zeros(1),
+            y=[ybar[str(i)]],
+            xaxis="x2",
+            yaxis="y",
+            marker=dict(size=12, symbol="square", color=c.RED),
+            hovertemplate="the mean of f(x): %{ybar}",
+        ),
+        go.Scatter(
+            x=np.zeros(1),
+            y=[f_of_x_bar[str(i)]],
+            xaxis="x2",
+            yaxis="y",
+            marker=dict(size=12, symbol="star", color=c.PURPLE),
+            hovertemplate="f of the mean of x: %{f_of_x_bar[0]}",
+        ),
+    ]
+
+
+fig = go.Figure(
+    data=scatter_on_f() + subplot_x_axis + subplot_y_axis(),
     layout=go.Layout(
         # title="Jensen's Inequality",
         # xaxis=dict(range=[0, 1]),
-        yaxis=dict(range=[-30, 30]),
+        yaxis=dict(range=[min_y, max_y]),
         # updatemenus=[
         #     dict(
         #         type="buttons",
@@ -81,7 +153,7 @@ fig = go.Figure(
                 pad={"t": 50},
                 steps=[
                     dict(
-                        label=str(i),
+                        label=(i),
                         method="animate",
                         args=[
                             [f"frame{i}"],
@@ -99,31 +171,7 @@ fig = go.Figure(
     frames=[
         go.Frame(
             name=f"frame{i}",
-            data=[
-                go.Scatter(
-                    x=x,
-                    y=y[str(i)],
-                    mode="markers",
-                    marker=dict(
-                        size=10,
-                    ),
-                ),
-                go.Scatter(
-                    x=x,
-                    y=np.zeros(n),
-                    mode="markers",
-                    name="Subplot 1",
-                    xaxis="x",
-                    yaxis="y2",
-                ),
-                go.Scatter(
-                    x=np.zeros(n),
-                    y=y[str(i)],
-                    mode="markers",
-                    xaxis="x2",
-                    yaxis="y",
-                ),
-            ],
+            data=scatter_on_f(i=i) + subplot_x_axis + subplot_y_axis(i=i),
         )
         for i in alphas
     ],

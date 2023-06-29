@@ -9,7 +9,7 @@ import hashlib
 # http://techarena51.com/index.php/how-to-install-python-3-and-flask-on-linux/
 import subprocess
 import os
-from github_secret import GITHUB_SECRET
+from webhook_config import GITHUB_SECRET, DIR
 
 
 app = Flask(__name__)
@@ -56,12 +56,10 @@ def github_payload():
             payload = request.get_json()
             if payload["commits"][0]["distinct"] == True:
                 try:
-                    subprocess.check_output(["cd", "~/gradML"])
-                    subprocess.check_output(["git", "pull"])
+                    subprocess.Popen(["git", "pull"], cwd=DIR)
+                    subprocess.Popen(["bundle", "exec", "jekyll", "build"], cwd=DIR)
                     return jsonify({"message": "Git pull successful"}), 200
-
                 except subprocess.CalledProcessError as error:
-                    email("Code deployment failed", error.output)
                     return jsonify({"msg": str(error.output)})
             else:
                 return jsonify({"msg": "nothing to commit"})

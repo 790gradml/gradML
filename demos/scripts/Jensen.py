@@ -9,10 +9,12 @@ f = lambda alpha, x: alpha * x * x + x + 3 * x
 alphas = np.linspace(-3, 3, 9)
 x = np.random.randn(n) + 1
 xbar = np.average(x)
-f_of_x_bar = f(alpha, xbar)
+
 y = {}
 ybar = {}
+f_of_x_bar = {}
 for alpha in alphas:
+    f_of_x_bar[alpha] = f(alpha, xbar)
     this_y = f(alpha, x)
     y[str(alpha)] = this_y
     ybar[str(alpha)] = np.average(this_y)
@@ -130,11 +132,9 @@ fig = go.Figure(
 # Show the figure
 fig.update_layout(
     title="Jensen's Inequality",
-    xaxis=dict(title="Sampled x", domain=[0, 0.95]),
-    yaxis=dict(title=r"$f(x)$", domain=[0.1, 1], tickformat="$%s$"),
-    xaxis2=dict(
-        title=None, domain=[1 - 0.03, 1], range=(-0.1, 0.1), showticklabels=False
-    ),
+    xaxis=dict(title="Sampled x", domain=[0.15, 1]),
+    yaxis=dict(title=r"$f(x)$", domain=[0.15, 1], tickformat="$%s$"),
+    xaxis2=dict(title=None, domain=[0, 0.03], range=(-0.1, 0.1), showticklabels=False),
     yaxis2=dict(title=None, domain=[0, 0.03], range=(-0.1, 0.1), showticklabels=False),
     showlegend=False,
 )

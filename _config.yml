@@ -97,6 +97,9 @@ exclude:
     - vendor/cache/
     - vendor/gems/
     - vendor/ruby/
+    - venv/
+    - gradML_sources
+    - booksNotes/
 # Collections for website data
 collections:
     staffers:

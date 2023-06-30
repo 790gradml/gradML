@@ -1,6 +1,3 @@
-[submodule "gradML_sources"]
-	path = gradML_sources
-	url = git@github.com:shensquared/gradML_sources.git
 [submodule "booksnotes"]
 	path = booksnotes
 	url = https://shenshen.mit.edu/git/shensquared/booksnotes.git

@@ -1,7 +1,7 @@
 ---
 title: Homework 0
 nav_order: 0
-permalink: /homeworks/hw0
+
 ---
 
 This is a set of warm-up problems, divided into two parts. *There is no

@@ -106,7 +106,7 @@ collections:
     modules:
     schedules:
     announcements:
-    
+
     # Define a collection named "resource", its documents reside in the "_resource" directory
     # resource:
     #permalink: "/:collection/:path/"
@@ -156,6 +156,7 @@ defaults:
       values:
           parent: Info
           layout: page
+          info_cat: true
     - scope:
           path: "homeworks/"
       values:

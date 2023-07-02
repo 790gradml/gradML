@@ -83,6 +83,12 @@
   }
 }
 
+.notes_nav,
+.info_nav {
+  border-bottom: $border $border-color;
+  margin-bottom: 1em;
+}
+
 .site-nav {
   display: none;
 

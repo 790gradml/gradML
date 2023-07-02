@@ -10,7 +10,7 @@ entry of $C$.
 Solution:
 
 ```py
-{% include_relative /code/2DGaussian.py %}
+{% include_relative /code/Regularization.py %}
 ```
 
 

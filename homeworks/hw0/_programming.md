@@ -31,7 +31,7 @@ compute $m \times n$ matrices: $A$ and $B$, such that
 $A(i, j)=x(i)+y(j)$, and $B(i, j)=x(i) \cdot y(j)$.
 
 ```py
-{% include_relative /code/Pairwise.py %}
+{% include_relative /code/pairwise.py %}
 ```
 
 ## Pairwise Euclidean Distances

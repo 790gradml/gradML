@@ -15,6 +15,7 @@
       {% include nav.html pages=info key=nil %}
     </div>
     <div class="notes_nav">
+      <p class="section-title">Notes</p>
       {% assign notes_pages = site.html_pages
       | where_exp:"item", "item.info_cat != true"
       | where_exp:"item", "item.title != nil"

@@ -5,10 +5,15 @@ nav_order: 2
 ---
 
 # Introduction
+
+{: .no_toc}
+
+## Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
+
 ## Background
 The term “Machine Learning” was coined by MIT alumnus Arthur Samuel[^1]
 in 1959. It evolved from many fields including Statistical Learning,

@@ -1,11 +1,11 @@
 ---
 # layout: page
-title: Background/Review
+title: Background Review
 nav_order: 3
 # katex: true
 ---
 
-# Backrgound and Review
+# Background Review
 {: .no_toc}
 
 ## Table of contents

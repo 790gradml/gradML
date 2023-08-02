@@ -10,5 +10,3 @@ nav_order: 2
 {{ schedule }}
 {% endfor %}
 
-
-# Grading and Late Policy

@@ -5,13 +5,15 @@ nav_order: 4
 ---
 # Cross-registration
 
-We follow MIT's calendar, and do not have additional extensions or accommodations based on home university calendar. Especially important will be for you to plan ahead for our in-person exam. We'll have one exam (time/place TBD; surely before Monday Dec 18). We'll NOT have a final exam during MIT's final exam period.
+We follow MIT's calendar, and do not have additional extensions or accommodations based on home university calendar. Especially important will be for you to plan ahead for our in-person exam. We'll have one exam (time/place TBD; surely before Monday Dec 18). We'll not have a final exam during MIT's final exam period.
 
-Cross-registered students will Kerberos once the registration goes through; however, the process can take a while. We therefore strongly encourage you to cross register early if possible, to avoid delayed access to course materials.
+All students need a Kerberos to interact with MIT systems (e.g. the Registrar). Cross-registered students will receive their Kerberos once the registration goes through; however, the process can take a while. We therefore strongly encourage you to cross register early, if possible, to avoid any delayed access.
 
 If you're not familiar with MIT campus, you might find the [whereis](https://whereis.mit.edu) site helpful.
 
 # Listener
+Due to capacity and other constraints, we will not be able to accept Listener
+registrants in 6.7900 GradML this semester.
 
 # Grading
 

@@ -91,18 +91,24 @@
     .location {
       @extend .fs-2;
     }
-@import "./../color_schemes/eecs";
-    &.lecture{
+
+    @import "./../color_schemes/eecs";
+
+    &.lecture {
       background-color: $eecs-red
     }
 
-    &.recitation{
+    &.recitation {
       background-color: $eecs-purple
     }
 
-    &.office-hours{
+    &.office-hours {
+      background-color: $eecs-blue
+    }
+
+    &.instructors-ohs,
+    &.ta-ohs {
       background-color: $eecs-blue
     }
   }
 }
-

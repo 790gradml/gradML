@@ -3,8 +3,17 @@ title: Course Policy and Support
 description: Listing of course modules and topics.
 nav_order: 4
 ---
+# Cross-registration
 
-# Grading Scheme
+We follow MIT's calendar, and do not have additional extensions or accommodations based on home university calendar. Especially important will be for you to plan ahead for our in-person exam. We'll have one exam (time/place TBD; surely before Monday Dec 18). We'll NOT have a final exam during MIT's final exam period.
+
+Cross-registered students will Kerberos once the registration goes through; however, the process can take a while. We therefore strongly encourage you to cross register early if possible, to avoid delayed access to course materials.
+
+If you're not familiar with MIT campus, you might find the [whereis](https://whereis.mit.edu) site helpful.
+
+# Listener
+
+# Grading
 
 # Late Policy
 

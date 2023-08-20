@@ -21,10 +21,10 @@ has_toc: false
 
 # Course Overview
 
-- Graduate-level Machine Learning Introduction
-- 12 units (3-0-9)
+- Graduate-level general introduction to machine learning; offered in fall semesters only; 12 units (3-0-9)
 - Prerequisites:
-  - Linear algebra (at the level of 18.06)
-  - Probability (at the level of 6.3700, 6.3800, or 18.600)
+  - Linear algebra (at the level of [18.06](https://github.com/mitmath/1806) or [18.C06](https://canvas.mit.edu/courses/16629))
+  - Probability (at the level of 6.3700, 6.3800, or [18.600](https://math.mit.edu/~sheffield/spring2022math600.html))
 - Recommended prerequisites: [6.3900](https://introml.mit.edu/spring23/calendar), 6.C01, [6.S898](https://phillipi.github.io/6.s898/), or other previous experience in machine learning.
 - Brief description: Principles, techniques, and algorithms in machine learning from the point of view of statistical inference; representation, generalization, and model selection; and methods such as linear models, Bayesian networks, and deep learning models. The focus in fall23 is on generative models and reinforcement learning.
+

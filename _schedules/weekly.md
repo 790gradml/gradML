@@ -26,7 +26,7 @@ schedule:
     - name: Instructors OHs
       start: 1:00 PM
       end: 2:00 PM
-      location: 26-322?
+      location: 26-322? (time also TBC)
 - name: Tuesday
   events:
     - name: Lecture

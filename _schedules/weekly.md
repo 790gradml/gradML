@@ -23,7 +23,7 @@ schedule:
 - name: ""
 - name: Monday
   events:
-    - name: Office Hours
+    - name: Office Hours (Instructors)
       start: 1:00 PM
       end: 2:00 PM
       location: 26-322?

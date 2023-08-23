@@ -53,7 +53,7 @@ back_to_top_text: "Back to top"
 nav_next_prev: true
 
 last_edit_timestamp: true
-gh_edit_link: false # show or hide edit this page link
+gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/shensquared/gradML"
 gh_edit_branch: "main" # the branch that your docs is served from

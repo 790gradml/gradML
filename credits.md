@@ -12,6 +12,7 @@ Special thanks to:
 
     Devavrat Shah, David Sontag, Suvrit Sra, Aaditya Singh, Aniruddh Raghu, Wangzhi Dai, Matthew McDermott, Rares Buhai,Varkey Alumootil, Hongge Chen, Yun-Ta Tsai, Shen Shen, Huitao Shen, Zhongxia Yan
 - [Russ Tedrake](http://groups.csail.mit.edu/locomotion/russt.html)
+- [Open-source Repository Contributors](https://github.com/shensquared/gradML/graphs/contributors)
 
 This site uses:
 

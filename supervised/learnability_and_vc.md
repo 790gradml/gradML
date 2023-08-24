@@ -99,7 +99,7 @@ bounded error on unseen data.
 
 
 {: .theorem}
-**Theorem 1** Let $\mathcal{H}$ be finite. Let $\delta \in (0,1)$,
+Let $\mathcal{H}$ be finite. Let $\delta \in (0,1)$,
 $\epsilon >0$ and $N \geq \frac{\log(|\mathcal{H}|/\delta)}{\epsilon}$.
 Then, for any distribution $\mathbb{P}$ for which realizability holds,
 we probability at least $1-\delta$ over the choice of dataset $S$ of
@@ -513,7 +513,7 @@ can be found in Chapter 28 of \[SSS\].
 
 <p class="theorem">
 
-**Theorem 15**. *Let $\mathcal{H}$ be a hypothesis class of functions
+*Let $\mathcal{H}$ be a hypothesis class of functions
 from a domain $\mathcal{X}$ to $\{0, 1\}$ and let the loss function be
 the $0 -1$ loss. Assume that $VC-Dim(\mathcal{H}) =d < \infty$. Then,
 there are absolute constants $C_1$, $C_2$ such that:*

@@ -129,6 +129,10 @@ main {
 }
 
 // We add two .theorem's here to increase CSS specificity
+.theorem.theorem[theorem-name]::before {
+  counter-increment: theorems;
+  content: "Theorem " counter(theorems) " (" attr(theorem-name) "). ";
+}
 .theorem.theorem::before {
   counter-increment: theorems;
   content: "Theorem " counter(theorems) ". ";

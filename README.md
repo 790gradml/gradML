@@ -1,7 +1,8 @@
 # Grad ML
 
-## Developer Setup
+Source code for [https://gradml.mit.edu](https://gradml.mit.edu)
 
-1. Install [Ruby](https://www.ruby-lang.org/en/)
-2. `bundle install`
-3. `bundle exec jekyll serve`
+Documentations for:
+
+- [Developers](/_docs/devs.md)
+- [Staff members](/_docs/staff.md)

@@ -2,17 +2,15 @@
 title:  Module 1 - Intro and Review
 ---
 Sep 6
-: Homework 0 Out
+: **Homework 0**{: .label .label-blue} HW0 out
     : [Homework 0](/homeworks/homework0)
 
 Sep 7
-: **Lecture**{: .label .label-blue } 1 - [Intro](/intro)
-    : [Slides]()
+: **Lecture 1**{: .label .label-red } Intro
+    : [Slides](), [Notes](/intro)
 
 Sep 8
-: **Recitation**{: .label .label-purple } 1 - Recitation
-    : [Handout]()
+: **Recitation 1**{: .label .label-purple } Background review
+    : [Handout](), [Notes](/review)
 
-Sep 12
-: **Lecture**{: .label .label-blue } 2 - [Background and Review](/review)
-    : [Slides]()
+

@@ -129,8 +129,8 @@ any other classifier in terms of minimizing the risk, as established
 formally via the following theorem (stated formally for
 $\mathcal{X}=\mathbb{R}^d$ for simplicity).
 
-{: .theorem}
-**Theorem 1** (BC optimality). For any classifier
+{: .theorem theorem-name="BC Optimality"}
+For any classifier
 $h : \mathbb{R}^{d} \rightarrow\{0,1\}$, $L(h^*) \le L(h)$.
 
 
@@ -238,7 +238,7 @@ for $k=1$ as stated below (see for more details).
 
 
 {:.theorem}
-**Theorem 2**. *Let $\mathcal{X} \subset \mathbb{R}^d, ~d\geq 1$. Let
+*Let $\mathcal{X} \subset \mathbb{R}^d, ~d\geq 1$. Let
 $\eta$ be continuous. Then, $$\begin{aligned}
 \lim_{n\to\infty} L_{1\text{-NN}} & = 2 \mathbb{E}\big[\eta(X) (1-\eta(X))\big] ~\leq~2 \mathbb{E}\big[\min\{\eta(X), 1-\eta(X)\}] ~=~ 2 L^*.
 \end{aligned}$$

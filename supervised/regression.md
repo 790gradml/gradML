@@ -129,7 +129,7 @@ estimator with the lowest expected square loss.
 <p id="thm:optimal_estimator" class="theorem">
 
 
-**Theorem 1**. *Let $\eta(x) = \mathbb{E}[Y|X=x]$ and let
+*Let $\eta(x) = \mathbb{E}[Y|X=x]$ and let
 $h : \mathbb{R}^d \to \mathcal{Y}$. Then
 $$\mathbb{E}[(\eta(X)-Y)^2] \leq \mathbb{E}[(h(X)-Y)^2].$$
 
@@ -246,7 +246,7 @@ the number of data points goes to infinity.
 
 <div id="thm:bound" class="theorem">
 
-**Theorem 2** (informal).
+(Informal)
 *$$\lim_{N \to \infty} \mathbb{E}\left[ \frac{1}{N} ||X\hat{w}-Xw||^2 \right] = 0$$*
 
 </div>

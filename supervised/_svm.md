@@ -811,7 +811,7 @@ below (which contains both necessary and sufficient conditions) was
 discovered by Yu et al (ICML 2013).
 
 ::: {#thm:rep .theorem}
-**Theorem 1**. *Let $x^{(1)},\ldots,x^{(n)}$ be training data drawn from
+*Let $x^{(1)},\ldots,x^{(n)}$ be training data drawn from
 a set $\mathcal{X}$. Let $R_n$ (condition on $R_n$?) be some loss
 function from $\mathbb{R}^n \to \mathbb{R}$, and $\mathcal{H}$ the RKHS
 induced by the kernel $k : \mathcal{X}\times \mathcal{X}\to \mathbb{R}$,
@@ -889,7 +889,8 @@ Of these, property (CC) is immediate because the nonnegative sum of two
 positive definite matrices is again positive definite. Property (PP) is
 a consequence of the famous "Schur product" theorem:
 
-**Theorem 2**. *Let $A, B$ be two symmetric positive definite matrices.
+{: .theorem }
+*Let $A, B$ be two symmetric positive definite matrices.
 Then, the matrix $C$ whose entries are defined by $c_{ij}:=a_{ij}b_{ij}$
 (denoted as $C=A\circ B$) is also symmetric positive definite.*
 

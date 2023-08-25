@@ -314,7 +314,7 @@ With some steps of derivation, we will eventually reach the formal risk
 convergence of Naive Bayes
 
 <p id="thm:NB_risk_convergence" class="theorem">
-**Theorem 4** (). *Define
+*Define
 $G(\tau) = P_{(x,y)\sim \mathbb{P}}\left[ (\ell_{NB,\infty}(x) \in [0,\tau d] \wedge y=1 ) \vee  (\ell_{NB,\infty}(x) \in [-\tau d,0] \wedge y=0 ) \right]$.
 Assume that for some fixed $\rho_0 > 0$, we have
 $\rho_0 \leq \mathbb{P}(y=1) \leq 1-\rho_0)$, and that
@@ -328,7 +328,7 @@ event $G(\tau)$, then we can obtain a more precise control on the bound
 of the error.
 
 <p id="thm:NB_risk_convergence_final" class="theorem">
-**Theorem 5** (). *Let the conditions of Theorem
+*Let the conditions of Theorem
 <a href="#thm:NB_risk_convergence" data-reference-type="ref"
 data-reference="thm:NB_risk_convergence">4</a> hold, and suppose
 $G(\tau) \leq \epsilon/2 +F(\tau)$, for some function $F(\tau)$ that

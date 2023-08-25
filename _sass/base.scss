@@ -121,3 +121,19 @@ blockquote {
   padding-left: 15px;
   border-left: 3px solid $border-color;
 }
+
+// GradML modification: Add automatic counters to theorem
+// Note that the theorem cannot be nested within another element for this numbering to work
+main {
+  counter-reset: theorems;
+}
+
+// We add two .theorem's here to increase CSS specificity
+.theorem.theorem[theorem-name]::before {
+  counter-increment: theorems;
+  content: "Theorem " counter(theorems) " (" attr(theorem-name) "). ";
+}
+.theorem.theorem::before {
+  counter-increment: theorems;
+  content: "Theorem " counter(theorems) ". ";
+}

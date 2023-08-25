@@ -110,7 +110,7 @@ estimator.
 
 <div id="thm:gaussmarkov" class="theorem">
 
-**Theorem 1** (The Gauss-Markov Theorem). *The linear least-squares
+**The Gauss-Markov Theorem**: *The linear least-squares
 estimator is the best unbiased linear estimator (i.e. the lowest
 variance estimator among linear estimators).*
 

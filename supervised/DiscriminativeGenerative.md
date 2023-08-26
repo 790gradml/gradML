@@ -177,27 +177,36 @@ is a Bernoulli distribution. The Naive Bayes classifier is defined by
 $$h(x) = \text{sign} (w^Tx+w_0)$$ for a suitable choice of $w$,$w_0$.
 
 {: .proof}
-Since $$X_j \in \{0,1\}$$, the Bernoulli distribution is
-<br>
-$$\begin{aligned}
+> Since $$X_j \in \{0,1\}$$, the Bernoulli distribution is
+> 
+> $$\begin{aligned}
 \mathbb{P}(X_j|Y=1) & = a_j^{X_j} (1-a_j)^{(1-X_j)} \\
 \mathbb{P}(X_j|Y=0) & = b_j^{X_j} (1-b_j)^{(1-X_j)}
-\end{aligned}$$ <br>where $a_j$ and $b_j$ are parameters for the $j$th
-dimension of $X$. With the conditional independence, we have 
-<br>
-$$\begin{aligned}
+\end{aligned}$$
+> 
+> where $a_j$ and $b_j$ are parameters for the $j$th
+> dimension of $X$. With the conditional independence, we have 
+> 
+> $$\begin{aligned}
 \mathbb{P}(Y=1|X)  & =\frac{\mathbb{P}(X|Y=1)\mathbb{P}(Y=1)}{\mathbb{P}(X|Y=1)\mathbb{P}(Y=1)+\mathbb{P}(X|Y=0)\mathbb{P}(Y=0)} \\
         & =\frac{1}{1+\frac{\mathbb{P}(X|Y=0)\mathbb{P}(Y=0)}{\mathbb{P}(X|Y=1)\mathbb{P}(Y=1)}} \\
         & = \frac{1}{1+\exp (- \log \frac{\mathbb{P}(X|Y=1)\mathbb{P}(Y=1)}{\mathbb{P}(X|Y=0)\mathbb{P}(Y=0)})} \\
         & =\sigma \left( \sum_j^d \log \frac{\mathbb{P}(X_j|Y=1)}{\mathbb{P}(X_j|Y=0)} + \log \frac{\mathbb{P}(Y=1)}{\mathbb{P}(Y=0)} \right)
 \end{aligned}$$ 
-<br>and therefore, <br>$$\begin{aligned}
+> 
+> and therefore,
+> 
+> $$\begin{aligned}
 \mathbb{P}(Y=1|X)  & = \sigma \left( \sum_j^d \log \frac{a_j^{X_j}(1-a_j)^{(1-X_j)}}{b_j^{X_j}(1-b_j)^{(1-X_j)}} + \log \frac{p}{1-p} \right) \\
         & = \sigma \left( \sum_j^d \left(X_j \log \frac{a_j(1-b_j)}{b_j(1-a_j)}\right) + \log \left(\frac{p}{1-p} \prod_j^d \frac{1-a_j}{1-b_j} \right) \right) \\
         & = \sigma \left( \sum_j^d w_j X_j  + w_0\right)
-\end{aligned}$$ <br>where $w_j = \log \frac{a_j(1-b_j)}{b_j(1-a_j)}$ and
-$w_0=\log \left(\frac{p}{1-p} \prod_j^d \frac{1-a_j}{1-b_j} \right)$.
-<br>Therefore, $$h(x) = \text{sign} (w^Tx+w_0)$$ and this shows the Naive Bayes is a linear classifier.
+\end{aligned}$$
+> 
+> where $w_j = \log \frac{a_j(1-b_j)}{b_j(1-a_j)}$ and
+> $w_0=\log \left(\frac{p}{1-p} \prod_j^d \frac{1-a_j}{1-b_j} \right)$.
+> 
+> Therefore, $$h(x) = \text{sign} (w^Tx+w_0)$$ and this shows the Naive Bayes is a linear classifier.
+
 # Naive Bayes vs. Logistic Regression
 
 We saw in the last section that Naive Bayes can be a linear classifier
@@ -262,16 +271,19 @@ challenging task and we will break our analysis into two parts
 For the first part, formally, we have the following theorem:
 
 {: .theorem}
-Let any $\epsilon_1$, $\delta >0$ and any $l \leq 0$
-be fixed. Assume that for some fixed $\rho_0 > 0$, we hvae
-$\rho_0 \leq \mathbb{P}(y=1) \leq 1- \rho_0$. Let
-$d = O ((1/\epsilon_1^2)\log(d/\delta))$, then with probability at least
-$1-\delta$:<br>
-$$\begin{aligned}
+> Let any $\epsilon_1$, $\delta >0$ and any $l \leq 0$
+> be fixed. Assume that for some fixed $\rho_0 > 0$, we hvae
+> $\rho_0 \leq \mathbb{P}(y=1) \leq 1- \rho_0$. Let
+> $d = O ((1/\epsilon_1^2)\log(d/\delta))$, then with probability at least
+> $1-\delta$:
+> 
+> $$\begin{aligned}
   |\hat{P}(X_j|Y=b) - \mathbb{P}(X_j|Y=b)| \leq \epsilon_1  
 \end{aligned}$$
-<br>
-and <br>$$\begin{aligned}
+> 
+> and
+> 
+> $$\begin{aligned}
   |\hat{P}(Y=b) - \mathbb{P}(Y=b)| \leq \epsilon_1
 \end{aligned}$$ for all $j=1,...,d$ and $b \in \mathcal{Y}$
 

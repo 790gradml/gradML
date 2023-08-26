@@ -107,43 +107,49 @@ size $N$, every ERM hypothesis $h_S$ satisfies
 $L_\mathbb{P} \leq \epsilon.$
 
 {: .proof}
-Let $$\mathcal{H}_B$$ be the set of "failed" hypotheses, that is
-$$\mathcal{H}_B = \{ h \in \mathcal{H}: L_\mathbb{P}(h) > \epsilon\}.$$
-In addition, let $M$ be the set of misleading samples, that is
-$$M = \{ S : \exists h \in \mathcal{H}_B, L_S(h)=0 \}$$ Namely, for
-every $S \in M$, there is a ’failed’ hypothesis, $h \in \mathcal{B}$,
-that looks like a ’good’ hypothesis on $S$. <br><br>Now, recall that we would
-like to bound the probability of the event $L_\mathbb{P}(h_S)>\epsilon$.
-Since the realizability implies that $L_S(h_S)=0$, it follows that the
-event $$L_\mathbb{P}(h_S)>\epsilon$$ can only happen if for some
-$$h\in \mathcal{H}_B$$, we have $L_S(h) =0$.<br><br>
-In other words, the failure
-will only happen if our training data is in the set of misleading
-samples Set $M$. Formally, we have
-$$\{S : L_{\mathbb{P}}(h_S)>\epsilon\} \subseteq M$$ As we can write $M$
-as $$M = \cup_{h \in \mathcal{H}_B}\{S : L_{S}(h)=0\}$$ Hence,
-$${P}\left( \{ S: L_\mathbb{P} (h_{S}) > \epsilon \}\right) \leq {P}\left( \cup_{h \in \mathcal{H}_B}\{S : L_{S}(h)=0\}\right)$$
-Applying the union bound to the right-hand side yields
-$${P}\left( \{ S: L_\mathbb{P} (h_{S})\right)  \leq \sum_{h \in \mathcal{H}_B} {P} \left(\{S : L_{S}(h)=0\}\ \right)$$
-Next, we can bound each summand of the right-hand side. Fix some
-’failed’ hypothesis $$h \in \mathcal{H}_B$$, the event $L_S(h) =0$ is
-equivalent to the event that in the training set, $\forall i$,
-$h(x_i)=y_i$. Since the training data are i.i.d. sampled, we have
-$${P} \left(\{S : L_{S}(h)=0\}\ \right) = \prod_{i=1}^N {P} \left( \{x_i: h(x_i) = y_i\} \right)$$
-For each individual sampling of an element of the training set, we have
-$${P} \left( \{x_i: h(x_i) = y_i\} \right) = 1-L_{\mathbb{P}}(h) \leq 1-\epsilon$$
-where the last inequality follows from the fact that
-$$h \in \mathcal{H}_B$$.<br><br>Using the inequality
-$1-\epsilon \leq e^{-\epsilon}$, we have for every
-$$h \in \mathcal{H}_B$$,
-$$P\left( S: L_{S}(h) = 0\right) \leq (1-\epsilon)^N \leq e^{-\epsilon N}$$
-Therefore, we have
-$$P\left( S: L_{\mathbb{P}}(h_S) > \epsilon \right) \leq |\mathcal{H}_B| e^{-\epsilon N} \leq |\mathcal{H}|e^{-\epsilon N}$$
-Let $\delta = P\left( S: L_{\mathbb{P}}(h_S) > \epsilon \right)$, we
-will reach the desired conclusion that with probability at least
-$1-\delta$, and having
-$N \geq \frac{\log (|\mathcal{H}|/\delta)}{\epsilon}$,
-$$L_{\mathbb{P}}(h_S) \leq \epsilon.$$
+> Let $$\mathcal{H}_B$$ be the set of "failed" hypotheses, that is
+> $$\mathcal{H}_B = \{ h \in \mathcal{H}: L_\mathbb{P}(h) > \epsilon\}.$$
+> In addition, let $M$ be the set of misleading samples, that is
+> $$M = \{ S : \exists h \in \mathcal{H}_B, L_S(h)=0 \}$$ Namely, for
+> every $S \in M$, there is a ’failed’ hypothesis, $h \in \mathcal{B}$,
+> that looks like a ’good’ hypothesis on $S$.
+> 
+> Now, recall that we would
+> like to bound the probability of the event $L_\mathbb{P}(h_S)>\epsilon$.
+> Since the realizability implies that $L_S(h_S)=0$, it follows that the
+> event $$L_\mathbb{P}(h_S)>\epsilon$$ can only happen if for some
+> $$h\in \mathcal{H}_B$$, we have $L_S(h) =0$.
+> 
+> In other words, the failure
+> will only happen if our training data is in the set of misleading
+> samples Set $M$. Formally, we have
+> $$\{S : L_{\mathbb{P}}(h_S)>\epsilon\} \subseteq M$$ As we can write $M$
+> as $$M = \cup_{h \in \mathcal{H}_B}\{S : L_{S}(h)=0\}$$ Hence,
+> $${P}\left( \{ S: L_\mathbb{P} (h_{S}) > \epsilon \}\right) \leq {P}\left( \cup_{h \in \mathcal{H}_B}\{S : L_{S}(h)=0\}\right)$$
+> Applying the union bound to the right-hand side yields
+> $${P}\left( \{ S: L_\mathbb{P} (h_{S})\right)  \leq \sum_{h \in \mathcal{H}_B} {P} \left(\{S : L_{S}(h)=0\}\ \right)$$
+> Next, we can bound each summand of the right-hand side. Fix some
+> ’failed’ hypothesis $$h \in \mathcal{H}_B$$, the event $L_S(h) =0$ is
+> equivalent to the event that in the training set, $\forall i$,
+> $h(x_i)=y_i$. Since the training data are i.i.d. sampled, we have
+> $${P} \left(\{S : L_{S}(h)=0\}\ \right) = \prod_{i=1}^N {P} \left( \{x_i: h(x_i) = y_i\} \right)$$
+> For each individual sampling of an element of the training set, we have
+> $${P} \left( \{x_i: h(x_i) = y_i\} \right) = 1-L_{\mathbb{P}}(h) \leq 1-\epsilon$$
+> where the last inequality follows from the fact that
+> $$h \in \mathcal{H}_B$$.
+> 
+> Using the inequality
+> $1-\epsilon \leq e^{-\epsilon}$, we have for every
+> $$h \in \mathcal{H}_B$$,
+> $$P\left( S: L_{S}(h) = 0\right) \leq (1-\epsilon)^N \leq e^{-\epsilon N}$$
+>
+> Therefore, we have
+> $$P\left( S: L_{\mathbb{P}}(h_S) > \epsilon \right) \leq |\mathcal{H}_B| e^{-\epsilon N} \leq |\mathcal{H}|e^{-\epsilon N}$$
+> Let $\delta = P\left( S: L_{\mathbb{P}}(h_S) > \epsilon \right)$, we
+> will reach the desired conclusion that with probability at least
+> $1-\delta$, and having
+> $N \geq \frac{\log (|\mathcal{H}|/\delta)}{\epsilon}$,
+> $$L_{\mathbb{P}}(h_S) \leq \epsilon.$$
 
 A weaker result can be proved without realizability, see Exercise 2 for
 details.
@@ -420,26 +426,19 @@ understand the meaning of the lower and upper bound of VC-Dimension.
 # Fundamental Theorem of Learnability
 As the name suggests, a pretty important theorem:
 
-<p id="fundamental" class="theorem">
-(The Fundamental Theorem of Statistical Learning). Let
-$\mathcal{H}$ be a hypothesis class of functions from a domain
-$\mathcal{X}$ to $\{0, 1\}$ and let the loss function be the $0 - 1$
-loss. Then the following are equivalent:
-<br>
-1. $\mathcal{H}$ has the uniform convergence property.
-<br>
-2. Any ERM rule is a successful agnostic PAC learner for
-    $\mathcal{H}$.
-<br>
-3. $\mathcal{H}$ is agnostic PAC learnable.
-<br>
-4. $\mathcal{H}$ is PAC learnable.
-<br>
-5. $\mathcal{H}$ Any ERM rule is a successful PAC learner for
-    $\mathcal{H}$.
-<br>
-6. $\mathcal{H}$ has a finite VC-dimension.
-</p>
+{: .theorem #fundamental theorem-name="The Fundamental Theorem of Statistical Learning" }
+> Let $\mathcal{H}$ be a hypothesis class of functions from a domain
+> $\mathcal{X}$ to $\{0, 1\}$ and let the loss function be the $0 - 1$
+> loss. Then the following are equivalent:
+> 
+> 1. $\mathcal{H}$ has the uniform convergence property.
+> 2. Any ERM rule is a successful agnostic PAC learner for
+>     $\mathcal{H}$.
+> 3. $\mathcal{H}$ is agnostic PAC learnable.
+> 4. $\mathcal{H}$ is PAC learnable.
+> 5. $\mathcal{H}$ Any ERM rule is a successful PAC learner for
+>     $\mathcal{H}$.
+> 6. $\mathcal{H}$ has a finite VC-dimension.
 
 In our previous discussion, we saw $1 \to 2$. $2 \to 3$, $3 \to 4$ and
 $2 \to 5$ are all trivial. For $4 \to 6$ and $5 \to 6$, there is
@@ -495,13 +494,13 @@ shattered by $\mathcal{H}$, then $|\mathcal{H}_C|$ is upper-bounded by
 the cardinality of $\mathcal{C}$. Then we can show the ERM error is
 bounded using the growth function.
 
-<p class="theorem">
-Let $\mathcal{H}$ be a class and $\tau_{\mathcal{H}}$
-its growth function. Then for every distribution $\mathbb{P}(X,Y)$ and
-every $\delta \in (0, 1)$, with probability at least $1-\delta$ over the
-choices of $S \sim \mathbb{P}$, we have
-$$|L_S(h) - L_\mathbb{P}(h) | \leq \frac{4+\sqrt{\log \tau_{\mathcal{H}}(2N)}}{\delta \sqrt{2N}}$$
-</p>
+{: .theorem}
+> Let $\mathcal{H}$ be a class and $\tau_{\mathcal{H}}$
+> its growth function. Then for every distribution $\mathbb{P}(X,Y)$ and
+> every $\delta \in (0, 1)$, with probability at least $1-\delta$ over the
+> choices of $S \sim \mathbb{P}$, we have
+> 
+> $$|L_S(h) - L_\mathbb{P}(h) | \leq \frac{4+\sqrt{\log \tau_{\mathcal{H}}(2N)}}{\delta \sqrt{2N}}$$
 
 And it follows from here that if VC-Dim($\mathcal{H}$) is finite, then
 the uniform convergence property holds, and indeed,
@@ -511,20 +510,18 @@ suffices for the uniform convergence property to hold.
 A more quantitative version of this theorem is as follows, and the proof
 can be found in Chapter 28 of \[SSS\].
 
-<p class="theorem">
-
-*Let $\mathcal{H}$ be a hypothesis class of functions
-from a domain $\mathcal{X}$ to $\{0, 1\}$ and let the loss function be
-the $0 -1$ loss. Assume that $VC-Dim(\mathcal{H}) =d < \infty$. Then,
-there are absolute constants $C_1$, $C_2$ such that:*
-
-1. $\mathcal{H}$ has the uniform convergence property with sample
-    complexity
-    $$C_1\frac{d+\log(1/\delta)}{\epsilon^2} \leq N_\mathcal{H}^{UC}(\epsilon,\delta) \leq C_2 \frac{d+\log(1/\delta)}{\epsilon^2}$$
-
-2. $\mathcal{H}$ is agnostic PAC learnable with sample complexity
-    $$C_1\frac{d+\log(1/\delta)}{\epsilon^2} \leq N_\mathcal{H}(\epsilon,\delta) \leq C_2 \frac{d+\log(1/\delta)}{\epsilon^2}$$
-
-3. *$\mathcal{H}$ is PAC learnable with sample complexity
+{: .theorem}
+> Let $\mathcal{H}$ be a hypothesis class of functions
+> from a domain $\mathcal{X}$ to $\{0, 1\}$ and let the loss function be
+> the $0 -1$ loss. Assume that $VC-Dim(\mathcal{H}) =d < \infty$. Then,
+> there are absolute constants $C_1$, $C_2$ such that:
+> 
+> 1. $\mathcal{H}$ has the uniform convergence property with sample
+>     complexity
+>     $$C_1\frac{d+\log(1/\delta)}{\epsilon^2} \leq N_\mathcal{H}^{UC}(\epsilon,\delta) \leq C_2 \frac{d+\log(1/\delta)}{\epsilon^2}$$
+> 
+> 2. $\mathcal{H}$ is agnostic PAC learnable with sample complexity
+>     $$C_1\frac{d+\log(1/\delta)}{\epsilon^2} \leq N_\mathcal{H}(\epsilon,\delta) \leq C_2 \frac{d+\log(1/\delta)}{\epsilon^2}$$
+> 
+> 3. *$\mathcal{H}$ is PAC learnable with sample complexity
     $$C_1\frac{d+\log(1/\delta)}{\epsilon} \leq N_\mathcal{H}(\epsilon,\delta) \leq C_2 \frac{d\log (1/\epsilon)+\log(1/\delta)}{\epsilon}$$
-</p>

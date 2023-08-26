@@ -68,6 +68,33 @@ permalink: /assets/js/search-data.json
   }
         {%- assign i = i | plus: 1 -%}
       {%- endunless -%}
+
+      {% comment %}
+        This section enables searching for theorems in the exact form
+        <p|blockquote class="theorem" id="theorem-id" theorem-name="theorem-name">theorem-content</p|blockquote>
+        Note that the content is a bit buggy for multi-line theorems...
+      {% endcomment %}
+      {%- assign page_content = page_content | replace: '<blockquote ', '<p ' | replace: '</blockquote>', '</p>' -%}
+      {%- assign parts = page_content | split: '<p class="theorem" id="' -%}
+      {%- for part in parts offset: 1 -%}
+        {%- assign theorem_part = part | split: '</p>' | first -%}
+        {%- assign theorem_id = part | split: '"' | first -%}
+        {%- assign theorem_name_tmp = part | split: 'theorem-name="' -%}
+        {%- assign theorem_name = theorem_name_tmp[1] | split: '"' | first -%}
+        {%- assign theorem_content_tmp = theorem_part | split: '">' -%}
+        {%- assign theorem_content = theorem_content_tmp[1] | strip_html -%}
+        {%- assign theorem_url = page.url | split: '#' | first -%}
+        {%- assign theorem_url = theorem_url | append: '#' | append: theorem_id -%}
+  {%- unless i == 0 -%},{%- endunless -%}
+  "{{ i }}": {
+    "doc": {{ page.title | jsonify }},
+    "title": {{ 'Theorem: ' | append: theorem_name | jsonify }},
+    "content": {{ theorem_content | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
+    "url": "{{ theorem_url | relative_url }}",
+    "relUrl": "{{ theorem_url }}"
+  }
+        {%- assign i = i | plus: 1 -%}
+      {%- endfor -%}
     {%- endif -%}
   {%- endfor -%}
 {%- endfor %}

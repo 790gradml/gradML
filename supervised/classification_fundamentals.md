@@ -129,7 +129,7 @@ any other classifier in terms of minimizing the risk, as established
 formally via the following theorem (stated formally for
 $\mathcal{X}=\mathbb{R}^d$ for simplicity).
 
-{: .theorem theorem-name="BC Optimality"}
+{: .theorem #thm:bc-optimality theorem-name="BC Optimality"}
 For any classifier
 $h : \mathbb{R}^{d} \rightarrow\{0,1\}$, $L(h^*) \le L(h)$.
 

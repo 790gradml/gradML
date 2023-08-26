@@ -90,7 +90,10 @@ how the average value of $\hat{f}$ differs from the true $f$. The term
 $\mathbb{E}[(\hat{f}-\mathbb{E}\hat{f})^2]$ is a variance term, as it
 quantifies how $\hat{f}$ differs from the average value of $\hat{f}$.
 
-We prove now the bias-variance tradeoff equality. $$\begin{aligned}
+We prove now the bias-variance tradeoff equality.
+
+$$
+\begin{aligned}
 \mathbb{E}[(y-\hat{f})^2]
 &= \mathbb{E}[(y-f+f-\hat{f})^2]&\\
 &= \mathbb{E}[(y-f)^2]+\mathbb{E}[(f-\hat{f})^2]+2\mathbb{E}[(y-f)(f-\hat{f})]&\\
@@ -99,7 +102,8 @@ We prove now the bias-variance tradeoff equality. $$\begin{aligned}
 &= \mathbb{E}[\eta^2] + \mathbb{E}[(f - \mathbb{E}\hat{f} + \mathbb{E}\hat{f} - \hat{f})^2]&\\
 &= \mathbb{E}[\eta^2] + \mathbb{E}[(f - \mathbb{E}\hat{f})^2] + \mathbb{E}[(\mathbb{E}\hat{f} - \hat{f})^2] + 2 (f - \mathbb{E}\hat{f})^T \mathbb{E}[\mathbb{E}\hat{f} - \hat{f}]&\\
 &= \mathbb{E}[\eta^2] + \mathbb{E}[(f - \mathbb{E}\hat{f})^2] + \mathbb{E}[(\mathbb{E}\hat{f} - \hat{f})^2] & [\text{uses } \mathbb{E}[\mathbb{E}\hat{f} - \hat{f}] = 0]
-\end{aligned}$$
+\end{aligned}
+$$
 
 We can now look at linear regression from the perspective of the
 bias-variance tradeoff. Theorem
@@ -108,13 +112,10 @@ data-reference="thm:gaussmarkov">1</a> shows that linear regression
 achieves the smallest expected error among all unbiased linear
 estimator.
 
-<div id="thm:gaussmarkov" class="theorem">
-
-**The Gauss-Markov Theorem**: *The linear least-squares
+{: .theorem #thm:gaussmarkov theorem-name="The Gauss-Markov Theorem"}
+The linear least-squares
 estimator is the best unbiased linear estimator (i.e. the lowest
-variance estimator among linear estimators).*
-
-</div>
+variance estimator among linear estimators).
 
 This theorem leaves open the possibility of achieving smaller expected
 error with linear estimators, as long as they are biased. Such
@@ -197,7 +198,9 @@ $y \in \mathbb{R}^N$, $\epsilon \in \mathbb{R}^N$. Note that the noise
 can be correlated. Let $z = \mathbb{E}[y]$ and
 $\hat{z} = K(K+N\lambda I)^{-1}y$. Note that $\hat{z}$ is the prediction
 made on these points using the kernelized least-squares estimator. Then
-the expected error minus the noise component is: $$\begin{aligned}
+the expected error minus the noise component is:
+
+$$\begin{aligned}
 \frac{1}{N}\mathbb{E}[||z-\hat{z}||^2]
 &= \frac{1}{N}\mathbb{E}[||z-\mathbb{E}\hat{z}||^2] + \frac{1}{N} \mathbb{E}[||\mathbb{E}\hat{z} - \hat{z}||^2] + \frac{1}{N} (z-\mathbb{E}\hat{z})^T\mathbb{E}[\mathbb{E}\hat{z} - \hat{z}]\\
 &= \frac{1}{N}\mathbb{E}[||z-\mathbb{E}\hat{z}||^2] + \frac{1}{N} \mathbb{E}[||\mathbb{E}\hat{z} - \hat{z}||^2]\\
@@ -207,7 +210,9 @@ the expected error minus the noise component is: $$\begin{aligned}
 &\qquad + \frac{1}{N} \operatorname{trace}[(K(K+N\lambda I)^{-1}) \operatorname{var}(y) (K(K+N\lambda I)^{-1})^T]\\
 &= \frac{1}{N} ||N\lambda (K+N\lambda I)^{-1}z||^2 + \frac{1}{N} \operatorname{trace} [C (K+N\lambda I)^{-1}K^2(K+N\lambda I)^{-1}]\\
 &= N \lambda^2 z^T (K+N\lambda I)^{-2} z + \frac{1}{N} \operatorname{trace} [C (K+N\lambda I)^{-1}K^2(K+N\lambda I)^{-1}]
-\end{aligned}$$ Then the bias is
+\end{aligned}$$
+
+Then the bias is
 $$N \lambda^2 z^T (K+N\lambda I)^{-2} z$$ and the variance is
 $$\frac{1}{N} \operatorname{trace}[C (K+N\lambda I)^{-1}K^2(K+N\lambda I)^{-1}].$$
 

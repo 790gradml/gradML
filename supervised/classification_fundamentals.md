@@ -135,30 +135,34 @@ $h : \mathbb{R}^{d} \rightarrow\{0,1\}$, $L(h^*) \le L(h)$.
 
 
 {: .proof}
-Given $X=x$, the conditional error probability of any
-classifier $h$ may be written as: $$\begin{aligned}
+> Given $X=x$, the conditional error probability of any
+> classifier $h$ may be written as:
+> 
+> $$\begin{aligned}
 {\quad \mathbb{P}\left(h(X) \neq Y | X=x\right)} &{=1-\mathbb{P}\left(Y=h(X) | X=x\right)} \\
 & {=1-\left(\mathbb{P}\left(Y=1, h(X)=1 | X=x\right)+\mathbb{P}\left(Y=0, h(X)=0 | X=x\right)\right)} \\
 & =1-\left( [\![h(x)=1]\!] \mathbb{P}\left(Y=1 | X=x\right)+[\![h(x)=0]\!] \mathbb{P}\left(Y=0 | X=x\right)\right)\\
 & =1- \left([\![h(x)=1]\!] \eta(x)+ [\![h(x)=0]\!] (1-\eta(x))\right)
-\end{aligned}$$ where $\llbracket \cdot \rrbracket$ is the Iverson bracket, i.e. $\llbracket z \rrbracket=1$ if $z=$ 'true' and 0 if $z=$ 'false'. 
-<br>
-Thus, for every $x \in \mathbb{R}^d$, we have:
-<br>
-$$
+\end{aligned}$$
+> 
+> where $\llbracket \cdot \rrbracket$ is the Iverson bracket, i.e. $\llbracket z \rrbracket=1$ if $z=$ 'true' and 0 if $z=$ 'false'. 
+> 
+> Thus, for every $x \in \mathbb{R}^d$, we have:
+> 
+> $$
 \begin{aligned}
 & \mathbb{P}(h(X) \neq Y \mid X=x)-\mathbb{P}\left(h^*(X) \neq Y \mid X=x\right) \\
 & \quad=\eta(x)\left(\llbracket h^*(x)=1 \rrbracket-\llbracket h(x)=1 \rrbracket\right)+(1-\eta(x))\left(\llbracket h^*(x)=0 \rrbracket-\llbracket h(x)=0 \rrbracket\right)
 \end{aligned}
-$$
-<br>
-Since $$\llbracket h^*(x)=0 \rrbracket=1-\llbracket h^*(x)=1 \rrbracket$$, the above equals to $$(2 \eta(x)-1)\left(\llbracket h^*(x)=1 \rrbracket-\llbracket h(x)=1 \rrbracket\right)$$ which is non-negative based on the definition of 
-$$h^*\left(\eta(x)>1 / 2 \Leftrightarrow \llbracket h^*(x)=1 \rrbracket=1\right)$$. 
-<br>
-Thus we have
-$$
-\int \mathbb{P}(h(X) \neq Y \mid X=x) d \mathbb{P}(x) \geq \int \mathbb{P}\left(h^*(X) \neq Y \mid X=x\right) d \mathbb{P}(x)
-$$ or equivalently, $\mathbb{P}(h(X) \neq Y) \geq \mathbb{P}\left(h^*(X) \neq Y\right)$.
+> $$
+> 
+> Since $$\llbracket h^*(x)=0 \rrbracket=1-\llbracket h^*(x)=1 \rrbracket$$, the above equals to $$(2 \eta(x)-1)\left(\llbracket h^*(x)=1 \rrbracket-\llbracket h(x)=1 \rrbracket\right)$$ which is non-negative based on the definition of 
+> $$h^*\left(\eta(x)>1 / 2 \Leftrightarrow \llbracket h^*(x)=1 \rrbracket=1\right)$$. 
+> 
+> Thus we have
+> $$
+> \int \mathbb{P}(h(X) \neq Y \mid X=x) d \mathbb{P}(x) \geq \int \mathbb{P}\left(h^*(X) \neq Y \mid X=x\right) d \mathbb{P}(x)
+> $$ or equivalently, $\mathbb{P}(h(X) \neq Y) \geq \mathbb{P}\left(h^*(X) \neq Y\right)$.
 
 
 Related to the manipulations of
@@ -166,17 +170,17 @@ Theorem <a href="#thm:bayes" data-reference-type="ref"
 data-reference="thm:bayes">1</a> is a helpful exercise below:
 
 {: .exercise}
-Verify the following useful formula:
-<br>
-$$
-\begin{aligned}
-L^* & =\inf _{h: \mathbb{R}^d \rightarrow(0,1)} \mathbb{P}(h(X) \neq Y) \\
-& =\mathbb{E}[\min \{\eta(X), 1-\eta(X)\}] \\
-& =\frac{1}{2}-\frac{1}{2} \mathbb{E}[|2 \eta(X)-1|] .
-\end{aligned}
-$$
-<br>
-We call $L^*$ the Bayes Error (the minimum error possible any classifier; this is an idealized quantity)
+> Verify the following useful formula:
+> 
+> $$
+> \begin{aligned}
+> L^* & =\inf _{h: \mathbb{R}^d \rightarrow(0,1)} \mathbb{P}(h(X) \neq Y) \\
+> & =\mathbb{E}[\min \{\eta(X), 1-\eta(X)\}] \\
+> & =\frac{1}{2}-\frac{1}{2} \mathbb{E}[|2 \eta(X)-1|] .
+> \end{aligned}
+> $$
+> 
+> We call $L^*$ the Bayes Error (the minimum error possible any classifier; this is an idealized quantity)
 
 Per Theorem <a href="#thm:bayes" data-reference-type="ref"
 data-reference="thm:bayes">1</a>, we have found the best possible
@@ -247,14 +251,15 @@ That is, with large number of data points, even $1$-NN algorithm has
 risk that is within factor $2$ of the optimal risk.
 
 {: .proof}
-Given $X = x$, let $X'(n)$ the closest data point to $x$
-amongst given $n$ observations. Then due to
-$\mathcal{X} \subset \mathbb{R}^d$ (i.e. complete, separable metric
-space), it can be argued that $X'(n) \to x$ as $n\to \infty$ with
-probability $1$. Further, $\eta$ is continuous. Therefore,
-$\eta(X'(n)) \to \eta(x)$ as $n\to \infty$ with probability $1$. Let
-$Y'(n)$ be the label observed associated $X'(n)$. Then,
-$$\begin{aligned}
+> Given $X = x$, let $X'(n)$ the closest data point to $x$
+> amongst given $n$ observations. Then due to
+> $\mathcal{X} \subset \mathbb{R}^d$ (i.e. complete, separable metric
+> space), it can be argued that $X'(n) \to x$ as $n\to \infty$ with
+> probability $1$. Further, $\eta$ is continuous. Therefore,
+> $\eta(X'(n)) \to \eta(x)$ as $n\to \infty$ with probability $1$. Let
+> $Y'(n)$ be the label observed associated $X'(n)$. Then,
+>
+> $$\begin{aligned}
 \mathbb{P}(h_{1\text{-NN}}(x) \neq Y | X = x) & = \mathbb{P}(Y'(n) \neq Y | X = x)  \\
 & =  \mathbb{P}(Y'(n) = 1,  Y = 0| X = x) +  \mathbb{P}(Y'(n) = 0,  Y = 1| X = x) \\
 & \stackrel{(a)}{=}  \mathbb{P}(Y'(n) = 1 | X = x)  \mathbb{P}( Y = 0 | X = x) + \mathbb{P}(Y'(n) = 0 | X = x)  \mathbb{P}( Y = 1| X = x) \\
@@ -263,14 +268,14 @@ $$\begin{aligned}
 & \stackrel{(b)}{=} 2 \min\{\eta(x), 1-\eta(x)\} \max\{\eta(x), 1-\eta(x)\}  \\
 & \stackrel{(c)}{\leq} 2 \min\{\eta(x), 1-\eta(x)\}.
 \end{aligned}$$ 
-<br>
-In above, (a) follows from the fact that $Y'(n)$ and $Y$
-are generated independently per our generative model; (b) from that the
-fact for $\alpha, \beta \in \mathbb{R}$ we have
-$\alpha \beta = \min\{\alpha, \beta\} \max\{\alpha, \beta\}$; and (c)
-from the fact that $\eta(x) \in [0,1]$ as it is probability. Then, the
-claim of theorem follows by recalling that the Bayes risk
-$L^* = \mathbb{E}[\min\{\eta(X), 1-\eta(X)\}]$.
+> 
+> In above, (a) follows from the fact that $Y'(n)$ and $Y$
+> are generated independently per our generative model; (b) from that the
+> fact for $\alpha, \beta \in \mathbb{R}$ we have
+> $\alpha \beta = \min\{\alpha, \beta\} \max\{\alpha, \beta\}$; and (c)
+> from the fact that $\eta(x) \in [0,1]$ as it is probability. Then, the
+> claim of theorem follows by recalling that the Bayes risk
+> $L^* = \mathbb{E}[\min\{\eta(X), 1-\eta(X)\}]$.
 
 Theorem <a href="#thm:nn" data-reference-type="ref"
 data-reference="thm:nn">2</a> provides asymptotic guarantee for

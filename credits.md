@@ -6,7 +6,6 @@ nav_exclude: true
 
 
 Special thanks to:
-
 - [Leslie Kaelbling](https://people.csail.mit.edu/lpk/)
 - 6.867 Fall 2019 teaching staff
 
@@ -14,6 +13,10 @@ Special thanks to:
 - [Russ Tedrake](http://groups.csail.mit.edu/locomotion/russt.html)
 - [Open-source Repository Contributors](https://github.com/shensquared/gradML/graphs/contributors)
 
+
+for this site's contents and infrastructure.
+
+--- 
 This site uses:
 
 - [Hypothesis](https://web.hypothes.is/)
@@ -23,3 +26,4 @@ This site uses:
 - [Just the Class](https://github.com/kevinlin1/just-the-class)
 - [Last Modified At](https://github.com/gjtorikian/jekyll-last-modified-at)
 - [Pandoc](https://pandoc.org/)
+- [WideTim](https://www.widetim.com/)

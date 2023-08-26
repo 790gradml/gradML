@@ -9,5 +9,11 @@ Sep/14
 : **Lecture 3**{: .label .label-red} Regularization, optimization
    
 Sep/15
-:	Recitation 2	
+: **Recitation 2**
+   
+Sep/19 	
+:	Lecture 4 Linear vs nonlinear, bias v/s variance
+   
+Sep/21 	
+:	Lecture 5	PAC intro, finite hypothesis class, infinite hypothesis, VC dimension
    

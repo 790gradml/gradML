@@ -29,7 +29,7 @@ has_toc: false
 
 ## Course Components
 
-We will have weekly lectures and recitations (schedule details cna be found [here](/info/schedule/); complementing those are homework, project, and exam(s). While some of the exam logistical details are TBC, any exam will be held during lecture time, in person, and before Monday, December 18, 2023 (i.e. we won't have any exam during MIT's final exam period).
+We will have weekly lectures and recitations (schedule details can be found [here](/info/schedule/)); complementing those are homeworks, project, and exams. While some of the exam logistical details are TBC, the exams will be held at lecture time, in person, and before Monday, December 18, 2023 (i.e. we won't have any exam during MIT's final exam period).
 
 ## Course Number Change
 

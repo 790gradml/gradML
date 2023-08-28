@@ -27,7 +27,7 @@ Nov/09
 : **Lecture**{: .label .label-red}
 
 Nov/10
-: **Student holiday**{: .label .label-gray} No Recitation
+: **Holiday**{: .label .label-gray} Student holiday; no recitation
 
 Nov/14
 : **Lecture**{: .label .label-red}
@@ -40,27 +40,31 @@ Nov/17
 
 Nov/21
 : **Lecture**{: .label .label-red} State-of-the-art LLMs
+    : [Slides]()
 
 Nov/22
 : **Drop Date**{: .label .label-yellow}
 
 Nov/23
-: **Thanksgiving holiday**{: .label .label-gray} No Lecture
+: **Holiday**{: .label .label-gray} Thanksgiving; no lecture
 
 Nov/24
-: **Thanksgiving holiday**{: .label .label-gray} No Recitation
+: **Holiday**{: .label .label-gray} Thanksgiving; no recitation
 
 Nov/28
 : **Lecture**{: .label .label-red} Deep RL policy-based (TRPO/PPO)
+    : [Slides](), [Notes]()
 
 Nov/30
 : **Lecture**{: .label .label-red} Deep RL, DQN
+    : [Slides](), [Notes]()
 
 Dec/01
 : **Recitation**{: .label .label-purple}
 
 Dec/05
 : **Lecture**{: .label .label-red} Deep RL, practical considerations
+    : [Slides]()
 
 Dec/07
 : **Exam 2**{: .label .label-blue}
@@ -70,3 +74,4 @@ Dec/08
 
 Dec/12
 : **Lecture**{: .label .label-red} Deep RL and AI applications
+    : [Slides]()

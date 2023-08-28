@@ -25,8 +25,7 @@ has_toc: false
   - Probability (at the level of 6.3700, 6.3800, or [18.600](https://math.mit.edu/~sheffield/spring2022math600.html))
 - Recommended prerequisites: [6.3900](https://introml.mit.edu/spring23/calendar), 6.C01, [6.S898](https://phillipi.github.io/6.s898/), or other previous experience in machine learning.
 - Brief description: Principles, techniques, and algorithms in machine learning from the point of view of statistical inference; representation, generalization, and model selection; and methods such as linear models, Bayesian networks, and deep learning models. 
-- For reference, fall22's syllabus can be found [here](https://docs.google.com/document/d/1Z0dG_xc1PlpJs0ZCWrsUNCFBQyTAUQ1O4ydZx8nP42A). The fall23 offering will focus more on generative models and reinforcement learning; a **tentative** syllabus can be found [here](/info/calendar).
-
+- The fall23 offering will have a relatively heavy focus on generative models and reinforcement learning; a **tentative** syllabus can be found [here](/info/calendar). For reference, fall22's syllabus can be found [here](https://docs.google.com/document/d/1Z0dG_xc1PlpJs0ZCWrsUNCFBQyTAUQ1O4ydZx8nP42A).
 ## Course Components
 
 We will have weekly lectures and recitations (schedule details can be found [here](/info/schedule/)); complementing those are homeworks, project, and exams. While some logistical details are TBC, the exams will be in lecture, in person, and scheduled before Monday, December 18, 2023 (i.e. we won't have any exam during MIT's final exam period).

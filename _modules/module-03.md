@@ -27,7 +27,7 @@ Nov/09
 : **Lecture**{: .label .label-red}
 
 Nov/10
-: **Holiday**{: .label .label-gray} Student holiday; no recitation
+: **Holiday**{: .label .label-gray} Veterans Day holiday; no recitation
 
 Nov/14
 : **Lecture**{: .label .label-red}

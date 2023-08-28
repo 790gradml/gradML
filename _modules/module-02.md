@@ -25,11 +25,11 @@ Sep/22
 : **Holiday**{: .label .label-gray} student holiday; no recitation
 
 Sep/26
-: **Lecture 6**{: .label .label-red}
+: **Lecture 6**{: .label .label-red} On-line learning, regret
     : [Slides]()
 
 Sep/28
-: **Lecture 7**{: .label .label-red}
+: **Lecture 7**{: .label .label-red} Decision problems, bandits
     : [Slides]()
 
 Sep/29
@@ -37,11 +37,11 @@ Sep/29
     : [Handout]()
 
 Oct/03
-: **Lecture 8**{: .label .label-red}
+: **Lecture 8**{: .label .label-red} Neural/deep architectures (supervised)
     : [Slides](), [Notes]()
 
 Oct/05
-: **Lecture 9**{: .label .label-red}
+: **Lecture 9**{: .label .label-red} Robustness, stability, adversarial predictions
     : [Slides]()
 
 Oct/06
@@ -56,7 +56,7 @@ Oct/10
 : **Holiday**{: .label .label-gray} student holiday; no lecture
 
 Oct/12
-: **Lecture 10**{: .label .label-red}
+: **Lecture 10**{: .label .label-red} Uncertainty, conformal prediction
     : [Slides](), [Notes]()
 
 Oct/13
@@ -64,7 +64,7 @@ Oct/13
     : [Handout]()
 
 Oct/17
-: **Lecture 11**{: .label .label-red}
+: **Lecture 11**{: .label .label-red} Complexity, generalization
     : [Slides](), [Notes]()
 
 Oct/19

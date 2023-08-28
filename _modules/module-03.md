@@ -3,37 +3,45 @@ title: Module 3 - Deep Dive
 ---
 
 Oct/24
-: **Lecture**{: .label .label-red}
+: **Lecture**{: .label .label-red} Unsupervised learning, dimensionality reduction
+    : [Slides]()
 
 Oct/26
-: **Lecture**{: .label .label-red}
+: **Lecture**{: .label .label-red} Generative models, auto-regressive
+    : [Slides]()
 
 Oct/27
 : **Recitation**{: .label .label-purple}
 
 Oct/31
-: **Lecture**{: .label .label-red}
+: **Lecture**{: .label .label-red} Deep generative models, VAEs, GANs
+    : [Slides]()
 
 Nov/02
-: **Lecture**{: .label .label-red}
+: **Lecture**{: .label .label-red} Flows, Diffusion models
+    : [Slides]()
 
 Nov/03 
-: **Recitation**{: .label .label-purple}
+: **Recitation**{: .label .label-purple} 
 
 Nov/07
-: **Lecture**{: .label .label-red}
+: **Lecture**{: .label .label-red} Covariate shift, domain adaptation
+    : [Slides]()
 
 Nov/09
-: **Lecture**{: .label .label-red}
+: **Lecture**{: .label .label-red} Few-shot learning, in-context learning
+    : [Slides]()
 
 Nov/10
 : **Holiday**{: .label .label-gray} veterans day holiday; no recitation
 
 Nov/14
-: **Lecture**{: .label .label-red}
+: **Lecture**{: .label .label-red} Self-supervised learning, masking, contrastive
+    : [Slides]()
 
 Nov/16
-: **Lecture**{: .label .label-red}
+: **Lecture**{: .label .label-red} Foundation models
+    : [Slides]()
 
 Nov/17
 : **Recitation**{: .label .label-purple}

@@ -22,7 +22,7 @@ Sep/21
   : [Slides](), [Notes]()
 
 Sep/22
-: **Holiday**{: .label .label-gray} Student holiday; no recitation
+: **Holiday**{: .label .label-gray} student holiday; no recitation
 
 Sep/26
 : **Lecture 6**{: .label .label-red}
@@ -30,7 +30,7 @@ Sep/26
 
 Sep/28
 : **Lecture 7**{: .label .label-red}
-    : [Slides](),
+    : [Slides]()
 
 Sep/29
 : **Recitation 3**{: .label .label-purple}
@@ -50,10 +50,10 @@ Oct/06
 : **Add Date**{: .label .label-yellow}
 
 Oct/09
-: **Holiday**{: .label .label-gray} Indigenous Peoples' Day
+: **Holiday**{: .label .label-gray} indigenous peoples' day holiday
 
 Oct/10
-: **Holiday**{: .label .label-gray} Student holiday; no lecture
+: **Holiday**{: .label .label-gray} student holiday; no lecture
 
 Oct/12
 : **Lecture 10**{: .label .label-red}

@@ -6,6 +6,10 @@ nav_order: 0
 
 # Calendar
 
+{: .warning}
+
+Rough draft of the semester calendar below; dates/events subject to change.
+
 {% for module in site.modules %}
 {{ module }}
 {% endfor %}

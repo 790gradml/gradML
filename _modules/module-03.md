@@ -39,7 +39,7 @@ Nov/17
 : **Recitation**{: .label .label-purple}
 
 Nov/21
-: **Lecture**{: .label .label-red} State-of-the-art LLMs (guest lecture)
+: **Lecture**{: .label .label-red} State-of-the-art LLMs
 
 Nov/22
 : **Drop Date**{: .label .label-yellow}
@@ -69,4 +69,4 @@ Dec/08
 : **Recitation**{: .label .label-purple} Project Help
 
 Dec/12
-: **Lecture**{: .label .label-red} Deep RL and AI applications (guest lecture)
+: **Lecture**{: .label .label-red} Deep RL and AI applications

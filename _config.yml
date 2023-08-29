@@ -187,6 +187,9 @@ callouts:
     warning:
         title: ""
         color: eecs-red
+    alt-warning:
+        title: ""
+        color: yellow
     example:
         title: "Example"
         color: eecs-purple

@@ -75,7 +75,7 @@ Dec/05
     : [Slides]()
 
 Dec/07
-: **Exam 2**{: .label .label-blue}
+: **Exam 2**{: .label .label-blue} date/room ???
 
 Dec/08
 : **Recitation**{: .label .label-purple} Project help

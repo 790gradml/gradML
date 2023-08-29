@@ -68,7 +68,7 @@ Oct/17
     : [Slides](), [Notes]()
 
 Oct/19
-: **Exam 1**{: .label .label-blue}
+: **Exam 1**{: .label .label-blue} date/room ???
 
 Oct/20
 : **Recitation 6**{: .label .label-purple}

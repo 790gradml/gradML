@@ -62,8 +62,7 @@ yourself with their services and resources. If you have been approved
 for accommodations by DAS, 6.790 staff are ready to assist with
 implementation. 
 
-Please send these approved requests to
-<a href="mailto:6.790-instructors@mit.edu">6.790-instructors@mit.edu</a>
+Please send these approved requests
 to inform us, and we will work to implement these accommodations.
 
 ## Mental Health

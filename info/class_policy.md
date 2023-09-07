@@ -17,18 +17,17 @@ nav_order: 4
 
 ## Cross-registration
 
-We follow MIT's calendar, and do not have additional extensions or accommodations based on home university calendar. Especially important will be for you to plan ahead for our in-person exam(s). Our exam(s) will be scheduled before MIT's final exam period (i.e., before Monday December 18, 2023); the exact time and location is TBC.
+We follow MIT's calendar, and do not have additional extensions or accommodations based on home university calendar. Especially important will be for you to plan ahead for our two in-person exams. Our exams will be scheduled before MIT's final exam period (i.e., before Monday December 18, 2023); the exact date/room are TBC.
 
-All students need a Kerberos to interact with MIT systems (e.g. the Registrar [WebSIS](https://websis.mit.edu)). Cross-registered students will receive their Kerberos once the registration goes through; however, the process can take a while. We therefore strongly encourage you to cross register early, if possible, to avoid any delayed access.
+All students need a Kerberos to interact with MIT systems (e.g. the Registrar [WebSIS](https://student.mit.edu)). Cross-registered students will receive their Kerberos once the registration goes through; however, the process can take a while. We therefore strongly encourage you to cross register early, if possible, to avoid any delayed access. 
+
+Per MIT policy, cross-registration approval is authorized **solely** to a course's lead instructor, aka, the instructor-on-record.
 
 If you're not familiar with MIT campus, you might find the [whereis](https://whereis.mit.edu) site helpful.
 
 ## Listener
 Due to capacity and other constraints, we will not be able to accept Listener registrants in Fall 2023.
 
-## Grading
-
-### Late Policy
 ### Collaboration
 
 We encourage students to discuss assignments in this subject with

@@ -14,7 +14,7 @@ has_toc: false
 
 <h1 style="margin-bottom:-1em">Machine Learning</h1>
 
-<h1 >(draft Site; unofficial)</h1>
+<h1 >(draft site; unofficial)</h1>
 
 </center>
 

@@ -1,6 +1,6 @@
 ---
 # layout: page
-title: Background Review
+title: Review
 nav_order: 2
 # katex: true
 ---
@@ -19,6 +19,7 @@ nav_order: 2
 - Data matrix is of the size $(n,d)$ where $n$ is the number of data points, and $d$ is the dimension of the features
 - Vectors are denoted with a small-case letter; matrices capital letters
 - The default norm of a vector is the $l_2$ norm
+
 
 # Linear Algebra, Calculus, and Optimization
 

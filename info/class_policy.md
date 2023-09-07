@@ -1,10 +1,10 @@
 ---
-title: Course Policy and Support
+title: Logistics and Support
 description: Listing of course modules and topics.
 nav_order: 4
 ---
 
-# Course Policy and Support
+# Logistics and Support
 
 {: .no_toc}
 
@@ -27,17 +27,6 @@ If you're not familiar with MIT campus, you might find the [whereis](https://whe
 
 ## Listener
 Due to capacity and other constraints, we will not be able to accept Listener registrants in Fall 2023.
-
-### Collaboration
-
-We encourage students to discuss assignments in this subject with
-other students and with the teaching staff to better understand the
-concepts.  However, everything you hand in on-line or off-line must be your own work, as it's also critical for your individual learning to
-be sure you devote concentrated independent effort to solving all the
-problems.
-
-The correct model is to discuss solution strategies and write your solutions individually. Implementations that are identical or differ only by variable names will not receive full credit.
-
 
 ## GradSupport
 

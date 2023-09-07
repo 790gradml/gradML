@@ -11,6 +11,8 @@ plt.plot(*(zip(*R)), marker=".", ls="")
 plt.show()
 muhat = np.mean(R, 0)
 R_0 = R - muhat[np.newaxis, :]
+# Why is the denominator (N-1) instead of (N)? Check
+# out Bessel's correction
 SIGMA_hat = np.dot(R_0.T, R_0) / (N - 1)
 
 L, Q = np.linalg.eig(SIGMA_hat)

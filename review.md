@@ -64,8 +64,8 @@ We will skip the details for negative semi-definite ($A\preceq 0$) and negative 
 - Convexity definition
 - Strong convexity definition
 - If a function is strongly convex, it is convex.
-{: .example}
 
+{: .example}
 Quadratic functions' Convexity Property
 
 <iframe src="/demos/QuadraticFun.html" width=1000 height=800 async></iframe>

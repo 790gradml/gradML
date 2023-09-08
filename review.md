@@ -61,7 +61,9 @@ We will skip the details for negative semi-definite ($A\preceq 0$) and negative 
 
 
 ##  Convexity and Strong Convexity
-
+- Convexity definition
+- Strong convexity definition
+- If a function is strongly convex, it is convex.
 {: .example}
 
 Quadratic functions' Convexity Property
@@ -72,7 +74,6 @@ Quadratic functions' Convexity Property
 
 Some quick facts:
 - If a function is convex, and this function has any local minima, then all of those local minima are global minima. Note that such local/global minima are not necessarily unique.
-- If a function is strongly convex, it is convex.
 - If a function is strongly convex, and this function has any local minima, then the following are true:
   - any local minima must be unique, that is, there can only exist a single unique local minimum
   - this local minimum is a global minimum

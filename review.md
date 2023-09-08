@@ -44,7 +44,7 @@ more efficiently/computationally check the PSD property. Specifically, the follo
 - There exists a factorization $A=B^{T} B$.
 
 
-Before we go to concrete examples, let us write out the analogous story for positive definiteness (PD). 
+The story is analogous for positive definiteness (PD). 
 
 {: .definition}
 An $n \times n$ symmetric real matrix $A$ is said to be positive definite (i.e., $A \succ 0$) if $x^{T} A x > 0$ for all $x$ in $\mathbb{R}^{n}$ and $x\neq 0$.

@@ -158,9 +158,14 @@ $$
 ###  The Chain Rule (in probability)
 ###  Marginal Independence
 
-Let $(\Omega, \mathcal{F} \cdot \mathbb{P})$ be a probability space. Two events, $A$ and $B$, are said to be independent if $\mathbb{P}(A \cap B)=\mathbb{P}(A) \mathbb{P}(B)$. If $\mathbb{P}(B)>0$, an equivalent condition is $\mathbb{P}(A)=\mathbb{P}(A \mid B)$.
+Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. Two events, $A$ and $B$, are said to be independent if  $$\mathbb{P}(A \cap B)=\mathbb{P}(A) \mathbb{P}(B)$$.
 
-Note: As an immediate consequence of that joint probability is the product of individual probabilities, the entropy  of the joint distribution is the sum of individual entropies
+If $\mathbb{P}(B)>0$, an equivalent condition is $\mathbb{P}(A)=\mathbb{P}(A \mid B)$.
+
+Note: Given marginal independence of two random variables, their joint distribution is the product of the individual marginal distribution. As an immediate consequence of this fact, given marginal independence of two random variables, the entropy of their joint distribution is equal to the sum of their individual entropies.
+
+
+
 
 ### Bayes' Rule
 

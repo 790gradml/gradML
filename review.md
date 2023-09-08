@@ -69,7 +69,7 @@ Quadratic functions' Convexity Property
 Some quick facts:
 - If a function is convex, and this function has any local minima, then all of those local minima are global minima. Note that such local/global minima are not necessarily unique.
 
-- If a function is strongly convex, and this function has any local minima, then the following are both true:
+- If a function is strongly convex, and this function has any local minima, then the following are true:
   - there only exist a single unique local minimum
   - this local minimum is a global minimum
   - this local minimum is a unique global minimum

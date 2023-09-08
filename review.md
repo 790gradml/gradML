@@ -32,23 +32,27 @@ Positive semidefinite(ness) and the variants are extremely important concepts in
 
 For now, let us try to review these concepts on their own; starting with PSD. Recall that:
 
+{: .definition}
 An $n \times n$ symmetric real matrix $A$ is said to be positive semidefinite (i.e., $A \succeq 0$) if $x^{T} A x \geq 0$ for all $x$ in $\mathbb{R}^{n}$.
 
 This definition requires checking the sign of the left-hand-side $x^{T} A x$ for all possible $x$ in $\mathbb{R}^{n}$ to establish $A \succeq 0$; not an easy task in general. Luckily there are many equivalent conditions that allow us to 
-more efficiently/computationally check the PSD property. Specifically, the following are conditions equivalent to $A \succeq 0$:
+more efficiently/computationally check the PSD property. Specifically, the following are all equivalent:
 
+- $A \succeq 0$
 - All $2^{n}-1$ principal minors of $A$ are nonnegative. (The so-called Sylvester's criterion)
 - All eigenvalues of $A$ are nonnegative.
 - There exists a factorization $A=B^{T} B$.
 
 
-Before we go to concrete examples, let us write out the analogous story for positive definiteness (PD). The definition says:
+Before we go to concrete examples, let us write out the analogous story for positive definiteness (PD). 
 
-An $n \times n$ symmetric real matrix $A$ is said to be positive definite (i.e., $A \succ 0$) if $x^{T} A x > 0$ for all $x$ in $\mathbb{R}^{n}$ and $x\neq 0$. (Note the requirement on $x\neq 0$).
+{: .definition}
+An $n \times n$ symmetric real matrix $A$ is said to be positive definite (i.e., $A \succ 0$) if $x^{T} A x > 0$ for all $x$ in $\mathbb{R}^{n}$ and $x\neq 0$.
 
 
-And similarly, the following equivalent conditions for $A \succ 0$ are somewhat more ``actionable'':
+And similarly, the following are all equivalent conditions (some are more ``actionable'' than the definition):
 
+- $A \succ 0$
 - All $n$ **leading** principal minors of $A$ are positive. (Note that Sylvester's conditions for PD and PSD are majorly different)
 - All eigenvalues of $A$ are positive. 
 - There exists a factorization $A=B^{T} B$ where $B$ is square and non-singular.

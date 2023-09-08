@@ -26,7 +26,35 @@ nav_order: 2
 ## The Gradient Vector
 
 ## The Chain Rule (in calculus)
+
 ##  Positive Semidefiniteness (PSD) and Positive Definiteness (PD)
+Positive semidefinite(ness) and the variants are extremely important concepts in optimization. For example, they have direct implications on whether a point is a local minimum. 
+
+For now, let us try to review these concepts on their own; starting with PSD. Recall that:
+
+An $n \times n$ symmetric real matrix $A$ is said to be positive semidefinite (i.e., $A \succeq 0$) if $x^{T} A x \geq 0$ for all $x$ in $\mathbb{R}^{n}$.
+
+This definition requires checking the sign of the left-hand-side $x^{T} A x$ for all possible $x$ in $\mathbb{R}^{n}$ to establish $A \succeq 0$; not an easy task in general. Luckily there are many equivalent conditions that allow us to 
+more efficiently/computationally check the PSD property. Specifically, the following are conditions equivalent to $A \succeq 0$:
+
+- All $2^{n}-1$ principal minors of $A$ are nonnegative. (The so-called Sylvester's criterion)
+- All eigenvalues of $A$ are nonnegative.
+- There exists a factorization $A=B^{T} B$.
+
+
+Before we go to concrete examples, let us write out the analogous story for positive definiteness (PD). The definition says:
+
+An $n \times n$ symmetric real matrix $A$ is said to be positive definite (i.e., $A \succ 0$) if $x^{T} A x > 0$ for all $x$ in $\mathbb{R}^{n}$ and $x\neq 0$. (Note the requirement on $x\neq 0$).
+
+
+And similarly, the following equivalent conditions for $A \succ 0$ are somewhat more ``actionable'':
+
+- All $n$ **leading** principal minors of $A$ are positive. (Note that Sylvester's conditions for PD and PSD are majorly different)
+- All eigenvalues of $A$ are positive. 
+- There exists a factorization $A=B^{T} B$ where $B$ is square and non-singular.
+
+We will skip the details for negative semi-definite ($A\preceq 0$) and negative definite ($A\prec 0$), because, e.g., $A\preceq 0$ if and only if $-A\succeq 0$ (convince yourself of this); so understanding the PSD/PD case is enough. 
+
 
 ##  Convexity and Strong Convexity
 

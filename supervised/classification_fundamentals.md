@@ -18,93 +18,49 @@ basic classifiers:
 - Bayes classifiers; and 
 - Nearest Neighbors. 
 
-The former is an abstract classifier used to understand the theoretical limits of
-classification, while the latter is a basic technique that one can use
-without having to use any specific “training algorithm”. We will see
-performance measures as well as some theoretical results regarding the
-classifiers introduced, along with some of the intuition behind when and why they work. 
+The former is an abstract classifier used to understand the theoretical limits of classification, while the latter is a basic technique that one can use without having to use any specific “training algorithm”. We will see performance measures as well as some theoretical results regarding the classifiers introduced. We will also see some of the intuition behind when and why they work. 
 
-Thereafter, we will motivate the idea of Empirical Risk
-Minimization (ERM), which is a leading paradigm for training classifiers in machine learning. We will discuss strengths and weaknesses of this
-framework, including the key ideas of “over-fitting” and “inductive
-bias”, as well as some standard trade-offs that one should be aware of
-when performing classification.
+Thereafter, we will motivate the idea of Empirical Risk Minimization (ERM), which is a leading paradigm for training classifiers in machine learning. We will discuss strengths and weaknesses of this framework, including the key ideas of “over-fitting” and “inductive bias”; we will also discuss some standard trade-offs that one should be aware of when performing classification.
 
 # Notations, Setup
 
 We start with notations setup that are assumed throughout the course
 for classification or more generally for supervised learning.
 
-- **Data domain**: An arbitrary set $\mathcal{X}$ from which our
-  training and test data are drawn. As often is the case,
-  $\mathcal{X}=\mathbb{R}^{d}$. For instance, if we assume that the
-  members of $\mathcal{X}$ are represented via *feature vectors*; we may
-  write $\Phi(x)$ to emphasize the encoding of a data point
-  $x \in \cal X$ as a feature vector in $\mathbb{R}^d$.
+- **Data/feature domain**: An arbitrary set $\mathcal{X}$ from which our training and test data are drawn. As often is the case, $\mathcal{X}=\mathbb{R}^{d}$. For instance, if we assume that the members of $\mathcal{X}$ are represented via *feature vectors*; we may write $\Phi(x)$ to emphasize the encoding of a data point $x \in \cal X$ as a feature vector in $\mathbb{R}^d$.
 
-- **Label domain**: A discrete set $\mathcal{Y}$; e.g., $\{0,1\}$ or
-  $\{-1,1\}$. It is important to *not* interpret these $0$ and $1$ as
-  “numbers,” but rather as “classes” or categorical variables. For the
-  setting of regression, as we shall see, the label domain $\mathcal{Y}$
-  could be continuous, e.g. $\mathcal{Y} = [0,1]$ or $\mathbb{R}$.
+- **Label domain**: A discrete set $\mathcal{Y}$; e.g., $\{0,1\}$ or $\{-1,1\}$. It is important to *not* interpret these $0$ and $1$ as “numbers,” but rather as “classes” or categorical variables. For the setting of regression, as we shall see, the label domain $\mathcal{Y}$ could be continuous, e.g. $\mathcal{Y} = [0,1]$ or $\mathbb{R}$.
 
-- **Training data**: A finite collection
-  $$S=\left\{(x_{1}, y_{1}), \ldots, (x_{N}, y_{N})\right\}$$ of (data,
-  label) pairs drawn from $\mathcal{X} \times \mathcal{Y}$.
+- **Training data**: A finite collection $$S=\left\{(x_{1}, y_{1}), \ldots, (x_{N}, y_{N})\right\}$$ of (data, label) pairs drawn from $\mathcal{X} \times \mathcal{Y}$.
 
-- **Data distribution**: A joint distribution $\mathbb{P}$ on
-  $\mathcal{X} \times \mathcal{Y}$. An *important assumption* made
-  throughout standard supervised machine learning is that while
-  $\mathbb{P}$ is unknown, it is *fixed*. We write $(X, Y)$ to denote a
-  random variable with $X$ taking values in $\mathcal{X}$ and $Y$ taking
-  values in $\mathcal{Y}$.
+- **Data distribution**: A joint distribution $\mathbb{P}$ on $\mathcal{X} \times \mathcal{Y}$. An **important assumption** made throughout standard supervised machine learning is that while $\mathbb{P}$ is unknown, it is *fixed*. We write $(X, Y)$ to denote a random variable with $X$ taking values in $\mathcal{X}$ and $Y$ taking values in $\mathcal{Y}$.
 
-**Classifier**. With these definitions, we are now ready to define a
-*classifier*; formally, it is simply a prediction rule
-$$h : \mathcal{X} \rightarrow \mathcal{Y},$$ that is, a map from the
-data domain to the label domain. We will write $h_{S}$ to emphasize
-dependence of the classifier $h$ on training data. We will abuse the
-notation by denoting $h$ as a hypothesis, prediction rule, or
-classifier, but we do hope that the precise meaning will be clear from
-the context.
+**Classifier**. With these definitions, we are now ready to define a *classifier*; formally, it is simply a prediction rule $$h : \mathcal{X} \rightarrow \mathcal{Y},$$ 
+that is, a map from the data domain to the label domain. 
 
-Suppose we have a candidate classifier $h$. We need some way to measure
-its performance or simply to provide us with a mathematical guideline on
-“what does it mean to train?” Indeed, the goal of supervised learning is
-to use training data to help train a classifier that works well on
-unseen test data. To quantify what “works well”, we describe a key idea
-below.
+We will often write $h_{S}$ to emphasize dependence of the classifier $h$ on training data. We will abuse the
+notation by denoting $h$ as a hypothesis, prediction rule, or classifier, but we do hope that the precise meaning will be clear from the context.
 
-**Measuring success**. We consider a quantity that measures the error of
-classifier. This quantity is called **risk**, which is also known as the
-*generalization error*: 
+Suppose we have a candidate classifier $h$. We need some way to measure its performance or simply to provide us with a mathematical guideline on “what does it mean to train?” Indeed, the goal of supervised learning is to use training data to help train a classifier that works well on unseen test data. 
 
-$$
-  L(h) \equiv L_{\mathbb{P}}(h) :=\mathbb{P}(h(X) \neq Y).$$ In words,
-the risk <a href="#eq:1" data-reference-type="eqref"
-data-reference="eq:1">[eq:1]</a> of a classifier $h$ is the probability
-of randomly choosing a pair $(X, Y) \sim \mathbb{P}$ for which
-$h(X) \neq Y$. The central goal of supervised learning is to learn a
-classifier $h$ using training data so that it has low risk—ideally, a
-classifier that is guaranteed to
-minimize <a href="#eq:1" data-reference-type="eqref"
-data-reference="eq:1">[eq:1]</a>.
+Towards quantifying what “works well”, we describe a key idea:
+
+**Measuring success**. We consider a quantity that measures the error of classifier. This quantity is called **risk**, which is also known as the *generalization error*
+
+{: .definition}
+
+> The risk, or generalization error of a classifier $h$ is defined as:
+> 
+> $$L(h) \equiv L_{\mathbb{P}}(h) :=\mathbb{P}(h(X) \neq Y).$$ 
+  
+In words, the risk of a classifier $h$ is the probability of randomly choosing a pair $(X, Y) \sim \mathbb{P}$ for which
+$h(X) \neq Y$. The central goal of supervised learning is to learn a classifier $h$ using training data so that it has low risk -- ideally, a classifier that is guaranteed to minimize the risk.
 
 # Bayes Classifier
 
-Given the goal of task is to minimize the
-risk <a href="#eq:1" data-reference-type="eqref"
-data-reference="eq:1">[eq:1]</a> (i.e., the chance of being wrong on
-unseen data), at least in principle there is a simple strategy that can
-help attain this risk. Indeed, suppose we know the distribution
-$\mathbb{P}$ as per which data is generated, then intuitively it makes
-sense to pick the most likely class given the observation (notice, this
-intuition is not limited to binary classification). 
+Given the goal of task is to minimize the risk (i.e., the chance of being wrong on unseen data), at least in principle there is a simple strategy that can help attain this risk. Indeed, suppose we know the distribution $\mathbb{P}$ as per which data is generated, then intuitively it makes sense to pick the most likely class given the observation. Note that this intuition is not limited to binary classification. 
 
-This intuitive idea is exactly the idea behind the so-called Bayes classifier. Before
-describing the Bayes classifier formally, let us introduce some
-additional notation; we limit our description to binary classification
-for ease of exposition.
+This intuitive idea is exactly the idea behind the so-called Bayes classifier. Before describing the Bayes classifier formally, let us introduce some additional notation; we limit our description to binary classification for ease of exposition.
 
 **Class conditional distribution**: Let $\mathcal{Y}=\{0,1\}$. We define
 

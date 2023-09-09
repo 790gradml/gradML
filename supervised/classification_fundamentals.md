@@ -12,9 +12,7 @@ nav_order: 0
 {:toc}
 # Overview
 
-The aim of this lecture is to establish basic terminology and
-definitions useful for studying classification. We will discuss two
-basic classifiers: 
+The aim of this lecture is to establish basic terminology and definitions useful for studying classification. We will discuss two basic classifiers: 
 - Bayes classifiers; and 
 - Nearest Neighbors. 
 
@@ -24,8 +22,7 @@ Thereafter, we will motivate the idea of Empirical Risk Minimization (ERM), whic
 
 # Notations, Setup
 
-We start with notations setup that are assumed throughout the course
-for classification or more generally for supervised learning.
+We start with notations setup that are assumed throughout the course for classification or more generally for supervised learning.
 
 - **Data/feature domain**: An arbitrary set $\mathcal{X}$ from which our training and test data are drawn. As often is the case, $\mathcal{X}=\mathbb{R}^{d}$. For instance, if we assume that the members of $\mathcal{X}$ are represented via *feature vectors*; we may write $\Phi(x)$ to emphasize the encoding of a data point $x \in \cal X$ as a feature vector in $\mathbb{R}^d$.
 
@@ -35,11 +32,9 @@ for classification or more generally for supervised learning.
 
 - **Data distribution**: A joint distribution $\mathbb{P}$ on $\mathcal{X} \times \mathcal{Y}$. An **important assumption** made throughout standard supervised machine learning is that while $\mathbb{P}$ is unknown, it is *fixed*. We write $(X, Y)$ to denote a random variable with $X$ taking values in $\mathcal{X}$ and $Y$ taking values in $\mathcal{Y}$.
 
-**Classifier**. With these definitions, we are now ready to define a *classifier*; formally, it is simply a prediction rule $$h : \mathcal{X} \rightarrow \mathcal{Y},$$ 
-that is, a map from the data domain to the label domain. 
+**Classifier**. With these definitions, we are now ready to define a *classifier*; formally, it is simply a prediction rule $$h : \mathcal{X} \rightarrow \mathcal{Y},$$ that is, a map from the data domain to the label domain. 
 
-We will often write $h_{S}$ to emphasize dependence of the classifier $h$ on training data. We will abuse the
-notation by denoting $h$ as a hypothesis, prediction rule, or classifier, but we do hope that the precise meaning will be clear from the context.
+We will often write $h_{S}$ to emphasize dependence of the classifier $h$ on training data. We will abuse the notation by denoting $h$ as a hypothesis, prediction rule, or classifier, but we do hope that the precise meaning will be clear from the context.
 
 Suppose we have a candidate classifier $h$. We need some way to measure its performance or simply to provide us with a mathematical guideline on “what does it mean to train?” Indeed, the goal of supervised learning is to use training data to help train a classifier that works well on unseen test data. 
 
@@ -53,8 +48,7 @@ Towards quantifying what “works well”, we describe a key idea:
 > 
 > $$L(h) \equiv L_{\mathbb{P}}(h) :=\mathbb{P}(h(X) \neq Y).$$ 
   
-In words, the risk of a classifier $h$ is the probability of randomly choosing a pair $(X, Y) \sim \mathbb{P}$ for which
-$h(X) \neq Y$. The central goal of supervised learning is to learn a classifier $h$ using training data so that it has low risk -- ideally, a classifier that is guaranteed to minimize the risk.
+In words, the risk of a classifier $h$ is the probability of randomly choosing a pair $(X, Y) \sim \mathbb{P}$ for which $h(X) \neq Y$. The central goal of supervised learning is to learn a classifier $h$ using training data so that it has low risk -- ideally, a classifier that is guaranteed to minimize the risk.
 
 # Bayes Classifier
 
@@ -62,28 +56,27 @@ Given the goal of task is to minimize the risk (i.e., the chance of being wrong 
 
 This intuitive idea is exactly the idea behind the so-called Bayes classifier. Before describing the Bayes classifier formally, let us introduce some additional notation; we limit our description to binary classification for ease of exposition.
 
-**Class conditional distribution**: Let $\mathcal{Y}=\{0,1\}$. We define
+**Class conditional distribution**: Let $\mathcal{Y}=\\{0,1\\}$. We define
 
-$$\eta(x) :=\mathbb{P}(Y=1 | X=x)=\mathbb{E}[Y | X=x],$$ 
+{: .definition}
+> Class conditional distribution
+>
+> $$\eta(x) :=\mathbb{P}(Y=1 | X=x)=\mathbb{E}[Y | X=x]$$ 
 
-which describes
-the posterior probability of the data being in class $1$ given that you
-have observed $x$. 
+This quantity describes the posterior probability of the data being in class $1$ given that you have observed $x$. 
 
-The Bayes classifier $h^{*}(x)$ is defined by the
-rule: $$
-  h^{*}(x) :=
-  \begin{cases}
-    1, &\text{if}\ \eta(x)=\mathbb{P}(Y=1 | X=x)>\frac{1}{2}\\
-    0, &\text{otherwise}.
-  \end{cases}$$ The classifier
-<a href="#eq:3" data-reference-type="eqref"
-data-reference="eq:3">[eq:3]</a> predicts label $1$ if the conditional
-probability of being in class $1$ is bigger than half. Remarkably, it
-can be shown that this simple classifier actually performs as good as
-any other classifier in terms of minimizing the risk, as established
-formally via the following theorem (stated formally for
-$\mathcal{X}=\mathbb{R}^d$ for simplicity).
+The Bayes classifier $h^{*}(x)$ is defined by the rule: 
+
+{: .definition def_name="Bayes classifier"}
+> Bayes classifier
+>
+> $$h^{*}(x) :=
+> \begin{cases}
+> 1, &\text{if}\ \eta(x)=\mathbb{P}(Y=1 | X=x)>\frac{1}{2}\\
+> 0, &\text{otherwise}.
+> \end{cases}$$ 
+ 
+The Bayes classifier predicts label $1$ if the conditional probability of being in class $1$ is bigger than half. Remarkably, it can be shown that this simple classifier actually performs as good as any classifier in terms of minimizing the risk, as established formally via the following theorem (stated formally for $\mathcal{X}=\mathbb{R}^d$ for simplicity).
 
 {: .theorem theorem-name="BC Optimality"}
 For any classifier
@@ -95,7 +88,7 @@ $h : \mathbb{R}^{d} \rightarrow\{0,1\}$, $L(h^*) \le L(h)$.
 > classifier $h$ may be written as:
 > 
 > $$\begin{aligned}
-{\quad \mathbb{P}\left(h(X) \neq Y | X=x\right)} &{=1-\mathbb{P}\left(Y=h(X) | X=x\right)} \\
+{\mathbb{P}\left(h(X) \neq Y | X=x\right)} &{=1-\mathbb{P}\left(Y=h(X) | X=x\right)} \\
 & {=1-\left(\mathbb{P}\left(Y=1, h(X)=1 | X=x\right)+\mathbb{P}\left(Y=0, h(X)=0 | X=x\right)\right)} \\
 & =1-\left( [\![h(x)=1]\!] \mathbb{P}\left(Y=1 | X=x\right)+[\![h(x)=0]\!] \mathbb{P}\left(Y=0 | X=x\right)\right)\\
 & =1- \left([\![h(x)=1]\!] \eta(x)+ [\![h(x)=0]\!] (1-\eta(x))\right)
@@ -112,7 +105,9 @@ $h : \mathbb{R}^{d} \rightarrow\{0,1\}$, $L(h^*) \le L(h)$.
 \end{aligned}
 > $$
 > 
-> Since $$\llbracket h^*(x)=0 \rrbracket=1-\llbracket h^*(x)=1 \rrbracket$$, the above equals to $$(2 \eta(x)-1)\left(\llbracket h^*(x)=1 \rrbracket-\llbracket h(x)=1 \rrbracket\right)$$ which is non-negative based on the definition of 
+> Since $$\llbracket h^*(x)=0 \rrbracket=1-\llbracket h^*(x)=1 \rrbracket$$, the above equals to 
+> 
+> $$(2 \eta(x)-1)\left(\llbracket h^*(x)=1 \rrbracket-\llbracket h(x)=1 \rrbracket\right)$$ which is non-negative based on the definition of 
 > $$h^*\left(\eta(x)>1 / 2 \Leftrightarrow \llbracket h^*(x)=1 \rrbracket=1\right)$$. 
 > 
 > Thus we have
@@ -121,9 +116,7 @@ $h : \mathbb{R}^{d} \rightarrow\{0,1\}$, $L(h^*) \le L(h)$.
 > $$ or equivalently, $\mathbb{P}(h(X) \neq Y) \geq \mathbb{P}\left(h^*(X) \neq Y\right)$.
 
 
-Related to the manipulations of
-Theorem <a href="#thm:bayes" data-reference-type="ref"
-data-reference="thm:bayes">1</a> is a helpful exercise below:
+Related to the manipulations of the BC-Optimality Theorem is a helpful exercise below:
 
 {: .exercise}
 > Verify the following useful formula:
@@ -138,23 +131,12 @@ data-reference="thm:bayes">1</a> is a helpful exercise below:
 > 
 > We call $L^*$ the Bayes Error (the minimum error possible any classifier; this is an idealized quantity)
 
-Per Theorem <a href="#thm:bayes" data-reference-type="ref"
-data-reference="thm:bayes">1</a>, we have found the best possible
-classifier. But it is *idealized*.
+Per BC-Optimality Theorem, we have found the best possible classifier. But it is *idealized*.
 
-<span style="color: cdarkred">**Question:**</span> What makes the Bayes
-classifier idealized?  
-<span style="color: cdarkred">**Answer**</span>: The Bayes classifier
-assumes that we have access to $\mathbb{P}(X,Y)$, but we almost never
-have access to this joint distribution. So the importance of Bayes
-classifier is more conceptual: if we had complete power and knew the
-distribution of the data we would know how to construct the best
-possible classifier.
+**Question:** What makes the Bayes classifier idealized?  
+**Answer**: The Bayes classifier assumes that we have access to $\mathbb{P}(X,Y)$, but we almost never have access to this joint distribution. So the importance of Bayes classifier is more conceptual: if we had complete power and knew the distribution of the data we would know how to construct the best possible classifier.
 
-Because we almost never have access to the true underlying joint
-distribution, let us now take a look at a fundamental approach to
-classification that *seems* distribution-free, namely, the method of
-nearest neighbors (NN).
+Because we almost never have access to the true underlying joint distribution, let us now take a look at a fundamental approach to classification that *seems* distribution-free, namely, the method of nearest neighbors (NN).
 
 # Nearest Neighbors
 

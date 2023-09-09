@@ -36,7 +36,7 @@ $A(i, j)=x(i)+y(j)$, and $B(i, j)=x(i) \cdot y(j)$.
 
 ## Pairwise Euclidean Distances
 
-Given a $d \times m$ matrix $X$, and a $d \times n$ matrix $Y$, compute an $m \times n$ matrix $D$, such that $D(i, j)=\left\|\left\|x^{i}-y^{j}\right\|\right\|$, where $x^{i}$ is the $i$-th column of $X$, and $y^{j}$ is the $j$-th column of $Y$. Hint: You may find the following decomposition (of the norm/distance squared) helpful for improving your code efficiency:
+Given a $d \times m$ matrix $X$, and a $d \times n$ matrix $Y$, compute an $m \times n$ matrix $D$, such that $$D(i, j)=\left\|x^{i}-y^{j}\right\|$$, where $x^{i}$ is the $i$-th column of $X$, and $y^{j}$ is the $j$-th column of $Y$. Hint: You may find the following decomposition (of the norm/distance squared) helpful for improving your code efficiency:
 
 $$\left\|x^{i}-y^{j}\right\|^{2}=\sum_{k=1}^{d}\left(x_{k}^{i}-y_{k}^{j}\right)^{2}=\sum_{k=1}^{d} x_{k}^{i^{2}}+\sum_{k=1}^{d} y_{k}^{j^{2}}-\sum_{k=1}^{d} 2 x_{k}^{i} y_{k}^{j} .$$
 
@@ -73,11 +73,14 @@ is a vector of length $n$.
 ## 2-D Gaussian
 
 Generate 1000 random points from a 2-D Gaussian distribution with mean
-$\mu=[4,2]$ and covariance $$\Sigma=\left(\begin{array}{cc}
+$\mu=[4,2]$ and covariance 
+
+$$\Sigma=\left(\begin{array}{cc}
         1   & 1.5 \\
         1.5 & 3
-    \end{array}\right)$$Plot the points so obtained, and estimate their
-mean and covariance from the data. Find the eigenvectors of the
+    \end{array}\right)$$
+    
+Plot the points so obtained, and estimate their mean and covariance from the data. Find the eigenvectors of the
 covariance matrix and plot them centered at the sample mean.
 
 

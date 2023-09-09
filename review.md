@@ -88,6 +88,7 @@ Some quick facts:
   - The notions of random variable, expectation, variance, entropy.
   - Union bounds
   - Concentration inequalities: Markov's Inequality, Chernoff bound, Hoeffding's inequality
+  - (Weak) law of large numbers
 
 ### Fundamental Distributions
 
@@ -161,14 +162,27 @@ $$
 $$
 
 ###  The Chain Rule (in probability)
+By simply reversing the definition of conditional probability (above), we arrive at the Chain Rule:
+
+$$
+P(A \cap B)=P(A \mid B) P(B)
+$$
+
+
+
 ###  Marginal Independence
 
-Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. Two events, $A$ and $B$, are said to be independent if  $$\mathbb{P}(A \cap B)=\mathbb{P}(A) \mathbb{P}(B)$$.
+Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. Two events, $A$ and $B$, are said to be independent if
 
-If $\mathbb{P}(B)>0$, an equivalent condition is $\mathbb{P}(A)=\mathbb{P}(A \mid B)$.
+$$
+\mathbb{P}(A \cap B)=\mathbb{P}(A) \mathbb{P}(B).
+$$
 
-Note: Given marginal independence of two random variables, their joint distribution is the product of the individual marginal distribution. As an immediate consequence of this fact, given marginal independence of two random variables, the entropy of their joint distribution is equal to the sum of their individual entropies.
+If $\mathbb{P}(B)>0$, an equivalent condition is 
 
+$$\mathbb{P}(A)=\mathbb{P}(A \mid B).$$
+
+**Note**: Given marginal independence of two random variables, their joint distribution is the product of the individual marginal distribution. As an immediate consequence of this fact, given marginal independence of two random variables, the entropy of their joint distribution is equal to the sum of their individual entropies.
 
 
 
@@ -187,3 +201,19 @@ $$
 
 
 ### KL divergence
+
+KL divergence is a measure of the dissimilarity between two probability distributions; it quantifies how one probability distribution diverges from another. The quantity we're after, $$KL(P \| Q)$$, measures the information lost when using Q to approximate P. (In more technical information-theory language, it calculates the extra amount of information needed to encode data from P using a code optimized for Q.)
+
+{: .definition}
+> Given two discrete probability distributions $P$ and $Q$, the KL divergence between $P$ and $Q$ is defined as:
+>
+> $$KL(P \| Q)= - \sum_x P(x) \log \left(\frac{Q(x)}{P(x)}\right)$$
+>
+
+(for continuous random variables, the summation in the definition is to be replaced by the integral.)
+
+
+Some useful properties of KL divergence:
+  1. Non-negativity: $$KL(P \| Q) \geq 0$$, with equality if and only if P and Q are identical.
+  2. Lack of symmetry: $$KL(P \| Q) \neq KL(Q \| P)$$ in general.
+  <!-- 3. Invariance under change of variables: $$KL(P \| Q)$$ remains the same if the variables are transformed. -->

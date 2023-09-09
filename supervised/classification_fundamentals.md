@@ -140,28 +140,15 @@ Because we almost never have access to the true underlying joint distribution, l
 
 # Nearest Neighbors
 
-This approach is akin to taking a view opposite to the Bayes classifier:
-whereas Bayes assumes full knowledge and takes advantage of the data
-distribution, Nearest neighbors (NN) ignores the underlying probability
-distribution. At a high level, the NN method is based on the belief that
-features that are used to describe the data are relevant to the
-labelings in a way that makes “close by” points likely to have the same
-label.
+This approach is akin to taking a view opposite to the Bayes classifier: whereas Bayes assumes full knowledge and takes advantage of the data distribution, Nearest neighbors (NN) completely ignores the underlying probability distribution. At a high level, the NN method is based on the belief that features that are used to describe the data are relevant to the labelling in a way that makes “close by” points likely to have the same label.
 
-NN is one of the simplest possible classifiers, where the training
-process is essentially to memorize the training data. Then during
-testing, for a given point $x$, it finds the $k$ points in training data
-nearest to $x$ and predicts a label by taking (weighted) majority label
-over these $k$ points. 
+NN is one of the simplest possible classifiers, where the training process is essentially to memorize the training data. Then during testing, for a given point $x$, it finds the $k$ points in training data nearest to $x$ and predicts a label by taking (weighted) majority label over these $k$ points. 
 
 Precisely, given training data
 $$S=\left\{\left(x_{i}, y_{i}\right) | 1 \leq i \leq N\right\}$$, define
 $$\mathrm{NN}_{k}(x) :=\left\{j | 1 \leq j \leq k, x_{j}\text { is within } k \text { closest to } x\right\}.$$
 
-Notice that
-$$\mathrm{NN}_{1}(x)=\operatorname{argmin}_{1 \leq i \leq N} \operatorname{dist}\left(x, x_{i}\right)$$. Then, the $k$-NN classifier $$
-h_{k\text{-NN}}(x) = \frac{1}{k} \sum_{\ell \in \mathrm{NN}_{k}(x)} y_\ell.
-$$
+Notice that $$\mathrm{NN}_{1}(x)=\operatorname{argmin}_{1 \leq i \leq N} \operatorname{dist}\left(x, x_{i}\right)$$. Then, the $k$-NN classifier $$ h_{k\text{-NN}}(x) = \frac{1}{k} \sum_{\ell \in \mathrm{NN}_{k}(x)} y_\ell.$$
 
 ## NN and Bayes
 
@@ -172,25 +159,18 @@ complex nonlinear classifiers (<span>Image Credit: Elements of
 Statistical Learning Theory)</span></figcaption>
 </figure>
 
-Despite its simplicity, NN is capable of learning complex nonlinear
-classifiers. Precisely, the risk of NN $$\begin{aligned}
-L_{k\text{-NN}} & = \mathbb{P}(h_{k\text{-NN}}(X) \neq Y).
-\end{aligned}$$ NN classifier has excellent asymptotic performance even
-for $k=1$ as stated below (see for more details).
-
+Despite its simplicity, NN is capable of learning complex nonlinear classifiers. Precisely, the risk of NN $$\begin{aligned}L_{k\text{-NN}} & = \mathbb{P}(h_{k\text{-NN}}(X) \neq Y).\end{aligned}$$ NN classifier has excellent asymptotic performance even for $k=1$ as stated below (see for more details).
 
 {:.theorem}
-*Let $\mathcal{X} \subset \mathbb{R}^d, ~d\geq 1$. Let
-$\eta$ be continuous. Then, $$\begin{aligned}
-\lim_{n\to\infty} L_{1\text{-NN}} & = 2 \mathbb{E}\big[\eta(X) (1-\eta(X))\big] ~\leq~2 \mathbb{E}\big[\min\{\eta(X), 1-\eta(X)\}] ~=~ 2 L^*.
+>Let $\mathcal{X} \subset \mathbb{R}^d, ~d\geq 1$. Let $\eta$ be continuous. 
+>Then, $$\begin{aligned}\lim_{n\to\infty} L_{1\text{-NN}} & = 2 \mathbb{E}\big[\eta(X) (1-\eta(X))\big] ~\leq~2 \mathbb{E}\big[\min\{\eta(X), 1-\eta(X)\}] ~=~ 2 L^*.
 \end{aligned}$$
 
-That is, with large number of data points, even $1$-NN algorithm has
-risk that is within factor $2$ of the optimal risk.
+That is, with large number of data points, even $1$-NN algorithm has risk that is within factor $2$ of the optimal risk.
 
 {: .proof}
-> Given $X = x$, let $X'(n)$ the closest data point to $x$
-> amongst given $n$ observations. Then due to
+> Given $X = x$, let $X'(n)$ the closest data point to $x$ amongst given $n$ observations. 
+> Then due to
 > $\mathcal{X} \subset \mathbb{R}^d$ (i.e. complete, separable metric
 > space), it can be argued that $X'(n) \to x$ as $n\to \infty$ with
 > probability $1$. Further, $\eta$ is continuous. Therefore,
@@ -215,28 +195,11 @@ risk that is within factor $2$ of the optimal risk.
 > claim of theorem follows by recalling that the Bayes risk
 > $L^* = \mathbb{E}[\min\{\eta(X), 1-\eta(X)\}]$.
 
-Theorem <a href="#thm:nn" data-reference-type="ref"
-data-reference="thm:nn">2</a> provides asymptotic guarantee for
-$1\text{-NN}$ algorithm. But in practice, we have only finite amount of
-data. A refined analysis (cf. see ) suggests that if
-$\mathcal{X} \subset \mathbb{R}^d$, $\eta$ is $\alpha \geq 1$-Holder
-continuous (see for precise definition, for example), then for any
-$\varepsilon \in (0,1)$, for $k\text{-NN}$ with
-$k = \Theta(\varepsilon^{-2})$ and
-$n = \Theta(\varepsilon^{-\frac{d}{\alpha} + 3} \log \varepsilon^{-1})$,
-the algorithm find approximation of $\eta$ that is within $\varepsilon$
-error on average. This leads to good approximation of Bayes risk.
+Theorem 2 provides asymptotic guarantee for $1\text{-NN}$ algorithm. But in practice, we have only finite amount of data. A refined analysis (cf. see ) suggests that if $\mathcal{X} \subset \mathbb{R}^d$, $\eta$ is $\alpha \geq 1$-Holder continuous (see for precise definition, for example), then for any $\varepsilon \in (0,1)$, for $k\text{-NN}$ with $k = \Theta(\varepsilon^{-2})$ and $n = \Theta(\varepsilon^{-\frac{d}{\alpha} + 3} \log \varepsilon^{-1})$, the algorithm find approximation of $\eta$ that is within $\varepsilon$ error on average. This leads to good approximation of Bayes risk.
 
+The nearest neighbor approach is powerful in that it works for any (reasonable) setting. For that reason, it is called non-parametric method. However, it comes at the cost of not utilizing the potentially simpler, a priori known structure in the data. For that reason, it suffers from requiring large amount of data (there is no ‘free lunch’). 
 
-
-The nearest neighbor approach is powerful in that it works for any
-(reasonable) setting. For that reason, it is called non-parametric
-method. However, it comes at the cost of not utilizing the potentially
-simpler, a priori known structure in the data. For that reason, it
-suffers from requiring large amount of data (there is no ‘free lunch’).
-However, if we have prior knowledge about the model class, it may make
-sense to incorporate it. And this is where the framework of Empirical
-Risk Minimization through incorporating “inductive bias” comes handy and
+However, if we have prior knowledge about the model class, it may make sense to incorporate it. And this is where the framework of Empirical Risk Minimization through incorporating “inductive bias” comes handy and
 we describe that next.
 
 # Empirical Risk Minimization

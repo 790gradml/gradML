@@ -10,110 +10,110 @@ $$w_0 + w_1 x_1 + \ldots + w_n x_n = 0 \;\;.$$
 <div class="questions">
 
 Find a unit vector normal to the hyperplane. Given a point
-${\ensuremath{\bm{{v}}}} = (v_1, \ldots, v_n)$ on the hyperplane, give
+${\bm{v}} = (v_1, \ldots, v_n)$ on the hyperplane, give
 the equation for the line through the point that is orthogonal to the
 hyperplane.
 
 <div class="solution">
 
-Let ${\ensuremath{\bm{{w}}}}=(w_1,\ldots,w_n)$, then
-${\ensuremath{\bm{{w}}}}/\|{\ensuremath{\bm{{w}}}}\|$ is a unit vector
+Let ${\bm{w}}=(w_1,\ldots,w_n)$, then
+${\bm{w}}/\|{\bm{w}}\|$ is a unit vector
 normal to the hyperplane. To prove this, given any two points
-${\ensuremath{\bm{{x}}}}$ and ${\ensuremath{\bm{{x}}}}'$ on the hyper
-plane, we will show that ${\ensuremath{\bm{{w}}}}$ is perpendicular to
-${\ensuremath{\bm{{x}}}}-{\ensuremath{\bm{{x}}}}'$. Note
-$${\ensuremath{\bm{{w}}}}^T({\ensuremath{\bm{{x}}}} - {\ensuremath{\bm{{x}}}}') = \sum_{i=1}^nw_ix_i - \sum_{i=1}^nw_ix'_i = (-w_0)-(-w_0) = 0$$
+${\bm{x}}$ and ${\bm{x}}'$ on the hyper
+plane, we will show that ${\bm{w}}$ is perpendicular to
+${\bm{x}}-{\bm{x}}'$. Note
+$${\bm{w}}^T({\bm{x}} - {\bm{x}}') = \sum_{i=1}^nw_ix_i - \sum_{i=1}^nw_ix'_i = (-w_0)-(-w_0) = 0$$
 Therefore, all the points on the line through the point
-${\ensuremath{\bm{{v}}}}=(v_1,\ldots,v_n)$ orthogonal to the hyperplane
+${\bm{v}}=(v_1,\ldots,v_n)$ orthogonal to the hyperplane
 could be represented as
-${\ensuremath{\bm{{x}}}}={\ensuremath{\bm{{v}}}} + t{\ensuremath{\bm{{w}}}}$,
+${\bm{x}}={\bm{v}} + t{\bm{w}}$,
 where $t\in\mathbb{R}$ is a parameter. The equation of this line could
 be written as
-$${\ensuremath{\bm{{A}}}}^T({\ensuremath{\bm{{x}}}} - {\ensuremath{\bm{{v}}}})={\ensuremath{\bm{{0}}}}$$
+$${\bm{A}}^T({\bm{x}} - {\bm{v}})={\bm{0}}$$
 where matrix
-${\ensuremath{\bm{{A}}}}=({\ensuremath{\bm{{a}}}}_1,\ldots,{\ensuremath{\bm{{a}}}}_{n-1})\in\mathbb{R}^{n\times (n-1)}$
+${\bm{A}}=({\bm{a}}_1,\ldots,{\bm{a}}_{n-1})\in\mathbb{R}^{n\times (n-1)}$
 is a basis for the subspace associated with the hyperplane. This
-equation means that for any vector ${\ensuremath{\bm{{x}}}}$ on this
-line, ${\ensuremath{\bm{{x}}}}-{\ensuremath{\bm{{v}}}}$ must be
+equation means that for any vector ${\bm{x}}$ on this
+line, ${\bm{x}}-{\bm{v}}$ must be
 orthogonal to all the basis vectors in the hyperplane. The choice of
-${\ensuremath{\bm{{A}}}}$ is not unique. One concrete way of getting it
-is: let ${\ensuremath{\bm{{e}}}}_1,\ldots,{\ensuremath{\bm{{e}}}}_n$ be
+${\bm{A}}$ is not unique. One concrete way of getting it
+is: let ${\bm{e}}_1,\ldots,{\bm{e}}_n$ be
 standard basis for $\mathbb{R}^n$. Choose $n-1$ from them by first
-taking all ${\ensuremath{\bm{{e}}}}_i$ such that
-${\ensuremath{\bm{{e}}}}_i^T{\ensuremath{\bm{{w}}}}=0$ (note there are
+taking all ${\bm{e}}_i$ such that
+${\bm{e}}_i^T{\bm{w}}=0$ (note there are
 at most $n-1$ of them); the rest of them could be taken arbitrarily.
 Denote the chosen vectors by
-$\tilde{{\ensuremath{\bm{{e}}}}}_1,\ldots,\tilde{{\ensuremath{\bm{{e}}}}}_{n-1}$,
+$\tilde{\bm{e}}_1,\ldots,\tilde{\bm{e}}_{n-1}$,
 then
-$${\ensuremath{\bm{{a}}}}_i=\tilde{{\ensuremath{\bm{{e}}}}}_i - \left(\tilde{{\ensuremath{\bm{{e}}}}}_i^T{\ensuremath{\bm{{w}}}}\right){\ensuremath{\bm{{w}}}}, \quad i=1,\ldots,n-1$$
+$${\bm{a}}_i=\tilde{\bm{e}}_i - \left(\tilde{\bm{e}}_i^T{\bm{w}}\right){\bm{w}}, \quad i=1,\ldots,n-1$$
 
 </div>
 
-Given a point ${\ensuremath{\bm{{v}}}} = (v_1, \ldots, v_n)$, how can
+Given a point ${\bm{v}} = (v_1, \ldots, v_n)$, how can
 you determine which side of the hyperplane it is on?
 
 <div class="solution">
 
 Let
-$f({\ensuremath{\bm{{x}}}}) = w_0 + {\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{x}}}} = w_0 + w_1x_1 + \cdots + w_nx_n$.
-Then $f({\ensuremath{\bm{{v}}}}) =
-            0$ means ${\ensuremath{\bm{{v}}}}$ is on the hyperplane;
-$f({\ensuremath{\bm{{v}}}}) > 0$ means ${\ensuremath{\bm{{v}}}}$ is on
-one side of the hyperplane, while $f({\ensuremath{\bm{{v}}}})<0$ means
+$f({\bm{x}}) = w_0 + {\bm{w}}^T{\bm{x}} = w_0 + w_1x_1 + \cdots + w_nx_n$.
+Then $f({\bm{v}}) =
+            0$ means ${\bm{v}}$ is on the hyperplane;
+$f({\bm{v}}) > 0$ means ${\bm{v}}$ is on
+one side of the hyperplane, while $f({\bm{v}})<0$ means
 it is on the other side of the hyperplane.
 
 </div>
 
 What is the distance of a point
-${\ensuremath{\bm{{v}}}}=(v_1, \ldots, v_n)$ to the hyperplane?
+${\bm{v}}=(v_1, \ldots, v_n)$ to the hyperplane?
 
 <div class="solution">
 
-Assume $\bar{{\ensuremath{\bm{{v}}}}}$ is the projection of
-${\ensuremath{\bm{{v}}}}=(v_1,\ldots,v_n)$ on the hyperplane. Since
-${\ensuremath{\bm{{w}}}}/\|{\ensuremath{\bm{{w}}}}\|$ is the unit normal
+Assume $\bar{\bm{v}}$ is the projection of
+${\bm{v}}=(v_1,\ldots,v_n)$ on the hyperplane. Since
+${\bm{w}}/\|{\bm{w}}\|$ is the unit normal
 vector of the hyperplane, we know that
-$${\ensuremath{\bm{{v}}}} = \bar{{\ensuremath{\bm{{v}}}}} + t\frac{{\ensuremath{\bm{{w}}}}}{\|{\ensuremath{\bm{{w}}}}\|}$$
-where $|t|$ is the distance of ${\ensuremath{\bm{{v}}}}$ to the
-hyperplane. We also know $f(\bar{{\ensuremath{\bm{{v}}}}})=0$ by the
+$${\bm{v}} = \bar{\bm{v}} + t\frac{\bm{w}}{\|{\bm{w}}\|}$$
+where $|t|$ is the distance of ${\bm{v}}$ to the
+hyperplane. We also know $f(\bar{\bm{v}})=0$ by the
 previous question, that means
-$$0 = f(\bar{{\ensuremath{\bm{{v}}}}}) = f\left({\ensuremath{\bm{{v}}}}-t\frac{{\ensuremath{\bm{{w}}}}}{\|{\ensuremath{\bm{{w}}}}\|}\right)
-            = w_0 + {\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{v}}}} - t\frac{{\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{w}}}}}{\|{\ensuremath{\bm{{w}}}}\|} = w_0 + {\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{v}}}} - t\|{\ensuremath{\bm{{w}}}}\|$$
+$$0 = f(\bar{\bm{v}}) = f\left({\bm{v}}-t\frac{\bm{w}}{\|{\bm{w}}\|}\right)
+            = w_0 + {\bm{w}}^T{\bm{v}} - t\frac{\bm{w}^T{\bm{w}}}{\|{\bm{w}}\|} = w_0 + {\bm{w}}^T{\bm{v}} - t\|{\bm{w}}\|$$
 Therefore, the distance is given by
-$$|t| = \left| \frac{w_0 + {\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{v}}}}}{\|{\ensuremath{\bm{{w}}}}\|} \right|
-            = \frac{\left| f({\ensuremath{\bm{{v}}}}) \right|}{\|{\ensuremath{\bm{{w}}}}\|}$$
+$$|t| = \left| \frac{w_0 + {\bm{w}}^T{\bm{v}}}{\|{\bm{w}}\|} \right|
+            = \frac{\left| f({\bm{v}}) \right|}{\|{\bm{w}}\|}$$
 
 </div>
 
 Consider the halfspace
-$H=\{{\ensuremath{\bm{{x}}}} \in \mathbb{R}^n \mid {\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{x}}}} \le b\}$.
+$H=\{\bm{x} \in \mathbb{R}^n \mid {\bm{w}}^T{\bm{x}} \le b\}$.
 Find a nearest (in Euclidean distance) point in $H$ to a given vector
-${\ensuremath{\bm{{v}}}}=(v_1,v_2,\ldots,v_n)$. Is this point unique?
+${\bm{v}}=(v_1,v_2,\ldots,v_n)$. Is this point unique?
 Hint: Consider combining the Euclidean distance and the constraint into
 a single function to optimize by using a Lagrangian multiplier.
 
 <div class="solution">
 
 We need to solve the problem:
-$\min_{{\ensuremath{\bm{{x}}}} \in H}\|{\ensuremath{\bm{{x}}}}-{\ensuremath{\bm{{v}}}}\|^2$.
+$\min_{\bm{x} \in H}\|{\bm{x}}-{\bm{v}}\|^2$.
 Using a Lagrangian multiplier $\lambda \ge 0$ for the constraint
-${\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{x}}}} \le b$ we consider
-$$L({\ensuremath{\bm{{x}}}},\lambda) = \tfrac12\|{\ensuremath{\bm{{x}}}}-{\ensuremath{\bm{{v}}}}\|^2 + \lambda({\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{x}}}}-b).$$
-Now solve $\partial L/\partial {\ensuremath{\bm{{x}}}}=0$ to obtain
-${\ensuremath{\bm{{x}}}}-{\ensuremath{\bm{{v}}}} + \lambda{\ensuremath{\bm{{w}}}}=0$,
+${\bm{w}}^T{\bm{x}} \le b$ we consider
+$$L({\bm{x}},\lambda) = \tfrac12\|{\bm{x}}-{\bm{v}}\|^2 + \lambda({\bm{w}}^T{\bm{x}}-b).$$
+Now solve $\partial L/\partial {\bm{x}}=0$ to obtain
+${\bm{x}}-{\bm{v}} + \lambda{\bm{w}}=0$,
 so that
-${\ensuremath{\bm{{x}}}}={\ensuremath{\bm{{v}}}}-\lambda{\ensuremath{\bm{{w}}}}$.
-If ${\ensuremath{\bm{{v}}}} \in H$, then we can set $\lambda=0$.
-Otherwise, any solution ${\ensuremath{\bm{{x}}}}$ must lie on the
+${\bm{x}}={\bm{v}}-\lambda{\bm{w}}$.
+If ${\bm{v}} \in H$, then we can set $\lambda=0$.
+Otherwise, any solution ${\bm{x}}$ must lie on the
 boundary of the halfspace $H$, and satisfy
-${\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{x}}}}=b$. From
-${\ensuremath{\bm{{x}}}}={\ensuremath{\bm{{v}}}}-\lambda {\ensuremath{\bm{{w}}}}$
+${\bm{w}}^T{\bm{x}}=b$. From
+${\bm{x}}={\bm{v}}-\lambda {\bm{w}}$
 it follows that
-${\ensuremath{\bm{{x}}}}^T{\ensuremath{\bm{{w}}}}={\ensuremath{\bm{{v}}}}^T{\ensuremath{\bm{{w}}}}-\lambda {\ensuremath{\bm{{w}}}}^T{\ensuremath{\bm{{w}}}}$,
+${\bm{x}}^T{\bm{w}}={\bm{v}}^T{\bm{w}}-\lambda {\bm{w}}^T{\bm{w}}$,
 which gives
-$\lambda=\frac{1}{\|{\ensuremath{\bm{{w}}}}\|^2}({\ensuremath{\bm{{v}}}}^T{\ensuremath{\bm{{w}}}}-b)$.
+$\lambda=\frac{1}{\|{\bm{w}}\|^2}({\bm{v}}^T{\bm{w}}-b)$.
 We can thus write the solution (it is unique) as
-$${\ensuremath{\bm{{x}}}} = {\ensuremath{\bm{{v}}}} - \frac{1}{\|{\ensuremath{\bm{{w}}}}\|^2}\max(0, {\ensuremath{\bm{{v}}}}^T{\ensuremath{\bm{{w}}}}-b){\ensuremath{\bm{{w}}}}.$$
+$${\bm{x}} = {\bm{v}} - \frac{1}{\|{\bm{w}}\|^2}\max(0, {\bm{v}}^T{\bm{w}}-b){\bm{w}}.$$
 
 </div>
 
@@ -124,36 +124,37 @@ $${\ensuremath{\bm{{x}}}} = {\ensuremath{\bm{{v}}}} - \frac{1}{\|{\ensuremath{\b
 Let $X$ be a random variable taking values in $\mathbb{R}^n$. It is
 normally distributed with mean $\bm{\mu}$ and covariance matrix
 $\Sigma$. Recall that the probability density function (pdf)
-$p_X({\ensuremath{\bm{{x}}}})$, sometimes denoted
-$p(X={\ensuremath{\bm{{x}}}})$, for $X$ is given by
-$$p_X({\ensuremath{\bm{{x}}}}) = \frac{1}{\sqrt{(2\pi)^n|\Sigma|}} \exp\left(-\frac{1}{2}({\ensuremath{\bm{{x}}}}-\bm{\mu})^T\Sigma^{-1}({\ensuremath{\bm{{x}}}}-\bm{\mu})\right)$$
+$p_X({\bm{x}})$, sometimes denoted
+$p(X={\bm{x}})$, for $X$ is given by
+$$p_X({\bm{x}}) = \frac{1}{\sqrt{(2\pi)^n|\Sigma|}} \exp\left(-\frac{1}{2}({\bm{x}}-\bm{\mu})^T\Sigma^{-1}({\bm{x}}-\bm{\mu})\right)$$
 
 <div class="questions">
 
 Show how to obtain the normalization constant
 $1 / \sqrt{(2\pi)^n|\Sigma|}$ for the multivariate Gaussian, starting
 from the fact that
-$$p_X({\ensuremath{\bm{{x}}}}) \propto \exp\left(-\frac{1}{2}({\ensuremath{\bm{{x}}}}-\bm{\mu})^T\Sigma^{-1}({\ensuremath{\bm{{x}}}}-\bm{\mu})\right)$$
+$$p_X({\bm{x}}) \propto \exp\left(-\frac{1}{2}({\bm{x}}-\bm{\mu})^T\Sigma^{-1}({\bm{x}}-\bm{\mu})\right)$$
 
 <div class="solution">
 
 To obtain the normalization constant we need to evaluate the integral
-$$\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}({\ensuremath{\bm{{x}}}}-\bm{\mu})^T\Sigma^{-1}({\ensuremath{\bm{{x}}}}-\bm{\mu})\right)d{\ensuremath{\bm{{x}}}}.$$
+$$\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}({\bm{x}}-\bm{\mu})^T\Sigma^{-1}({\bm{x}}-\bm{\mu})\right)d{\bm{x}}.$$
 Observe that wlog we can assume $\bm{\mu}=0$. Thus, it remains to
 evaluate
-$$\int_{\mathbb{R}^n} \exp\left(-\tfrac{1}{2}{\ensuremath{\bm{{x}}}}^T\Sigma^{-1}{\ensuremath{\bm{{x}}}}\right)d{\ensuremath{\bm{{x}}}}
-            \label{1_2_2_num}$$ Let
-${\ensuremath{\bm{{y}}}} = \Sigma^{-1/2} {\ensuremath{\bm{{x}}}}$, then
+<div id="1_2_2_num">
+$$\int_{\mathbb{R}^n} \exp\left(-\tfrac{1}{2}{\bm{x}}^T\Sigma^{-1}{\bm{x}}\right)d{\bm{x}}$$
+</div> Let
+${\bm{y}} = \Sigma^{-1/2} {\bm{x}}$, then
 by Jacobian
-transformation <a href="#1_2_2_num" data-reference-type="eqref"
+transformation <a href="#1_2_2_num" data-reference-type="eqref"
 data-reference="1_2_2_num">[1_2_2_num]</a> can be rewritten as
 $$\begin{aligned}
-            \int_{\mathbb{R}^n} \exp\left(-\tfrac{1}{2}{\ensuremath{\bm{{y}}}}^T{\ensuremath{\bm{{y}}}}\right)|\Sigma^{1/2}|d{\ensuremath{\bm{{y}}}} & = |\Sigma^{1/2}|\prod^n_{i=1}\int_{\mathbb{R}}\exp\left(-\tfrac{1}{2}y^2_i\right) dy_i \\
+            \int_{\mathbb{R}^n} \exp\left(-\tfrac{1}{2}{\bm{y}}^T{\bm{y}}\right)|\Sigma^{1/2}|d{\bm{y}} & = |\Sigma^{1/2}|\prod^n_{i=1}\int_{\mathbb{R}}\exp\left(-\tfrac{1}{2}y^2_i\right) dy_i \\
                                                                                               & = |\Sigma^{1/2}|\prod^n_{i=1} \sqrt{2 \pi}
         
 \end{aligned}$$ We use the fact that
 $\int_{\mathbb{R}}\exp(-\frac{1}{2}x^2) = \sqrt{2 \pi}$, then using the
-fact that $\int p({\ensuremath{\bm{{x}}}}) = 1$, we conclude that the
+fact that $\int p({\bm{x}}) = 1$, we conclude that the
 normalization constant is $\frac{1}{\sqrt{(2\pi)^n|\Sigma|}}$.
 
 </div>
@@ -164,11 +165,11 @@ Let $Y = 2 X$. What is the pdf of $Y$?
 
 By the rule of probability density function for change of variable,
 $$\begin{aligned}
-                p_Y({\ensuremath{\bm{{y}}}}) & = \left(\frac{1}{2}\right)^n \frac{1}{\sqrt{(2\pi)^n|\Sigma|}}
-                \exp\left(-\frac{1}{2}\left(\frac{{\ensuremath{\bm{{y}}}}}{2}-\mu\right)^T\Sigma^{-1}\left(\frac{{\ensuremath{\bm{{y}}}}}
+                p_Y({\bm{y}}) & = \left(\frac{1}{2}\right)^n \frac{1}{\sqrt{(2\pi)^n|\Sigma|}}
+                \exp\left(-\frac{1}{2}\left(\frac{\bm{y}}{2}-\mu\right)^T\Sigma^{-1}\left(\frac{\bm{y}}
                 {2}-\mu\right)\right)                                                         \\
                              & = \frac{1}{\sqrt{(2\pi)^n|4\Sigma|}}
-                \exp\left(-\frac{1}{2}\left({\ensuremath{\bm{{y}}}}-2\mu\right)^T\left(4\Sigma^{-1}\right)\left({\ensuremath{\bm{{y}}}}
+                \exp\left(-\frac{1}{2}\left({\bm{y}}-2\mu\right)^T\left(4\Sigma^{-1}\right)\left({\bm{y}}
                     -2\mu\right)\right)
             \end{aligned}$$ So $Y$ is still normally distributed, with
 mean $2\mu$ and covariance matrix $4\Sigma$.
@@ -182,7 +183,7 @@ the pdf?
 <div class="solution">
 
 When $\Sigma$ is the identity matrix,
-$$p_X({\ensuremath{\bm{{x}}}}) = \frac{1}{\sqrt{(2\pi)^n}}\exp\left(-\frac{1}{2}\sum_{i=1}^n (x_i-\mu_i)^2\right)
+$$p_X({\bm{x}}) = \frac{1}{\sqrt{(2\pi)^n}}\exp\left(-\frac{1}{2}\sum_{i=1}^n (x_i-\mu_i)^2\right)
             = \prod_{i=1}^n \frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}(x_i-\mu_i)^2\right)$$
 The factorization of the pdf implies that $X_1,\ldots,X_n$ are now
 independent random variables.
@@ -195,7 +196,7 @@ What can we say about the distribution of $X$ if $\Sigma$ is $5 I$?
 
 $X_1,\ldots,X_n$ are still independent. In general, let $\sigma\neq 0$
 be any real number, if $\Sigma=\sigma^2 I$, then
-$$p_X({\ensuremath{\bm{{x}}}}) = \frac{1}{\sqrt{(2\pi)^n\sigma^{2n}}}\exp\left(-\frac{1}{2\sigma^2}\sum_{i=1}^n
+$$p_X({\bm{x}}) = \frac{1}{\sqrt{(2\pi)^n\sigma^{2n}}}\exp\left(-\frac{1}{2\sigma^2}\sum_{i=1}^n
             (x_i-\mu_i)^2\right)
             = \prod_{i=1}^n \frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{1}{2\sigma^2}(x_i-\mu_i)^2\right)$$
 
@@ -210,7 +211,7 @@ Although the covariance matrix is not a (scaled) identity matrix, the
 off-diagonal elements are still zero, so the two components of the 2D
 random vector are still independent and the pdf factorizes.
 Specifically, we have
-$$p_X({\ensuremath{\bm{{x}}}}) = \frac{\exp\left(-\frac{1}{2\times 10}(x_1-\mu_1)^2\right)}{\sqrt{2\pi\times 10}}
+$$p_X({\bm{x}}) = \frac{\exp\left(-\frac{1}{2\times 10}(x_1-\mu_1)^2\right)}{\sqrt{2\pi\times 10}}
             \cdot \frac{\exp\left(-\frac{1}{2}(x_2-\mu_2)^2\right)}{\sqrt{2\pi}}$$
 
 </div>
@@ -222,7 +223,7 @@ $\{x\in R^n: p_X(x)=c\}$ for some $c$) of the above distribution in Part
 <div class="solution">
 
 Let
-$$c = p_X({\ensuremath{\bm{{x}}}}) = \frac{\exp\left(-\frac{1}{2\times 10}(x_1-\mu_1)^2\right)}{\sqrt{2\pi\times 10}}
+$$c = p_X({\bm{x}}) = \frac{\exp\left(-\frac{1}{2\times 10}(x_1-\mu_1)^2\right)}{\sqrt{2\pi\times 10}}
             \cdot \frac{\exp\left(-\frac{1}{2}(x_2-\mu_2)^2\right)}{\sqrt{2\pi}}$$
 Via simple manipulation, we get the equation
 $$\frac{1}{10}(x_1-\mu_1)^2 + (x_2-\mu_2)^2 = C$$ where $C>0$ is a
@@ -254,7 +255,7 @@ in Part 7 have?
 
 <div class="solution">
 
-Similarly, let $p_X({\ensuremath{\bm{{x}}}}) = c$, we will get an
+Similarly, let $p_X({\bm{x}}) = c$, we will get an
 equation of an ellipse. The contours for this specific case look like
 those:
 

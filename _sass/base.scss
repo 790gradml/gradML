@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: Palatino, $body-font-family; 
+  font-family: Palatino, $body-font-family;
   font-size: inherit;
   line-height: $body-line-height;
   color: $body-text-color;
@@ -47,6 +47,10 @@ h6,
   font-weight: 500;
   line-height: $body-heading-line-height;
   color: $body-heading-color;
+}
+
+#markdown-toc {
+  text-transform: capitalize;
 }
 
 p {
@@ -133,6 +137,7 @@ main {
   counter-increment: theorems;
   content: "Theorem " counter(theorems) " (" attr(theorem-name) "). ";
 }
+
 .theorem.theorem::before {
   counter-increment: theorems;
   content: "Theorem " counter(theorems) ". ";

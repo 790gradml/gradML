@@ -22,6 +22,5 @@ first week learning how to form elegant, efficient solutions to these
 problems. You are welcome to use `numpy` and/or `scipy`.
 
 
-<!-- {% include_relative _math.md %} -->
-
+{% include_relative _math.md %}
 {% include_relative _programming.md %}

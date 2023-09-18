@@ -18,15 +18,14 @@ timeline:
 - '4:00 PM'
 - '4:30 PM'
 - '5:00 PM'
-- '5:30 PM'
 schedule:
 - name: ""
 - name: Monday
   events:
-    # - name: Instructors OHs
-    #   start: 1:00 PM
-    #   end: 2:00 PM
-    #   location: 26-322? (time also TBC)
+    - name: Instructors OHs
+      start: 1:00 PM
+      end: 2:00 PM
+      location: 34-301
 - name: Tuesday
   events:
     - name: Lecture

@@ -26,15 +26,3 @@ All freely accessible (an MIT IP may be required):
 - [SB] [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/RLbook2020trimmed.pdf), Sutton and Barton; The MIT Press, 2018.
 - [JWHT] [An Introduction to Statistical Learning](https://www.statlearning.com/), James, Witten, Hastie, and Tibshirani; Springer, 2013.
 
-# Grading
-
-## Late Submission
-## Collaboration
-
-We encourage students to discuss assignments in this subject with
-other students and with the teaching staff to better understand the
-concepts.  However, everything you hand in on-line or off-line must be your own work, as it's also critical for your individual learning to
-be sure you devote concentrated independent effort to solving all the
-problems.
-
-The correct model is to discuss solution strategies and write your solutions individually. Implementations that are identical or differ only by variable names will not receive full credit.

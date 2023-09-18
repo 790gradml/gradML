@@ -13,8 +13,6 @@ nav_order: 4
 
 1. TOC
 {:toc}
-
-
 ## Cross-registration
 
 We follow MIT's calendar, and do not have additional extensions or accommodations based on home university calendar. Especially important will be for you to plan ahead for our two in-person exams. Our exams will be scheduled before MIT's final exam period (i.e., before Monday December 18, 2023); the exact date/room are TBC.
@@ -27,6 +25,17 @@ If you're not familiar with MIT campus, you might find the [whereis](https://whe
 
 ## Listener
 Due to capacity and other constraints, we will not be able to accept Listener registrants in Fall 2023.
+
+
+## Collaboration
+
+We encourage students to discuss assignments in this subject with
+other students and with the teaching staff to better understand the
+concepts.  However, everything you hand in on-line or off-line must be your own work, as it's also critical for your individual learning to
+be sure you devote concentrated independent effort to solving all the
+problems.
+
+The correct model is to discuss solution strategies and write your solutions individually. Implementations that are identical or differ only by variable names will not receive full credit.
 
 ## GradSupport
 
@@ -71,3 +80,4 @@ may be able to provide additional guidance and support:
 * [Student Support Services](https://studentlife.mit.edu/s3)
 * [MIT Medical: Student Mental Health and Counseling](https://medical.mit.edu/services/mental-health-counseling)
 * [MIT Peer Ears](https://peerears.mit.edu/)
+

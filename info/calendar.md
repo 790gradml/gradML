@@ -1,8 +1,8 @@
 ---
-title: Syllabus
+title: Calendar
 description: Listing of course modules and topics.
 nav_order: 0
-nav_exclude: true
+#nav_exclude: true
 
 ---
 
@@ -10,8 +10,7 @@ nav_exclude: true
 
 {: .warning}
 
-Rough draft of the semester calendar below; dates/events subject to change.
-
+Rough semester calendar draft; dates/events are subject to change/update.
 {% for module in site.modules %}
 {{ module }}
 {% endfor %}

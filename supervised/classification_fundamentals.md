@@ -10,6 +10,12 @@ nav_order: 0
 
 1. TOC
 {:toc}
+
+<div class="video-container">
+<video controls>
+<source src="/assets/videos/classification_fundamentals.mp4" type="video/mp4">
+</video>
+</div>
 # Overview
 
 The aim of this lecture is to establish basic terminology and definitions useful for studying classification. We will discuss two basic classifiers: 

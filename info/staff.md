@@ -33,5 +33,5 @@ in_row: true
 {% for staffer in teaching_assistants %}
 {{ staffer }}
 {% endfor %}
-{% endif %}
 </div>
+{% endif %}

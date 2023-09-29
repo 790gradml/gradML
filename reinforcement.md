@@ -37,7 +37,7 @@ Some comments on each field's unique challenges. On one hand, good that a single
 
 - $S$: a state space which contains all possible states of the system
 - $A$: an action space which contains all possible actions an agent can take
-- $P(s'|s,a)$: a stochastic transition kernel which gives the probability of transition from state $s$ to $s'$ if action $a$ is taken. This transition can be deterministic as well. Implies by this notation is that $s$ is the current state; $s'$ is the next state, or the state we ended in.
+- $P(s'\|s,a)$ a stochastic transition kernel which gives the probability of transition from state $s$ to $s'$ if action $a$ is taken. This transition can be deterministic as well. Implies by this notation is that $s$ is the current state; $s'$ is the next state, or the state we ended in.
 - $R: S \times A \to \mathbb{R}$: a reward function that takes in the state and the action and gives back a real value reward.
 - $\gamma \in [0,1]$: a discount factor that re-weight long term and short term rewards
 

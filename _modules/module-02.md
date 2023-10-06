@@ -3,11 +3,11 @@ title: Module 2 - The Basics
 ---
 Sep/12
 : **Lecture 2**{: .label .label-red } [Supervised Learning, ERM](/supervised/classification_fundamentals/)
-    : [Slides](/assets/Slides/Lecture 02.pdf)<br>[[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 1, 2, 3,
+    : [Slides](/assets/slides/erm.pdf)<br>[[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 1, 2, 3,
    
 Sep/14
 : **Lecture 3**{: .label .label-red} [Optimization, regularization](/review)
-    : [Slides](/assets/Slides/Lecture 03.pdf)<br>[[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 12.1.1, 13.1, 13.2
+    : [Slides](/assets/slides/optimization.pdf)<br>[[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 12.1.1, 13.1, 13.2
 
 Sep/15
 : **Recitation 2**{: .label .label-purple}

@@ -25,4 +25,4 @@ All freely accessible (an MIT IP may be required):
 - [SB]/[SSS] [Understanding Machine Learning: From Theory to Algorithms](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning), Shalev-Shwartz and Ben-David; Cambridge University Press, 2014.
 - [SB] [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/RLbook2020trimmed.pdf), Sutton and Barton; The MIT Press, 2018.
 - [JWHT] [An Introduction to Statistical Learning](https://www.statlearning.com/), James, Witten, Hastie, and Tibshirani; Springer, 2013.
-
+<!-- - [BV] [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf), Boyd and Vandenberghe; Cambridge University Press, 2004 -->

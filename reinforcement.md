@@ -49,15 +49,15 @@ As an aside, this is a general pattern. Asymptotic regime allows you to "cancel"
 
 A couple of more comments:
 - States versus observation. 
-- Rewards are what we immdiately see but not our final goal. We're in the game for the long run, so it's the sum of rewards that we go after. These are the so-called value functions, which we'll define more precisely and need to comment with more details. For now, remember this intuitive punchline: rewards are short-term thing, values are long-term thing. We want to do good in the long run.
+- Rewards are what we immediately see but not our final goal. We're in the game for the long run, so it's the sum of rewards that we go after. These are the so-called value functions, which we'll define more precisely and need to comment with more details. For now, remember this intuitive punchline: rewards are short-term thing, values are long-term thing. We want to do good in the long run.
 - Fundamental to the long-term versus short-term performance is the tension between exploitation and exploration.
 Exploitation does well in the short-run; exploration may help us do well in the long-run (even if potentially losing out somewhat in the short-term).
-- Sometimes in the literature, the rewards model would be a mapping of (s, s', a) to (r). In other words, the reward you get not only depends on your current state, and your current action, but also the state you ends in (based on the generally stochastic transition). One such example would be, when you buy a lottery at a particular store, the (moneitary) return/reward you get depends on if you actually win. Note, however, that such reward model distinction really do not matter at all in the infinite-horizon case -- again, coz converegence cancels that out. Even in the finite-horizon case, all the math works the same by thinking of the future-dependent reward as future-independent, but the horizon got shortened by 1.
+- Sometimes in the literature, the rewards model would be a mapping of (s, s', a) to (r). In other words, the reward you get not only depends on your current state, and your current action, but also the state you ends in (based on the generally stochastic transition). One such example would be, when you buy a lottery at a particular store, the (monetary) return/reward you get depends on if you actually win. Note, however, that such reward model distinction really do not matter at all in the infinite-horizon case -- again, coz convergence cancels that out. Even in the finite-horizon case, all the math works the same by thinking of the future-dependent reward as future-independent, but the horizon got shortened by 1.
 - In the infinite-horizon set up, the discount factor has to be strictly less than 1, for making sure the infinite-length rewards sequence converge and we end up with a finite summation of infinite terms.
 
 # Reinforcement Learning Set Up
 
-## Agent and enviroment
+## Agent and environment
 
 
 No longer have access to the transition model, and sometimes no access to the rewards model either. 

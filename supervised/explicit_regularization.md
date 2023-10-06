@@ -1,5 +1,5 @@
 ---
-title: Regularization
+title: Explicit Regularization
 nav_order: 4
 ---
 # Regularization

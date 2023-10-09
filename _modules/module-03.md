@@ -25,29 +25,29 @@ Nov/03
 : **Recitation**{: .label .label-purple} 
 
 Nov/07
-: **Lecture**{: .label .label-red} Covariate shift, domain adaptation
+: **Lecture**{: .label .label-red} Deep RL policy-based (TRPO/PPO)
     <!-- : [Slides]() -->
 
 Nov/09
-: **Lecture**{: .label .label-red} Few-shot learning, in-context learning
+: **Lecture**{: .label .label-red} Deep RL, DQN
     <!-- : [Slides]() -->
 
 Nov/10
 : **Holiday**{: .label .label-gray} veterans day holiday; no recitation
 
 Nov/14
-: **Lecture**{: .label .label-red} Self-supervised learning, masking, contrastive
+: **Lecture**{: .label .label-red} Deep RL, practical considerations
     <!-- : [Slides]() -->
 
 Nov/16
-: **Lecture**{: .label .label-red} Foundation models
+: **Lecture**{: .label .label-red} Covariate shift, domain adaptation 
     <!-- : [Slides]() -->
 
 Nov/17
 : **Recitation**{: .label .label-purple}
 
 Nov/21
-: **Lecture**{: .label .label-red} State-of-the-art LLMs
+: **Lecture**{: .label .label-red} Few-shot learning, in-context learning
     <!-- : [Slides]() -->
 
 Nov/22
@@ -60,22 +60,22 @@ Nov/24
 : **Holiday**{: .label .label-gray} thanksgiving holiday; no recitation
 
 Nov/28
-: **Lecture**{: .label .label-red} Deep RL policy-based (TRPO/PPO)
+: **Lecture**{: .label .label-red} Self-supervised learning, masking, contrastive
     <!-- : [Slides](), [Notes]() -->
 
 Nov/30
-: **Lecture**{: .label .label-red} Deep RL, DQN
+: **Lecture**{: .label .label-red} Foundation models
     <!-- : [Slides](), [Notes]() -->
 
 Dec/01
 : **Recitation**{: .label .label-purple}
 
 Dec/05
-: **Lecture**{: .label .label-red} Deep RL, practical considerations
+: **Lecture**{: .label .label-red} State-of-the-art LLMs
     <!-- : [Slides]() -->
 
 Dec/07
-: **Exam 2**{: .label .label-blue} date/room ???
+: **Exam 2**{: .label .label-blue} Walker
 
 Dec/08
 : **Recitation**{: .label .label-purple} Project help

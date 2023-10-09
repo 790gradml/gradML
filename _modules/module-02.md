@@ -29,7 +29,7 @@ Sep/26
     : [[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 21 
 
 Sep/28
-: **Lecture 7**{: .label .label-red} Decision problems, bandits
+: **Lecture 7**{: .label .label-red} [Decision problems, bandits](/reinforcement/bandit)
     : [[SB]](http://incompleteideas.net/book/RLbook2020trimmed.pdf) Chapter 1, 2
 
 Sep/29

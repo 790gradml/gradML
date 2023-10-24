@@ -25,18 +25,18 @@ Nov/03
 : **Recitation**{: .label .label-purple} 
 
 Nov/07
-: **Lecture**{: .label .label-red} Deep RL policy-based (TRPO/PPO)
+: **Lecture**{: .label .label-red} Markov Decision Processes; value-based RL
     <!-- : [Slides]() -->
 
 Nov/09
-: **Lecture**{: .label .label-red} Deep RL, DQN
+: **Lecture**{: .label .label-red} Policy-based RL
     <!-- : [Slides]() -->
 
 Nov/10
 : **Holiday**{: .label .label-gray} veterans day holiday; no recitation
 
 Nov/14
-: **Lecture**{: .label .label-red} Deep RL, practical considerations
+: **Lecture**{: .label .label-red} Deep RL (e.g., DQN and TROP/PPO)
     <!-- : [Slides]() -->
 
 Nov/16

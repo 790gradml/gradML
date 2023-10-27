@@ -3,19 +3,20 @@ title: Module 3 - Deep Dive
 ---
 
 Oct/24
-: **Lecture**{: .label .label-red} Unsupervised learning, dimensionality reduction
-    <!-- : [Slides]() -->
+: **Lecture 12**{: .label .label-red} Unsupervised learning, dimensionality reduction
+    : [[HTF]](https://hastie.su.domains/ElemStatLearn/) Chapter 14.5, [[JWHT]](https://www.statlearning.com/), Chapter 12.1-12.2
 
 Oct/26
-: **Lecture**{: .label .label-red} Generative models, auto-regressive
-    <!-- : [Slides]() -->
+: **Lecture 13**{: .label .label-red} Generative models, auto-regressive
+    : [[B]](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) Chapter 9, [[HTF]](https://hastie.su.domains/ElemStatLearn/) Chapter 14.3.7
 
 Oct/27
 : **Recitation**{: .label .label-purple}
 
 Oct/31
-: **Lecture**{: .label .label-red} Deep generative models, VAEs, GANs
-    <!-- : [Slides]() -->
+: **Lecture 14**{: .label .label-red} Deep generative models, VAEs
+    : [[B]](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) Chapter 10
+
 
 Nov/02
 : **Lecture**{: .label .label-red} Flows, Diffusion models

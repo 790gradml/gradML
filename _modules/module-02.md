@@ -15,7 +15,7 @@ Sep/15
 
 Sep/19 	
 : **Lecture 4**{: .label .label-red} [Linear vs. nonlinear models, bias variance](/supervised/explicit_regularization)
-  : [[B]](http://incompleteideas.net/book/RLbook2020trimmed.pdf) Chapter 3, [[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 5
+  : [[B]](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) Chapter 3, [[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 5, [[HTF]](https://hastie.su.domains/ElemStatLearn/) Chapter 3
 
 Sep/21 	
 : **Lecture 5**{: .label .label-red} [Intro to PAC Learning](/supervised/learnability_and_vc)
@@ -26,7 +26,7 @@ Sep/22
 
 Sep/26
 : **Lecture 6**{: .label .label-red} On-line learning, regret
-    : [[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 21 
+    : [[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 21
 
 Sep/28
 : **Lecture 7**{: .label .label-red} [Decision problems, bandits](/reinforcement/bandit)
@@ -38,11 +38,11 @@ Sep/29
 
 Oct/03
 : **Lecture 8**{: .label .label-red} Neural/deep architectures (supervised)
-    <!-- : [Slides](), [Notes]() -->
+    : [[HTF]](https://hastie.su.domains/ElemStatLearn/) Chapter 11, [[JWHT]](https://www.statlearning.com/), Chapter 10
 
 Oct/05
 : **Lecture 9**{: .label .label-red} Robustness, stability, adversarial predictions
-    <!-- : [Slides]() -->
+    : [[KM]](https://adversarial-ml-tutorial.org/) tutorial
 
 Oct/06
 : **Recitation 4**{: .label .label-purple}
@@ -57,7 +57,7 @@ Oct/10
 
 Oct/12
 : **Lecture 10**{: .label .label-red} Uncertainty, conformal prediction
-    <!-- : [Slides](), [Notes]() -->
+    : [[AB]](https://arxiv.org/pdf/2107.07511.pdf) tutorial
 
 Oct/13
 : **Recitation 5**{: .label .label-purple}
@@ -65,11 +65,10 @@ Oct/13
 
 Oct/17
 : **Lecture 11**{: .label .label-red} Complexity, generalization
-    <!-- : [Slides](), [Notes]() -->
+    : [[SSS]](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning) Chapter 6, [[HTF]](https://hastie.su.domains/ElemStatLearn/) Chapter 7.9
 
 Oct/19
 : **Exam 1**{: .label .label-blue} Walker
 
 Oct/20
 : **Recitation 6**{: .label .label-purple}
-    <!-- : [Handout]() -->

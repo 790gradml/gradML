@@ -15,12 +15,12 @@ Oct/27
 
 Oct/31
 : **Lecture 14**{: .label .label-red} Deep generative models, VAEs
-    : [[B]](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) Chapter 10
+    : [[KW]](https://arxiv.org/abs/1906.02691)
 
 
 Nov/02
-: **Lecture**{: .label .label-red} Flows, Diffusion models
-    <!-- : [Slides]() -->
+: **Lecture 15**{: .label .label-red} Diffusion models
+    : [[SWMG]](http://proceedings.mlr.press/v37/sohl-dickstein15.pdf),[[HJA]](https://arxiv.org/abs/2006.11239),[[SE]](https://arxiv.org/abs/1907.05600)
 
 Nov/03 
 : **Recitation**{: .label .label-purple} 

@@ -26,23 +26,23 @@ Nov/03
 : **Recitation**{: .label .label-purple} 
 
 Nov/07
-: **Lecture**{: .label .label-red} Markov Decision Processes; value-based RL
-    <!-- : [Slides]() -->
+: **Lecture**{: .label .label-red} Markov Decision Processes
+    : [Slides](/assets/slides/mdp.pdf)<br>[[SB]](http://incompleteideas.net/book/RLbook2020trimmed.pdf) Chapter 3
 
 Nov/09
 : **Lecture**{: .label .label-red} Policy-based RL
-    <!-- : [Slides]() -->
+    : [Slides](/assets/slides/policy-rl.pdf)<br>[[SB]](http://incompleteideas.net/book/RLbook2020trimmed.pdf) Chapter 6, 13
 
 Nov/10
 : **Holiday**{: .label .label-gray} veterans day holiday; no recitation
 
 Nov/14
 : **Lecture**{: .label .label-red} Deep RL (e.g., DQN and TROP/PPO)
-    <!-- : [Slides]() -->
+    : [[TRPO]](https://arxiv.org/abs/1502.05477), [[PPO]](https://arxiv.org/abs/1707.06347), [[DQN]](https://arxiv.org/abs/1312.5602)
 
 Nov/16
-: **Lecture**{: .label .label-red} Covariate shift, domain adaptation 
-    <!-- : [Slides]() -->
+: **Lecture**{: .label .label-red} Covariate shift, domain adaptation
+    : [[SKM]](https://jmlr.csail.mit.edu/papers/volume8/sugiyama07a/sugiyama07a.pdf), [[GUAG]](https://arxiv.org/abs/1505.07818), [[CFTR]](https://arxiv.org/abs/1507.00504),[[Gul]](https://arxiv.org/pdf/2007.01434.pdf), [[PC]](https://arxiv.org/abs/1803.00567)
 
 Nov/17
 : **Recitation**{: .label .label-purple}

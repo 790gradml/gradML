@@ -82,5 +82,5 @@ Dec/08
 : **Recitation**{: .label .label-purple} Project help
 
 Dec/12
-: **Lecture**{: .label .label-red} Deep RL and AI applications
-    <!-- : [Slides]() -->
+: **Lecture**{: .label .label-red} Some Recent trends/ applications
+    : [Slides](https://slides.com/shensquared/f23_applications/fullscreen)

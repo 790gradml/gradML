@@ -27,7 +27,8 @@ kernelized version of linear regression.
 
 # Introduction to Regression
 
-Let the training data be $S = \{(x_1, y_1), ..., (x_N,y_N)\}$ where
+Let the training data be 
+$S = \{(x_1, y_1), ..., (x_N,y_N)\}$ where
 $x_i \in \mathbb{R}^d$, $y_i \in \mathbb{R}$,
 $\forall i \in \{1, ..., N\}$. The goal is to learn a rule
 $h: \mathbb{R}^d \to \mathbb{R}$ that can predict the values $y$ from

@@ -82,7 +82,9 @@ decomposes the expected error in three terms: $$\begin{aligned}
 &= \mathbb{E}[\eta^2] &\text{(noise)}\\
 &+ \mathbb{E}[(f - \mathbb{E}\hat{f})^2] &(\text{bias}^2)\\
 &+ \mathbb{E}[(\hat{f} - \mathbb{E}\hat{f})^2] &\text{(variance)}
-\end{aligned}$$ where $\eta$ is the noise of the new data point. The
+\end{aligned}$$ 
+
+where $\eta$ is the noise of the new data point. The
 term $\mathbb{E}[\eta^2]$ is inevitable, and comes from the inherent
 noise in the observation model. The term
 $\mathbb{E}[(f-\mathbb{E}\hat{f})^2]$ is a bias term, as it quantifies
@@ -92,18 +94,19 @@ quantifies how $\hat{f}$ differs from the average value of $\hat{f}$.
 
 We prove now the bias-variance tradeoff equality.
 
-$$
-\begin{aligned}
+
+
+$$\begin{aligned}
+
 \mathbb{E}[(y-\hat{f})^2]
 &= \mathbb{E}[(y-f+f-\hat{f})^2]&\\
 &= \mathbb{E}[(y-f)^2]+\mathbb{E}[(f-\hat{f})^2]+2\mathbb{E}[(y-f)(f-\hat{f})]&\\
 &= \mathbb{E}[\eta^2]+\mathbb{E}[(f-\hat{f})^2]+2\mathbb{E}[\eta(f-\hat{f})]&\\
-&= \mathbb{E}[\eta^2]+\mathbb{E}[(f-\hat{f})^2]&[\text{uses } \eta \rotatebox[origin=c]{90}{$\models$}\hat{f}]\\
+&= \mathbb{E}[\eta^2]+\mathbb{E}[(f-\hat{f})^2]&\\
 &= \mathbb{E}[\eta^2] + \mathbb{E}[(f - \mathbb{E}\hat{f} + \mathbb{E}\hat{f} - \hat{f})^2]&\\
 &= \mathbb{E}[\eta^2] + \mathbb{E}[(f - \mathbb{E}\hat{f})^2] + \mathbb{E}[(\mathbb{E}\hat{f} - \hat{f})^2] + 2 (f - \mathbb{E}\hat{f})^T \mathbb{E}[\mathbb{E}\hat{f} - \hat{f}]&\\
 &= \mathbb{E}[\eta^2] + \mathbb{E}[(f - \mathbb{E}\hat{f})^2] + \mathbb{E}[(\mathbb{E}\hat{f} - \hat{f})^2] & [\text{uses } \mathbb{E}[\mathbb{E}\hat{f} - \hat{f}] = 0]
-\end{aligned}
-$$
+\end{aligned}$$
 
 We can now look at linear regression from the perspective of the
 bias-variance tradeoff. Theorem

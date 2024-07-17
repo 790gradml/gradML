@@ -25,6 +25,17 @@ nav_order: 2
 
 ## The Gradient Vector
 
+Consider a multi-variate function $f: \mathbb{R}^n \rightarrow \mathbb{R}.$ Assuming the function is differentiable at a point $p=\left(x_1, \ldots, x_n\right)$ in its $n$-dimensional input space, then the function's gradient, denoted as $\nabla f: \mathbb{R}^n \rightarrow \mathbb{R}^n,$ at that particular point $p$ is the $n$-dimensional vector
+
+$$
+\nabla f(p)=\left[\begin{array}{c}
+\frac{\partial f}{\partial x_1}(p) \\
+\vdots \\
+\frac{\partial f}{\partial x_n}(p)
+\end{array}\right]
+$$
+
+
 ## The Chain Rule (in calculus)
 
 ##  Positive Semidefiniteness (PSD) and Positive Definiteness (PD)

@@ -14,7 +14,7 @@ Today's lecture will come in three parts. We'll first formally introduce a mathe
 So the objective: familiar with four definitions: MDP, RL, the two value functions.
 
 ## Recall: Bandits
-We've seen [Bandit](/bandit) problems are one type of problems that can fit in this looped diagram. You're presented with $k$ slot machines, collectively, those machines are your state. Your job is to make a decision as to which slot machine to pull over some period of time.
+We've seen [Bandits](/reinforcement/bandit/) problems are one type of problems that can fit in this looped diagram. You're presented with $k$ slot machines, collectively, those machines are your state. Your job is to make a decision as to which slot machine to pull over some period of time.
 
 The bandits problem illustrates the fundamental tradeoff between exploitation and exploration. And the reason that there's this tradeoff is because we do not have access to the rewards function. The rewards are a stochastic function of the states, and we do not know the explicit form, or the parameters of the function.
 

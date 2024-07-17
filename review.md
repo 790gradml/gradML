@@ -173,11 +173,13 @@ $$
 $$
 
 ###  The Chain Rule (in probability)
-By simply reversing the definition of conditional probability (above), we arrive at the Chain Rule:
+By reversing the definition of conditional probability (above), we arrive at the Chain Rule:
 
 $$
-P(A \cap B)=P(A \mid B) P(B)
+\mathbb{P}(A \cap B)=\mathbb{P}(A \mid B)\mathbb{P}(B) 
 $$
+
+(which is also valid for when $\mathbb{P}(B)=0.$)
 
 
 

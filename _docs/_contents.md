@@ -1,29 +1,27 @@
-## Minor edits and "Live" site
-Minor edits like typo fix can be done by following the `edit link` at the bottom of each `gradML` webpage. 
+### Minor edits and the "Live" site
 
-Those with this repo's write access can edit directly via the GitHub webUI; or, PR can be another approach. Content-edit pushed to the `main` branch will be "live" on `gradML` within a few second (in contrast, other changes like website infastructure upgrade or feature change requires a server-side reload).
+Minor edits like typo fixes can be made by following the `edit link` at the bottom of each `gradML` webpage.
+
+Those with write access to this repository can edit directly via the GitHub webUI. A PR can be another approach. Content edits pushed to the `main` branch will be "live" on `gradML" within a few seconds. Other changes, like website infrastructure upgrades or feature changes, require a server-side reload.
 
 Below is a quick demo of adding a "gradient vector" blob:
 ![](figs/simpe-edit-demo.gif)
 
 
-## Site structure 
+### Site structure
 
-Overall, the website structure mirrors the file system structure (with a few exceptions, detailed later). Every `html` webpage is sourced from a `.md` markdown file. Any markdown file with filename starting with `_` or located under a folder whose name starts with `_` are skipped and not turned into a webpage, e.g. no files under this `_docs` folder are rendered on `gradML`.
+The website structure mirrors the file system structure (with a few exceptions, detailed later). Every `html` webpage is sourced from a `.md` markdown file. Any markdown file with a filename starting with `_` or located in a folder whose name starts with `_` is skipped and not turned into a webpage, e.g., no files under this `_docs` folder are rendered on `gradML`.
 
-Top-level navigational pages are placed under the root folder, for example, the site links the [https://gradml.mit.edu/review/](https://gradml.mit.edu/review/) on the homepage since the corresponding source [review.md](https://github.com/shensquared/gradML/blob/main/review.md) lives under the repo root folder.
+Top-level navigational pages are placed in the root folder. For example, the site links to [https://gradml.mit.edu/review/](https://gradml.mit.edu/review/) on the homepage since the corresponding source [review.md](https://github.com/shensquared/gradML/blob/main/review.md) is located in the repo's root folder.
 
 Lower-level structure is declared in the [`_config.yml`](https://github.com/shensquared/gradML/blob/main/_config.yml) file. For example, this blob
-```
+
+```yaml
 - scope:
     path: "reinforcement/"
   values:
     parent: Reinforcement Learning
     layout: page
-``` 
-in the [`_config.yml`](https://github.com/shensquared/gradML/blob/37564ca75c73b216f16c1ef165721417ab78ed6b/_config.yml#L144) is how the site knows to look for markdown files located under the `<repo root>/reinformcement` folder to orangize the corresponding drop-down module. (Similarly, under `<repo root>/supervised/` we have a `learnability_and_vc.md` file; this file is being rendered to the [https://gradml.mit.edu/supervised/learnability_and_vc/](https://gradml.mit.edu/supervised/learnability_and_vc/) page.)
+```
 
-
-
-
-
+in the [`_config.yml`](https://github.com/shensquared/gradML/blob/37564ca75c73b216f16c1ef165721417ab78ed6b/_config.yml#L144) file tells the site to look for markdown files located in the `<repo root>/reinforcement` folder to organize the corresponding drop-down module. Similarly, under `<repo root>/supervised/`, the `learnability_and_vc.md` file is rendered as the `gradml.mit.edu/supervised/learnability_and_vc/` page.

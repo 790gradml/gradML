@@ -4,7 +4,8 @@ Minor edits like typo fixes can be made by following the `edit link` at the bott
 
 Those with write access to this repository can edit directly via the GitHub webUI; a PR can be another approach. Content edits pushed to the `main` branch will be "live" on [`gradML`](https://gradml.mit.edu) within a few seconds. Other changes, like website infrastructure upgrades or feature changes, require a server-side reload.
 
-Below is a quick demo of adding a "gradient vector" blob:
+Below is a quick demo of adding a "gradient vector" blob (commit [`c8d8c5d`](https://github.com/shensquared/gradML/commit/c8d8c5d15cce69b94a6ff0aa980f45e9d4c0cbc2))
+
 ![](figs/simpe-edit-demo.gif)
 
 

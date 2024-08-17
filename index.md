@@ -19,6 +19,8 @@ has_toc: false
 
 </center>
 
+<br>
+
 
 ## Course Overview
 - Probabilistic foundations of machine learning; offered in fall semesters; 12 units (3-0-9)

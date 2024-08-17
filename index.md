@@ -21,6 +21,14 @@ has_toc: false
 
 <br>
 
+## Course sites
+<ul>
+<li> For technical questions: Please read/post publicly on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a> 
+<li> For personal or administrative questions: Please post privately on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a>
+<li> For class or section enrollment information: Please check <a href="https://canvas.mit.edu/courses/28217"><b>Canvas</b></a></li>
+</ul>
+
+<br>
 
 ## Course Overview
 - Probabilistic foundations of machine learning; offered in fall semesters; 12 units (3-0-9)

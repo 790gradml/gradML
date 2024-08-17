@@ -20,12 +20,13 @@ timeline:
 - '5:00 PM'
 schedule:
 - name: ""
-- name: Monday
-  events:
-    - name: Instructors OHs
-      start: 1:00 PM
-      end: 2:00 PM
-      location: 34-301
+
+# - name: Monday
+#   events:
+#     - name: Instructors OHs
+#       start: 1:00 PM
+#       end: 2:00 PM
+#       location: 34-301
 - name: Tuesday
   events:
     - name: Lecture
@@ -53,9 +54,9 @@ schedule:
     - name: Recitation
       start: 1:00 PM
       end: 2:00 PM
-      location: 3-270
+      location: TBD
     - name: Recitation
       start: 2:00 PM
       end: 3:00 PM
-      location: 3-270
+      location: TBD
 ---

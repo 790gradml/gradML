@@ -16,14 +16,25 @@ layout: table_wrappers
     <div id="main-content-wrap" class="main-content-wrap">
       {% include components/breadcrumbs.html %}
       <div id="main-content" class="main-content">
-        <p class="alt-warning">
+
+        <!-- <p class="alt-warning">
           👋 Hi there! Please go to <a href="https://canvas.mit.edu/courses/22594"><b>Canvas</b></a> for our <b>official
             fall23</b>
           course website.<br>
           This here is a <b>draft</b> site currently under construction 🚧. (Bug reports very <a
             href="https://github.com/shensquared/gradML/issues">welcome</a> though; thanks!)<br>
 
+        </p> -->
+
+        <p class="alt-warning">
+          👋 Hi there! 
+          <ul>
+          <li> For technical questions: Please read/post publicly on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a> 
+          <li> For personal or administrative questions: Please post privately on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a>
+          <li> For class or section enrollment information: Please check <a href="https://canvas.mit.edu/courses/28217"><b>Canvas</b></a></li>
+          </ul>
         </p>
+
         <main>
           {% if site.heading_anchors != false %}
           {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16

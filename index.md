@@ -22,18 +22,19 @@ has_toc: false
 <br>
 
 ## Course sites
+
 <ul>
-<li> For technical questions: Please read/post publicly on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a> 
-<li> For personal or administrative questions: Please post privately on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a>
+<li> For technical questions: Please read/post publicly on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a></li>
+<li> For personal or administrative questions: Please post privately on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a></li>
 <li> For class or section enrollment information: Please check <a href="https://canvas.mit.edu/courses/28217"><b>Canvas</b></a></li>
 </ul>
 
-<br>
 
 ## Course Overview
+
 - Probabilistic foundations of machine learning; offered in fall semesters; 12 units (3-0-9)
 - Prerequisites:
-  - Introductory machine learning (at the level of [6.390](http://introml.mit.edu) or [6.370](http://student.mit.edu/catalog/m6c.html#6.3700) or [6.C01](http://student.mit.edu/catalog/m6e.html#6.C01))
+  - Introductory machine learning (at the level of [6.390](https://introml.mit.edu) or [6.370](http://student.mit.edu/catalog/m6c.html#6.3700) or [6.C01](http://student.mit.edu/catalog/m6e.html#6.C01))
   - Linear algebra (at the level of [18.06](https://github.com/mitmath/1806) or [18.C06](https://canvas.mit.edu/courses/16629))
   - Probability (at the level of [6.3700](https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/pages/readings/), [6.3800](http://student.mit.edu/catalog/m6c.html#6.3800), or [18.600](https://math.mit.edu/~sheffield/spring2022math600.html))
 - Brief description: Probabilistic thinking is critical to understanding machine learning, in techniques ranging from classic linear models to modern deep networks.  We will study model representation, generalization, learning algorithms, and model-selection with mathematical rigor as well as an emphasis on how to apply these methods in applications with real-world consequence.

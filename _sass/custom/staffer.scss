@@ -1,17 +1,17 @@
 .staff-row{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 38px;
 }
 
 .staffer {
   display: flex;
-  margin: $sp-4 0;
+  margin: $sp-5 0;
 
   .staffer-image {
     border-radius: 100%;
     height: 100px;
-    margin-right: $sp-4;
+    margin-right: $sp-2;
     width: auto;
 
     // border: 1px solid silver;

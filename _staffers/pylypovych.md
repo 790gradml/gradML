@@ -1,5 +1,5 @@
 ---
 name: Greg Pylypovych
-email: pylypovych@mit.edu
+email: gpylypov@mit.edu
 role: Teaching Assistant
 ---

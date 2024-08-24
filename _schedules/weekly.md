@@ -43,19 +43,19 @@ schedule:
       location: 32-123
 - name: Friday
   events:
-    - name: Recitation
+    - name: Problem session
       start: 10:00 AM
       end: 11:00 AM
       location: 4-237
-    - name: Recitation
+    - name: Problem session
       start: 11:00 AM
       end: 12:00 PM
       location: 4-237
-    - name: Recitation
+    - name: Problem session
       start: 1:00 PM
       end: 2:00 PM
       location: TBD
-    - name: Recitation
+    - name: Problem session
       start: 2:00 PM
       end: 3:00 PM
       location: TBD

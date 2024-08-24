@@ -12,15 +12,16 @@ nav_order: 4
 
 1. TOC
 {:toc}
-## Cross-registration
 
-We follow MIT's calendar, and do not have additional extensions or accommodations based on home university calendar. Especially important will be for you to plan ahead for our two in-person exams. Our final will be scheduled during MIT's final exam period---the exact date/room are TBC. 
+## Attendance and section assignments
 
-All students need a Kerberos to interact with MIT systems (e.g. the Registrar [WebSIS](https://student.mit.edu)). Cross-registered students will receive their Kerberos once the registration goes through; however, the process can take a while. We therefore strongly encourage you to cross register early, if possible, to avoid any delayed access. 
+We strongly encourage you to be present in the actual lectures (Tuesdays and Thursdays, 2:30 - 4:00 in 32-123). We will however record and post lectures and notes.
 
-Per MIT policy, cross-registration approval is authorized **solely** to a course's lead instructor, aka, the instructor-on-record.
+The Friday sections will be devoted to working through problems from the homework and answering student quesitons. They are entirely optional (but very valuable if you are finding the homeowrk or concepts difficult). The registrar will produce an assignment of students to section times.  We encourage you to attend the section time to which you were assigned, for load-balancing purposes, but it's fine to attend any section you wish (or more than one!).
 
-If you're not familiar with MIT campus, you might find the [whereis](https://whereis.mit.edu) site helpful.
+## Office hours
+
+Office hours are to be determined.
 
 ## Grading, lateness, and extensions 
 
@@ -31,16 +32,17 @@ The grade break-down will be as follows:
 - Final exam: 35%
 
 Exams:
-- Midterm exam will be on October 25, 7PM - 9PM. A conflict exam will be offered on October 26, 8AM - 10AM.
-- Final exam will be during finals period, as scheduled by the registrar. Please plan to be physically present at MIT for the exam.
-- Exams will cover content from homework and projects.
+- The midterm exam will be on October 25, 7PM - 9PM. <br>
+A conflict exam will be offered on October 26, 8AM - 10AM.
+- The final exam will be during finals period, as scheduled by the registrar. Please plan to be physically present at MIT for the exam.
+- Exams will cover content from homework *and* projects.
 
 Late homework:
-- Homework turned in at all late will be worth 75% of its original value and may not get graded until the end of the semester.
+- Homework turned in *at all* late will be worth 75% of its original value and may not get graded until the end of the semester.
 - The lowest homework grade will be dropped from the calculations.
 
 Late projects:
-- Projects turned in late will be subject to the following penalties: 1 day = 5%, 2 days = 10%, 3 days = 20%, 4 days = 40%, more than 4 days = not accepted.
+- Projects turned in late will be subject to the following penalties: 1 day = 5%, 2 days = 10%, 3 days = 20%, 4 days = 40%, more than 4 days = not accepted. 
 
 Extensions:
 - If you are having health or personal problems, definitely take it easy.  See GradSupport or S-Cubed and ask them to [contact us](mailto:lpk@mit.edu) and we will make arrangements for extensions. 
@@ -56,9 +58,15 @@ understand the concepts.
 
 Ultimately, it is your responsibility to ensure that you personally understand the course material, so be sure you devote concentrated independent effort to solving all the problems.
 
-- You may use AI-assistants, such as co-pilot for help with any coding assignments.  
+- You may use AI-assistants, such as co-pilot, for help with any coding assignments.  
 - You may use large language models to assist with writing your homework or project report.
-- In both cases, you remain personally responsible for the correctness and quality of your submissions.
+In both cases, you remain personally responsible for the correctness and quality of your submissions. Please don't make us read long paragraphs of LLM blather.
+
+## Cross-registration
+
+You are welcome to cross-register for the course! However, we will not make any special extensions or accommodations (beyond those described here, with student support provided via your institution). In particular, take careful note of the exam times and be sure you can attend.
+
+All students need a Kerberos ID to interact with MIT systems (e.g. the Registrar [WebSIS](https://student.mit.edu)). Cross-registered students will receive their Kerberos ID once the registration goes through; however, the process can take a while. We therefore strongly encourage you to cross register early, if possible, to avoid any delayed access. 
 
 ## Support
 

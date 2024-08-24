@@ -2,28 +2,28 @@
 title: Class schedule
 ---
 Sep/5
-: **Lecture 1**{: .label .label-red}
+: **Lecture 1**{: .label .label-red} Foundations of machine learning <br>
 HW0 out
 
 Sep/6
 : **Recitation**{: .label .label-purple}
 
 Sep/10
-: **Lecture 2**{: .label .label-red}
+: **Lecture 2**{: .label .label-red} Parameter estimation <br>
 HW0 due; HW1 out
 
 Sep/12
-: **Lecture 3**{: .label .label-red}
+: **Lecture 3**{: .label .label-red} Bayesian view of estimation
 
 Sep/13
 : **Recitation**{: .label .label-purple}
 
 Sep/17
-: **Lecture 4**{: .label .label-red}
+: **Lecture 4**{: .label .label-red} Linear regression <br>
 HW1 due; HW2 out
 
 Sep/19
-: **Lecture 5**{: .label .label-red}
+: **Lecture 5**{: .label .label-red} Bayesian linear regression <br>
 
 Sep/20
 : **Student Holiday!**{: .label .label-gray} No recitation
@@ -108,7 +108,7 @@ Nov/15
 
 Nov/19
 : **Lecture 20**{: .label .label-red}
-HW6 due; HW7 out
+HW6 due; MP2 out
 
 Nov/21
 : **Lecture 21**{: .label .label-red}
@@ -118,7 +118,6 @@ Nov/22
 
 Nov/26
 : **Lecture 22**{: .label .label-red}
-HW7 due; MP2 out
 
 Nov/28
 : **Holiday!**{: .label .label-gray} No lecture

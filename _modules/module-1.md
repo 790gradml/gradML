@@ -6,7 +6,7 @@ Sep/5
 HW0 out
 
 Sep/6
-: **Recitation**{: .label .label-purple}
+: **Problem session**{: .label .label-purple}
 
 Sep/10
 : **Lecture 2**{: .label .label-red} Parameter estimation <br>
@@ -16,7 +16,7 @@ Sep/12
 : **Lecture 3**{: .label .label-red} Bayesian view of estimation
 
 Sep/13
-: **Recitation**{: .label .label-purple}
+: **Problem session**{: .label .label-purple}
 
 Sep/17
 : **Lecture 4**{: .label .label-red} Linear regression <br>
@@ -26,7 +26,7 @@ Sep/19
 : **Lecture 5**{: .label .label-red} Bayesian linear regression <br>
 
 Sep/20
-: **Student Holiday!**{: .label .label-gray} No recitation
+: **Student Holiday!**{: .label .label-gray} No problem session
 
 Sep/24
 : **Lecture 6**{: .label .label-red} Bias/variance, regularization 
@@ -35,7 +35,7 @@ Sep/26
 : **Lecture 7**{: .label .label-red} Evaluating estimators, consistency
 
 Sep/27
-: **Recitation**{: .label .label-purple}
+: **Problem session**{: .label .label-purple}
 
 Oct/1
 : **Lecture 8**{: .label .label-red} Classification, logistic regression <br>
@@ -45,7 +45,7 @@ Oct/3
 : **Lecture 9**{: .label .label-red} Trees, forests, nearest-neighbor
 
 Oct/4
-: **Recitation**{: .label .label-purple}
+: **Problem session**{: .label .label-purple}
 
 Oct/8
 : **Lecture 10**{: .label .label-red} Stochastic gradient descent <br>
@@ -55,7 +55,7 @@ Oct/10
 : **Lecture 11**{: .label .label-red} Neural networks
 
 Oct/11
-: **Recitation**{: .label .label-purple}
+: **Problem session**{: .label .label-purple}
 
 Oct/15
 : **Holiday!**{: .label .label-gray} No lecture
@@ -75,7 +75,7 @@ Oct/24
 : **Midterm**{: .label .label-yellow} 7PM--9PM  No lecture
 
 Oct/25
-: **No recitation**{: .label .label-gray}
+: **No problem session**{: .label .label-gray}
 
 Oct/29
 : **Lecture 14**{: .label .label-red} Making guarantees 
@@ -84,7 +84,7 @@ Oct/31
 : **Lecture 15**{: .label .label-red} Uncertainty quantification
 
 Nov/1
-: **Recitation**{: .label .label-purple}
+: **Problem session**{: .label .label-purple}
 
 Nov/5
 : **Lecture 16**{: .label .label-red} Modeling densities <br>
@@ -94,7 +94,7 @@ Nov/7
 : **Lecture 17**{: .label .label-red} Principal components analysis
 
 Nov/8
-: **Recitation**{: .label .label-purple}
+: **Problem session**{: .label .label-purple}
 
 Nov/12
 : **Lecture 18**{: .label .label-red} Handling missing data <br>
@@ -104,7 +104,7 @@ Nov/14
 : **Lecture 19**{: .label .label-red} Temporal and spatial data
 
 Nov/15
-: **Recitation**{: .label .label-purple}
+: **Problem session**{: .label .label-purple}
 
 Nov/19
 : **Lecture 20**{: .label .label-red} Graphical models <br>
@@ -114,7 +114,7 @@ Nov/21
 : **Lecture 21**{: .label .label-red} Modeling complex densities
 
 Nov/22
-: **Recitation**{: .label .label-purple}
+: **Problem session**{: .label .label-purple}
 
 Nov/26
 : **Lecture 22**{: .label .label-red} Diffusion and flow models
@@ -123,7 +123,7 @@ Nov/28
 : **Holiday!**{: .label .label-gray} No lecture
 
 Nov/15
-: **Holiday!**{: .label .label-gray} No recitation
+: **Holiday!**{: .label .label-gray} No problem session
 
 Dec/3
 : **Lecture 23**{: .label .label-red} Working with foundation models
@@ -132,7 +132,7 @@ Dec/5
 : **Lecture 24**{: .label .label-red} Applications in small-data regime
 
 Dec/6
-: **Recitation**{: .label .label-purple} 
+: **No problem session**{: .label .label-gray} 
 MP2 due
 
 Dec/10

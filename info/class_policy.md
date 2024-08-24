@@ -1,10 +1,9 @@
 ---
-title: Logistics and Support
-description: Listing of course modules and topics.
+title: Class Policies and Support
 nav_order: 4
 ---
 
-# Logistics and Support
+# Class policies and support
 
 {: .no_toc}
 
@@ -15,7 +14,7 @@ nav_order: 4
 {:toc}
 ## Cross-registration
 
-We follow MIT's calendar, and do not have additional extensions or accommodations based on home university calendar. Especially important will be for you to plan ahead for our two in-person exams. Our exams will be scheduled before MIT's final exam period (i.e., before Monday December 18, 2023); the exact date/room are TBC.
+We follow MIT's calendar, and do not have additional extensions or accommodations based on home university calendar. Especially important will be for you to plan ahead for our two in-person exams. Our final will be scheduled during MIT's final exam period---the exact date/room are TBC. 
 
 All students need a Kerberos to interact with MIT systems (e.g. the Registrar [WebSIS](https://student.mit.edu)). Cross-registered students will receive their Kerberos once the registration goes through; however, the process can take a while. We therefore strongly encourage you to cross register early, if possible, to avoid any delayed access. 
 
@@ -23,30 +22,56 @@ Per MIT policy, cross-registration approval is authorized **solely** to a course
 
 If you're not familiar with MIT campus, you might find the [whereis](https://whereis.mit.edu) site helpful.
 
-## Listener
-Due to capacity and other constraints, we will not be able to accept Listener registrants in Fall 2023.
+## Grading, lateness, and extensions 
 
+The grade break-down will be as follows:
+- Homework: 20%
+- Mini-projects: 20%
+- Midterm exam: 25%
+- Final exam: 35%
 
-## Collaboration
+Exams:
+- Midterm exam will be on October 25, 7PM - 9PM. A conflict exam will be offered on October 26, 8AM - 10AM.
+- Final exam will be during finals period, as scheduled by the registrar. Please plan to be physically present at MIT for the exam.
+- Exams will cover content from homework and projects.
 
-We encourage students to discuss assignments in this subject with
-other students and with the teaching staff to better understand the
-concepts.  However, everything you hand in on-line or off-line must be your own work, as it's also critical for your individual learning to
-be sure you devote concentrated independent effort to solving all the
-problems.
+Late homework:
+- Homework turned in at all late will be worth 75% of its original value and may not get graded until the end of the semester.
+- The lowest homework grade will be dropped from the calculations.
 
-The correct model is to discuss solution strategies and write your solutions individually. Implementations that are identical or differ only by variable names will not receive full credit.
+Late projects:
+- Projects turned in late will be subject to the following penalties: 1 day = 5%, 2 days = 10%, 3 days = 20%, 4 days = 40%, more than 4 days = not accepted.
 
-## GradSupport
+Extensions:
+- If you are having health or personal problems, definitely take it easy.  See GradSupport or S-Cubed and ask them to [contact us](mailto:lpk@mit.edu) and we will make arrangements for extensions. 
+- *There will be no further extensions given for other reasons*
+
+## Collaboration with humans and computers
+
+We view the homework and projects as teaching tools and the exams as
+evaluation tools. As part of the teaching process we will provide some
+feedback on your homework and projects.  We encourage you to discuss
+assignments with other students and with the teaching staff to better
+understand the concepts.
+
+Ultimately, it is your responsibility to ensure that you personally understand the course material, so be sure you devote concentrated independent effort to solving all the problems.
+
+- You may use AI-assistants, such as co-pilot for help with any coding assignments.  
+- You may use large language models to assist with writing your homework or project report.
+- In both cases, you remain personally responsible for the correctness and quality of your submissions.
+
+## Support
+
+### GradSupport
 
 For graduate students, a variety of issues may impact your academic career including faculty/student relationships, funding, and interpersonal concerns. In the Office of Graduate Education (OGE), GradSupport provides consultation, coaching, and advocacy to graduate students on matters related to academic and life challenges. If you are dealing with an issue that is impacting your ability to attend class, complete work, or take an exam, you may contact GradSupport by email at <a href="mailto:gradsupport@mit.edu">gradsupport@mit.edu</a>
 or via phone at (617) 253-4860. More info can be found at [GradSupport](https://oge.mit.edu/development/gradsupport/).
 
-## Student Support Services
+### Student Support Services
 For undergrad students, if you are dealing with a personal or medical issue that is impacting your ability to attend class, complete work, or take an exam, you should contact a dean in Student Support Services (S3). S3 is here to help you. The deans will verify your situation, provide you with support, and help you work with your professor or instructor to determine next steps. In most circumstances, you will not be excused from coursework without verification from a dean. Please visit the [S3 website](https://studentlife.mit.edu/s3) for contact information and more ways that they can provide support.
 
 
-## Disability and Access Services
+### Disability and Access Services
 We are committed to the principle of equal access, and we are more
 than willing to make arrangements to help accommodate students with
 disabilities or related challenges. In general, knowing about the kind
@@ -62,7 +87,7 @@ implementation.
 Please send these approved requests
 to inform us, and we will work to implement these accommodations.
 
-## Mental Health
+### Mental Health
 MIT is a challenging environment, and 6.790 is a challenging course.  As such,
 it is normal to expect some level of stress (and a lot of hard work) during
 6.790.  A certain level of stress is healthy and is part of the learning

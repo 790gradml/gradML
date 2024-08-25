@@ -4,7 +4,7 @@
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash"
     },
-    "postCreateCommand": "gem install bundler jekyll && bundle install",
+    "postCreateCommand": "gem install bundler jekyll && bundle install && bundle exec jekyll serve --config _config.yml,_config_dev.yml",
     "forwardPorts": [4000],
     "extensions": [
         "rebornix.Ruby"

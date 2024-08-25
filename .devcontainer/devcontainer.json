@@ -1,13 +1,18 @@
 {
     "name": "Jekyll Development",
-    "image": "mcr.microsoft.com/vscode/devcontainers/ruby:latest",
+    "image": "ruby:3.1.3",  // Use the Ruby image for Jekyll
+    "features": {
+        "git": "latest",
+        "docker-in-docker": "latest"
+    },
+    "postCreateCommand": "gem install bundler jekyll && bundle install && bundle exec jekyll serve --config _config.yml,_config_dev.yml",
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash"
     },
-    "postCreateCommand": "gem install bundler jekyll && bundle install && bundle exec jekyll serve --config _config.yml,_config_dev.yml",
+    "workspaceFolder": "/workspace",
+    "remoteUser": "root",
     "forwardPorts": [4000],
-    "extensions": [
-        "rebornix.Ruby"
-    ],
-    "remoteUser": "vscode"
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ]
 }

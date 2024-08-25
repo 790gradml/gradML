@@ -1,0 +1,13 @@
+{
+    "name": "Jekyll Development",
+    "image": "mcr.microsoft.com/vscode/devcontainers/ruby:latest",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "gem install bundler jekyll && bundle install",
+    "forwardPorts": [4000],
+    "extensions": [
+        "rebornix.Ruby"
+    ],
+    "remoteUser": "vscode"
+}

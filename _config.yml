@@ -100,6 +100,8 @@ exclude:
     - venv/
     - gradML_sources
     - booksNotes/
+    - .github
+    - .devcontainer
 # Collections for website data
 collections:
     staffers:

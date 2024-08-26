@@ -91,7 +91,7 @@ Nov/5
 HW4 due; HW5 out
 
 Nov/7
-: **Lecture 17**{: .label .label-red} Principal components analysis
+: **Lecture 17**{: .label .label-red} Dimensionality reduction
 
 Nov/8
 : **Problem session**{: .label .label-purple}

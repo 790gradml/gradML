@@ -32,8 +32,8 @@ The grade break-down will be as follows:
 - Final exam: 35%
 
 Exams:
-- The midterm exam will be on October 25, 7PM - 9PM. <br>
-A conflict exam will be offered on October 26, 8AM - 10AM.
+- The midterm exam will be on Thursday October 24, 7PM - 9PM. <br>
+A conflict exam will be offered on Friday October 25, 8AM - 10AM.
 - The final exam will be during finals period, as scheduled by the registrar. Please plan to be physically present at MIT for the exam.
 - Exams will cover content from homework *and* projects.
 

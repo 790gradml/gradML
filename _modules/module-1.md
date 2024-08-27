@@ -6,7 +6,7 @@ Sep/5
 HW0 out
 
 Sep/6
-: **Problem session**{: .label .label-purple}
+: **No Problem session**{: .label .label-gray}
 
 Sep/10
 : **Lecture 2**{: .label .label-red} Parameter estimation <br>

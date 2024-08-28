@@ -26,7 +26,7 @@ has_toc: false
 <ul>
 <li> For technical questions: Please read/post publicly on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a></li>
 <li> For personal or administrative questions: Please post privately on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a></li>
-<li> For class or section enrollment information: Please check <a href="https://canvas.mit.edu/courses/28217"><b>Canvas</b></a></li>
+<li> For grades on submitted work: Please check <a href="https://canvas.mit.edu/courses/28217"><b>Canvas</b></a></li>
 </ul>
 
 

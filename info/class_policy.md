@@ -30,7 +30,7 @@ The grade break-down will be as follows:
 - Mini-projects: 20%
 - Midterm exam: 25%
 - Final exam: 35%
-<br>
+<p>
 The grade-assignment cutoffs will be *no lower than*: A - 90%, B - 80%, C - 70%. 
 
 Exams:
@@ -61,8 +61,9 @@ understand the concepts.
 Ultimately, it is your responsibility to ensure that you personally understand the course material, so be sure you devote concentrated independent effort to solving all the problems.
 
 - You may use AI-assistants, such as co-pilot, for help with any coding assignments.  
-- You may use large language models to assist with superficial grammatical corrections of your writing.
-In both cases, you remain personally responsible for the originality, correctness and quality of your submissions. 
+- You may use large language models to assist with superficial grammatical corrections of your writing, but not to provide or suggest content.
+
+In all cases, you remain personally responsible for the originality, correctness and quality of your submissions. 
 
 ## Cross-registration
 

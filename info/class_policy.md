@@ -30,6 +30,7 @@ The grade break-down will be as follows:
 - Mini-projects: 20%
 - Midterm exam: 25%
 - Final exam: 35%
+The grade-assignment cutoffs will be *no lower than*: A - 90%, B - 80%, C - 70%. 
 
 Exams:
 - The midterm exam will be on Thursday October 24, 7PM - 9PM. <br>
@@ -38,8 +39,8 @@ A conflict exam will be offered on Friday October 25, 8AM - 10AM.
 - Exams will cover content from homework *and* projects.
 
 Late homework:
-- Homework turned in *at all* late will be worth 75% of its original value and may not get graded until the end of the semester.
-- The lowest homework grade will be dropped from the calculations.
+- Homework turned in late will be subject to the following penalties: 1 day = 5%, 2 days = 10%, 3 days = 20%, 4 or more days = not accepted.
+- The lowest two homework grades will be dropped from the calculations.
 
 Late projects:
 - Projects turned in late will be subject to the following penalties: 1 day = 5%, 2 days = 10%, 3 days = 20%, 4 days = 40%, more than 4 days = not accepted. 
@@ -59,8 +60,8 @@ understand the concepts.
 Ultimately, it is your responsibility to ensure that you personally understand the course material, so be sure you devote concentrated independent effort to solving all the problems.
 
 - You may use AI-assistants, such as co-pilot, for help with any coding assignments.  
-- You may use large language models to assist with writing your homework or project report.
-In both cases, you remain personally responsible for the correctness and quality of your submissions. Please don't make us read long paragraphs of LLM blather.
+- You may use large language models to assist with superficial grammatical corrections of your writing.
+In both cases, you remain personally responsible for the originality, correctness and quality of your submissions. 
 
 ## Cross-registration
 

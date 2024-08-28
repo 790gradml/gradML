@@ -30,6 +30,7 @@ The grade break-down will be as follows:
 - Mini-projects: 20%
 - Midterm exam: 25%
 - Final exam: 35%
+<b>
 The grade-assignment cutoffs will be *no lower than*: A - 90%, B - 80%, C - 70%. 
 
 Exams:

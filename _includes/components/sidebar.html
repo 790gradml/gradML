@@ -14,6 +14,7 @@
       | where_exp:"item", "item.nav_exclude != true" %}
       {% include nav.html pages=info key=nil %}
     </div>
+    {% if site.dev%}
     <div class="notes_nav">
       <p class="section-title">Notes</p>
       {% assign notes_pages = site.html_pages
@@ -23,6 +24,7 @@
       %}
       {% include nav.html pages=notes_pages key=nil %}
     </div>
+    {% endif %}
     {%- if site.nav_external_links -%}
     <ul class="nav-list">
       {%- for node in site.nav_external_links -%}

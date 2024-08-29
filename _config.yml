@@ -33,19 +33,19 @@ url: "https://gradml.mit.edu" # the base hostname & protocol for your site, e.g.
 heading_anchors: true
 permalink: pretty
 aux_links:
-    Canvas:
-        - "https://canvas.mit.edu/courses/28217"
-    Piazza:
-        - "https://piazza.com/class/lzy7kgi6f2n4fs/"
+  Canvas:
+    - "https://canvas.mit.edu/courses/28217"
+  Piazza:
+    - "https://piazza.com/class/lzy7kgi6f2n4fs/"
 aux_links_new_tab: true
 
 #remote_theme: just-the-docs/just-the-docs
 plugins:
-    - jekyll-feed
-    - jekyll-default-layout
-    # - jekyll-pandoc
-    - jekyll-last-modified-at
-    - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-default-layout
+  # - jekyll-pandoc
+  - jekyll-last-modified-at
+  - jekyll-seo-tag
 
 # Back to top link
 back_to_top: true
@@ -55,14 +55,14 @@ nav_next_prev: true
 last_edit_timestamp: true
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "✏️ Edit this page on GitHub"
-gh_edit_repository: "https://github.com/shensquared/gradML"
+gh_edit_repository: "https://github.com/790gradml/gradML"
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree"
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
-    date-format: "%d-%b-%Y"
+  date-format: "%d-%b-%Y"
 # kramdown:
 # math_engine: katex
 # input: GFMKatex # GFMKatex class from sp301415 is in _plugins/server-side-math.rb
@@ -87,82 +87,82 @@ last-modified-at:
 #
 color_scheme: wider
 exclude:
-    - .sass-cache/
-    - .jekyll-cache/
-    - gemfiles/
-    - Gemfile
-    - Gemfile.lock
-    - node_modules/
-    - vendor/bundle/
-    - vendor/cache/
-    - vendor/gems/
-    - vendor/ruby/
-    - venv/
-    - gradML_sources
-    - booksNotes/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - venv/
+  - gradML_sources
+  - booksNotes/
 # Collections for website data
 collections:
-    staffers:
-    modules:
-    schedules:
-    announcements:
+  staffers:
+  modules:
+  schedules:
+  announcements:
 
-    # Define a collection named "resource", its documents reside in the "_resource" directory
-    # resource:
-    #permalink: "/:collection/:path/"
-    # permalink: "/:path/"
-    # output: true
+  # Define a collection named "resource", its documents reside in the "_resource" directory
+  # resource:
+  #permalink: "/:collection/:path/"
+  # permalink: "/:path/"
+  # output: true
 # Default layouts for each collection type
 defaults:
-    - scope:
-          path: ""
-          type: staffers
-      values:
-          layout: staffer
-          subpath: "/assets/images/"
-    - scope:
-          path: ""
-          type: modules
-      values:
-          layout: module
-    - scope:
-          path: ""
-          type: schedules
-      values:
-          layout: schedule
-    - scope:
-          path: ""
-          type: announcements
-      values:
-          layout: announcement
-    - scope:
-          path: "supervised/"
-      values:
-          parent: Supervised Learning
-          layout: page
-          katex: true
-    - scope:
-          path: "reinforcement/"
-      values:
-          parent: Reinforcement Learning
-          layout: page
-    - scope:
-          path: "unsupervised/"
-      values:
-          parent: Unsupervised Learning
-          layout: page
-    - scope:
-          path: "info/"
-      values:
-          parent: Info
-          layout: page
-          info_cat: true
-    - scope:
-          path: "homeworks/"
-      values:
-          parent: Homeworks
-          layout: page
-          permalink: homeworks/:basename/
+  - scope:
+      path: ""
+      type: staffers
+    values:
+      layout: staffer
+      subpath: "/assets/images/"
+  - scope:
+      path: ""
+      type: modules
+    values:
+      layout: module
+  - scope:
+      path: ""
+      type: schedules
+    values:
+      layout: schedule
+  - scope:
+      path: ""
+      type: announcements
+    values:
+      layout: announcement
+  - scope:
+      path: "supervised/"
+    values:
+      parent: Supervised Learning
+      layout: page
+      katex: true
+  - scope:
+      path: "reinforcement/"
+    values:
+      parent: Reinforcement Learning
+      layout: page
+  - scope:
+      path: "unsupervised/"
+    values:
+      parent: Unsupervised Learning
+      layout: page
+  - scope:
+      path: "info/"
+    values:
+      parent: Info
+      layout: page
+      info_cat: true
+  - scope:
+      path: "homeworks/"
+    values:
+      parent: Homeworks
+      layout: page
+      permalink: homeworks/:basename/
 # pandoc:
 #     extensions:
 #         # - normalize
@@ -172,33 +172,33 @@ defaults:
 # callouts
 callouts_level: quiet # or loud
 callouts:
-    definition:
-        title: Definition
-        color: yellow
-    theorem:
-        title: Theorem
-        color: eecs-red
-    proof:
-        title: Proof
-        color: eecs-blue
-    note:
-        title: Note
-        color: blue
-    warning:
-        title: ""
-        color: eecs-red
-    alt-warning:
-        title: ""
-        color: yellow
-    example:
-        title: "Example"
-        color: eecs-purple
-    exercise:
-        title: "Exercise"
-        color: blue
-    solutions:
-        title: "Solutions"
-        color: mit-gray
+  definition:
+    title: Definition
+    color: yellow
+  theorem:
+    title: Theorem
+    color: eecs-red
+  proof:
+    title: Proof
+    color: eecs-blue
+  note:
+    title: Note
+    color: blue
+  warning:
+    title: ""
+    color: eecs-red
+  alt-warning:
+    title: ""
+    color: yellow
+  example:
+    title: "Example"
+    color: eecs-purple
+  exercise:
+    title: "Exercise"
+    color: blue
+  solutions:
+    title: "Solutions"
+    color: mit-gray
 # mermaid:
 #     # Version of mermaid library
 #     # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/

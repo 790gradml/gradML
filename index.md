@@ -26,7 +26,7 @@ has_toc: false
 <ul>
 <li> For technical questions: Please read/post publicly on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a></li>
 <li> For personal or administrative questions: Please post privately on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a></li>
-<li> For class or section enrollment information: Please check <a href="https://canvas.mit.edu/courses/28217"><b>Canvas</b></a></li>
+<li> For grades on submitted work: Please check <a href="https://canvas.mit.edu/courses/28217"><b>Canvas</b></a></li>
 </ul>
 
 
@@ -38,11 +38,11 @@ has_toc: false
   - Linear algebra (at the level of [18.06](https://github.com/mitmath/1806) or [18.C06](https://canvas.mit.edu/courses/16629))
   - Probability (at the level of [6.3700](https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/pages/readings/), [6.3800](http://student.mit.edu/catalog/m6c.html#6.3800), or [18.600](https://math.mit.edu/~sheffield/spring2022math600.html))
 - Brief description: Probabilistic thinking is critical to understanding machine learning, in techniques ranging from classic linear models to modern deep networks.  We will study model representation, generalization, learning algorithms, and model-selection with mathematical rigor as well as an emphasis on how to apply these methods in applications with real-world consequence.
-<!-- - A **tentative** syllabus can be found [here](/info/calendar).  -->
+- A syllabus can be found [here](/info/calendar)
 
 ## Course Components
 
-We will have weekly lectures and recitations (schedule details can be found [here](/info/schedule/)); complementing those are written homework, small projects, a midterm and a final exam. 
+We will have weekly lectures and problem sessions (schedule details can be found [here](/info/schedule/)); complementing those are written homework, small projects, a midterm and a final exam. 
 
 ## Course Number Change
 

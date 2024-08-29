@@ -2,7 +2,7 @@
 
 All commands below should be run as command-line shell commands. For example, on Mac, these commands can be run in the built-in App `Terminal`, or `iterm2` (a popular 3rd-party alternative).
 
-1. Clone this repository: `git clone https://github.com/shensquared/gradML.git`
+1. Clone this repository: `git clone https://github.com/790gradml/gradML.git`
 
 2. (Important) `cd` to the directory of your clone of this repo
 
@@ -16,7 +16,7 @@ All commands below should be run as command-line shell commands. For example, on
         - add `eval "$(rbenv init -)"` to your shell, e.g. to `.zshrc`
         - `rbenv local 3.1.3`
     
-    - If on other OS, see https://github.com/shensquared/gradML/pull/11 for some details
+    - If on other OS, see https://github.com/790gradml/gradML/pull/11 for some details
 
 4. Install [Jekyll](https://jekyllrb.com): `gem install bundler jekyll`
 

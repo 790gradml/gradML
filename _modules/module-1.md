@@ -38,21 +38,21 @@ Sep/27
 : **Problem session**{: .label .label-purple}
 
 Oct/1
-: **Lecture 8**{: .label .label-red} Classification, logistic regression <br>
+: **Lecture 8**{: .label .label-red} Classification, ranking <br>
 HW2 due; HW3 out
 
 Oct/3
-: **Lecture 9**{: .label .label-red} Trees, forests, nearest-neighbor
+: **Lecture 9**{: .label .label-red} Non-linear predictors: basis functions, trees, forests, nearest-neighbor
 
 Oct/4
 : **Problem session**{: .label .label-purple}
 
 Oct/8
-: **Lecture 10**{: .label .label-red} Stochastic gradient descent <br>
+: **Lecture 10**{: .label .label-red} Neural networks <br>
 HW3 due; MP1 out
 
 Oct/10
-: **Lecture 11**{: .label .label-red} Neural networks
+: **Lecture 11**{: .label .label-red} Optimization, regularization
 
 Oct/11
 : **Problem session**{: .label .label-purple}
@@ -61,14 +61,14 @@ Oct/15
 : **Holiday!**{: .label .label-gray} No lecture
 
 Oct/17
-: **Lecture 12**{: .label .label-red} Scaling up neural networks <br>
+: **Lecture 12**{: .label .label-red} Neural network models and problem structures <br>
 MP1 due
 
 Oct/18
 : **Review sessions**{: .label .label-blue}
 
 Oct/22
-: **Lecture 13**{: .label .label-red} Structured neural networks <br>
+: **Lecture 13**{: .label .label-red} Over-parameterization, generalization <br>
 HW4 out
 
 Oct/24
@@ -78,10 +78,10 @@ Oct/25
 : **No problem session**{: .label .label-gray}
 
 Oct/29
-: **Lecture 14**{: .label .label-red} Making guarantees 
+: **Lecture 14**{: .label .label-red} Robustness, uncertainty quantification
 
 Oct/31
-: **Lecture 15**{: .label .label-red} Uncertainty quantification
+: **Lecture 15**{: .label .label-red} Domain adaptation, covariate shift
 
 Nov/1
 : **Problem session**{: .label .label-purple}
@@ -129,7 +129,7 @@ Dec/3
 : **Lecture 23**{: .label .label-red} Working with foundation models
 
 Dec/5
-: **Lecture 24**{: .label .label-red} Applications in small-data regime
+: **Lecture 24**{: .label .label-red} Applications in the small-data regime
 
 Dec/6
 : **No problem session**{: .label .label-gray} 

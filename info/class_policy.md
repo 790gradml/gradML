@@ -31,7 +31,7 @@ The grade break-down will be as follows:
 - Midterm exam: 25%
 - Final exam: 35%
 
-The grade-assignment cutoffs will be *no lower than*: A - 90%, B - 80%, C - 70%. 
+<!-- The grade-assignment cutoffs will be *no lower than*: A - 90%, B - 80%, C - 70%.  -->
 
 Exams:
 - The midterm exam will be on Thursday October 24, 7PM - 9PM. <br>

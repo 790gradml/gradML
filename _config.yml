@@ -106,6 +106,9 @@ collections:
   modules:
   schedules:
   announcements:
+  homeworks:
+    # output: true
+    # permalink: /homeworks/:name/
 
   # Define a collection named "resource", its documents reside in the "_resource" directory
   # resource:

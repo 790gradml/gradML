@@ -17,7 +17,7 @@ nav_order: 4
 
 We strongly encourage you to be present in the actual lectures (Tuesdays and Thursdays, 2:30 - 4:00 in 32-123). We will however record and post lectures and notes.
 
-The Friday sections will be devoted to working through problems from the homework and answering student quesitons. They are entirely optional (but very valuable if you are finding the homework or concepts difficult). The registrar will produce an assignment of students to section times.  We encourage you to attend the section time to which you were assigned, for load-balancing purposes, but it's fine to attend any section you wish (or more than one!).
+The Friday sections will be devoted to working through problems from the homework and answering student questions. They are entirely optional (but very valuable if you are finding the homework or concepts difficult). The registrar will produce an assignment of students to section times.  We encourage you to attend the section time to which you were assigned, for load-balancing purposes, but it's fine to attend any section you wish (or more than one!).
 
 ## Office hours
 
@@ -30,8 +30,8 @@ The grade break-down will be as follows:
 - Mini-projects: 20%
 - Midterm exam: 25%
 - Final exam: 35%
-<p>
-The grade-assignment cutoffs will be *no lower than*: A - 90%, B - 80%, C - 70%. 
+
+The grade-assignment cutoffs will be *no lower than*: A - 90%, B - 80%, C - 70%.
 
 Exams:
 - The midterm exam will be on Thursday October 24, 7PM - 9PM. <br>

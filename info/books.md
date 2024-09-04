@@ -7,8 +7,8 @@ nav_order: 5
 ---
 
 # Primary textbooks
-- [Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html), Kevin Murphy, MIT Press, 2022.
-- [Probabilistic Machine Learning: Advanced Topics](https://probml.github.io/pml-book/book2.html), Kevin Murphy, MIT Press, 2023.
+- [M1] [Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html), Kevin Murphy, MIT Press, 2022.
+- [M2] [Probabilistic Machine Learning: Advanced Topics](https://probml.github.io/pml-book/book2.html), Kevin Murphy, MIT Press, 2023.
 
 # Other recommended reading
 

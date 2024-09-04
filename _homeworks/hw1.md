@@ -1,7 +1,7 @@
 ---
 title: "Homework 1"
-release_date: 2024-09-11
-due_date: 2024-09-17
-pdf: "/assets/homeworks/not-yet-released.pdf"
-gradescope_link: "https://gradescope.com/courses/your_course/hw1"
+release_date: 2024-09-05
+due_date: 2024-09-10
+# pdf: "/assets/homeworks/test.pdf"
+# gradescope_link: "https://canvas.mit.edu/courses/28217/external_tools/369"
 ---

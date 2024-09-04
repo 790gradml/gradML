@@ -1,22 +1,21 @@
 ---
-# layout: default
 title: "Lectures"
-nav_order: 6
-# permalink: /homeworks/
+nav_order: 2
 ---
 
 # Lectures
 
-TODO: create lecture modules and add content here
+Find notes from lectures below.
 
-{% assign sorted_homeworks = site.homeworks | sort: 'release_date' | reverse %}
+{% assign limit_value = 1 %}  <!-- Set this to the number of lectures to display-->
+{% assign sorted_lectures = site.lectures | sort: 'id' | reverse %}
+{% assign total_items = sorted_lectures | size %}
+{% assign start_index = total_items | minus: limit_value %}
+{% assign filtered_lectures = sorted_lectures | slice: start_index, limit_value %}
 
-{% for hw in sorted_homeworks %}
-## {{ hw.title }}
-
-- **Release Date:** {{ hw.release_date | date: "%B %d, %Y" }}
-- **Due Date:** {{ hw.due_date | date: "%B %d, %Y" }}
-- **[Download PDF]({{ hw.pdf }})**
-- **[Submit to Gradescope]({{ hw.gradescope_link }})**
+{% for lecture in filtered_lectures %}
+## {{ lecture.title }}
+- {% if lecture.notes %} **[Notes]({{ lecture.notes }})** {% else %} **Notes:** *To be released* {% endif %}
+- {% if lecture.slides %} **[Slides]({{ lecture.slides }})** {% else %} **Slides:** *To be released* {% endif %}
 
 {% endfor %}

@@ -8,13 +8,21 @@
     <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
   </div>
   <nav aria-label="Main" id="site-nav" class="site-nav">
-    <div class="info_nav">
-      {% assign info = site.html_pages
+
+    <!-- info/ Pages -->
+    {% assign info = site.html_pages
       | where_exp:"item", "item.info_cat == true"
       | where_exp:"item", "item.nav_exclude != true" %}
-      {% include nav.html pages=info key=nil %}
-    </div>
-    <!-- <div class="notes_nav">
+    {% include nav.html pages=info key=nil %}
+
+    <!-- main/ Pages -->
+    {% assign main_pages = site.pages 
+      | where_exp: "item", "item.path contains 'main/'" 
+      | where_exp:"item", "item.nav_exclude != true" %}
+    {% include nav.html pages=main_pages key=nil %}
+    
+    {% if false %}
+    <div class="notes_nav">
       <p class="section-title">Notes</p>
       {% assign notes_pages = site.html_pages
       | where_exp:"item", "item.info_cat != true"
@@ -22,7 +30,8 @@
       | where_exp:"item", "item.nav_exclude != true"
       %}
       {% include nav.html pages=notes_pages key=nil %}
-    </div> -->
+    </div>
+    {% endif %}
     {%- if site.nav_external_links -%}
     <ul class="nav-list">
       {%- for node in site.nav_external_links -%}

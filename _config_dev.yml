@@ -1,0 +1,3 @@
+title: 6.790 <br> Dev Site
+baseurl: "/dev" # the subpath of your site, e.g. /blog
+dev: true

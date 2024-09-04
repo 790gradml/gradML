@@ -1,11 +1,11 @@
 // Just the Class dependencies
-@import 'card';
+@import "card";
 
 // Just the Class styles
-@import 'announcement';
-@import 'module';
-@import 'schedule';
-@import 'staffer';
+@import "announcement";
+@import "module";
+@import "schedule";
+@import "staffer";
 
 // Overrides
 code {
@@ -28,11 +28,6 @@ summary {
   width: 100%;
 }
 
-.main-content-wrap {
-  max-width: $content-width;
-  margin: auto;
-}
-
 .main-content {
   dl {
     display: block;
@@ -40,7 +35,6 @@ summary {
   }
 
   dt {
-    font-weight: 700;
     text-align: start;
 
     &::after {
@@ -51,7 +45,7 @@ summary {
   dd {
     font-weight: normal;
 
-    +dt {
+    + dt {
       margin-top: 1em;
     }
   }

@@ -3,14 +3,14 @@ title: Class schedule
 ---
 Sep/5
 : **Lecture 1**{: .label .label-red} Foundations of machine learning <br>
-    : HW0 out
+    : HW0 out : Reading M1 Ch1
 
 Sep/6
 : **No Problem session**{: .label .label-gray}
 
 Sep/10
 : **Lecture 2**{: .label .label-red} Parameter estimation <br>
-    : HW0 due; HW1 out
+    : HW0 due; HW1 out : Reading M1 Ch4.2, 4.6
 
 Sep/12
 : **Lecture 3**{: .label .label-red} Bayesian view of estimation

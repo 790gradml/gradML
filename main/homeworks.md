@@ -7,8 +7,6 @@ nav_order: 6
 
 # Homeworks
 
-Below is a list of all homeworks.
-
 {% assign sorted_homeworks = site.homeworks | sort: 'release_date' | reverse %}
 
 {% for hw in sorted_homeworks %}

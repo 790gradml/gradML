@@ -53,7 +53,6 @@ Oct/8
     : HW3 due; MP1 out
 
 Oct/10
-: **Lecture 10**{: .label .label-red} Neural networks
 : **Lecture 11**{: .label .label-red} Optimization, regularization
 
 Oct/11

@@ -13,12 +13,13 @@
     }
   }
 
-  >dl {
+  > dl {
     border-bottom: $border $border-color;
     border-top: $border $border-color;
     display: grid;
-    grid-template-columns: max-content 1fr;
-    margin: $sp-2 (-$sp-4);
+    grid-template-columns: 10px minmax(max-content 100fr); // Four-column layout
+    margin: $sp-2 (0);
+    align-items: stretch; // Make all items stretch to match row height
 
     &:first-child {
       margin-top: 0;
@@ -28,9 +29,9 @@
       margin-bottom: 0;
     }
 
-    @include mq(lg) {
-      grid-template-columns: 1fr 7fr;
-    }
+    // @include mq(lg) {
+    //   grid-template-columns: 1fr 7fr; // Adjust for larger screens if needed
+    // }
 
     %module-item {
       margin: 0;
@@ -41,21 +42,25 @@
       }
     }
 
-    >dt {
+    > dt {
       @extend %module-item;
       border-top: $border $border-color;
       font-weight: normal;
       text-align: right;
+      overflow-wrap: break-word;
 
-      +dd {
+      + dd {
         border-top: $border $border-color;
+        overflow-wrap: break-word;
+        align-self: stretch; // Ensure that `dd` elements stretch to match row height
       }
 
       &:first-child {
         border-top: none;
 
-        +dd {
+        + dd {
           border-top: none;
+          overflow-wrap: break-word;
         }
       }
 
@@ -64,32 +69,37 @@
       }
     }
 
-    >dd {
+    > dd {
       @extend %module-item;
+      align-self: stretch; // Make sure all `dd` elements stretch to match row height
+      overflow-wrap: break-word;
 
-      +dd {
+      + dd {
+        overflow-wrap: break-word;
         padding-top: 0;
+        align-self: stretch; // Ensure nested `dl` structures are also aligned
       }
 
-      ol, ul, dl {
+      ol,
+      ul,
+      dl {
         margin: 0;
       }
 
       dl {
-        display: flex;
-        flex-direction: column;
-
-        @include mq(sm) {
-          flex-direction: row;
-        }
+        display: grid; // Use grid to control layout of nested `dl` elements
+        grid-template-columns: 1fr 1fr; // Set the structure of the nested columns
+        align-items: center; // Vertically center nested content
 
         dt {
-          flex: 0 0 62.5%;
+          flex: 0 0 150px; // Adjust width for nested `dt`
           margin: 0;
+          align-self: center;
         }
 
         dd {
           margin: 0;
+          align-self: center;
         }
       }
     }

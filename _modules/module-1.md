@@ -1,8 +1,8 @@
 ---
 title: Class schedule
 ---
-**DATE**
-: **EVENT**
+**Date**
+: **Event**
     : **Assignment**
         : **Reading**
 

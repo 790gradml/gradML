@@ -7,7 +7,7 @@ has_toc: false
 ---
 <center>
 <div style="margin-bottom:1.5em">
-<img src="/assets/images/eecslogo.svg" width="12%" style="margin-right:2em">
+<img src="/assets/images/eecslogo.svg" width="12%">
 <!-- <img src="/assets/images/790-placeholder.png" width="12%"> -->
 </div>
 

@@ -5,7 +5,7 @@ nav_order: 1
 
 # Homeworks
 
-{% assign limit_value = 1 %}  <!-- Set this to the number of hws to display-->
+{% assign limit_value = 2 %}  <!-- Set this to the number of hws to display-->
 {% assign sorted_homeworks = site.homeworks | sort: 'release_date' %}
 {% assign filtered_homeworks = sorted_homeworks | slice: 0, limit_value %}
 

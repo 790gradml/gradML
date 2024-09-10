@@ -11,6 +11,6 @@ Please note that the schedule is subject to minor changes!
 - Friday 10-12pm (45-102)
 - Friday 1-3pm (45-102)
 - Sunday: 3-5pm (26-322)
-- Sunday: 7-9pm (26-322)
+- Sunday: 5-7pm (26-322)
 - Monday: 7-9pm (26-322)
-- Tuesday: 7-9pm (36-112)
+- Tuesday: 5-9pm (36-112)

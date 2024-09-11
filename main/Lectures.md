@@ -7,7 +7,7 @@ nav_order: 2
 
 Find notes from lectures below.
 
-{% assign limit_value = 1 %}  <!-- Set this to the number of lectures to display-->
+{% assign limit_value = 2 %}  <!-- Set this to the number of lectures to display-->
 {% assign sorted_lectures = site.lectures | sort: 'id' %}
 {% assign filtered_lectures = sorted_lectures | slice: 0, limit_value %}
 

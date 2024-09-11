@@ -16,9 +16,9 @@ Sep/6
 : **No Problem session**{: .label .label-gray}
 
 Sep/10
-: **Lecture 2**{: .label .label-red} Parameter estimation 
-    : HW0 due <br> HW1 out 
-        : [M1] <br> Ch4.2, 4.6
+: **Lecture 2**{: .label .label-red} [Parameter estimation](/main/Lectures/#lecture-2)
+    : [HW0](/main/homeworks/#homework-0) due <br> [HW1](/main/homeworks/#homework-1) out 
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch4.2, 4.6
 
 
 Sep/12

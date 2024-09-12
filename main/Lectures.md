@@ -5,7 +5,7 @@ nav_order: 2
 
 # Lectures
 
-Find notes from lectures below.
+Lecture recordings are uploaded to [Panopto](https://mit.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b2079bc7-0ca3-4fdf-a3e5-b1d4014c37ee%22).
 
 {% assign limit_value = 2 %}  <!-- Set this to the number of lectures to display-->
 {% assign sorted_lectures = site.lectures | sort: 'id' %}
@@ -15,6 +15,8 @@ Find notes from lectures below.
 ## {{ lecture.title }}
 - {% if lecture.notes %} **[Notes]({{ lecture.notes }})** {% else %} **Notes:** *To be released* {% endif %}
 - {% if lecture.slides %} **[Slides]({{ lecture.slides }})** {% else %} **Slides:** *To be released* {% endif %}
-- {% if lecture.recording %} **[Recording]({{ lecture.recording }})** {% else %} **Recording:** *To be released* {% endif %}
 
 {% endfor %}
+
+
+<!-- - {% if lecture.recording %} **[Recording]({{ lecture.recording }})** {% else %} **Recording:** *To be released* {% endif %} -->

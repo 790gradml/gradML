@@ -46,17 +46,17 @@ schedule:
     - name: Problem session
       start: 10:00 AM
       end: 11:00 AM
-      location: 4-237
+      location: 45-102
     - name: Problem session
       start: 11:00 AM
       end: 12:00 PM
-      location: 4-237
+      location: 45-102
     - name: Problem session
       start: 1:00 PM
       end: 2:00 PM
-      location: TBD
+      location: 45-102
     - name: Problem session
       start: 2:00 PM
       end: 3:00 PM
-      location: TBD
+      location: 45-102
 ---

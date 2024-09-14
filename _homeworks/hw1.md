@@ -8,6 +8,6 @@ pdf: "/assets/homeworks/hw1.pdf"
 additional_links:
   - name: "Link to CSVs"
     link: "https://canvas.mit.edu/courses/28217/assignments/362416"
-  - name: "H1 Raw Tex"
+  - name: "Raw Tex"
     link: "/assets/homeworks/hw1_no_solutions.tex"
 ---

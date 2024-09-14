@@ -23,8 +23,8 @@ Sep/10
 
 Sep/12
 : **Lecture 3**{: .label .label-red} Bayesian view of estimation  
-: 
-: [[M1]](/info/books/#primary-textbooks) <br> Ch 4.6.1--4.6.4
+    : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 4.6.1--4.6.4
 
 Sep/13
 : **Problem session**{: .label .label-purple}
@@ -32,12 +32,12 @@ Sep/13
 Sep/17
 : **Lecture 4**{: .label .label-red} Linear regression 
     : HW1 due  <br> HW2 out
-    : [[M1]](/info/books/#primary-textbooks) <br> Ch 11.1--11.3
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 11.1--11.3
 
 Sep/19
 : **Lecture 5**{: .label .label-red} Bayesian linear regression 
-: 
-: [[M1]](/info/books/#primary-textbooks) <br> Ch 11.7.1--11.7.5
+    : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 11.7.1--11.7.5
 
 Sep/20
 : **Student Holiday!**{: .label .label-gray} No problem session

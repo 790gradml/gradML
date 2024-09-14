@@ -1,8 +1,8 @@
 %
 \documentclass[11pt]{exam}
 
-%\printanswers % If you want to print answers
-\noprintanswers % If you don't want to print answers
+\printanswers % If you want to print answers
+%\noprintanswers % If you don't want to print answers
 
 %\addpoints % if you want to count the points
 %\noaddpoints % if you don't want to count the points
@@ -21,7 +21,6 @@
 \pagestyle{myheadings}
 \markright{MIT 6.867 \hfill Fall 2024 \hfill}
 \date{Sept 10, 2024}
-
 % Use to index over examples
 \newcommand\ex[2]{#1^{(#2)}}
 % Data set
@@ -545,20 +544,20 @@ Our goal is to derive and implement the bayes optimal classifier $\delta$ such t
 We have provided two csv files train.csv and test.csv for the completion of this question.  
 \begin{parts}
 
-\part (Empirics) From train.csv, what is your maximum likelihood estimate for $P(y = 0)$ and $P(y = 1)$? What is your estimate for $\mu_1$ and $\mu_2$?  What is your estimate for $\Sigma_1$ and $\Sigma_2$? Do you notice something about $\Sigma_1$ and $\Sigma_2$?  (Hint: Don't overthink)
+\part (Empirics) From train.csv, what is your maximum likelihood estimate for $P(y = 0)$ and $P(y = 1)$? What is your estimate for $\mu_0$ and $\mu_1$?  What is your estimate for $\Sigma_0$ and $\Sigma_1$? Do you notice something about $\Sigma_0$ and $\Sigma_1$?  (Hint: Don't overthink)
 
-\part (Theory) What is $P(y = 1|x)$ and $P(y = 0|x)$ proportional to
-  as a function of $y$?
+\part (Theory) What are $P(y = 1|x)$ and $P(y = 0|x)$ proportional to, as a function of
+  $x$?
   %(Hint: apply bayes rule and ignore $P(x)$)  
 
 \part (Theory) Derive an equation for the decision boundary for $x \in \R^d$ where 
 \begin{equation}
 \ln(P(y=1|x)) = \ln(P(y=0|x))
 \end{equation}
-Here we compare the log likelihood as it simplifies the derivation.  Is this decision boundary (as a function of $x$) linear, quadratic, etc.?  How does the decision boundary simplify when $\Sigma_1 = \Sigma_2$?
+Here we compare the log likelihood as it simplifies the derivation.  Is this decision boundary (as a function of $x$) linear, quadratic, etc.?  How does the decision boundary simplify when $\Sigma_0 = \Sigma_1$?
 
 
-\part (Empirics) Using the decision boundary derived in part (c), classify the points in test.csv as $y = 0$ or $1$.  It suffices to write down the form of the decision boundary and associated decision rule.   
+\part (Empirics) Using the decision boundary derived in part (c), classify the points in test.csv as $y = 0$ or $1$.  It suffices to write down the form of the decision boundary and associated decision rule. 
 
 
 \end{parts}

@@ -1,0 +1,868 @@
+%
+\documentclass[11pt]{exam}
+
+\printanswers % If you want to print answers
+%\noprintanswers % If you don't want to print answers
+
+%\addpoints % if you want to count the points
+%\noaddpoints % if you don't want to count the points
+% Specifies the way question are displayed:
+%\qformat{\textbf{Problem \thequestion}\quad(\thepoints)\hfill}
+%\usepackage{color} % defines a new color
+%\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % light blue
+%\shadedsolutions % defines the style of the solution environment
+%\framedsolutions % defines the style of the solution environment
+% Defines the title of the solution environment:
+%\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
+
+
+%\def\myrightmargin{2.0in}
+%\usepackage[left=1in, right=\myrightmargin]{geometry}
+\pagestyle{myheadings}
+\markright{MIT 6.867 \hfill Fall 2024 \hfill}
+\date{Sept 10, 2024}
+
+% Use to index over examples
+\newcommand\ex[2]{#1^{(#2)}}
+% Data set
+\newcommand\data{{\cal D}}
+% Model
+\newcommand\model{{\cal M}}
+% Max likelihood
+\newcommand\ml[1]{#1_{\bf ml}}
+
+\newcommand{\fb}{\text{f}_{\ml{b}} (x)}
+\newcommand{\fab}{\text{f}_{\ml{a},\ml{b}} (x,y)}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bt}{\boldsymbol{\theta}}
+\newcommand{\R}{\mathbb{R}}
+\def\mul{{\ml{\mu}}}
+\def\mus{{\mu^*}}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{url}
+
+\usepackage{subfigure}
+
+\renewcommand{\rmdefault}{ppl} % rm
+\linespread{1.05}        % Palatino needs more leading
+\usepackage[scaled]{helvet} % ss
+\usepackage{courier} % Alternative to inconsolata
+\usepackage{eulervm} 
+\normalfont
+\usepackage[T1]{fontenc}
+
+\usepackage[textwidth=1.5in]{todonotes}
+
+\newcommand{\note}[1]{\todo[color=blue!10,inline, linecolor=blue!90,size=\footnotesize]{\linespread{0.9}\selectfont{#1}\par}}
+\newcommand{\answernote}[1]{\todo[color=green!10,inline, linecolor=green!90,size=\footnotesize]{\linespread{0.9}\selectfont{#1}\par}}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\title{6.790 Homework 1}
+
+\begin{document}
+
+\maketitle
+
+Questions 1--3 are relatively stand-alone warm-ups.  Questions 4--6
+are more extended practice and illustrations of the ideas of this
+material.  Question 7 requires coding.  {\em Do not submit your code!}
+
+There are some rhetorical questions in blue boxes. You don't need to
+answer them---they're just for thinking about.
+
+Please hand in your work via Gradescope via the link at https://gradml.mit.edu/info/homeworks/. If you were not added to the course automatically, please use Entry Code R7RGGX to add yourself to Gradescope.
+\begin{enumerate}
+ \item Latex is not required, but if you are hand-writing your solutions, please write clearly and carefully. You should include enough work to show how you derived your answers, but you don’t have to give careful proofs.
+\item Homework is due on Tuesday September 17 at 11PM.
+\item Lateness and extension policies are described at https://gradml.mit.edu/info/class\_policy/.
+\end{enumerate}
+
+
+\tableofcontents
+\newpage
+
+
+
+
+\section{Normal fish [10 Points]} 
+\subsection{Fish tale}
+%\question
+ (Bishop 1.11)  We find ourselves with a data set consisting of the
+ measured weights of a bunch of fish caught during an afternoon of
+ fishing.  We decide to model the distribution of these weights using a
+ Gaussian distribution.\note{Why might this not be a great modeling
+   choice?} 
+
+
+ Our goal is to select parameters $\mu, \sigma^2$ of the Gaussian
+ distribution in order to maximize the likelihood of our data,
+ $\data = \{\ex{x}{1}, \ldots, \ex{x}{n}\}$.  The parameters that maximize
+ the log likelihood of the data, will also maximize the likelihood (due to its monotonicity) and
+ the form is easier to deal with.
+Recall that the pdf of a Gaussian distribution is given by
+\[p_X(x \mid \mu, \sigma^2) = \frac{1}{\sqrt{2 \pi}\sigma}
+    \exp\{-\frac{1}{2 \sigma^2}(x - \mu)^2\}\;\;.\]
+If we assume that the process whereby we caught the fish made their
+weights independent and identically distributed, then 
+\[p(\data \mid \mu, \sigma^2) = \prod_i p_X(\ex{x}{i} \mid \mu,
+  \sigma^2)\;\;.\]
+The log likelihood function is then
+$$
+\log p(\data \mid \mu, \sigma^2)=-\frac{1}{2\sigma^2}\sum_{i=1}^N
+(\ex{x}{i}-\mu)^2-\frac{N}{2}\log \sigma^2 -\frac{N}{2}\log(2\pi)\;\;.
+$$
+By setting its derivatives with respect to $\mu$ and $\sigma^2$ equal
+to zero and solving
+\iffalse
+\footnote{In the exercises of this class, we often solve the system
+  $\nabla_{\theta} L(\theta)=0$ for $\theta$ where $\theta$ is the
+  parameter to be estimated (here, $(\mu,\sigma^{2})$) and $L$ is the
+  loss function to be minimized (here, $-\log p$). From calculus
+  class, we know that this is a necessary condition of $\theta$ being
+  a local extremum of $L:U \rightarrow \mathbb{R}$ (where $U$ is an
+  open subset of $\mathbb{R}^n$). If the loss function \(L\) is
+  convex, this is also a sufficient condition of  $\theta$ being a
+  global minimum of $L$. In exercises, we often consider a convex loss
+  function \(L\)  where our approach of solving $\nabla_{\theta}
+  L(\theta)=0$ is justified.     }
+\fi
+, verify that the maximum likelihood estimates of $\mu$ and
+$\sigma$ are given by
+$$\ml\mu=\frac{1}{N}\sum_{n=1}^N \ex{x}{n}$$
+$$\ml\sigma^2=\frac{1}{N}\sum_{n=1}^N (\ex{x}{n}-\ml\mu)^2$$ \;\;.
+
+Under what assumptions about the log likelihood function is this a
+valid approach for finding a global maximum?
+
+\note{This solution may be different than the estimator you have
+  previously seen for $\sigma^2$.  See the discussion at the bottom of
+Bishop page 27 for an explanation.} 
+
+
+
+\subsection{A simple model}
+%\question
+As it happens, we caught 6 mega-guppies (a tasty type of
+fish), with these weights:
+\[\data_0 = \{0.9, 1, 1.1, 1.2, 3, 3.1\}\;\;.\]
+We looked in the USDA handbook which told us that the variance of
+the weight of North American mega-guppies is 
+$\sigma^2 = 0.5^2 = 0.25$.
+
+Find the maximum likelihood value of $\ml\mu$ for $\data_0$ under this
+assumption.  What is
+the data likelihood $p(\data_0 | \ml\mu)$?  
+
+
+
+\subsection{A more complex model}
+%\question
+Now, what if we ignore the USDA value of $\sigma^2$ and decide to
+estimate it ourselves?
+Find the maximum likelihood estimates $\ml\mu$ and
+  $\ml\sigma^2$ of $\mu$ and $\sigma^2$ for our data set $\data_0$.
+  What is the data
+  likelihood $p(\data_0 | \ml\mu, \ml\sigma^2)$?
+  
+What are the advantages and disadvantages of this model versus
+the one with the fixed variance?
+
+
+
+\section{Parameter estimation [10 points]}
+
+\subsection{Force field}
+%\question
+A supervillain has our hero trapped in an invisible
+one-dimensional force-field (hero can only move in one dimension) and
+we know that the field has finite extent.  Using a drone flying overhead, we
+make several measurements of the hero's position.
+
+We wish to estimate the boundaries of the force-field given
+samples of the hero's position.
+
+If we knew that our data are drawn uniformly from a finite interval,
+$[a, b]$, then we might want to find $\ml{a}, \ml{b}$ to maximize the
+likelihood of $\data$.
+
+For our data set $\data = (\ex x1, \ex x2,\dots,\ex x n)$, what are the maximum likelihood parameter
+estimates $\ml{a}$ and $\ml{b}$?  What is the data likelihood $p(\data |
+\ml{a}, \ml{b})$?
+
+\note{Is this model of the hero data a good one? Why or why not?}
+
+
+
+
+
+
+\subsection{Pigeons}
+%\question
+Pigeons\footnote{``Probability-Matching in the Pigeon'',
+  Donald H. Bullock and M. E. Bitterman, {\it The American Journal of
+    Psychology} , Vol. 75, No. 4 (Dec., 1962), pp. 634-639}, when put
+in a situation where $\Pr(y=1) = p$ and $\Pr(y=0) = 1-p$, will select option 1 with
+probability $p$ and option 0 with probability $1 - p$.  What is the
+expected 0-1 loss for the pigeons' decision rule?  What is the optimal
+decision rule and its expected loss?
+
+Actually, people\footnote{``Banking on a Bad Bet:  Probability
+  Matching in Risky Choice is Linked to Expectation Generation,'' {\it
+    Psychological Science}, Vol. 22, No. 6 (2011).}
+ do this too!
+
+
+
+\section{Bayesian belief update [10 Points]}
+\subsection{Beta-Binomial practice}
+%\question
+\begin{parts}
+
+\part Label which of the lines in the figure below correspond to:
+\begin{enumerate}
+\item Beta(0.1, 0.1)
+\item Beta(1,1)
+\item Beta(2,2)
+\end{enumerate}
+\begin{figure}[h]
+\includegraphics[width=0.3\linewidth]{figures/beta.png}
+\end{figure}
+
+
+
+We are estimating the probability that a coin comes up heads.  
+
+
+\part What does it mean to have a prior of $\text{Beta}(2, 2)$?
+
+
+\part If that's the prior, what is the posterior after seeing 3 heads and 2 tails?  
+
+
+\part What are the mean and mode of that posterior?
+
+
+\part What does it mean to have a prior of $\text{Beta}(2, 3)$?
+
+
+\part If that's the prior, what is the posterior after seeing 3 heads and 2 tails?  
+
+
+\part What are the mean and mode of that posterior?
+
+
+% \part With a $\text{Beta}(0.1, 0.1)$ prior, what is the posterior after seeing
+% 3 heads and 2 tails?
+% 
+
+% \part Explain how that posterior differs from the one you would have
+% gotten with a $\text{Beta}(1, 1)$ prior or with a $\text{Beta}(2, 2)$
+% prior.
+% 
+
+\end{parts}
+
+\subsection{What's new?}
+%\question
+
+(Bishop 2.7) Consider a binomial random variable $x$ given by:
+$$\binom{N}{m}\mu^m (1-\mu)^{N-m} \quad (2.9)$$
+with prior distribution for $\mu$ given by the beta distribution:
+$$ \text{Beta}(\mu;a,b)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)} \mu^{a-1}(1-\mu)^{b-1} \quad (2.13)$$
+and suppose we have observed $m$ occurrences of $x=1$ and $l$
+occurrences of $x=0$.  Show that the posterior mean value of $\mu$
+lies between the prior mean and the maximum likelihood estimate for
+$\mu$.
+
+To do this, show that the posterior mean can be written as $\lambda$
+times the prior mean plus $(1-\lambda)$ times the maximum likelihood
+estimate, where $0 \le \lambda \le 1$. This illustrates the concept of
+the posterior distribution being a compromise between the prior
+distribution and the maximum likelihood solution.
+
+
+
+\section{Which dice factory? [15 points]}
+%\question
+
+You have just purchased a two-sided die, which can come up either 1 or
+2: \\
+\includegraphics[width=0.2\textwidth]{figures/twoSidedDie.jpg}
+
+You want to use your crazy die in some betting games with friends
+later this evening, but first you want to know the probability that it
+will roll a 1.
+
+You know it came either from factory 0 or factory 1, but not which.
+
+Factory 0 produces dice that roll a 1 with probability $\phi_0$.
+Factory 1 produces dice that roll a 1 with probability $\phi_1$.
+You believe initially that with probability $\eta_0$ that it came from
+factory 1.
+
+\begin{parts}
+
+\part
+Without seeing any rolls of this die, what would be your predicted
+probability that it would roll at 1?
+
+
+
+\part
+If we roll the die and observe the outcome, what can we infer
+about where the coin was manufactured?  
+
+
+
+
+\part
+More concretely, let's assume that:
+\begin{itemize}
+\item $\phi_0 = 1$: dice from factor 0 always roll a 1
+\item $\phi_1 = 0.5$: dice from factory 1 are fair (roll at 1 with
+  probability 0.5)
+\item $\eta_0 = 0.7$: we think with probability 0.7 that this die
+  came from factory 1
+\end{itemize}
+
+Now we roll it, and it comes up 1!  What is your posterior
+distribution on which factory it came from?  What is your predictive
+distribution on the value of the next roll?
+
+
+
+\part  You roll it again, and it comes up 1 again.
+
+Now, what is your posterior
+distribution on which factory it came from?  What is your predictive
+distribution on the value of the next roll?
+
+
+
+\part
+Instead, what if it rolls a 2 on the second roll?   
+
+
+
+\part In the general case (not using the numerical values we have been
+using) prove that if you have two observations, and you use them to
+update your prior in two steps (first conditioning on one observation
+and then conditioning on the second), that no matter which order you
+do the updates in you will get the same result.
+
+
+\end{parts}
+
+
+\section{Emergency Room [15 Points]}
+%\question
+
+You are a young doctor, working off your federal medical school
+tuition grant in southern North Dakota.  It's your fourth day on the
+job.  You are all alone in the emergency room (ER) when Pat comes in
+complaining of chest pain.
+
+You have to predict whether Pat is having a heart attack (H) or
+indigestion (I).  Your loss function is:
+\[L(g, a) = \begin{cases}
+         0 & \text{if $g = a$} \\
+         1 & \text{if $g = $"H" and $a = $"I"} \\
+         10 & \text{if $g = $"I" and $a = $"H"}
+\end{cases}
+\]
+
+You have seen three previous patients who exhibited chest pain,
+none of whom were actually having a heart attack.
+
+\begin{parts}
+  \part You use those three data points to make a point estimate of
+  the probability that Pat is having a heart attack and then use it to
+  make the prediction that minimizes the empirical risk.  What do you
+  predict?  What is the empirical risk of that prediction?
+
+\note{Do you think the empirical risk of this predictor is a good
+  measure of how useful it will be?}
+
+
+
+\part The next morning, you think more carefully and decide it would
+be better to forget all your previous experience and simply view each
+new patient with an open mind.  So, you use some ideas from this
+week's lectures.
+Let $Q$ be a random variable representing the probability that a
+random patient walking into your ER will be having a heart attack.
+You have a uniform prior on $Q$.
+
+What is the prediction that minimizes risk for a random patient walking
+into your ER?  What is the risk of that prediction?
+
+
+
+
+\part Later that afternoon, you figure it would be better to combine
+approaches.  So, what if you started with a uniform prior, but then
+observed three patients all of whom had indigestion?
+
+What would be your posterior distribution on $Q$?  What prediction
+should you make?  What is the risk (under the posterior distribution)
+of that prediction?
+
+
+
+
+\part That evening, really worried that you haven't had enough
+experience in these matters, and beginning to question your judgment
+about accepting this job, you decide to call your friend Chris who is
+working at Mass General.  Chris has seen 20 patients with indigestion
+and 1 with heart attack.  You use Chris's experience to construct a prior
+distribution, and then update it with your own (3 patients with
+indigestion).
+
+What would be your posterior distribution on $Q$?  What prediction
+should you make?  What is the risk (under the posterior distribution)
+of that prediction?
+
+
+
+
+\part At 2AM, questioning the meaning of life, you are quite sure that
+you should have become a poet.  You are so uncertain of your ability
+to make predictions that you call your former professor who is the
+head of the emergency medicine department at Gotham City Hospital.
+Herr Prof. Dr. Strangelove has seen 2000 patients with indigestion and
+20 with heart attack.  You use Dr. Strangelove's experience to
+construct a prior distribution, and then update it with your own (3
+patients with indigestion).
+
+What would be your posterior distribution on $Q$?  What prediction
+should you make?  What is the risk of that prediction?
+
+
+
+
+\end{parts}
+
+\note{Is there a potential problem with using Dr. Strangelove's data to
+  help construct your prior?}
+
+
+
+\section{Abby Normal [15 Points]}
+%\question
+
+Dr. Frahnkensteen is designing an artificial cranium, but she needs to
+know how big to make it; her design goal is to be a good fit to 80\%
+of brains.  So, she wants to get a good estimate of the distribution of
+the sizes of brains in the local population.  Since brains are kind of
+squishy, we will just consider the total volume of the brain, a
+one-dimensional quantity.
+
+The Dr. has considerable previous experience with brains and thinks
+their distribution is well modeled as a Gaussian distribution with 
+with a variance of 75cc.   But she's not at all sure about the mean of
+this current population.    She thinks it might be somewhere around
+1100cc. 
+
+\begin{parts}
+
+\part One way to express the Dr.'s uncertainty about the distribution of
+brain sizes in the local population is to put a Gaussian distribution
+{\em on the mean} of the local distribution.
+
+What are the hyper-parameters of this distribution?  Pick some to model
+Dr. F's situation (they're not completely determined by the story).
+
+
+
+\part Dr. F. sends her assistant Eygor out to get a new brain from the local
+population.  Eygor brings back one that is 1500cc!   What should the
+posterior be?
+
+Start by solving this problem algebraically.  Write down the prior and
+the observation likelihood function symbolically.  Then, derive a form
+for the posterior.
+
+What actual numerical values do you get, given your answer to the
+previous question, and the observation of 1500cc?
+
+
+
+\part How is the new mean related to the old mean and the observation?
+
+
+
+\part What can we say about how the variance behaves when an
+observation is made?
+
+
+
+\part What is Dr. F's. posterior predictive distribution?  First find
+it symbolically, then numerically.
+
+
+
+\part If Eygor brought back 10 more brains from the local morgue,
+would Dr. F. be able to update her prior in some way that is more
+efficient than doing the individual update procedure 10 times?
+
+
+\end{parts}
+
+
+
+
+\section{Coding Question: Two Gaussians [25 Points]}
+% \question
+We saw in lecture that if we know $p(X, Y)$ then we can derive an
+optimal decision rule, but we were sad to realize that we never really
+know $p(X, Y)$. One strategy for addressing this problem is to
+directly estimate $p(X, Y)$ and then use the estimate to derive a
+decision rule that would be optimal if our estimate were accurate.
+
+In this question we consider a generative model for a 
+dataset comprised of a mixture of two gaussians.  The data is
+generated as follows. Let $C_0 = N(\mu_0,\Sigma_0)$ and
+$C_1 = N(\mu_1,\Sigma_1)$ be two gaussians where $\mu_0$ and
+$\mu_1 \in \R^d$ are the means and $\Sigma_0$ and
+$\Sigma_1 \in \R^{d \times d}$ are two covariances.  Let
+$y \in \{0,1\}$ be a latent variable indicating if $x$ is drawn from
+$C_0$ or $C_1$.  The probability density of $x$ is defined as follows
+\begin{equation}
+P(x) = P(x|y=1)P(y=1) + P(x|y=0)P(y=0)
+\end{equation}
+
+Our goal is to derive and implement the bayes optimal classifier $\delta$ such that given a new point $x' \in \R^d$, 
+\begin{equation}
+\delta(x') =  \argmax_{y \in \{0,1\}} P(x'|y)
+\end{equation}
+We have provided two csv files train.csv and test.csv for the completion of this question.  
+\begin{parts}
+
+\part (Empirics) From train.csv, what is your maximum likelihood estimate for $P(y = 0)$ and $P(y = 1)$? What is your estimate for $\mu_1$ and $\mu_2$?  What is your estimate for $\Sigma_1$ and $\Sigma_2$? Do you notice something about $\Sigma_1$ and $\Sigma_2$?  (Hint: Don't overthink)
+
+\part (Theory) What is $P(y = 1|x)$ and $P(y = 0|x)$ proportional to
+  as a function of $y$?
+  %(Hint: apply bayes rule and ignore $P(x)$)  
+
+\part (Theory) Derive an equation for the decision boundary for $x \in \R^d$ where 
+\begin{equation}
+\ln(P(y=1|x)) = \ln(P(y=0|x))
+\end{equation}
+Here we compare the log likelihood as it simplifies the derivation.  Is this decision boundary (as a function of $x$) linear, quadratic, etc.?  How does the decision boundary simplify when $\Sigma_1 = \Sigma_2$?
+
+
+\part (Empirics) Using the decision boundary derived in part (c), classify the points in test.csv as $y = 0$ or $1$.  
+
+
+\end{parts}
+
+\section{Optional}
+
+\subsection{Throwing rocks:  asymmetric loss}
+%\question
+You just bought a new trebuchet and you are interested in making
+predictions about how far it can throw a rock.  Your ballistics
+officer tells you that optimizing the squared error of your
+predictions is not appropriate for the problem.   If your
+prediction is within some constant $c$ of the true value then they can
+use your predicted value to aim the trebuchet such that it hits the castle, but if
+your prediction off by more than $c$, then using the prediction for aiming will
+cause the trebuchet to miss.  However, the fact is, it's better for
+your prediction to be too short than too far.
+
+So, we will let
+\[L(a, g) = \begin{cases}
+    0 & \text{if $|a - g| < c$}\\
+    1 & \text{if $a - g > c$} \\
+    2 & \text{if $g - a > c$} \\
+  \end{cases}
+\]
+If you know that the range
+of the ball for these types of trebuchets is distributed as a Gaussian with mean $\mu$ and variance
+$\sigma^2$, what prediction minimizes loss $L$?
+
+(This is a little bit tricky.  It's fine to just write out an
+expression in terms of $c$, $\mu$, and $\sigma^2$.  )
+
+  
+
+\subsection{Copy that: discrete Bayes update and decision theory}
+
+You have just bought a copy machine at a garage sale.  You know it is
+one of two possible models, $m_1$ or $m_2$, but the tag has
+fallen off, so you're not sure which.
+
+You do know that $m_1$ machines have a $0.1$ ``error'' (bad copy)
+rate and  $m_2$ machines have a $0.2$ error rate.
+\begin{parts}
+\part You use your machine to make 1000 copies, and 140 of them are
+  bad.  What is the maximum likelihood estimate of the machine's error
+  rate?  Explain why.  (Remember that you're sure it's one of those two types of
+  machines).  \label{copyData}
+
+
+
+\part Looking more closely, you can see part of the label, and so you
+  think that, just based on the label it has a probability $0.2$ of
+  being an $m_1$ type machine and a probability $0.8$ of being an
+  $m_2$ type machine.  If you take that to be your prior, and
+  incorporate the data from part~\ref{copyData}, what is your
+  posterior distribution on the type of the machine?
+
+
+
+\part Given that posterior, what is the probability that the next copy
+  will be a failure?
+
+
+\part You intend to sell this machine on the web.  Because it's used,
+  you have to sell it with a warranty.  You can offer a gold or a
+  silver warranty.  If it has a gold warranty and the buyer runs it
+  for 1000 copies and gets more than 150 bad copies, then you are
+  obliged to pay \$1000 in damages; if it has a silver warranty, you
+  have to pay damages if it generates more than 300 bad copies in 1000
+  copies.  Your maximum reasonable asking price for a machine with a
+  gold warranty is \$300; for a machine with a silver warranty, it
+  is \$100.  You can assume the machine will sell at these prices.
+  What type of warranty should you offer on this machine?
+
+
+
+\part Under what conditions would it be better to just throw the
+  machine away, rather than try to sell it?
+
+\end{parts}
+
+\subsection{Dirichlet Priors}
+
+{\it Exercise borrowed from Stat180 at UCLA.  See Bishop, sections 2.1
+and 2.2 for background on Beta and Dirichlet distributions.}
+
+The Dirichlet distribution is a multivariate version of the Beta
+distribution.  When we have a coin with two outcomes, we really only
+need a single parameter $\theta$ to model the probability of heads.
+But now let's consider a ``thick'' coin that has three possible
+outcomes:  heads, tails, and edge.  Now we need two parameters:
+$\theta_h$ is the probability of heads, $\theta_t$ is the probability
+of tails, and then the probability of an edge is $1 - \theta_h -
+\theta_t$.  
+
+The random variables $(V,W) \in [0,1]$ and such that $V + W \leq 1$
+have a Dirichlet distribution with parameters $\alpha_1, \alpha_2,
+\alpha_3$ if their joint density is
+\[f(v,w) = v^{\alpha_1-1} w^{\alpha_2-1} (1 - v - w)^{\alpha_3-1}
+\frac{\Gamma(\alpha_1 + \alpha_2 + \alpha_3)}{\Gamma(\alpha_1)
+  \Gamma(\alpha_2) \Gamma(\alpha_3)}\;\;.\]
+This is a direct generalization of the Beta distribution.  (Note that
+$\Gamma$ refers to the Gamma function, which is a generalization of
+factorial.) 
+
+\begin{parts}
+\part
+\label{marginal}
+ If $(\theta_h, \theta_t)$ have a Dirichlet
+distribution as above, what is the marginal distribution of
+$\theta_h$?
+
+
+
+
+\part
+\label{posterior}
+Suppose you are playing with a thick coin, and get
+results $x^{(1)} \ldots x^{(n)}$, resulting in 
+$H$ heads and $T$ tails out of $n$ throws.  Given $\theta_h$ and
+$\theta_t$ the random variables $H$ and $T$ have a multinomial
+distribution: 
+\[\Pr(H,T | \theta_h, \theta_t) = \frac{n!}{H!T!(n-H-T)!}\theta_h^H \theta_t^T (1 -
+\theta_h - \theta_t)^{n-H-T}\;\;.\] Assume a uniform prior on the
+space of possible values of $\theta_h$ and $\theta_t$ (remembering
+that they are constrained such that $\theta_h \geq 0$, $\theta_t \geq
+0$, and $\theta_h + \theta_t \leq 1$).  What is the posterior
+distribution for $\theta_h$ and $\theta_t$?
+
+
+
+\part
+\label{predictive}
+In this same setting, what is the predictive
+distribution for getting another head?  That is, what's $\Pr(x^{(n+1)} =
+{\rm heads} \mid x^{(1)} \ldots x^{(n)})$?
+
+
+
+
+\part
+\label{posterior2}
+Now assume a Dirichlet prior for $\theta_h$ and
+$\theta_t$ with parameters $\alpha_1, \alpha_2, \alpha_3$.  What is
+the posterior in this case?  
+
+
+
+
+\part
+\label{predictive2}
+ In this same case, what is the predictive distribution?
+
+
+\part If you assume a squared-error loss on the predicted parameter,
+  that is, 
+\[L(\theta, \hat{\theta}) = (\theta - \hat{\theta})^2\;\;,\]
+what is the Bayes-optimal estimate of $\theta_h$ and $\theta_t$?  
+
+
+
+
+\part
+As $n \rightarrow \infty$, how do optimal estimates relate to
+  the maximum likelihood estimates and to the prior?
+
+
+\end{parts}
+
+\subsection{More fun with Dirichlet}
+
+Given a parameterized family of probability
+models $\Pr(x \mid \theta)$ and a data set $D = (x^{(1)}, \ldots , x^{(n)})$
+comprised of independent samples $x^{(i)} \approx \Pr(x \mid \theta)$, we
+fit the model to the data so as to maximize the likelihood (or
+log-likelihood) of all samples. This gives the maximum-likelihood (ML)
+estimate of the parameters:
+\[\hat{\theta}_{ML} = {\rm arg} \max_{\theta} \log \Pr(D \mid \theta)	\]
+
+This approach does not express any prior bias as to which values of $\theta$
+we should prefer when data is limited. 
+
+In the sequel, we consider a regularized approach to parameter
+estimation. Here, we specify a prior model $\Pr(\theta)$ over the set of
+allowed parameter settings $\Theta$. Given a prior model, we may then employ
+Bayes' rule to compute the posterior probability of $\theta$ given the 
+observations: 
+\[\Pr(\theta \mid D) = \frac{\Pr(D \mid \theta) \Pr(\theta)}{\Pr(D)}\]
+where 
+\[\Pr(D) = \int_{\Theta} \Pr(D \mid \theta) \Pr(\theta) d\theta\] 
+Then, we fit the model to the data by maximizing the (log-)
+probability of $\theta$ conditioned  on the data, 
+\begin{eqnarray*}
+\hat{\theta}_{MAP} & = & {\rm arg} \max_\theta \log \Pr(\theta \mid D)\\
+& = & {\rm arg} \max_\theta \{\log \Pr(D \mid \theta) + \log \Pr(\theta)-\log \Pr(D)\}\\
+& = & {\rm arg} \max_\theta \{\log \Pr(D \mid \theta) + \log \Pr(\theta)\}
+\end{eqnarray*}
+
+Note that we have dropped the $-\log \Pr(D)$ term as this does not depend
+upon $\theta$ and does not affect the parameter estimate. Hence, we do not
+need to explicitly evaluate the integral in the denominator. This may
+be viewed as a penalized log-likelihood criterion, i.e. we maximize
+$J(\theta) = \log \Pr(D; \theta)+f(\theta)$ subject to the
+regularization penalty $f(\theta) =\log \Pr(\theta)$. The parameter
+estimate $\hat{\theta}_{MAP}$ is known as the maximum a posteriori (MAP)
+estimate.  
+
+In this problem you will construct MAP estimates for the probabilities
+of a (potentially biased) $M$ -sided die, i.e. $x^{(i)} \in \{1, \ldots ,
+M\}$. We consider the fully-parameterized representation $\Pr(x=k) =
+\theta_k$, where $0 \leq \theta_k \leq 1$ for $k = 1, \dots,M$ and
+$\sum_k \theta_k = 1$. This simple model has many relevant
+applications.
+
+Consider a document classification task, where we need
+class-conditional distributions over words in the documents. Suppose
+we only consider words $1, \ldots , M$ (for relatively large $M$). Each
+word in the document is assumed to have been drawn at random from the
+distribution $\Pr(x = k \mid y; \theta) = \theta_{k \mid y}$, where
+$\sum_k \theta_{k\mid y} = 1$ for each class $y$. Thus the selection
+of words according to the distribution $\theta_{k \mid y}$ can 
+be interpreted as a (biased) $M$-sided die. 
+
+Now, the probability of generating all words $x^{(1)}, \dots , x^{(n)}$ in a
+document of length $n$ would be 
+\[\Pr(D \mid y; \theta) = \prod_{i=1}^n \Pr(x^{(i)} \mid y; \theta) =
+\prod_{i=1}^n \theta_{x^{(i)} \mid y}\]
+assuming the document belongs to class $y$. Note that this model cares
+about how many times each word occurs in the document. It is a valid
+probability model over the set of words in the document. 
+
+Since we typically have very few documents per class, it is important
+to regularize the parameters, i.e., provide a meaningful prior answer
+to the class conditional distributions. 
+
+Let's start by briefly revisiting ML estimation of the (biased)
+$M$-sided die. Similarly to calculations you have already performed, the
+ML estimate of the parameter $\theta$ from $n$ samples is given by the
+empirical distribution: 
+\[\hat{\theta}_x = \frac{n(x)}{n} \]
+where $n(x)$ is the number of times value $x$ occurred in $n$
+samples. The count $n(x)$ is also a {\it sufficient statistic} for
+$\theta_x$ as it is all we need to know  from the available $n$ samples
+in order to estimate $\theta_x$.  
+
+Next, we consider MAP estimation. To do so, we must introduce a prior
+distribution over the $\theta$'s. A natural choice for this problem is the
+Dirichlet distribution
+\[ \Pr(\theta; \beta) = \frac{1}{Z(\beta)}\prod_{k=1}^M
+\theta_k^{\beta_k}\] with non-negative hyperparameters $\beta =
+(\beta_k > 0, k = 1, \ldots , M)$ and where $Z(\beta)$ is just the
+normalization constant (which you saw earlier and which you do not
+need to evaluate in this problem).
+
+\begin{parts}
+\part First, consider this prior model (ignoring the data for the
+  moment). What value of $\theta$ is most likely under this prior
+  model? That is, compute 
+\[\hat{\theta}(\beta) = {\rm arg} \max_{\theta} \log \Pr(\theta;
+\beta)\]
+This is the {\em a priori} estimate of $\theta$ before observing any
+data. 
+
+
+
+
+\part Next, given the data $D$, compute the MAP estimate of $\theta$
+as a function of the hyperparameters $\beta$ and the data $D$ (use the
+sufficient statistics $n(x)$): 
+\[\hat{\theta}_{MAP} (D; \beta) = {\rm arg} \max_{\theta} \log \Pr(\theta
+\mid D;  \beta)\]
+Note that you do not need to calculate $Z(\beta)$ in order to perform this
+optimization; you can optimize the penalized log-likelihood $J(\theta) =
+\log \Pr(D \mid \theta)+f(\theta;\beta)$ with a simple penalty
+function $f(\theta ; \beta)$, as 
+discussed above. Thus we do not have to evaluate the full posterior
+distribution $\Pr(\theta \mid D; \beta)$ in order to perform the
+regularization.  
+
+
+
+\part Show that your MAP estimate may be expressed as a convex
+  combination of the a priori estimate $\hat{\theta}(\beta)$ and the
+  ML estimate $\hat{\theta}_{ML}(D)$. The means that we may write  
+\[\hat{\theta}_{MAP}(D ; \beta) = (1-\lambda) \hat{\theta}_{ML}(D) +
+\lambda \hat{\theta}(\beta)\] for some $\lambda \in [0, 1]$. Note that
+the same convex combination holds for each component
+$\theta_x$. Determine $\lambda$ as a function of the number of samples
+$n$ and the hyperparameters $\beta$.
+
+
+\end{parts}
+
+As this shows, one way of thinking of a prior distribution is that it
+is a proxy for any data we have observed in the past but no
+longer have available. The normalized parameters $\hat{\beta}_i =
+\beta_i/N$, where $N = \sum_i \beta_i$, express our prior estimate of
+the parameters $\theta$ while the normalization parameter $N$
+expresses how strongly we believe in that prior estimate.
+
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

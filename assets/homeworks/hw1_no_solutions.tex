@@ -1,8 +1,8 @@
 %
 \documentclass[11pt]{exam}
 
-\printanswers % If you want to print answers
-%\noprintanswers % If you don't want to print answers
+%\printanswers % If you want to print answers
+\noprintanswers % If you don't want to print answers
 
 %\addpoints % if you want to count the points
 %\noaddpoints % if you don't want to count the points
@@ -273,8 +273,7 @@ We are estimating the probability that a coin comes up heads.
 \subsection{What's new?}
 %\question
 
-(Bishop 2.7) Consider a binomial random variable $x$ given by:
-$$\binom{N}{m}\mu^m (1-\mu)^{N-m} \quad (2.9)$$
+(Bishop 2.7) Consider a bernoulli random variable $x$ with mean $\mu$ 
 with prior distribution for $\mu$ given by the beta distribution:
 $$ \text{Beta}(\mu;a,b)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)} \mu^{a-1}(1-\mu)^{b-1} \quad (2.13)$$
 and suppose we have observed $m$ occurrences of $x=1$ and $l$
@@ -559,7 +558,7 @@ We have provided two csv files train.csv and test.csv for the completion of this
 Here we compare the log likelihood as it simplifies the derivation.  Is this decision boundary (as a function of $x$) linear, quadratic, etc.?  How does the decision boundary simplify when $\Sigma_1 = \Sigma_2$?
 
 
-\part (Empirics) Using the decision boundary derived in part (c), classify the points in test.csv as $y = 0$ or $1$.  
+\part (Empirics) Using the decision boundary derived in part (c), classify the points in test.csv as $y = 0$ or $1$.  It suffices to write down the form of the decision boundary and associated decision rule.   
 
 
 \end{parts}

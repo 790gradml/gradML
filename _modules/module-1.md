@@ -18,11 +18,13 @@ Sep/6
 Sep/10
 : **Lecture 2**{: .label .label-red} [Parameter estimation](/main/Lectures/#lecture-2)
     : [HW0](/main/homeworks/#homework-0) due <br> [HW1](/main/homeworks/#homework-1) out 
-        : [[M1]](/info/books/#primary-textbooks) <br> Ch4.2, 4.6
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch4.2
 
 
 Sep/12
-: **Lecture 3**{: .label .label-red} Bayesian view of estimation
+: **Lecture 3**{: .label .label-red} Bayesian view of estimation  
+    : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 4.6.1--4.6.4
 
 Sep/13
 : **Problem session**{: .label .label-purple}
@@ -30,9 +32,12 @@ Sep/13
 Sep/17
 : **Lecture 4**{: .label .label-red} Linear regression 
     : HW1 due  <br> HW2 out
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 11.1--11.3
 
 Sep/19
 : **Lecture 5**{: .label .label-red} Bayesian linear regression 
+    : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 11.7.1--11.7.5
 
 Sep/20
 : **Student Holiday!**{: .label .label-gray} No problem session

@@ -23,7 +23,7 @@ Submit homeworks to [gradescope](https://canvas.mit.edu/courses/28217/external_t
 {% for hw in filtered_homeworks %}
 ## {{ hw.title }}
 
-- **Release Date:** {{ hw.release_date | date: "%B %d, %Y" }}
+<!-- - **Release Date:** {{ hw.release_date | date: "%B %d, %Y" }} -->
 - **Due Date:** {{ hw.due_date | date: "%B %d, %Y" }}
 - {% if hw.pdf %} **[PDF]({{ hw.pdf }})** {% else %} **PDF:** *To be released* {% endif %}
 - {% if hw.sln %} **[Solution]({{ hw.sln }})** {% else %} **Solution:** *To be released* {% endif %}

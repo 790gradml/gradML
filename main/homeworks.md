@@ -7,7 +7,7 @@ nav_order: 1
 
 Submit homeworks to [gradescope](https://canvas.mit.edu/courses/28217/external_tools/369).
 
-{% assign limit_value = 2 %}  <!-- Set this to the number of hws to display-->
+{% assign limit_value = 3 %}  <!-- Set this to the number of hws to display-->
 {% assign sorted_homeworks = site.homeworks | sort: 'release_date' %}
 {% assign filtered_homeworks = sorted_homeworks | slice: 0, limit_value %}
 
@@ -23,7 +23,7 @@ Submit homeworks to [gradescope](https://canvas.mit.edu/courses/28217/external_t
 {% for hw in filtered_homeworks %}
 ## {{ hw.title }}
 
-- **Release Date:** {{ hw.release_date | date: "%B %d, %Y" }}
+<!-- - **Release Date:** {{ hw.release_date | date: "%B %d, %Y" }} -->
 - **Due Date:** {{ hw.due_date | date: "%B %d, %Y" }}
 - {% if hw.pdf %} **[PDF]({{ hw.pdf }})** {% else %} **PDF:** *To be released* {% endif %}
 - {% if hw.sln %} **[Solution]({{ hw.sln }})** {% else %} **Solution:** *To be released* {% endif %}

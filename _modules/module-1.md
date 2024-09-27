@@ -44,6 +44,8 @@ Sep/20
 
 Sep/24
 : **Lecture 6**{: .label .label-red} Bias/variance, regularization 
+    : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 4.7, 11.3
 
 Sep/26
 : **Lecture 7**{: .label .label-red} Evaluating estimators, consistency

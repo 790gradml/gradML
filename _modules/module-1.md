@@ -49,6 +49,10 @@ Sep/24
 
 Sep/26
 : **Lecture 7**{: .label .label-red} Evaluating estimators, consistency
+    : <br>
+        : [[JWHT]](/info/books/#primary-textbooks) 5.1 (best) <br> 
+        : [[M1]](/info/books/#primary-textbooks) 5.4.3 (brief) <br> 
+		: [[SB]](/info/books/#primary-textbooks) 11.2 (optional) <br> 
 
 Sep/27
 : **Problem session**{: .label .label-purple}
@@ -56,9 +60,14 @@ Sep/27
 Oct/1
 : **Lecture 8**{: .label .label-red} Classification, ranking 
     : HW2 due  <br>  HW3 out
+	  : [[M1]](/info/books/#primary-textbooks) <br> 10.1, 10.2, 10.3.1--3
+	  : [[B]](/info/books/#primary-textbooks) <br> 4.1--4.3  (another view)
 
 Oct/3
-: **Lecture 9**{: .label .label-red} Non-linear predictors: basis functions, <br> trees, forests, nearest-neighbor
+: **Lecture 9**{: .label .label-red} Online learning, regret
+    : <br>
+        : [[SB]](/info/books/#primary-textbooks) <br> Ch 21
+
     
 Oct/4
 : **Problem session**{: .label .label-purple}

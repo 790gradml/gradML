@@ -60,7 +60,7 @@ Sep/27
 Oct/1
 : **Lecture 8**{: .label .label-red} Classification, ranking 
     : HW2 due  <br>  HW3 out
-	  : [[M1]](/info/books/#primary-textbooks) <br> 10.1, 10.2, 10.3.1--3
+	  : [[M1]](/info/books/#primary-textbooks) <br> 9.1, 9.2.1--9.2.3, 9.3.1, 9.4, 10.1, 10.2, 10.3.1--3
 	  : [[B]](/info/books/#primary-textbooks) <br> 4.1--4.3  (another view)
 
 Oct/3

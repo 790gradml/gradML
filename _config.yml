@@ -108,6 +108,7 @@ collections:
   announcements:
   homeworks:
   lectures:
+  projects:
 
   # Define a collection named "resource", its documents reside in the "_resource" directory
   # resource:

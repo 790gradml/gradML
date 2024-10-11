@@ -75,9 +75,13 @@ Oct/4
 Oct/8
 : **Lecture 10**{: .label .label-red} Neural networks
     : HW3 due  <br> MP1 out
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 18.1-18.4, 13.1
+        : [[ISLP]](/info/books/#primary-textbooks) <br> Ch 8.1, 8.2 (for lecture 10 first part)
 
 Oct/10
 : **Lecture 11**{: .label .label-red} Optimization, regularization
+    : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 13.2, 13.3, 15.1, 15.2
 
 Oct/11
 : **Problem session**{: .label .label-purple}

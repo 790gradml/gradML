@@ -3,8 +3,6 @@ title: "Exams"
 nav_order: 4
 ---
 
-# Projects
-
 ## Midterm
 
 - [Practice Test](/assets/exams/exam1/6_7900__Practice_Exam_1__Fall_2024.pdf)

@@ -92,7 +92,7 @@ Oct/15
 Oct/17
 : **Lecture 12**{: .label .label-red} Neural network models and problem structures
     : MP1 due
-        : [[B1]](/info/books/#primary-textbooks) <br> Ch 10, 13, 12
+        : [[B2]](/info/books/#primary-textbooks) <br> Ch 10, 13, 12
 
 Oct/18
 : **Review sessions**{: .label .label-blue}

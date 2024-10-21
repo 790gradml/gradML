@@ -92,7 +92,7 @@ Oct/15
 Oct/17
 : **Lecture 12**{: .label .label-red} Neural network models and problem structures
     : MP1 due
-        : [[B2]](/info/books/#primary-textbooks) <br> Ch 10, 13, 12
+        : [[B2]](/info/books/#primary-textbooks) <br> Ch 10, 13
 
 Oct/18
 : **Review sessions**{: .label .label-blue}
@@ -100,6 +100,7 @@ Oct/18
 Oct/22
 : **Lecture 13**{: .label .label-red} Over-parameterization, generalization
     : HW4 out
+        : [[B2]](/info/books/#primary-textbooks) <br> Ch 12
 
 Oct/24
 : **Midterm**{: .label .label-yellow} 7PM--9PM  (No lecture)

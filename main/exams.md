@@ -7,6 +7,7 @@ nav_order: 4
 
 ## Midterm
 
+- [Solutions](/assets/exams/exam1/6_7900_Fall24_Exam1_Solutions.pdf)
 
 The midterm exam will be Thursday 10/24 from 7PM - 9PM.
 Rooms:

@@ -75,9 +75,13 @@ Oct/4
 Oct/8
 : **Lecture 10**{: .label .label-red} Neural networks
     : HW3 due  <br> MP1 out
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 18.1-18.4, 13.1
+        : [[JWHT]](/info/books/#primary-textbooks) <br> Ch 8.1, 8.2 (for lecture 10 first part)
 
 Oct/10
 : **Lecture 11**{: .label .label-red} Optimization, regularization
+    : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 13.2, 13.3, 15.1, 15.2
 
 Oct/11
 : **Problem session**{: .label .label-purple}
@@ -88,6 +92,7 @@ Oct/15
 Oct/17
 : **Lecture 12**{: .label .label-red} Neural network models and problem structures
     : MP1 due
+        : [[B2]](/info/books/#primary-textbooks) <br> Ch 10, 13
 
 Oct/18
 : **Review sessions**{: .label .label-blue}
@@ -95,6 +100,7 @@ Oct/18
 Oct/22
 : **Lecture 13**{: .label .label-red} Over-parameterization, generalization
     : HW4 out
+        : [[B2]](/info/books/#primary-textbooks) <br> Ch 12
 
 Oct/24
 : **Midterm**{: .label .label-yellow} 7PM--9PM  (No lecture)

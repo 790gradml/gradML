@@ -118,21 +118,21 @@ Nov/1
 : **Problem session**{: .label .label-purple}
 
 Nov/5
-: **Lecture 16**{: .label .label-red} Modeling densities
+: **Lecture 16**{: .label .label-red} Temporal and spatial data
     : HW4 due  <br> HW5 out
 
 Nov/7
-: **Lecture 17**{: .label .label-red} Dimensionality reduction
+: **Lecture 17**{: .label .label-red} Handling missing data
 
 Nov/8
 : **Problem session**{: .label .label-purple}
 
 Nov/12
-: **Lecture 18**{: .label .label-red} Handling missing data
+: **Lecture 18**{: .label .label-red} Modeling densities
     : HW5 due  <br> HW6 out
 
 Nov/14
-: **Lecture 19**{: .label .label-red} Temporal and spatial data
+: **Lecture 19**{: .label .label-red} Dimensionality reduction
 
 Nov/15
 : **Problem session**{: .label .label-purple}

@@ -110,9 +110,14 @@ Oct/25
 
 Oct/29
 : **Lecture 14**{: .label .label-red} Robustness, uncertainty quantification
+    : <br>
+        : [[Here]](https://adversarial-ml-tutorial.org/linear_models/) <br> Ch 1 & 2
+        : [[M2]](/info/books/#primary-textbooks) <br> Ch 19.8
 
 Oct/31
 : **Lecture 15**{: .label .label-red} Domain adaptation, covariate shift
+    : <br>
+        : [[M2]](https://adversarial-ml-tutorial.org/linear_models/) <br> 19.1, 19.2, 19.5.2, 19.5.3, 19.5.4
 
 Nov/1
 : **Problem session**{: .label .label-purple}
@@ -120,6 +125,7 @@ Nov/1
 Nov/5
 : **Lecture 16**{: .label .label-red} Temporal and spatial data
     : HW4 due  <br> HW5 out
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 17 - 17.2
 
 Nov/7
 : **Lecture 17**{: .label .label-red} Handling missing data

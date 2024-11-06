@@ -7,7 +7,7 @@ nav_order: 2
 
 Lecture recordings are uploaded to [Panopto](https://mit.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b2079bc7-0ca3-4fdf-a3e5-b1d4014c37ee%22).
 
-{% assign limit_value = 15 %}  <!-- Set this to the number of lectures to display-->
+{% assign limit_value = 16 %}  <!-- Set this to the number of lectures to display-->
 {% assign sorted_lectures = site.lectures | sort: 'id' %}
 {% assign filtered_lectures = sorted_lectures | slice: 0, limit_value %}
 

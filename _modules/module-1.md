@@ -129,6 +129,9 @@ Nov/5
 
 Nov/7
 : **Lecture 17**{: .label .label-red} Handling missing data
+    : <br>
+        : [[Here]](https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/book/10.1002/9781119482260) <br> Ch 1 
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 1.5.5
 
 Nov/8
 : **Problem session**{: .label .label-purple}

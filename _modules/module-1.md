@@ -138,20 +138,20 @@ Nov/8
 
 Nov/12
 : **Lecture 18**{: .label .label-red} Modeling densities
-    : HW5 due  <br> HW6 out
 
 Nov/14
 : **Lecture 19**{: .label .label-red} Dimensionality reduction
+    : HW5 due  <br> HW6 out
 
 Nov/15
 : **Problem session**{: .label .label-purple}
 
 Nov/19
 : **Lecture 20**{: .label .label-red} Graphical models 
-    : HW6 due  <br>  MP2 out
 
 Nov/21
 : **Lecture 21**{: .label .label-red} Modeling complex densities
+    : HW6 due  <br>  MP2 out
 
 Nov/22
 : **Problem session**{: .label .label-purple}

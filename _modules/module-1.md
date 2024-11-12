@@ -138,6 +138,8 @@ Nov/8
 
 Nov/12
 : **Lecture 18**{: .label .label-red} Modeling densities
+    : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 20-20.1
 
 Nov/14
 : **Lecture 19**{: .label .label-red} Dimensionality reduction

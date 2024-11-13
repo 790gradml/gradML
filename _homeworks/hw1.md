@@ -10,4 +10,6 @@ additional_links:
     link: "https://canvas.mit.edu/courses/28217/assignments/362416"
   - name: "Raw Tex"
     link: "/assets/homeworks/hw1_no_solutions.tex"
+  - name: "8.1 Solution"
+    link: "/assets/homeworks/hw1-8p1-sln.pdf"
 ---

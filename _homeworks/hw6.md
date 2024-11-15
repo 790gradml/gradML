@@ -8,4 +8,7 @@ pdf: "/assets/homeworks/hw6.pdf"
 # additional_links:
 #   - name: "Raw Tex"
 #     link: "/assets/homeworks/HW5_tex_no_solutions.zip"
+additional_links:
+  - name: "Raw Tex"
+    link: "/assets/homeworks/HW6_tex_no_solutions.zip"
 ---

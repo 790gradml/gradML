@@ -150,16 +150,17 @@ Nov/15
 
 Nov/19
 : **Lecture 20**{: .label .label-red} Graphical models 
+    : MP2 out
 
 Nov/21
 : **Lecture 21**{: .label .label-red} Modeling complex densities
-    : HW6 due  <br>  MP2 out
 
 Nov/22
 : **Problem session**{: .label .label-purple}
 
 Nov/26
 : **Lecture 22**{: .label .label-red} Diffusion and flow models
+    : HW6 due
 
 Nov/28
 : **Holiday!**{: .label .label-gray} No lecture

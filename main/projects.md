@@ -7,7 +7,7 @@ nav_order: 3
 
 Submit projects to [gradescope](https://canvas.mit.edu/courses/28217/external_tools/369).
 
-{% assign limit_value = 1 %}  <!-- Set this to the number of projects to display-->
+{% assign limit_value = 2 %}  <!-- Set this to the number of projects to display-->
 {% assign sorted_projects = site.projects | sort: 'due_date' %}
 {% assign filtered_projects = sorted_projects | slice: 0, limit_value %}
 

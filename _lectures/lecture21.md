@@ -1,6 +1,6 @@
 ---
-title: "Lecture 20"
-id: "20"
+title: "Lecture 21"
+id: "21"
 # notes: "/assets/lectures/lecture_15_notes.pdf"
 slides: "https://www.dropbox.com/scl/fi/7lmcyeglhmrvxma66whf8/lecture21_slides.pdf?rlkey=kr4jbplu8pyp3i2zzbl9jnlla&st=efx5w5cj&dl=0"
 # recording: "https://canvas.mit.edu/courses/28217/external_tools/369"

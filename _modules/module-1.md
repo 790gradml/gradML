@@ -166,7 +166,7 @@ Nov/28
 : **Holiday!**{: .label .label-gray} No lecture
 
 Nov/29
-: **Holiday!**{: .label .label-gray} No problem session
+: **Holiday!!**{: .label .label-gray} No problem session
 
 Dec/3
 : **Lecture 23**{: .label .label-red} Working with foundation models

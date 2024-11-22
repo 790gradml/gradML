@@ -165,7 +165,7 @@ Nov/26
 Nov/28
 : **Holiday!**{: .label .label-gray} No lecture
 
-Nov/15
+Nov/29
 : **Holiday!**{: .label .label-gray} No problem session
 
 Dec/3

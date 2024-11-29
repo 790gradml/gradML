@@ -156,7 +156,7 @@ Nov/19
 
 Nov/21
 : **Lecture 21**{: .label .label-red} Variational auto-encoders
-    :
+    : <br>
         : [[M2]](/info/books/#primary-textbooks) <br> Ch 20; 21.1--2
 
 Nov/22
@@ -175,7 +175,7 @@ Nov/29
 
 Dec/3
 : **Lecture 23**{: .label .label-red} Flow-matching models
-    :
+    : <br>
         : [[M2]](/info/books/#primary-textbooks) <br> Ch 23.1
 
 Dec/5

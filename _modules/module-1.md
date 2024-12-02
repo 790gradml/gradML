@@ -1,4 +1,4 @@
----
+(---
 title: Class schedule
 ---
 **Date**
@@ -179,7 +179,7 @@ Dec/3
         : [[M2]](/info/books/#primary-textbooks) <br> Ch 23.1
 
 Dec/5
-: **Lecture 24**{: .label .label-red} Applications in the small-data regime
+: **Lecture 24**{: .label .label-red} Some (more) ways to do machine learning wrong!
 
 Dec/6
 : **No problem session**{: .label .label-gray} 

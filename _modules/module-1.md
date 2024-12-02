@@ -137,30 +137,35 @@ Nov/8
 : **Problem session**{: .label .label-purple}
 
 Nov/12
-: **Lecture 18**{: .label .label-red} Modeling densities
+: **Lecture 18**{: .label .label-red} Dimensionality reduction
     : <br>
         : [[M1]](/info/books/#primary-textbooks) <br> Ch 20-20.1
 
 Nov/14
 : **Lecture 19**{: .label .label-red} Dimensionality reduction
     : HW5 due  <br> HW6 out
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 20-20.4.10
 
 Nov/15
 : **Problem session**{: .label .label-purple}
 
 Nov/19
-: **Lecture 20**{: .label .label-red} Graphical models 
+: **Lecture 20**{: .label .label-red} Modeling complex densities 
     : MP2 out
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 16.3.1--3; 3.5; 8.7; 21.4
 
 Nov/21
-: **Lecture 21**{: .label .label-red} Modeling complex densities
+: **Lecture 21**{: .label .label-red} Variational auto-encoders
+    : <br>
+        : [[M2]](/info/books/#primary-textbooks) <br> Ch 20; 21.1--2
 
 Nov/22
 : **Problem session**{: .label .label-purple}
 
 Nov/26
-: **Lecture 22**{: .label .label-red} Diffusion and flow models
+: **Lecture 22**{: .label .label-red} Diffusion models
     : HW6 due
+        : [[M2]](/info/books/#primary-textbooks) <br> Ch 25.1--4  
 
 Nov/28
 : **Holiday!**{: .label .label-gray} No lecture
@@ -169,7 +174,9 @@ Nov/29
 : **Holiday!!**{: .label .label-gray} No problem session
 
 Dec/3
-: **Lecture 23**{: .label .label-red} Working with foundation models
+: **Lecture 23**{: .label .label-red} Flow-matching models
+    : <br>
+        : [[M2]](/info/books/#primary-textbooks) <br> Ch 23.1
 
 Dec/5
 : **Lecture 24**{: .label .label-red} Applications in the small-data regime

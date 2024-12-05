@@ -9,7 +9,7 @@ nav_order: 4
 
 The midterm exam will be Friday 12/20 from 9:00AM - 12:00PM in [Dupont Gym](http://whereis.mit.edu/?go=W31)
 
-You may bring in 2 "cheat sheet2", with writing on both sides, written or printed in any manner that doesn't require specialized instruments to read.  Don't worry about cramming formulas: we'll give you ones you are likely to need.
+You may bring in 2 "cheat sheets", with writing on both sides, written or printed in any manner that doesn't require specialized instruments to read.  Don't worry about cramming formulas: we'll give you ones you are likely to need.
 You will not need a calculator! 
 
 > If you need special arrangements due to a documented disability, please contact lpk@mit.edu right away.

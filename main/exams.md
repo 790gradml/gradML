@@ -19,6 +19,12 @@ The exam will cover:
 - HW 1--7
 - Projects 1--2
 
+The homework and project are the best definition of the scope of the exam. Additional problems below. Note that we don't have practice problems directly relating to Project 2 or some topics noted at the top of the practice material, but that does not imply they will not be covered on the exam.
+
+- [Practice Problems](/assets/exams/final/final_exam_practice.pdf)
+- [Practice Problems with Solutions](/assets/exams/final/final_exam_practice_solutions.pdf)
+
+
 
 ## Midterm
 

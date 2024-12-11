@@ -1,7 +1,7 @@
 ---
 title: "Lecture 22"
 id: "22"
-# notes: "/assets/lectures/lecture_15_notes.pdf"
+notes: "/assets/lectures/lecture_22_notes.pdf"
 slides: "https://www.dropbox.com/scl/fi/eihn83ky8o93qkfmdhfql/lecture22_slides.pdf?rlkey=h3rk14kb21ya2htyqpu9qeu9i&st=j1560wqo&dl=0"
 # recording: "https://canvas.mit.edu/courses/28217/external_tools/369"
 # additional_links:

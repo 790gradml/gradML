@@ -24,6 +24,11 @@ The homework and project are the best definition of the scope of the exam. Addit
 - [Practice Problems](/assets/exams/final/final_exam_practice.pdf)
 - [Practice Problems with Solutions](/assets/exams/final/final_exam_practice_solutions.pdf)
 
+Here are some additional practice problems.  The hardest ones are probably more difficult than our exam will be and a few are at the margins of material we have covered. Please excuse the formatting---we found pdfs for these problems but don't have the source.
+
+- [Extra Practice Problems](/assets/exams/final/extra_practice_problems_nosols.pdf)
+- [Extra Practice Problems with Solutions](/assets/exams/final/extra_practice_problems_sols.pdf)
+
 
 
 ## Midterm

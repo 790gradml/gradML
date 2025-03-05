@@ -78,7 +78,7 @@ computationally simpler. However, it cannot be used to sample new data.
 
 
 
-# Discrimitive Classifiers: Logistic Regression
+# Discriminative Classifiers: Logistic Regression
 
 Logistic Regression can be viewed as an approach of fitting a
 discriminative model. It assumes a parametric form of the conditional

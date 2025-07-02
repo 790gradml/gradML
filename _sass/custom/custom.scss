@@ -64,3 +64,19 @@ summary {
     height: 100%;
   }
 }
+
+// Footer link spacing
+.site-footer {
+  a {
+    display: block;
+    padding: $sp-1 0;
+    
+    &:first-child {
+      padding-top: 0;
+    }
+    
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

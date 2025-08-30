@@ -122,7 +122,7 @@ defaults:
       type: staffers
     values:
       layout: staffer
-      subpath: "/assets/images/"
+      subpath: "/assets/images/staffers/"
   - scope:
       path: ""
       type: modules

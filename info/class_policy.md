@@ -35,7 +35,7 @@ The grade-assignment cutoffs will be *no higher than*: A - 90%, B - 80%, C - 70%
 
 Exams:
 - The midterm exam will be on Thursday October 23, 7PM - 9PM. <br>
-A conflict exam will be offered on Friday October 25, 8AM - 10AM.
+A conflict exam will be offered on Friday October 24, 8AM - 10AM.
 - The final exam will be during finals period, as scheduled by the registrar. Please plan to be physically present at MIT for the exam.
 - Exams will cover content from homework *and* projects.
 

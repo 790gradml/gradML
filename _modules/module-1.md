@@ -134,3 +134,6 @@ Dec/2
 
 Dec/4
 : **Lecture 24**{: .label .label-red}
+
+Dec/9
+: **Review**{: .label .label-blue} -->

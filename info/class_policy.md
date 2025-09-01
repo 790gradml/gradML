@@ -34,7 +34,7 @@ The grade break-down will be as follows:
 The grade-assignment cutoffs will be *no higher than*: A - 90%, B - 80%, C - 70%.
 
 Exams:
-- The midterm exam will be on Thursday October 24, 7PM - 9PM. <br>
+- The midterm exam will be on Thursday October 23, 7PM - 9PM. <br>
 A conflict exam will be offered on Friday October 25, 8AM - 10AM.
 - The final exam will be during finals period, as scheduled by the registrar. Please plan to be physically present at MIT for the exam.
 - Exams will cover content from homework *and* projects.
@@ -47,7 +47,7 @@ Late projects:
 - Projects turned in late will be subject to the following penalties: 1 day = 5%, 2 days = 10%, 3 days = 20%, 4 days = 40%, more than 4 days = not accepted. 
 
 Extensions:
-- If you are having health or personal problems, definitely take it easy.  See GradSupport or S-Cubed and ask them to [contact us](mailto:lpk@mit.edu) and we will make arrangements for extensions. 
+- If you are having health or personal problems, definitely take it easy.  See GradSupport or S-Cubed and ask them to [contact us](tamarab@mit.edu) and we will make arrangements for extensions. 
 - *There will be no further extensions given for other reasons*
 
 ## Collaboration with humans and computers

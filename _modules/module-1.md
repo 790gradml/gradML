@@ -133,4 +133,4 @@ Dec/2
     : MP2 due <br> HW7 out
 
 Dec/4
-: **Lecture 24**{: .label .label-red} Some (more) ways to do machine learning wrong!
+: **Lecture 24**{: .label .label-red}

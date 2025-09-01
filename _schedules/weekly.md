@@ -21,18 +21,26 @@ timeline:
 schedule:
 - name: ""
 
-# - name: Monday
-#   events:
-#     - name: Instructors OHs
-#       start: 1:00 PM
-#       end: 2:00 PM
-#       location: 34-301
+- name: Monday
+  events:
+    - name: Instructors OHs
+      start: 7:00 PM
+      end: 9:00 PM
+      location: TBD
 - name: Tuesday
   events:
     - name: Lecture
       start: 2:30 PM
       end: 4:00 PM
       location: 32-123
+    - name: Instructors OHs
+      start: 5:00 PM
+      end: 7:00 PM
+      location: TBD
+    - name: Instructors OHs
+      start: 7:00 PM
+      end: 9:00 PM
+      location: TBD
 - name: Wednesday
   events:
 - name: Thursday
@@ -41,22 +49,30 @@ schedule:
       start: 2:30 PM
       end: 4:00 PM
       location: 32-123
+    - name: Instructors OHs
+      start: 5:30 PM
+      end: 7:30 PM
+      location: TBD
 - name: Friday
   events:
-    - name: Problem session
+    - name: Instructors OHs
       start: 10:00 AM
-      end: 11:00 AM
-      location: 45-102
-    - name: Problem session
-      start: 11:00 AM
       end: 12:00 PM
-      location: 45-102
-    - name: Problem session
-      start: 1:00 PM
-      end: 2:00 PM
-      location: 45-102
-    - name: Problem session
-      start: 2:00 PM
+      location: TBD
+    - name: Instructors OHs
+      start: 1:00 AM
       end: 3:00 PM
-      location: 45-102
+      location: TBD
+- name: Saturday
+  events:
+- name: Sunday
+  events:
+    - name: Instructors OHs
+      start: 3:00 PM
+      end: 5:00 PM
+      location: TBD
+    - name: Instructors OHs
+      start: 5:00 PM
+      end: 7:00 PM
+      location: Virtual
 ---

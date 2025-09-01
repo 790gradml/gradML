@@ -5,9 +5,11 @@ nav_order: 4
 
 # Exams
 
-<!-- ## Final
+## Final
 
-The final exam will be Friday 12/20 from 9:00AM - 12:00PM in [Dupont Gym](http://whereis.mit.edu/?go=W31)
+The full details about the final exam will be announced later in the semester.
+
+<!-- The final exam will be Friday 12/20 from 9:00AM - 12:00PM in [Dupont Gym](http://whereis.mit.edu/?go=W31)
 
 You may bring in 2 "cheat sheets", with writing on both sides, written or printed in any manner that doesn't require specialized instruments to read.  Don't worry about cramming formulas: we'll give you ones you are likely to need.
 You will not need a calculator! 

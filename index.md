@@ -42,7 +42,7 @@ has_toc: false
 
 ## Course Components
 
-We will have weekly lectures and problem sessions (schedule details can be found [here](/info/schedule/)); complementing those are written homework, small projects, a midterm and a final exam. 
+We will have weekly lectures (schedule details can be found [here](/info/schedule/)); complementing those are written homework, small projects, a midterm, and a final exam. 
 
 ## Course Number Change
 

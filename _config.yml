@@ -19,9 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: 6.790 <br> Machine Learning
-tagline: 6.790 Machine Learning, Fall 2024
+tagline: 6.790 Machine Learning, Fall 2025
 email: 6.790-website@mit.edu
-description: "Graduate Machine Learning Course, MIT EECS, Fall 2024."
+description: "Graduate Machine Learning Course, MIT EECS, Fall 2025."
 # logo: "/assets/images/790-txt.png"
 
 baseurl: "" # the subpath of your site, e.g. /blog

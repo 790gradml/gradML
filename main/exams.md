@@ -35,7 +35,7 @@ Here are some additional practice problems.  The hardest ones are probably more 
 
 <!-- - [Solutions](/assets/exams/exam1/6_7900_Fall24_Exam1_Solutions.pdf) -->
 
-The midterm exam will be Thursday 10/23 from 7PM - 9PM.
+The midterm exam will be on Thursday 10/23 from 7PM - 9PM.
 <!-- Rooms:
 - If your last name begins with A-L, please go to room 32-123
 - If your last name begins with M-Z, please go to room 34-101 -->

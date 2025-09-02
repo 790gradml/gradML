@@ -1,6 +1,7 @@
 ---
 title: "Exams"
 nav_order: 4
+nav_exlude: true
 ---
 
 # Exams

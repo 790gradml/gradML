@@ -17,7 +17,7 @@ nav_order: 4
 
 We strongly encourage you to be present in the actual lectures (Tuesdays and Thursdays, 2:30 - 4:00 in 32-123). We will however record and post lectures and notes.
 
-The Friday sections will be devoted to working through problems from the homework and answering student questions. They are entirely optional (but very valuable if you are finding the homework or concepts difficult). The registrar will produce an assignment of students to section times.  We encourage you to attend the section time to which you were assigned, for load-balancing purposes, but it's fine to attend any section you wish (or more than one!).
+The office hours will be devoted to working through problems from the homework and answering student questions. They are entirely optional (but very valuable if you are finding the homework or concepts difficult). It's fine to attend any section you wish (or more than one!).
 
 ## Office hours
 
@@ -35,7 +35,7 @@ The grade-assignment cutoffs will be *no higher than*: A - 90%, B - 80%, C - 70%
 
 Exams:
 - The midterm exam will be on Thursday October 23, 7PM - 9PM. <br>
-A conflict exam will be offered on Friday October 24, 8AM - 10AM.
+A conflict exam will be offered on Friday October 24, 8AM - 10AM. <b>Important: Please [contact us](tamarab@mit.edu) at least two weeks ahead of time notifying us in case you have any reason to take the conflict exam (follow the extension policy below)</b>.
 - The final exam will be during finals period, as scheduled by the registrar. Please plan to be physically present at MIT for the exam.
 - Exams will cover content from homework *and* projects.
 

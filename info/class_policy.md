@@ -37,7 +37,7 @@ Exams:
 - The midterm exam will be on Thursday October 23, 7PM - 9PM. <br>
 A conflict exam will be offered on Friday October 24, 8AM - 10AM. <b>Important: Please [contact us](tamarab@mit.edu) at least two weeks ahead of time notifying us in case you have any reason to take the conflict exam (follow the extension policy below)</b>.
 - The final exam will be during finals period, as scheduled by the registrar. Please plan to be physically present at MIT for the exam.
-- Exams will cover content from homework *and* projects.
+- Exams will cover content from homework *and* projects. The precise material will be published before each exam.
 
 Late homework:
 - Homework turned in late will be subject to the following penalties: 1 day = 5%, 2 days = 10%, 3 days = 20%, 4 or more days = not accepted.

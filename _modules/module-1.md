@@ -44,96 +44,96 @@ Dec/10
         : **Reading**
 
 Sep/4
-: **Lecture 1**{: .label .label-red}
+: **Lecture 1**{: .label .label-red} Introduction and foundations
     : HW0 out
 
 Sep/9
-: **Lecture 2**{: .label .label-red}
+: **Lecture 2**{: .label .label-red} Empirical risk minimization, maximum likelihood
     : HW1 out
 
 Sep/11
-: **Lecture 3**{: .label .label-red}
+: **Lecture 3**{: .label .label-red} Bayesian learning
 
 Sep/16
-: **Lecture 4**{: .label .label-red}
+: **Lecture 4**{: .label .label-red} Linear regression
     : HW0 due <br> HW1 due <br> HW2 out
 
 Sep/18
-: **Lecture 5**{: .label .label-red}
+: **Lecture 5**{: .label .label-red} Uncertainty quantification, regularizers
 
 Sep/23
-: **Lecture 6**{: .label .label-red}
+: **Lecture 6**{: .label .label-red} Features, kernels
 
 Sep/25
-: **Lecture 7**{: .label .label-red}
+: **Lecture 7**{: .label .label-red} Evaluation, hyperparameter learning
 
 Sep/30
-: **Lecture 8**{: .label .label-red}
+: **Lecture 8**{: .label .label-red} Classification, intro to optimization
     : HW2 due <br> HW3 out
 
 Oct/2
-: **Lecture 9**{: .label .label-red}
+: **Lecture 9**{: .label .label-red} Generalization I
 
 Oct/7
-: **Lecture 10**{: .label .label-red}
+: **Lecture 10**{: .label .label-red} Generalization II
     : HW3 due <br> MP1 out
 
 Oct/9
-: **Lecture 11**{: .label .label-red}
+: **Lecture 11**{: .label .label-red} Boosting 
 
 Oct/14
-: **Lecture 12**{: .label .label-red}
+: **Lecture 12**{: .label .label-red} Neural networks I: intuition, activations, depth, and width
 
 Oct/16
-: **Lecture 13**{: .label .label-red}
+: **Lecture 13**{: .label .label-red} Neural networks II: optimization 
     : MP1 due
 
 Oct/21
-: **Lecture 14**{: .label .label-red}
+: **Lecture 14**{: .label .label-red} Neural networks III: kernels versus feature learning
     : HW4 out
 
 Oct/23
 : **Midterm**{: .label .label-yellow} 7PM--9PM  (No lecture)
 
 Oct/28
-: **Lecture 15**{: .label .label-red}
+: **Lecture 15**{: .label .label-red} Neural networks IV: other architectures
 
 Oct/30
-: **Lecture 16**{: .label .label-red}
+: **Lecture 16**{: .label .label-red} Neural networks V: overparameterization
 
 Nov/4
-: **Lecture 17**{: .label .label-red}
+: **Lecture 17**{: .label .label-red} Temporal and spatial learning
     : HW4 due <br> HW5 out
 
 Nov/6
-: **Lecture 18**{: .label .label-red}
+: **Lecture 18**{: .label .label-red} Missing data
 
 Nov/11
 : **Holiday!**{: .label .label-gray} No lecture
 
 Nov/13
-: **Lecture 19**{: .label .label-red}
+: **Lecture 19**{: .label .label-red} Dimensionality reduction I
 
 Nov/18
-: **Lecture 20**{: .label .label-red}
+: **Lecture 20**{: .label .label-red} Dimensionality reduction II
     : HW5 due <br> HW6 out
 
 Nov/20
-: **Lecture 21**{: .label .label-red}
+: **Lecture 21**{: .label .label-red} Attention & transformers
 
 Nov/25
-: **Lecture 22**{: .label .label-red}
+: **Lecture 22**{: .label .label-red} Representation learning I
     : HW6 due <br> MP2 out
 
 Nov/27
 : **Holiday!**{: .label .label-gray} No lecture
 
 Dec/2
-: **Lecture 23**{: .label .label-red}
+: **Lecture 23**{: .label .label-red} Representation learning II
     : MP2 due <br> HW7 out
 
 Dec/4
-: **Lecture 24**{: .label .label-red}
+: **Lecture 24**{: .label .label-red} Some ways to do machine learning wrong
 
 Dec/9
 : **Review**{: .label .label-blue}

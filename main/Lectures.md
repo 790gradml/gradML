@@ -5,7 +5,7 @@ nav_order: 2
 
 # Lectures
 
-Lecture recordings are uploaded to [Panopto](https://mit.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b2079bc7-0ca3-4fdf-a3e5-b1d4014c37ee%22).
+Lecture recordings are uploaded to [Panopto](https://canvas.mit.edu/courses/33927/external_tools/594).
 
 {% assign limit_value = 24 %}  <!-- Set this to the number of lectures to display-->
 {% assign sorted_lectures = site.lectures | sort: 'id' %}

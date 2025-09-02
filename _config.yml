@@ -34,9 +34,9 @@ heading_anchors: true
 permalink: pretty
 aux_links:
   Canvas:
-    - "https://canvas.mit.edu/courses/28217"
+    - "canvas.mit.edu/courses/33927"
   Piazza:
-    - "https://piazza.com/class/lzy7kgi6f2n4fs/"
+    - "https://piazza.com/mit/fall2025/67900"
 aux_links_new_tab: true
 
 #remote_theme: just-the-docs/just-the-docs

@@ -5,7 +5,7 @@ nav_order: 1
 
 # Homeworks
 
-Submit homeworks to [gradescope](https://canvas.mit.edu/courses/28217/external_tools/369).
+Submit homeworks to [gradescope](https://www.gradescope.com/courses/1112729).
 
 {% assign limit_value = 8 %}  <!-- Set this to the number of hws to display-->
 {% assign sorted_homeworks = site.homeworks | sort: 'due_date' %}

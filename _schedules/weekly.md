@@ -36,7 +36,7 @@ schedule:
     - name: Instructors OHs
       start: 7:00 PM
       end: 9:00 PM
-      location: TBD
+      location: Virtual
 - name: Tuesday
   events:
     - name: Lecture
@@ -46,11 +46,11 @@ schedule:
     - name: Instructors OHs
       start: 5:00 PM
       end: 7:00 PM
-      location: TBD
+      location: Virtual
     - name: Instructors OHs
       start: 7:00 PM
       end: 9:00 PM
-      location: TBD
+      location: Virtual
 - name: Wednesday
   events:
 - name: Thursday
@@ -62,17 +62,17 @@ schedule:
     - name: Instructors OHs
       start: 5:30 PM
       end: 7:30 PM
-      location: TBD
+      location: Virtual
 - name: Friday
   events:
     - name: Instructors OHs
       start: 10:00 AM
       end: 12:00 PM
-      location: TBD
+      location: 24-321
     - name: Instructors OHs
       start: 1:00 PM
       end: 3:00 PM
-      location: TBD
+      location: 24-321
 - name: Saturday
   events:
 - name: Sunday
@@ -80,7 +80,7 @@ schedule:
     - name: Instructors OHs
       start: 3:00 PM
       end: 5:00 PM
-      location: TBD
+      location: Virtual
     - name: Instructors OHs
       start: 5:00 PM
       end: 7:00 PM

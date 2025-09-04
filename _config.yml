@@ -34,7 +34,7 @@ heading_anchors: true
 permalink: pretty
 aux_links:
   Canvas:
-    - "canvas.mit.edu/courses/33927"
+    - "https://canvas.mit.edu/courses/33927"
   Piazza:
     - "https://piazza.com/mit/fall2025/67900"
 aux_links_new_tab: true

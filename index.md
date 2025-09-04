@@ -1,10 +1,5 @@
----
-title: Info
-info_cat: true
-nav_order: 0
-has_children: true
-has_toc: false
----
+title: Home
+nav_exclude: true
 <center>
 <div style="margin-bottom:1.5em">
 <img src="/assets/images/eecslogo.svg" width="12%">
@@ -24,9 +19,9 @@ has_toc: false
 ## Course sites
 
 <ul>
-<li> For technical questions: Please read/post publicly on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a></li>
-<li> For personal or administrative questions: Please post privately on <a href="https://piazza.com/class/lzy7kgi6f2n4fs/"><b>Piazza</b></a></li>
-<li> For grades on submitted work: Please check <a href="https://canvas.mit.edu/courses/28217"><b>Canvas</b></a></li>
+<li> For technical questions: Please read/post publicly on <a href="https://piazza.com/mit/fall2025/67900"><b>Piazza</b></a></li>
+<li> For personal or administrative questions: Please post privately to All Instructors on <a href="https://piazza.com/mit/fall2025/67900"><b>Piazza</b></a></li>
+<li> For grades on submitted work: Please check <a href="https://canvas.mit.edu/courses/33927"><b>Canvas</b></a></li>
 </ul>
 
 

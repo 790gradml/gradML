@@ -62,7 +62,7 @@ gh_edit_view_mode: "tree"
 
 # Sidebar external links (rendered as tabs/links in the nav)
 nav_external_links:
-  - title: Main
+  - title: Home
     url: "/"
     hide_icon: true
 

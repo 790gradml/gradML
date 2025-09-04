@@ -1,6 +1,7 @@
 ---
 title: Class Policies and Support
 nav_order: 4
+info_cat: true
 ---
 
 # Class policies and support

@@ -1,6 +1,7 @@
 ---
 title: "Lectures"
 nav_order: 2
+nav_exclude: true
 ---
 
 # Lectures

@@ -1,5 +1,10 @@
-title: Home
-nav_exclude: true
+---
+title: Info
+info_cat: true
+nav_order: 0
+has_children: true
+has_toc: false
+---
 <center>
 <div style="margin-bottom:1.5em">
 <img src="/assets/images/eecslogo.svg" width="12%">

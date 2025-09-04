@@ -157,13 +157,11 @@ defaults:
   - scope:
       path: "info/"
     values:
-      parent: Info
       layout: page
       info_cat: true
   - scope:
       path: "homeworks/"
     values:
-      parent: Homeworks
       layout: page
       permalink: homeworks/:basename/
 # pandoc:

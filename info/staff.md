@@ -4,7 +4,6 @@ description: A listing of all the course staff members.
 nav_order: 1
 in_row: true
 #nav_exclude: true
-info_cat: true
 ---
 
 

@@ -4,7 +4,6 @@ info_cat: true
 nav_order: 0
 has_children: true
 has_toc: false
-nav_exclude: true
 ---
 <center>
 <div style="margin-bottom:1.5em">

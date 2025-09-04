@@ -158,7 +158,7 @@ defaults:
       path: "info/"
     values:
       layout: page
-      info_cat: false
+      info_cat: true
   - scope:
       path: "homeworks/"
     values:

@@ -1,8 +1,8 @@
 ---
 title: Info
 info_cat: true
-nav_order: 0
-has_children: true
+nav_exclude: true   # hides the tab, page stays as the homepage and is still reachable
+has_children: false # optional
 has_toc: false
 ---
 <center>

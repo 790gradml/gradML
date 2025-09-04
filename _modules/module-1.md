@@ -46,6 +46,7 @@ Dec/10
 Sep/4
 : **Lecture 1**{: .label .label-red} Introduction and foundations
     : HW0 out
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch1
 
 Sep/9
 : **Lecture 2**{: .label .label-red} Empirical risk minimization, maximum likelihood

@@ -21,7 +21,7 @@ The office hours will be devoted to working through problems from the homework a
 
 ## Office hours
 
-Office hours are to be determined.
+Office hours information can be found under the [office hours](https://gradml.mit.edu/info/office_hours/) tab.
 
 ## Grading, lateness, and extensions 
 

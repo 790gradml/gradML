@@ -60,6 +60,12 @@ gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree"
 
+# Sidebar external links (rendered as tabs/links in the nav)
+nav_external_links:
+  - title: Main
+    url: "/"
+    hide_icon: true
+
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
   date-format: "%d-%b-%Y"

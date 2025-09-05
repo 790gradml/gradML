@@ -1,6 +1,6 @@
 .schedule {
   @include abstract-card();
-  overflow-x: auto;
+  overflow-x: scroll;
   position: relative;
 
   li::before {
@@ -49,30 +49,20 @@
     border-left: $border $border-color;
     flex: 1 0 0;
     margin: 0;
-    min-width: 60px;
+    min-width: 120px;
 
     &:first-of-type {
       border-left: 0;
-    }
-
-    // Responsive adjustments for smaller screens
-    @media (max-width: 768px) {
-      min-width: 50px;
     }
   }
 
   h2.schedule-header {
     align-items: center;
     display: flex;
-    font-size: 11px !important;
+    font-size: 18px !important;
     height: 40px;
     justify-content: center;
     margin: 0;
-    
-    // Responsive font size for smaller screens
-    @media (max-width: 768px) {
-      font-size: 10px !important;
-    }
   }
 
   .schedule-events {
@@ -95,13 +85,11 @@
 
     .name {
       @extend .fs-3, .fw-700;
-      font-size: 12px !important;
     }
 
     .time,
     .location {
       @extend .fs-2;
-      font-size: 10px !important;
     }
 
     @import "./../color_schemes/eecs";

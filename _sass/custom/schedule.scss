@@ -11,6 +11,10 @@
   ul.schedule-group,
   ul.schedule-events {
     margin-top: 0;
+  }
+
+  ul.schedule-timeline,
+  ul.schedule-events {
     padding-left: 0;
   }
 
@@ -43,20 +47,13 @@
     display: flex;
     margin-bottom: 0;
     position: relative;
+    padding-left: 64px;
   }
 
   .schedule-day {
     border-left: $border $border-color;
-    flex: 1 0 0;
+    flex: 1;
     margin: 0;
-
-    &:first-of-type {
-      border-left: 0;
-    }
-  }
-
-  .schedule-timeline-spacer {
-    width: 64px;
   }
 
   h2.schedule-header {

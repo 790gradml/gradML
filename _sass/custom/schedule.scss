@@ -1,6 +1,6 @@
 .schedule {
   @include abstract-card();
-  overflow-x: scroll;
+  overflow-x: auto;
   position: relative;
 
   li::before {
@@ -49,10 +49,15 @@
     border-left: $border $border-color;
     flex: 1 0 0;
     margin: 0;
-    min-width: 120px;
+    min-width: 100px;
 
     &:first-of-type {
       border-left: 0;
+    }
+
+    // Responsive adjustments for smaller screens
+    @media (max-width: 768px) {
+      min-width: 80px;
     }
   }
 

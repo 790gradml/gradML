@@ -31,13 +31,13 @@ timeline:
 schedule:
 - name: ""
 
-- name: Monday
+- name: Mon
   events:
     - name: Instructors OHs
       start: 7:00 PM
       end: 9:00 PM
       location: Virtual
-- name: Tuesday
+- name: Tue
   events:
     - name: Lecture
       start: 2:30 PM
@@ -51,9 +51,9 @@ schedule:
       start: 7:00 PM
       end: 9:00 PM
       location: Virtual
-- name: Wednesday
+- name: Wed
   events:
-- name: Thursday
+- name: Thu
   events:
     - name: Lecture
       start: 2:30 PM
@@ -63,7 +63,7 @@ schedule:
       start: 5:30 PM
       end: 7:30 PM
       location: Virtual
-- name: Friday
+- name: Fri
   events:
     - name: Instructors OHs
       start: 10:00 AM
@@ -73,9 +73,9 @@ schedule:
       start: 1:00 PM
       end: 3:00 PM
       location: 24-321
-- name: Saturday
+- name: Sat
   events:
-- name: Sunday
+- name: Sun
   events:
     - name: Instructors OHs
       start: 3:00 PM

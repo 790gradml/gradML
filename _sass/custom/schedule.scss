@@ -49,7 +49,7 @@
     border-left: $border $border-color;
     flex: 1 0 0;
     margin: 0;
-    min-width: 80px;
+    min-width: 60px;
 
     &:first-of-type {
       border-left: 0;
@@ -57,21 +57,21 @@
 
     // Responsive adjustments for smaller screens
     @media (max-width: 768px) {
-      min-width: 60px;
+      min-width: 50px;
     }
   }
 
   h2.schedule-header {
     align-items: center;
     display: flex;
-    font-size: 14px !important;
+    font-size: 11px !important;
     height: 40px;
     justify-content: center;
     margin: 0;
     
     // Responsive font size for smaller screens
     @media (max-width: 768px) {
-      font-size: 12px !important;
+      font-size: 10px !important;
     }
   }
 

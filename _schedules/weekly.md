@@ -34,7 +34,7 @@ schedule:
     - name: Instructors OHs
       start: 7:00 PM
       end: 9:00 PM
-      location: Virtual
+      location: 36-112
 - name: Tue
   events:
     - name: Lecture
@@ -44,11 +44,11 @@ schedule:
     - name: Instructors OHs
       start: 5:00 PM
       end: 7:00 PM
-      location: Virtual
+      location: 36-112
     - name: Instructors OHs
       start: 7:00 PM
       end: 9:00 PM
-      location: Virtual
+      location: 36-112
 - name: Wed
   events:
 - name: Thu
@@ -60,7 +60,7 @@ schedule:
     - name: Instructors OHs
       start: 5:30 PM
       end: 7:30 PM
-      location: Virtual
+      location: 36-153
 - name: Fri
   events:
     - name: Instructors OHs
@@ -78,9 +78,9 @@ schedule:
     - name: Instructors OHs
       start: 3:00 PM
       end: 5:00 PM
-      location: Virtual
+      location: 36-112
     - name: Instructors OHs
       start: 5:00 PM
       end: 7:00 PM
-      location: Virtual
+      location: 36-112
 ---

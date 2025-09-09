@@ -7,11 +7,11 @@ nav_order: 6
 
 # Office Hour Times
 Please note that the schedule is subject to minor changes!
-- Thursday 5:30-7:30pm (Virtual)
+- Monday: 7-9pm (36-112)
+- Tuesday: 5-7pm (36-112)
+- Tuesday: 7-9pm (36-112)
+- Thursday 5:30-7:30pm (36-153)
 - Friday 10am-12pm (24-321)
 - Friday 1-3pm (24-321)
-- Sunday: 3-5pm (Virtual)
-- Sunday: 5-7pm (Virtual)
-- Monday: 7-9pm (Virtual)
-- Tuesday: 5-7pm (Virtual)
-- Tuesday: 5-9pm (Virtual)
+- Sunday: 3-5pm (36-112)
+- Sunday: 5-7pm (36-112)

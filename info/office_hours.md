@@ -14,4 +14,4 @@ Please note that the schedule is subject to minor changes!
 - Friday 10am-12pm (24-319)
 - Friday 1-3pm (24-319)
 - Sunday: 3-5pm (36-112)
-- Sunday: 5-7pm (36-112)
+- Sunday: 5-7pm (Virtual)

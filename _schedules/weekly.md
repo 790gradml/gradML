@@ -82,5 +82,5 @@ schedule:
     - name: Instructors OHs
       start: 5:00 PM
       end: 7:00 PM
-      location: 36-112
+      location: Virtual
 ---

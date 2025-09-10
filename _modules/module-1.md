@@ -51,7 +51,7 @@ Sep/4
 Sep/9
 : **Lecture 2**{: .label .label-red} Empirical risk minimization, maximum likelihood
     : HW1 out
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch4.2
 
 Sep/11
 : **Lecture 3**{: .label .label-red} Bayesian learning

@@ -66,11 +66,11 @@ schedule:
     - name: Instructors OHs
       start: 10:00 AM
       end: 12:00 PM
-      location: 24-321
+      location: 24-319
     - name: Instructors OHs
       start: 1:00 PM
       end: 3:00 PM
-      location: 24-321
+      location: 24-319
 - name: Sat
   events:
 - name: Sun

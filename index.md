@@ -44,7 +44,7 @@ has_toc: false
 
 We will have weekly lectures (schedule details can be found [here](/info/schedule/)); complementing those are written homework, small projects, a midterm, and a final exam.
 
-Homeworks, projects, and lecture notes will be poseted on [Piazza](https://piazza.com/mit/fall2025/67900).
+Homeworks, tex templaes for homework submissions, projects, and lecture notes will be poseted on [Piazza](https://piazza.com/mit/fall2025/67900).
 
 ## Course Number Change
 

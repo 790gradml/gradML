@@ -56,12 +56,12 @@ Sep/9
 Sep/11
 : **Lecture 3**{: .label .label-red} Bayesian learning
     : <br>
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 4.6.1--4.6.4
 
 Sep/16
 : **Lecture 4**{: .label .label-red} Linear regression
     : HW0 due <br> HW1 due <br> HW2 out
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 11.1--11.3
 
 Sep/18
 : **Lecture 5**{: .label .label-red} Uncertainty quantification, regularizers

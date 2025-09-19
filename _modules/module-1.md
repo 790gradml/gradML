@@ -66,7 +66,7 @@ Sep/16
 Sep/18
 : **Lecture 5**{: .label .label-red} Uncertainty quantification, regularizers
     : <br>
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 11.7.1--11.7.5
 
 Sep/23
 : **Lecture 6**{: .label .label-red} Features, kernels

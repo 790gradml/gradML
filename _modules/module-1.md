@@ -71,7 +71,7 @@ Sep/18
 Sep/23
 : **Lecture 6**{: .label .label-red} Features, kernels
     : <br>
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 2.1.2, 11.3--11.3.1, 17.1, 4.5--4.5.3
 
 Sep/25
 : **Lecture 7**{: .label .label-red} Evaluation, hyperparameter learning

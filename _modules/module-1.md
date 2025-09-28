@@ -76,7 +76,9 @@ Sep/23
 Sep/25
 : **Lecture 7**{: .label .label-red} Evaluation, hyperparameter learning
     : <br>
-        : <br>
+        : [[JWHT]](/info/books/#primary-textbooks) 5.1 (best) <br> 
+        : [[M1]](/info/books/#primary-textbooks) 5.4.3 (brief) <br> 
+		: [[SB]](/info/books/#primary-textbooks) 11.2 (optional) <br> 
     
 Sep/30
 : **Lecture 8**{: .label .label-red} Classification, intro to optimization

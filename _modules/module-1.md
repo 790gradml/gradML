@@ -46,12 +46,12 @@ Dec/10
 Sep/4
 : **Lecture 1**{: .label .label-red} Introduction and foundations
     : HW0 out
-        : [[M1]](/info/books/#primary-textbooks) <br> Ch1
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 1
 
 Sep/9
 : **Lecture 2**{: .label .label-red} Empirical risk minimization, maximum likelihood
     : HW1 out
-        : [[M1]](/info/books/#primary-textbooks) <br> Ch4.2
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 4.2
 
 Sep/11
 : **Lecture 3**{: .label .label-red} Bayesian learning
@@ -76,14 +76,14 @@ Sep/23
 Sep/25
 : **Lecture 7**{: .label .label-red} Evaluation, hyperparameter learning
     : <br>
-        : [[JWHT]](/info/books/#primary-textbooks) 5.1 (best) <br> 
-        : [[M1]](/info/books/#primary-textbooks) 5.4.3 (brief) <br> 
-		: [[SB]](/info/books/#primary-textbooks) 11.2 (optional) <br> 
+        : [[JWHT]](/info/books/#primary-textbooks) Ch 5.1 (best) <br> 
+        : [[M1]](/info/books/#primary-textbooks) Ch 5.4.3 (brief) <br> 
+		: [[SB]](/info/books/#primary-textbooks) Ch 11.2 (optional) <br> 
     
 Sep/30
 : **Lecture 8**{: .label .label-red} Classification, intro to optimization
     : HW2 due <br> HW3 out
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) Ch 10 <br>
 
 Oct/2
 : **Lecture 9**{: .label .label-red} Generalization I

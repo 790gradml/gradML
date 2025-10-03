@@ -78,7 +78,7 @@ Sep/25
     : <br>
         : [[JWHT]](/info/books/#primary-textbooks) Ch 5.1 (best) <br> 
         : [[M1]](/info/books/#primary-textbooks) Ch 5.4.3 (brief) <br> 
-		: [[SB]](/info/books/#primary-textbooks) Ch 11.2 (optional) <br> 
+		: [[SB]](/info/books/#primary-textbooks) Ch 11.2 (optional)
     
 Sep/30
 : **Lecture 8**{: .label .label-red} Classification, intro to optimization
@@ -88,7 +88,8 @@ Sep/30
 Oct/2
 : **Lecture 9**{: .label .label-red} Generalization I
     : <br>
-        : <br>
+        : [[Ba]](/info/books/#primary-textbooks) Ch 1.2.1, 5 <br>
+        : [[M1]](/info/books/#primary-textbooks) Ch 8
 
 Oct/7
 : **Lecture 10**{: .label .label-red} Generalization II

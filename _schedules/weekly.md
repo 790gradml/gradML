@@ -76,11 +76,7 @@ schedule:
 - name: Sun
   events:
     - name: Instructors OHs
-      start: 3:00 PM
-      end: 5:00 PM
-      location: 36-112
-    - name: Instructors OHs
       start: 5:00 PM
-      end: 7:00 PM
+      end: 6:00 PM
       location: Virtual
 ---

@@ -94,7 +94,9 @@ Oct/2
 Oct/7
 : **Lecture 10**{: .label .label-red} Generalization II
     : HW3 due <br> MP1 out
-        : <br>
+        : [[Ba]](/info/books/#primary-textbooks) Ch 5.4 <br>
+        : [[M1]](/info/books/#primary-textbooks) Ch 8.4 <br>
+        : [[SB]/[SSS]](/info/books/#primary-textbooks) Ch 2.3, 3.1-3.2, 4.1-4.2
 
 Oct/9
 : **Lecture 11**{: .label .label-red} Boosting 

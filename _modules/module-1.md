@@ -101,7 +101,7 @@ Oct/7
 Oct/9
 : **Lecture 11**{: .label .label-red} Boosting 
     : <br>
-        : <br>
+        : [[SB]/[SSS]](/info/books/#primary-textbooks) Ch 6, 28
 
 Oct/14
 : **Lecture 12**{: .label .label-red} Neural networks I: intuition, activations, depth, and width

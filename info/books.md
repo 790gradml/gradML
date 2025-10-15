@@ -19,6 +19,7 @@ nav_order: 5
 - [HR] [Patterns, Predictions, and Actions A story about machine learning](https://mlstory.org/) Hardt and Recht; Princeton University Press, 2022.
 - [SB]/[SSS] [Understanding Machine Learning: From Theory to Algorithms](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning), Shalev-Shwartz and Ben-David; Cambridge University Press, 2014.
 - [JWHT] [An Introduction to Statistical Learning](https://www.statlearning.com/), James, Witten, Hastie, and Tibshirani; Springer, 2023.
+- [T] [Deep learning theory lecture notes](https://mjt.cs.illinois.edu/dlt/), Matus, Telgarsky; 2021.
 
 
 All freely accessible (an MIT IP may be required)

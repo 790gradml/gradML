@@ -106,7 +106,8 @@ Oct/9
 Oct/14
 : **Lecture 12**{: .label .label-red} Neural networks I: intuition, activations, depth, and width
     : <br>
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) Ch 13 <br>
+        : [[T]](/info/books/#primary-textbooks) Ch 2
 
 Oct/16
 : **Lecture 13**{: .label .label-red} Neural networks II: optimization 

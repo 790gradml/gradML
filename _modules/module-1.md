@@ -112,12 +112,14 @@ Oct/14
 Oct/16
 : **Lecture 13**{: .label .label-red} Neural networks II: optimization 
     : MP1 due
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) Ch 13 <br>
+        : [[HR]](/info/books/#primary-textbooks) Ch 7 <br>
+        : [[T]](/info/books/#primary-textbooks) Ch 5 <br>
 
 Oct/21
 : **Lecture 14**{: .label .label-red} Neural networks III: kernels versus feature learning
     : HW4 out
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) Ch 14
 
 Oct/23
 : **Midterm**{: .label .label-yellow} 7PM--9PM  (No lecture)

@@ -86,20 +86,20 @@ Sep/30
         : [[M1]](/info/books/#primary-textbooks) Ch 10 <br>
 
 Oct/2
-: **Lecture 9**{: .label .label-red} Generalization I
+: **Lecture 9**{: .label .label-red} Optimization
     : <br>
         : [[Ba]](/info/books/#primary-textbooks) Ch 1.2.1, 5 <br>
         : [[M1]](/info/books/#primary-textbooks) Ch 8
 
 Oct/7
-: **Lecture 10**{: .label .label-red} Generalization II
+: **Lecture 10**{: .label .label-red} Generalization I
     : HW3 due <br> MP1 out
         : [[Ba]](/info/books/#primary-textbooks) Ch 5.4 <br>
         : [[M1]](/info/books/#primary-textbooks) Ch 8.4 <br>
         : [[SB]/[SSS]](/info/books/#primary-textbooks) Ch 2.3, 3.1-3.2, 4.1-4.2
 
 Oct/9
-: **Lecture 11**{: .label .label-red} Boosting 
+: **Lecture 11**{: .label .label-red} Generalization II 
     : <br>
         : [[SB]/[SSS]](/info/books/#primary-textbooks) Ch 6, 28
 
@@ -114,7 +114,7 @@ Oct/16
     : MP1 due
         : [[M1]](/info/books/#primary-textbooks) Ch 13 <br>
         : [[HR]](/info/books/#primary-textbooks) Ch 7 <br>
-        : [[T]](/info/books/#primary-textbooks) Ch 5 <br>
+        : [[T]](/info/books/#primary-textbooks) Ch 5
 
 Oct/21
 : **Lecture 14**{: .label .label-red} Neural networks III: kernels versus feature learning

@@ -139,12 +139,13 @@ Oct/30
 Nov/4
 : **Lecture 17**{: .label .label-red} Temporal and spatial learning
     : HW4 due <br> HW5 out
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 17 - 17.2
 
 Nov/6
 : **Lecture 18**{: .label .label-red} Missing data
     : <br>
-        : <br>
+        : [[Here]](https://onlinelibrary-wiley-com.libproxy.mit.edu/doi/book/10.1002/9781119482260) <br> Ch 1 
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 1.5.5
 
 Nov/11
 : **Holiday!**{: .label .label-gray} No lecture
@@ -154,12 +155,11 @@ Nov/11
 Nov/13
 : **Lecture 19**{: .label .label-red} Dimensionality reduction I
     : <br>
-        : <br>
-
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 20-20.1
 Nov/18
 : **Lecture 20**{: .label .label-red} Dimensionality reduction II
     : HW5 due <br> HW6 out
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 20-20.4.10
 
 Nov/20
 : **Lecture 21**{: .label .label-red} Attention & transformers

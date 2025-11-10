@@ -156,6 +156,7 @@ Nov/13
 : **Lecture 19**{: .label .label-red} Dimensionality reduction I
     : <br>
         : [[M1]](/info/books/#primary-textbooks) <br> Ch 20-20.1
+
 Nov/18
 : **Lecture 20**{: .label .label-red} Dimensionality reduction II
     : HW5 due <br> HW6 out
@@ -178,7 +179,7 @@ Nov/27
     
 Dec/2
 : **Lecture 23**{: .label .label-red} Representation learning II
-    : MP2 due <br> HW7 out
+    : HW7 out
         : <br>
 
 Dec/4
@@ -188,5 +189,5 @@ Dec/4
 
 Dec/9
 : **Review**{: .label .label-blue}
-    : <br>
+    : MP2 due 
         : <br>

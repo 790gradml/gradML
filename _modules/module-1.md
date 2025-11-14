@@ -193,6 +193,6 @@ Dec/9
         : <br>
 
 Dec/15
-: **Final Exam**{: .label .label-blue}
+: **Final Exam**{: .label .label-yellow}
     : <br>
         : <br>

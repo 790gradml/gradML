@@ -191,3 +191,8 @@ Dec/9
 : **Review**{: .label .label-blue}
     : MP2 due 
         : <br>
+
+Dec/15
+: **Final Exam**{: .label .label-blue}
+    : <br>
+        : <br>

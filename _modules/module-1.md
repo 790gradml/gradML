@@ -165,7 +165,7 @@ Nov/18
 Nov/20
 : **Lecture 21**{: .label .label-red} Attention & transformers
     : <br>
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 20.5, Ch 15
 
 Nov/25
 : **Lecture 22**{: .label .label-red} Representation learning I
@@ -175,12 +175,14 @@ Nov/25
 Nov/27
 : **Holiday!**{: .label .label-gray} No lecture
     : <br>
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 15
+        : [[PH]](/info/books/#primary-textbooks)
     
 Dec/2
 : **Lecture 23**{: .label .label-red} Representation learning II
     : HW7 out
-        : <br>
+        : [[M1]](/info/books/#primary-textbooks) <br> Ch 15
+        : [[PH]](/info/books/#primary-textbooks)
 
 Dec/4
 : **Lecture 24**{: .label .label-red} Some ways to do machine learning wrong

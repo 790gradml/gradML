@@ -20,7 +20,7 @@ nav_order: 5
 - [SB]/[SSS] [Understanding Machine Learning: From Theory to Algorithms](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning), Shalev-Shwartz and Ben-David; Cambridge University Press, 2014.
 - [JWHT] [An Introduction to Statistical Learning](https://www.statlearning.com/), James, Witten, Hastie, and Tibshirani; Springer, 2023.
 - [T] [Deep learning theory lecture notes](https://mjt.cs.illinois.edu/dlt/), Matus, Telgarsky; 2021.
-
+- [PH] [Formal Algorithms for Transformers](https://arxiv.org/abs/2207.09238), Phuong, Hutter; 2022.
 
 All freely accessible (an MIT IP may be required)
 

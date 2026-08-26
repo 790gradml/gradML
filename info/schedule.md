@@ -2,6 +2,7 @@
 title: Weekly Schedule
 description: The weekly event schedule.
 nav_order: 2
+nav_exclude: true
 ---
 
 # Weekly Schedule

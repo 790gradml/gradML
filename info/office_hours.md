@@ -2,7 +2,7 @@
 title: Office Hours
 description: Listing of office hour times and locations.
 nav_order: 6
-#nav_exclude: true
+nav_exclude: true
 ---
 
 # Office Hour Times

@@ -40,8 +40,6 @@ has_toc: false
 - Brief description: Probabilistic thinking is critical to understanding machine learning, in techniques ranging from classic linear models to modern deep networks.  We will study model representation, generalization, learning algorithms, and model-selection with mathematical rigor as well as an emphasis on how to apply these methods in applications with real-world consequence.
 - A syllabus can be found [here](/info/calendar)
 
-## Course Components
+## Course Number Change
 
-We will have weekly lectures (schedule details can be found [here](/info/schedule/)); complementing those are written homework, small projects, a midterm, and a final exam.
-
-Homeworks, tex templates for homework submissions, projects, and lecture notes will be posted on [Piazza](https://piazza.com/mit/fall2025/67900).
+Since Fall 22, all MIT EECS subjects have been renumbered (rationale and details can be found [here](https://www.eecs.mit.edu/academics/subject-numbering/)). This subject used to be called 6.867; moving forward, it will be 6.790, eventually. But for registration purposes, please register for **6.7900** (note the extra trailing zero) during this current transition phase.

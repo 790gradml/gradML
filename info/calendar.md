@@ -2,7 +2,7 @@
 title: Calendar
 description: Listing of course modules and topics.
 nav_order: 0
-#nav_exclude: true
+nav_exclude: true
 
 ---
 

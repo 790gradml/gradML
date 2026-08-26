@@ -45,7 +45,3 @@ has_toc: false
 We will have weekly lectures (schedule details can be found [here](/info/schedule/)); complementing those are written homework, small projects, a midterm, and a final exam.
 
 Homeworks, tex templates for homework submissions, projects, and lecture notes will be posted on [Piazza](https://piazza.com/mit/fall2025/67900).
-
-## Course Number Change
-
-Since Fall 22, all MIT EECS subjects have been renumbered (rationale and details can be found [here](https://www.eecs.mit.edu/academics/subject-numbering/)). This subject used to be called 6.867; moving forward, it will be 6.790, eventually. But for registration purposes, please register for **6.7900** (note the extra trailing zero) during this current transition phase.

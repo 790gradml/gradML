@@ -18,18 +18,24 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
           chmod 600 ~/.ssh/id_rsa
-          ssh -p ${{ secrets.REMOTE_PORT }} -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} << 'EOF'
+          ssh -p ${{ secrets.REMOTE_PORT }} -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} 'bash -s' << 'EOF'
+          set -euo pipefail
           export PATH="/home/shensquared/.rbenv/bin:$PATH"
           eval "$(rbenv init -)"
-          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-          cd /home/shensquared/gradML 
-          echo "Running on main branch"
-          git pull origin main
-          bundle exec jekyll build
-          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
-          cd /home/shensquared/gradML_dev
-          echo "Running on dev branch"
-          git pull origin dev
-          bundle exec jekyll build --config _config.yml,_config_dev.yml
+          REF="${{ github.ref }}"
+          if [ "$REF" = "refs/heads/main" ]; then
+            cd /home/shensquared/gradML
+            git fetch origin main
+            git reset --hard origin/main
+            bundle exec jekyll build
+          elif [ "$REF" = "refs/heads/dev" ]; then
+            cd /home/shensquared/gradML_dev
+            git fetch origin dev
+            git reset --hard origin/dev
+            bundle exec jekyll build --config _config.yml,_config_dev.yml
+          else
+            echo "unexpected ref: $REF" >&2
+            exit 1
           fi
+          echo "deployed $(git rev-parse --short HEAD)"
           EOF

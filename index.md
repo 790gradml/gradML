@@ -24,8 +24,8 @@ has_toc: false
 ## Course sites
 
 - For personal or administrative questions, please email the course staff email 6790-fa26@mit.edu.
-- For technical questions, please read/post on Piazza.
-- For grades on submitted work, please check Canvas.
+- For technical questions, please read/post on [Piazza](https://piazza.com/mit/fall2026/6790/home).
+- For grades on submitted work, please check [Canvas](https://canvas.mit.edu/courses/40026).
 
 
 ## Course Overview
@@ -36,7 +36,7 @@ has_toc: false
   - Linear algebra (at the level of [18.06](https://github.com/mitmath/1806) or [18.C06](https://canvas.mit.edu/courses/16629))
   - Probability (at the level of [6.3700](https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/pages/readings/), [6.3800](http://student.mit.edu/catalog/m6c.html#6.3800), or [18.600](https://math.mit.edu/~sheffield/spring2022math600.html))
 - Brief description: Probabilistic thinking is critical to understanding machine learning, in techniques ranging from classic linear models to modern deep networks.  We will study model representation, generalization, learning algorithms, and model-selection with mathematical rigor as well as an emphasis on how to apply these methods in applications with real-world consequence.
-- A syllabus can be found on Piazza.
+- Please see the [resources section](https://piazza.com/mit/fall2026/6790/resources) on Piazza for course policies and a lecture schedule.
 
 ## Course Components
 

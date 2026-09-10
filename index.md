@@ -26,6 +26,7 @@ has_toc: false
 - For personal or administrative questions, please email the course staff email 6790-fa26@mit.edu.
 - For technical questions, please read/post on [Piazza](https://piazza.com/mit/fall2026/6790/home).
 - For grades on submitted work, please check [Canvas](https://canvas.mit.edu/courses/40026).
+- Assignments will be submitted and graded through [Gradescope](https://www.gradescope.com/courses/1385601).
 
 
 ## Course Overview
